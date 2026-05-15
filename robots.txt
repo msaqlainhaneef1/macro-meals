@@ -9,3 +9,7 @@ Allow: /
 
 # Sitemap location (absolute URL required)
 Sitemap: https://macroandmeals.com/sitemap.xml
+
+# LLM-friendly content (llmstxt.org standard)
+# llms.txt: https://macroandmeals.com/llms.txt
+# llms-full.txt: https://macroandmeals.com/llms-full.txt

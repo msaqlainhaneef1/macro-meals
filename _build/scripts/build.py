@@ -601,10 +601,222 @@ Allow: /
 
 # Sitemap location (absolute URL required)
 Sitemap: {URL}/sitemap.xml
+
+# LLM-friendly content (llmstxt.org standard)
+# llms.txt: {URL}/llms.txt
+# llms-full.txt: {URL}/llms-full.txt
 """
     with open(os.path.join(ROOT, 'robots.txt'), 'w') as f:
         f.write(content)
     print('✓ Generated robots.txt (allow all bots)')
+
+def extract_page_info(html_file):
+    """Extract title, description, and h1 from an HTML file."""
+    with open(html_file, 'r', encoding='utf-8', errors='ignore') as f:
+        content = f.read()
+
+    title_match = re.search(r'<title>([^<]+)</title>', content)
+    title = title_match.group(1).replace(' | Macro & Meals', '').strip() if title_match else ''
+
+    desc_match = re.search(r'name="description"\s+content="([^"]+)"', content)
+    desc = desc_match.group(1).strip() if desc_match else ''
+
+    h1_match = re.search(r'<h1[^>]*>([^<]+)</h1>', content)
+    h1 = h1_match.group(1).strip() if h1_match else title
+
+    return title, desc, h1
+
+
+def generate_llms_txt():
+    """Generate llms.txt and llms-full.txt following the llmstxt.org standard."""
+
+    # Collect all pages with metadata
+    pages = []
+    root_index = os.path.join(ROOT, 'index.html')
+    if os.path.exists(root_index):
+        title, desc, h1 = extract_page_info(root_index)
+        pages.append(('/', title or 'Home', desc, 'home'))
+
+    for html_file in sorted(glob.glob(os.path.join(ROOT, '*', 'index.html'))):
+        rel = os.path.relpath(html_file, ROOT)
+        slug = os.path.dirname(rel)
+        top_dir = slug.split(os.sep)[0]
+        if top_dir in SKIP_DIRS:
+            continue
+        title, desc, h1 = extract_page_info(html_file)
+        # Categorize
+        if slug in ESSENTIAL_PAGES:
+            cat = 'policy'
+        elif slug.endswith(('-nutrition-calculator', '-calories-calculator')):
+            cat = 'restaurant'
+        elif slug.endswith('-menu'):
+            cat = 'menu'
+        elif slug.endswith(('-calculator', '-converter')):
+            cat = 'calculator'
+        elif slug.startswith('blog'):
+            cat = 'blog'
+        else:
+            cat = 'other'
+        pages.append((f'/{slug}/', title, desc, cat))
+
+    # Blog subdirectories
+    for html_file in sorted(glob.glob(os.path.join(ROOT, 'blog', '*', 'index.html'))):
+        rel = os.path.relpath(html_file, ROOT)
+        slug = os.path.dirname(rel)
+        title, desc, h1 = extract_page_info(html_file)
+        pages.append((f'/{slug}/', title, desc, 'blog'))
+
+    # Group pages by category
+    categories = {
+        'calculator': [],
+        'restaurant': [],
+        'menu': [],
+        'blog': [],
+        'policy': [],
+        'other': [],
+    }
+    for loc, title, desc, cat in pages:
+        if cat != 'home':
+            categories[cat].append((loc, title, desc))
+
+    # ── llms.txt (concise summary with links) ──
+    llms_lines = []
+    llms_lines.append(f'# {BRAND}')
+    llms_lines.append('')
+    llms_lines.append(f'> {BRAND} ({URL}) provides free nutrition calculators and health tools '
+                      f'for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more. '
+                      f'All tools are free, no login required.')
+    llms_lines.append('')
+    llms_lines.append(f'{BRAND} helps users make informed dietary decisions with accurate '
+                      f'nutrition data from popular restaurant chains and science-backed health calculators. '
+                      f'The site covers restaurant nutrition analysis with meal builders, body composition '
+                      f'calculators, macro and calorie tracking tools, vitamin intake guides, and pregnancy/fertility tools.')
+    llms_lines.append('')
+
+    # Health Calculators
+    llms_lines.append('## Health & Fitness Calculators')
+    llms_lines.append('')
+    for loc, title, desc in sorted(categories['calculator'], key=lambda x: x[1]):
+        line = f'- [{title}]({URL}{loc})'
+        if desc:
+            line += f': {desc[:120]}'
+        llms_lines.append(line)
+    llms_lines.append('')
+
+    # Restaurant Calculators
+    llms_lines.append('## Restaurant Nutrition Calculators')
+    llms_lines.append('')
+    for loc, title, desc in sorted(categories['restaurant'], key=lambda x: x[1]):
+        line = f'- [{title}]({URL}{loc})'
+        if desc:
+            line += f': {desc[:120]}'
+        llms_lines.append(line)
+    llms_lines.append('')
+
+    # Menus
+    if categories['menu']:
+        llms_lines.append('## Restaurant Menus')
+        llms_lines.append('')
+        for loc, title, desc in sorted(categories['menu'], key=lambda x: x[1]):
+            line = f'- [{title}]({URL}{loc})'
+            if desc:
+                line += f': {desc[:120]}'
+            llms_lines.append(line)
+        llms_lines.append('')
+
+    # Blog
+    if categories['blog']:
+        llms_lines.append('## Blog')
+        llms_lines.append('')
+        for loc, title, desc in sorted(categories['blog'], key=lambda x: x[1]):
+            line = f'- [{title}]({URL}{loc})'
+            if desc:
+                line += f': {desc[:120]}'
+            llms_lines.append(line)
+        llms_lines.append('')
+
+    # Optional section (policy pages)
+    llms_lines.append('## Optional')
+    llms_lines.append('')
+    for loc, title, desc in sorted(categories['policy'], key=lambda x: x[1]):
+        llms_lines.append(f'- [{title}]({URL}{loc})')
+    if categories['other']:
+        for loc, title, desc in sorted(categories['other'], key=lambda x: x[1]):
+            llms_lines.append(f'- [{title}]({URL}{loc})')
+    llms_lines.append('')
+
+    llms_path = os.path.join(ROOT, 'llms.txt')
+    with open(llms_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(llms_lines))
+
+    # ── llms-full.txt (expanded with full descriptions) ──
+    full_lines = []
+    full_lines.append(f'# {BRAND} — Complete Site Reference')
+    full_lines.append('')
+    full_lines.append(f'> {BRAND} ({URL}) is a free nutrition and health calculator platform '
+                      f'with 50+ restaurant nutrition tools, 20+ health calculators, meal builders, '
+                      f'and science-backed fitness tools. No login required. All data is sourced from '
+                      f'official restaurant nutrition guides and peer-reviewed health formulas.')
+    full_lines.append('')
+    full_lines.append('## Site Overview')
+    full_lines.append('')
+    full_lines.append(f'- **Domain**: {URL}')
+    full_lines.append(f'- **Total Pages**: {len(pages)}')
+    full_lines.append(f'- **Restaurant Calculators**: {len(categories["restaurant"])}')
+    full_lines.append(f'- **Health Calculators**: {len(categories["calculator"])}')
+    full_lines.append(f'- **Restaurant Menus**: {len(categories["menu"])}')
+    full_lines.append(f'- **Blog Posts**: {len(categories["blog"])}')
+    full_lines.append(f'- **Sitemap**: {URL}/sitemap.xml')
+    full_lines.append('')
+
+    # Detailed sections
+    section_map = [
+        ('Health & Fitness Calculators', 'calculator',
+         'Science-backed health and fitness calculators covering BMI, BMR, TDEE, body fat, '
+         'macros, vitamins, pregnancy tools, and more. Each calculator includes step-by-step '
+         'instructions, formulas used, result interpretation, and FAQ.'),
+        ('Restaurant Nutrition Calculators', 'restaurant',
+         'Nutrition calculators for 50+ popular restaurant chains. Each tool includes full menu '
+         'data with calories, protein, carbs, fat, fiber, and sodium per item. Features an '
+         'interactive meal builder to track total nutrition across multiple items.'),
+        ('Restaurant Menus', 'menu',
+         'Browse full menus with nutrition data for popular restaurant chains.'),
+        ('Blog', 'blog',
+         'Expert nutrition articles, guides, and tips for healthy eating and meal planning.'),
+    ]
+
+    for section_title, cat_key, section_desc in section_map:
+        if not categories[cat_key]:
+            continue
+        full_lines.append(f'## {section_title}')
+        full_lines.append('')
+        full_lines.append(section_desc)
+        full_lines.append('')
+        for loc, title, desc in sorted(categories[cat_key], key=lambda x: x[1]):
+            full_lines.append(f'### [{title}]({URL}{loc})')
+            if desc:
+                full_lines.append('')
+                full_lines.append(desc)
+            full_lines.append('')
+
+    # Policy pages
+    full_lines.append('## Optional')
+    full_lines.append('')
+    full_lines.append('Legal and policy pages.')
+    full_lines.append('')
+    for loc, title, desc in sorted(categories['policy'], key=lambda x: x[1]):
+        full_lines.append(f'- [{title}]({URL}{loc})')
+    if categories['other']:
+        for loc, title, desc in sorted(categories['other'], key=lambda x: x[1]):
+            full_lines.append(f'- [{title}]({URL}{loc})')
+    full_lines.append('')
+
+    full_path = os.path.join(ROOT, 'llms-full.txt')
+    with open(full_path, 'w', encoding='utf-8') as f:
+        f.write('\n'.join(full_lines))
+
+    print(f'✓ Generated llms.txt ({len(pages)} pages) and llms-full.txt')
+
 
 if __name__ == '__main__':
     print('Loading components...')
@@ -614,4 +826,5 @@ if __name__ == '__main__':
     generate_sitemap()
     generate_sitemap_xsl()
     generate_robots_txt()
+    generate_llms_txt()
     print(f'\n✅ Build complete! ({len(COMPONENTS)} components loaded)')
