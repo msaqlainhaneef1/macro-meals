@@ -17,6 +17,7 @@ ServerSignature Off
 # REDIRECTS — Single canonical version: https://macroandmeals.com
 # ============================================================
 RewriteEngine On
+RewriteBase /
 
 # Force HTTPS (all HTTP → HTTPS)
 RewriteCond %{HTTPS} off
