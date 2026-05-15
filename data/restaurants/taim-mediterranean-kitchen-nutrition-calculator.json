@@ -1,0 +1,438 @@
+{
+  "slug": "taim-mediterranean-kitchen-nutrition-calculator",
+  "title": "🧆 Taim Mediterranean Kitchen Calculator",
+  "description": "Track nutrition for falafel, bowls, and Mediterranean dishes.",
+  "categories": [
+    {
+      "name": "Bases",
+      "items": [
+        {
+          "name": "Artisan House-Baked Pita",
+          "calories": 180.0,
+          "protein": 5.0,
+          "carbs": 33.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 320.0
+        },
+        {
+          "name": "Toasted Cumin Basmati Rice",
+          "calories": 165.0,
+          "protein": 3.0,
+          "carbs": 35.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 150.0
+        },
+        {
+          "name": "Couscous",
+          "calories": 250.0,
+          "protein": 6.0,
+          "carbs": 45.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 200.0
+        },
+        {
+          "name": "Super Greens",
+          "calories": 40.0,
+          "protein": 2.0,
+          "carbs": 5.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 50.0
+        },
+        {
+          "name": "Chopped Romaine",
+          "calories": 15.0,
+          "protein": 1.0,
+          "carbs": 3.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 10.0
+        }
+      ]
+    },
+    {
+      "name": "Proteins (Mains)",
+      "items": [
+        {
+          "name": "Falafel (Green)",
+          "calories": 350.0,
+          "protein": 12.0,
+          "carbs": 30.0,
+          "fat": 0.0,
+          "fiber": 8.0,
+          "sodium": 450.0
+        },
+        {
+          "name": "Falafel (Harissa)",
+          "calories": 360.0,
+          "protein": 12.0,
+          "carbs": 32.0,
+          "fat": 0.0,
+          "fiber": 8.0,
+          "sodium": 480.0
+        },
+        {
+          "name": "Chicken Shawarma",
+          "calories": 300.0,
+          "protein": 32.0,
+          "carbs": 4.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 650.0
+        },
+        {
+          "name": "Beef/Lamb Shawarma (HALAL)",
+          "calories": 350.0,
+          "protein": 28.0,
+          "carbs": 5.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 700.0
+        },
+        {
+          "name": "Cauliflower Shawarma",
+          "calories": 220.0,
+          "protein": 4.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 5.0,
+          "sodium": 300.0
+        },
+        {
+          "name": "Golden Eggplant",
+          "calories": 165.0,
+          "protein": 2.0,
+          "carbs": 15.0,
+          "fat": 0.0,
+          "fiber": 4.0,
+          "sodium": 120.0
+        }
+      ]
+    },
+    {
+      "name": "Signature Menu (Plates & Pitas)",
+      "items": [
+        {
+          "name": "O.G. Falafel Pita",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sabich Pita",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chicken Shawarma Plate",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Beef/Lamb Shawarma Plate (HALAL)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Greek Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Salads & Toppings",
+      "items": [
+        {
+          "name": "Israeli Salad",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tabouli",
+          "calories": 120.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Moroccan Carrots",
+          "calories": 80.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Marinated Beets",
+          "calories": 70.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pickled Cabbage",
+          "calories": 30.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Feta Cheese",
+          "calories": 75.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Seasoned Chickpeas",
+          "calories": 90.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Crispy Shallots",
+          "calories": 60.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Kalamata Olives",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pickled Onions",
+          "calories": 20.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Shifka Hot Peppers",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Spreads & Sauces",
+      "items": [
+        {
+          "name": "Hummus",
+          "calories": 110.0,
+          "protein": 4.0,
+          "carbs": 8.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Red Pepper Babaganoush",
+          "calories": 150.0,
+          "protein": 3.0,
+          "carbs": 20.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tzatziki",
+          "calories": 60.0,
+          "protein": 4.0,
+          "carbs": 4.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tahini Sauce",
+          "calories": 190.0,
+          "protein": 5.0,
+          "carbs": 6.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Whipped Garlic",
+          "calories": 100.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Harissa",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Amba",
+          "calories": 30.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Saffron Aioli",
+          "calories": 120.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Small Bites & Sides",
+      "items": [
+        {
+          "name": "Hand-Cut Fries (Saffron Aioli)",
+          "calories": 320.0,
+          "protein": 4.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Falafel + Tahini (8 balls)",
+          "calories": 480.0,
+          "protein": 16.0,
+          "carbs": 40.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hummus + Za'atar Pita",
+          "calories": 350.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Baklava Dessert",
+          "calories": 290.0,
+          "protein": 4.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "Fresh Ginger Mint Lemonade",
+          "calories": 135.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Strawberry Lemonade",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dragonfruit Lemonade",
+          "calories": 145.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Date Lime Banana Smoothie",
+          "calories": 220.0,
+          "protein": 3.0,
+          "carbs": 50.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Can Soda / Spindrift",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

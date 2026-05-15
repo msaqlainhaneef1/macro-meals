@@ -1,0 +1,921 @@
+{
+  "slug": "cafe-rio-calories-calculator",
+  "title": "🌯 Cafe Rio Nutrition Calculator",
+  "description": "Track calories for burritos, salads, and Mexican favorites.",
+  "categories": [
+    {
+      "name": "Entrées",
+      "items": [
+        {
+          "name": "Enchilada Style Burrito",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Handheld Burrito",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Salads",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bowl",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tacos",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Griddled Quesadillas",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tostada",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Nachos",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tortilla Soup",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Kids Menu",
+      "items": [
+        {
+          "name": "Kids Quesadilla Meal",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Kids Taco Meal",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Kids Bean & Cheese Burrito",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Niño Quesadilla",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Chips & Dips",
+      "items": [
+        {
+          "name": "Chips & Queso",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chips & Guacamole",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chips & Salsa",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chips",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Fajita Veggies",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fresh Corn Salsa",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pico de Gallo",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Salsa Fresca",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fire Roasted Habanero Salsa",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dressing",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Guacamole",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sour Cream",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tortillas",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tortilla Strips",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Rice",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Beans",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Famous Tres Leches",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fresh Lime Pie",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Churro Cookie",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "Fountain Drink",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bottled Beverages",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweet Prickly Pear",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Horchata",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mint Limeade",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Original Black Tea",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Tortillas",
+      "items": [
+        {
+          "name": "12 inch Flour Tortilla",
+          "calories": 420.0,
+          "protein": 9.0,
+          "carbs": 63.0,
+          "fat": 14.0,
+          "fiber": 2.0,
+          "sodium": 0.0,
+          "saturated_fat": 7.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "12 inch Wheat Tortilla",
+          "calories": 390.0,
+          "protein": 10.0,
+          "carbs": 58.0,
+          "fat": 14.0,
+          "fiber": 1.0,
+          "sodium": 5.0,
+          "saturated_fat": 6.0,
+          "sugars": 4.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "6 inch Corn Tortilla",
+          "calories": 60.0,
+          "protein": 1.0,
+          "carbs": 13.0,
+          "fat": 0.5,
+          "fiber": 1.0,
+          "sodium": 135.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "6 inch Flour Tortilla",
+          "calories": 170.0,
+          "protein": 3.0,
+          "carbs": 25.0,
+          "fat": 5.0,
+          "fiber": 1.0,
+          "sodium": 0.0,
+          "saturated_fat": 2.5,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "6 inch Wheat Tortilla",
+          "calories": 190.0,
+          "protein": 5.0,
+          "carbs": 29.0,
+          "fat": 7.0,
+          "fiber": 1.0,
+          "sodium": 0.0,
+          "saturated_fat": 3.0,
+          "sugars": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Tortilla Chips",
+          "calories": 190.0,
+          "protein": 4.0,
+          "carbs": 29.0,
+          "fat": 7.0,
+          "fiber": 4.0,
+          "sodium": 20.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Tortilla Strips",
+          "calories": 100.0,
+          "protein": 2.0,
+          "carbs": 15.0,
+          "fat": 3.5,
+          "fiber": 2.0,
+          "sodium": 10.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Tostada Shell",
+          "calories": 90.0,
+          "protein": 2.0,
+          "carbs": 15.0,
+          "fat": 3.5,
+          "fiber": 2.0,
+          "sodium": 15.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Beans & Rice",
+      "items": [
+        {
+          "name": "Black Beans",
+          "calories": 180.0,
+          "protein": 10.0,
+          "carbs": 28.0,
+          "fat": 1.0,
+          "fiber": 10.0,
+          "sodium": 240.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Cilantro Lime Rice",
+          "calories": 110.0,
+          "protein": 3.0,
+          "carbs": 21.0,
+          "fat": 2.0,
+          "fiber": 1.0,
+          "sodium": 220.0,
+          "saturated_fat": 0.5,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Pinto Beans",
+          "calories": 190.0,
+          "protein": 10.0,
+          "carbs": 31.0,
+          "fat": 1.5,
+          "fiber": 10.0,
+          "sodium": 240.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Meats",
+      "items": [
+        {
+          "name": "Carne Asada",
+          "calories": 120.0,
+          "protein": 12.0,
+          "carbs": 1.0,
+          "fat": 6.0,
+          "fiber": 0.0,
+          "sodium": 80.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.0,
+          "sugars": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Chile Roast Beef",
+          "calories": 90.0,
+          "protein": 7.0,
+          "carbs": 1.0,
+          "fat": 6.0,
+          "fiber": 0.0,
+          "sodium": 90.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 2.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Baja Citrus Shrimp",
+          "calories": 260.0,
+          "protein": 17.0,
+          "carbs": 38.0,
+          "fat": 4.0,
+          "fiber": 1.0,
+          "sodium": 145.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Coconut Shrimp",
+          "calories": 230.0,
+          "protein": 10.0,
+          "carbs": 32.0,
+          "fat": 7.0,
+          "fiber": 2.0,
+          "sodium": 135.0,
+          "cholesterol": 46.0,
+          "saturated_fat": 3.0,
+          "sugars": 6.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Fire-Grilled Chicken",
+          "calories": 80.0,
+          "protein": 14.0,
+          "carbs": 0.0,
+          "fat": 2.0,
+          "fiber": 0.0,
+          "sodium": 125.0,
+          "cholesterol": 40.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Fire-Grilled Steak",
+          "calories": 120.0,
+          "protein": 14.0,
+          "carbs": 1.0,
+          "fat": 6.0,
+          "fiber": 0.0,
+          "sodium": 45.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Pollo Asado",
+          "calories": 110.0,
+          "protein": 12.0,
+          "carbs": 2.0,
+          "fat": 4.5,
+          "fiber": 0.0,
+          "sodium": 180.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 1.0,
+          "sugars": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Shredded Chicken Breast",
+          "calories": 80.0,
+          "protein": 8.0,
+          "carbs": 1.0,
+          "fat": 4.5,
+          "fiber": 0.0,
+          "sodium": 440.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 1.5,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Sweet Pork Barbacoa",
+          "calories": 70.0,
+          "protein": 4.0,
+          "carbs": 10.0,
+          "fat": 2.0,
+          "fiber": 0.0,
+          "sodium": 130.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 0.5,
+          "sugars": 9.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces & Dressings",
+      "items": [
+        {
+          "name": "Cilantro Lime Dressing",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 11.0,
+          "fat": 2.0,
+          "fiber": 0.0,
+          "sodium": 320.0,
+          "sugars": 9.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Creamy Tomatillo Dressing",
+          "calories": 150.0,
+          "protein": 1.0,
+          "carbs": 3.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 210.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 2.5,
+          "sugars": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Green Chile Sauce (Med)",
+          "calories": 40.0,
+          "protein": 1.0,
+          "carbs": 9.0,
+          "fat": 0.5,
+          "fiber": 1.0,
+          "sodium": 330.0,
+          "sugars": 5.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Mango Salsa",
+          "calories": 35.0,
+          "protein": 1.0,
+          "carbs": 6.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 200.0,
+          "sugars": 4.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Red Chile Sauce (Hot)",
+          "calories": 45.0,
+          "protein": 1.0,
+          "carbs": 5.0,
+          "fat": 2.5,
+          "fiber": 0.0,
+          "sodium": 350.0,
+          "saturated_fat": 1.0,
+          "sugars": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Habanero (Hottest)",
+          "calories": 30.0,
+          "protein": 1.0,
+          "carbs": 5.0,
+          "fat": 2.0,
+          "fiber": 1.0,
+          "sodium": 190.0,
+          "sugars": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Tomatillo Sauce (Mild)",
+          "calories": 25.0,
+          "protein": 0.0,
+          "carbs": 3.0,
+          "fat": 1.0,
+          "fiber": 1.0,
+          "sodium": 160.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Toppings & Specials",
+      "items": [
+        {
+          "name": "Cabbage",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 2.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 5.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Cheddar Jack Blend",
+          "calories": 220.0,
+          "protein": 13.0,
+          "carbs": 1.0,
+          "fat": 18.0,
+          "fiber": 0.0,
+          "sodium": 360.0,
+          "cholesterol": 55.0,
+          "saturated_fat": 11.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Cilantro",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Cotija Cheese",
+          "calories": 25.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 2.0,
+          "fiber": 0.0,
+          "sodium": 100.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Guacamole",
+          "calories": 40.0,
+          "protein": 1.0,
+          "carbs": 2.0,
+          "fat": 3.5,
+          "fiber": 2.0,
+          "sodium": 160.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Lettuce",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 1.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Lime Wedge",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 1.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Pico de Gallo",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 1.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 70.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Queso",
+          "calories": 130.0,
+          "protein": 5.0,
+          "carbs": 6.0,
+          "fat": 9.0,
+          "fiber": 1.0,
+          "sodium": 550.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 6.0,
+          "sugars": 4.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Salsa Fresca",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 2.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Shredded Jack Cheese",
+          "calories": 210.0,
+          "protein": 14.0,
+          "carbs": 0.0,
+          "fat": 17.0,
+          "fiber": 0.0,
+          "sodium": 340.0,
+          "cholesterol": 50.0,
+          "saturated_fat": 11.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Sour Cream",
+          "calories": 60.0,
+          "protein": 1.0,
+          "carbs": 1.0,
+          "fat": 5.0,
+          "fiber": 0.0,
+          "sodium": 15.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 3.5,
+          "sugars": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Tortilla Soup with Tortilla Strips",
+          "calories": 380.0,
+          "protein": 24.0,
+          "carbs": 30.0,
+          "fat": 18.0,
+          "fiber": 5.0,
+          "sodium": 2070.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 7.0,
+          "sugars": 4.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts & Drinks",
+      "items": [
+        {
+          "name": "Fresh Lime Pie",
+          "calories": 870.0,
+          "protein": 20.0,
+          "carbs": 137.0,
+          "fat": 29.0,
+          "fiber": 1.0,
+          "sodium": 380.0,
+          "cholesterol": 145.0,
+          "saturated_fat": 13.0,
+          "sugars": 125.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Horchata",
+          "calories": 80.0,
+          "protein": 2.0,
+          "carbs": 15.0,
+          "fat": 1.5,
+          "fiber": 0.0,
+          "sodium": 20.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 1.0,
+          "sugars": 12.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Mint Limeade",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 12.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Tres Leches",
+          "calories": 240.0,
+          "protein": 6.0,
+          "carbs": 47.0,
+          "fat": 3.5,
+          "fiber": 1.0,
+          "sodium": 180.0,
+          "cholesterol": 105.0,
+          "saturated_fat": 1.5,
+          "sugars": 30.0,
+          "trans_fat": 0.0
+        }
+      ]
+    }
+  ]
+}

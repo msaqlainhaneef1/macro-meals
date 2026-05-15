@@ -1,0 +1,338 @@
+{
+  "slug": "jersey-mikes-calories-calculator",
+  "title": "🥪 Jersey Mike's Nutrition Calculator",
+  "description": "Estimate calories and nutrition for subs and wraps.",
+  "categories": [
+    {
+      "name": "Cold Subs",
+      "items": [
+        {
+          "name": "BLT",
+          "calories": 790.0,
+          "protein": 27.0,
+          "carbs": 61.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1550.0
+        },
+        {
+          "name": "Jersey Shore's Favorite",
+          "calories": 820.0,
+          "protein": 39.0,
+          "carbs": 64.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2190.0
+        },
+        {
+          "name": "Ham and Provolone",
+          "calories": 820.0,
+          "protein": 38.0,
+          "carbs": 63.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2120.0
+        },
+        {
+          "name": "The Number Four",
+          "calories": 810.0,
+          "protein": 38.0,
+          "carbs": 64.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2070.0
+        },
+        {
+          "name": "The Super Sub",
+          "calories": 840.0,
+          "protein": 42.0,
+          "carbs": 64.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2370.0
+        },
+        {
+          "name": "Roast Beef and Provolone",
+          "calories": 910.0,
+          "protein": 50.0,
+          "carbs": 62.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1290.0
+        },
+        {
+          "name": "Turkey and Provolone",
+          "calories": 820.0,
+          "protein": 39.0,
+          "carbs": 65.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1750.0
+        },
+        {
+          "name": "Club Sub",
+          "calories": 1160.0,
+          "protein": 46.0,
+          "carbs": 64.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2340.0
+        },
+        {
+          "name": "Club Supreme",
+          "calories": 1190.0,
+          "protein": 50.0,
+          "carbs": 64.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1800.0
+        },
+        {
+          "name": "Tuna Fish",
+          "calories": 1060.0,
+          "protein": 32.0,
+          "carbs": 62.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1340.0
+        },
+        {
+          "name": "Stickball Special",
+          "calories": 890.0,
+          "protein": 39.0,
+          "carbs": 63.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2280.0
+        },
+        {
+          "name": "Cancro Special",
+          "calories": 970.0,
+          "protein": 53.0,
+          "carbs": 63.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1470.0
+        },
+        {
+          "name": "The Original Italian",
+          "calories": 960.0,
+          "protein": 47.0,
+          "carbs": 65.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2820.0
+        },
+        {
+          "name": "The Veggie",
+          "calories": 950.0,
+          "protein": 39.0,
+          "carbs": 65.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1240.0
+        }
+      ]
+    },
+    {
+      "name": "Hot Subs",
+      "items": [
+        {
+          "name": "Mike's Chicken Philly",
+          "calories": 680.0,
+          "protein": 53.0,
+          "carbs": 69.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2100.0
+        },
+        {
+          "name": "Mike's Famous Philly",
+          "calories": 750.0,
+          "protein": 46.0,
+          "carbs": 67.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2160.0
+        },
+        {
+          "name": "Bacon Ranch Chicken Cheese Steak",
+          "calories": 920.0,
+          "protein": 58.0,
+          "carbs": 68.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2420.0
+        },
+        {
+          "name": "California Chicken Cheese Steak",
+          "calories": 930.0,
+          "protein": 53.0,
+          "carbs": 65.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2060.0
+        },
+        {
+          "name": "Chipotle Chicken Cheese Steak",
+          "calories": 970.0,
+          "protein": 53.0,
+          "carbs": 70.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2430.0
+        },
+        {
+          "name": "Chipotle Cheese Steak",
+          "calories": 1040.0,
+          "protein": 46.0,
+          "carbs": 70.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2430.0
+        },
+        {
+          "name": "Buffalo Chicken Cheese Steak",
+          "calories": 890.0,
+          "protein": 50.0,
+          "carbs": 61.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 3500.0
+        },
+        {
+          "name": "Big Kahuna Chicken Cheese Steak",
+          "calories": 740.0,
+          "protein": 56.0,
+          "carbs": 71.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2430.0
+        },
+        {
+          "name": "Big Kahuna Cheese Steak",
+          "calories": 800.0,
+          "protein": 50.0,
+          "carbs": 70.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2530.0
+        },
+        {
+          "name": "Portabella Mushroom & Swiss",
+          "calories": 650.0,
+          "protein": 26.0,
+          "carbs": 69.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 920.0
+        }
+      ]
+    },
+    {
+      "name": "Breakfast",
+      "items": [
+        {
+          "name": "Bacon, Egg & Cheese",
+          "calories": 400.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Ham, Egg & Cheese",
+          "calories": 400.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sausage, Egg & Cheese",
+          "calories": 500.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides, Drinks & Desserts",
+      "items": [
+        {
+          "name": "Chips",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cookie",
+          "calories": 280.0,
+          "protein": 3.0,
+          "carbs": 37.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 220.0
+        },
+        {
+          "name": "Brownie",
+          "calories": 500.0,
+          "protein": 3.0,
+          "carbs": 21.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 70.0
+        },
+        {
+          "name": "GF Snickerdoodle",
+          "calories": 210.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Soda Bottle",
+          "calories": 250.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pure Leaf Tea",
+          "calories": 150.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Kid's Items",
+      "items": [
+        {
+          "name": "Kid's Meal",
+          "calories": 400.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

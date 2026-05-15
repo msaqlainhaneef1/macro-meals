@@ -1,0 +1,16 @@
+<!-- ============================== -->
+<!-- Macro & Meals — Scroll Progress Bar -->
+<!-- Shows reading progress at top of page -->
+<!-- Edit this file and run build.py to update all pages -->
+<!-- ============================== -->
+<div id="scroll-progress" class="scroll-progress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>

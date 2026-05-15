@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DIG Nutrition Calculator | Macro & Meals</title>
+<meta name="description" content="Build your DIG plate and estimate total calorie intake.">
+<link rel="canonical" href="https://macroandmeals.com/dig-nutrition-calculator/">
+<meta property="og:title" content="DIG Nutrition Calculator">
+<meta property="og:description" content="Build your DIG plate and estimate total calorie intake.">
+<meta property="og:url" content="https://macroandmeals.com/dig-nutrition-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macro & Meals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DIG Nutrition Calculator">
+<meta name="twitter:description" content="Build your DIG plate and estimate total calorie intake.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"DIG Nutrition Calculator","url":"https://macroandmeals.com/dig-nutrition-calculator/","applicationCategory":"HealthApplication","operatingSystem":"All"}</script>
+<style media="print">
+  @media print {
+    .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
+    .nav-dropdown, .back-to-top, .cookie-banner, .social-share,
+    .announcement-bar, .scroll-progress, #back-to-top,
+    .breadcrumbs, .hero-search, #search-results {
+      display: none !important;
+    }
+    body {
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 1cm;
+    }
+    .container, .hero, .hero-home, section {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+    a[href^="/"]::after { content: " (macroandmeals.com" attr(href) ")"; font-size: 0.8em; color: #666; }
+    h1, h2, h3 { page-break-after: avoid; color: #000; }
+    img { max-width: 100%; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; }
+    @page { margin: 2cm; }
+  }
+</style>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7Q3DMT4258');
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FNQMD49');</script>
+<meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#22c55e">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNQMD49"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="scroll-progress" class="scroll-progress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>
+<div id="announcement-bar" class="announcement-bar" data-enabled="false">
+  <div class="announcement-bar-inner">
+    <span class="announcement-text">New: Check out our <a href="/blog/">latest blog post</a> on daily calorie needs!</span>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('announcement-bar');
+  if (!bar || bar.dataset.enabled !== 'true') { if(bar) bar.style.display='none'; return; }
+  if (sessionStorage.getItem('announcement-closed')) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  document.getElementById('announcement-close').addEventListener('click', function(){
+    bar.style.display = 'none';
+    sessionStorage.setItem('announcement-closed', '1');
+  });
+})();
+</script>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+<nav class="nav-desktop">
+  <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="vitamins">Vitamins &amp; Micronutrients <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="body">Body Composition &amp; Health <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="diet">Diet &amp; Macro Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="pregnancy">Pregnancy &amp; Specialty <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+</nav>
+<button class="mobile-toggle" id="mobile-toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div class="nav-dropdown" id="dropdown-nutrition"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-menu"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-vitamins"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-body"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-diet"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-pregnancy"><div class="nav-dropdown-inner"></div></div>
+<div class="mobile-nav" id="mobile-nav"></div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+<script>
+(function(){
+  var ol = document.querySelector('.breadcrumbs ol');
+  if (!ol) return;
+  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
+  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
+  var h1 = document.querySelector('h1');
+  for (var i = 0; i < path.length; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('itemprop','itemListElement');
+    li.setAttribute('itemscope','');
+    li.setAttribute('itemtype','https://schema.org/ListItem');
+    var isLast = (i === path.length - 1);
+    var slug = path[i];
+    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    if (isLast) {
+      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+    } else {
+      var href = '/' + path.slice(0, i+1).join('/') + '/';
+      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+    }
+    ol.appendChild(li);
+  }
+})();
+</script>
+
+<section class="hero"><div class="container"><h1>&#127869; DIG Nutrition Calculator</h1><p>Build your DIG plate and estimate total calorie intake.</p></div></section>
+<section class="section"><div class="container" style="max-width:1200px;margin:0 auto">
+<div id="rest-layout-wrapper">
+<div class="rest-left-col">
+<div class="calc-card">
+<div id="rest-tabs" class="cat-tabs"><div class="cat-tabs-scroll"><button class="cat-tab active" data-cat="Chef's Specials">Chef's Specials <span class="cat-count">4</span></button><button class="cat-tab" data-cat="Seasonal Specials">Seasonal Specials <span class="cat-count">5</span></button><button class="cat-tab" data-cat="All Day Deals">All Day Deals <span class="cat-count">3</span></button><button class="cat-tab" data-cat="Salads">Salads <span class="cat-count">2</span></button><button class="cat-tab" data-cat="Little Digs">Little Digs <span class="cat-count">2</span></button><button class="cat-tab" data-cat="Market Line - Sides">Market Line - Sides <span class="cat-count">14</span></button><button class="cat-tab" data-cat="Market Line - Mains">Market Line - Mains <span class="cat-count">7</span></button><button class="cat-tab" data-cat="Market Line - Extras">Market Line - Extras <span class="cat-count">3</span></button><button class="cat-tab" data-cat="Desserts">Desserts <span class="cat-count">3</span></button><button class="cat-tab" data-cat="Sauces">Sauces <span class="cat-count">6</span></button><button class="cat-tab" data-cat="Drinks">Drinks <span class="cat-count">10</span></button><button class="cat-tab" data-cat="Large Sides (Serves 4)">Large Sides (Serves 4) <span class="cat-count">14</span></button></div><div class="rest-search"><input type="text" id="rest-search-input" class="rest-search-input" placeholder="Search items..."></div></div>
+<div id="rest-grid" class="menu-grid"><div class="rest-cat-group" data-category="Chef's Specials"><div class="menu-item" data-name="Classic Dig" data-calories="800" data-protein="38" data-carbs="94" data-fat="35" data-fiber="12" data-sodium="1810" data-cholesterol="150" data-saturated-fat="3" data-price="$16.36"><div class="menu-item-header"><h4>Classic Dig</h4><span class="item-price">$16.36</span></div><div class="menu-item-cal">800 cal</div><div class="macros"><span class="macro-pro">P: 38g</span> <span class="macro-carb">C: 94g</span> <span class="macro-fat">F: 35g</span></div></div><div class="menu-item" data-name="Vegan Dig Classic" data-calories="940" data-protein="31" data-carbs="101" data-fat="52" data-fiber="13" data-sodium="1990" data-saturated-fat="4" data-price="$14.86"><div class="menu-item-header"><h4>Vegan Dig Classic</h4><span class="item-price">$14.86</span></div><div class="menu-item-cal">940 cal</div><div class="macros"><span class="macro-pro">P: 31g</span> <span class="macro-carb">C: 101g</span> <span class="macro-fat">F: 52g</span></div></div><div class="menu-item" data-name="Spicy Salmon Bowl" data-calories="860" data-protein="33" data-carbs="97" data-fat="42" data-fiber="12" data-sodium="2280" data-cholesterol="70" data-saturated-fat="4" data-price="$17.55"><div class="menu-item-header"><h4>Spicy Salmon Bowl</h4><span class="item-price">$17.55</span></div><div class="menu-item-cal">860 cal</div><div class="macros"><span class="macro-pro">P: 33g</span> <span class="macro-carb">C: 97g</span> <span class="macro-fat">F: 42g</span></div></div><div class="menu-item" data-name="Hot Honey Chicken Bowl" data-calories="850" data-protein="48" data-carbs="77" data-fat="40" data-fiber="9" data-sodium="2190" data-cholesterol="200" data-saturated-fat="12" data-price="$16.96"><div class="menu-item-header"><h4>Hot Honey Chicken Bowl</h4><span class="item-price">$16.96</span></div><div class="menu-item-cal">850 cal</div><div class="macros"><span class="macro-pro">P: 48g</span> <span class="macro-carb">C: 77g</span> <span class="macro-fat">F: 40g</span></div></div></div><div class="rest-cat-group" data-category="Seasonal Specials" style="display:none"><div class="menu-item" data-name="Lemon Piccata Chicken Plate" data-calories="610" data-protein="30" data-carbs="35" data-fat="29" data-fiber="5" data-sodium="2250" data-cholesterol="80" data-saturated-fat="6.5" data-trans-fat="1.5" data-price="$16.96"><div class="menu-item-header"><h4>Lemon Piccata Chicken Plate</h4><span class="item-price">$16.96</span></div><div class="menu-item-cal">610 cal</div><div class="macros"><span class="macro-pro">P: 30g</span> <span class="macro-carb">C: 35g</span> <span class="macro-fat">F: 29g</span></div></div><div class="menu-item" data-name="Lemon Piccata Caesar Plate" data-calories="660" data-protein="34" data-carbs="26" data-fat="55" data-fiber="10" data-sodium="1590" data-cholesterol="80" data-saturated-fat="11" data-trans-fat="1.5"><div class="menu-item-header"><h4>Lemon Piccata Caesar Plate</h4></div><div class="menu-item-cal">660 cal</div><div class="macros"><span class="macro-pro">P: 34g</span> <span class="macro-carb">C: 26g</span> <span class="macro-fat">F: 55g</span></div></div><div class="menu-item" data-name="Spring Chicken Plate" data-calories="730" data-protein="33" data-carbs="47" data-fat="46" data-fiber="8" data-sodium="1730" data-cholesterol="80" data-saturated-fat="7"><div class="menu-item-header"><h4>Spring Chicken Plate</h4></div><div class="menu-item-cal">730 cal</div><div class="macros"><span class="macro-pro">P: 33g</span> <span class="macro-carb">C: 47g</span> <span class="macro-fat">F: 46g</span></div></div><div class="menu-item" data-name="Cheesy Cauliflower Chicken Plate" data-calories="660" data-protein="38" data-carbs="40" data-fat="37" data-fiber="7" data-sodium="1910" data-cholesterol="170" data-saturated-fat="7" data-trans-fat="0.1" data-price="$16.36"><div class="menu-item-header"><h4>Cheesy Cauliflower Chicken Plate</h4><span class="item-price">$16.36</span></div><div class="menu-item-cal">660 cal</div><div class="macros"><span class="macro-pro">P: 38g</span> <span class="macro-carb">C: 40g</span> <span class="macro-fat">F: 37g</span></div></div><div class="menu-item" data-name="Feta Grain Bowl" data-calories="600" data-protein="8" data-carbs="45" data-fat="46" data-fiber="12" data-sodium="1095" data-cholesterol="10" data-saturated-fat="6" data-price="$13.98"><div class="menu-item-header"><h4>Feta Grain Bowl</h4><span class="item-price">$13.98</span></div><div class="menu-item-cal">600 cal</div><div class="macros"><span class="macro-pro">P: 8g</span> <span class="macro-carb">C: 45g</span> <span class="macro-fat">F: 46g</span></div></div></div><div class="rest-cat-group" data-category="All Day Deals" style="display:none"><div class="menu-item" data-name="Fan Faves Plate" data-calories="390" data-protein="29" data-carbs="19" data-fat="28" data-fiber="5" data-sodium="1130" data-cholesterol="70" data-saturated-fat="3.5"><div class="menu-item-header"><h4>Fan Faves Plate</h4></div><div class="menu-item-cal">390 cal</div><div class="macros"><span class="macro-pro">P: 29g</span> <span class="macro-carb">C: 19g</span> <span class="macro-fat">F: 28g</span></div></div><div class="menu-item" data-name="Vegan Favorites Plate" data-calories="560" data-protein="25" data-carbs="38" data-fat="37" data-fiber="7" data-sodium="1190" data-saturated-fat="2"><div class="menu-item-header"><h4>Vegan Favorites Plate</h4></div><div class="menu-item-cal">560 cal</div><div class="macros"><span class="macro-pro">P: 25g</span> <span class="macro-carb">C: 38g</span> <span class="macro-fat">F: 37g</span></div></div><div class="menu-item" data-name="Charred Chicken &amp; Rice" data-calories="670" data-protein="60" data-carbs="43" data-fat="34" data-fiber="3" data-sodium="1910" data-cholesterol="300" data-saturated-fat="6"><div class="menu-item-header"><h4>Charred Chicken &amp; Rice</h4></div><div class="menu-item-cal">670 cal</div><div class="macros"><span class="macro-pro">P: 60g</span> <span class="macro-carb">C: 43g</span> <span class="macro-fat">F: 34g</span></div></div></div><div class="rest-cat-group" data-category="Salads" style="display:none"><div class="menu-item" data-name="Kale Caesar Salad" data-calories="550" data-protein="12" data-carbs="41" data-fat="47" data-fiber="11" data-sodium="1140" data-saturated-fat="5" data-price="$13.98"><div class="menu-item-header"><h4>Kale Caesar Salad</h4><span class="item-price">$13.98</span></div><div class="menu-item-cal">550 cal</div><div class="macros"><span class="macro-pro">P: 12g</span> <span class="macro-carb">C: 41g</span> <span class="macro-fat">F: 47g</span></div></div><div class="menu-item" data-name="Kale Caesar Salad with Crispy Chicken" data-calories="860" data-protein="36" data-carbs="61" data-fat="62" data-fiber="11" data-sodium="1980" data-cholesterol="100" data-saturated-fat="7"><div class="menu-item-header"><h4>Kale Caesar Salad with Crispy Chicken</h4></div><div class="menu-item-cal">860 cal</div><div class="macros"><span class="macro-pro">P: 36g</span> <span class="macro-carb">C: 61g</span> <span class="macro-fat">F: 62g</span></div></div></div><div class="rest-cat-group" data-category="Little Digs" style="display:none"><div class="menu-item" data-name="Kid's Classic" data-calories="400" data-protein="19" data-carbs="47" data-fat="18" data-fiber="6" data-sodium="910" data-cholesterol="75" data-saturated-fat="3"><div class="menu-item-header"><h4>Kid's Classic</h4></div><div class="menu-item-cal">400 cal</div><div class="macros"><span class="macro-pro">P: 19g</span> <span class="macro-carb">C: 47g</span> <span class="macro-fat">F: 18g</span></div></div><div class="menu-item" data-name="Old Macdonald" data-calories="360" data-protein="21" data-carbs="33" data-fat="18" data-fiber="4.5" data-sodium="820" data-cholesterol="60" data-saturated-fat="2"><div class="menu-item-header"><h4>Old Macdonald</h4></div><div class="menu-item-cal">360 cal</div><div class="macros"><span class="macro-pro">P: 21g</span> <span class="macro-carb">C: 33g</span> <span class="macro-fat">F: 18g</span></div></div></div><div class="rest-cat-group" data-category="Market Line - Sides" style="display:none"><div class="menu-item" data-name="Brown Rice" data-calories="210" data-protein="4" data-carbs="41" data-fat="10" data-fiber="3" data-sodium="430" data-price="$4.58"><div class="menu-item-header"><h4>Brown Rice</h4><span class="item-price">$4.58</span></div><div class="menu-item-cal">210 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 41g</span> <span class="macro-fat">F: 10g</span></div></div><div class="menu-item" data-name="Herb Rice" data-calories="180" data-protein="3" data-carbs="31" data-fat="4.5" data-fiber="3" data-sodium="490" data-price="$4.58"><div class="menu-item-header"><h4>Herb Rice</h4><span class="item-price">$4.58</span></div><div class="menu-item-cal">180 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 31g</span> <span class="macro-fat">F: 4.5g</span></div></div><div class="menu-item" data-name="Farm Greens with Mint" data-calories="10" data-protein="0.1" data-carbs="2" data-fat="0" data-fiber="0" data-sodium="10"><div class="menu-item-header"><h4>Farm Greens with Mint</h4></div><div class="menu-item-cal">10 cal</div><div class="macros"><span class="macro-pro">P: 0.1g</span> <span class="macro-carb">C: 2g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Cashew Kale Caesar" data-calories="140" data-protein="4" data-carbs="8" data-fat="14" data-fiber="2" data-sodium="360" data-saturated-fat="1.5" data-price="$5.65"><div class="menu-item-header"><h4>Cashew Kale Caesar</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">140 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 8g</span> <span class="macro-fat">F: 14g</span></div></div><div class="menu-item" data-name="Tomatoes &amp; Cucumbers" data-calories="25" data-protein="0.1" data-carbs="6" data-fat="0" data-fiber="1" data-sodium="85" data-price="$5.65"><div class="menu-item-header"><h4>Tomatoes &amp; Cucumbers</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">25 cal</div><div class="macros"><span class="macro-pro">P: 0.1g</span> <span class="macro-carb">C: 6g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Marinated Cannellini Beans" data-calories="160" data-protein="5" data-carbs="17" data-fat="8" data-fiber="6" data-sodium="520" data-saturated-fat="0.1"><div class="menu-item-header"><h4>Marinated Cannellini Beans</h4></div><div class="menu-item-cal">160 cal</div><div class="macros"><span class="macro-pro">P: 5g</span> <span class="macro-carb">C: 17g</span> <span class="macro-fat">F: 8g</span></div></div><div class="menu-item" data-name="Charred Broccoli with Lemon" data-calories="100" data-protein="3" data-carbs="9" data-fat="7" data-fiber="3" data-sodium="420" data-saturated-fat="0.1" data-price="$5.65"><div class="menu-item-header"><h4>Charred Broccoli with Lemon</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">100 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 9g</span> <span class="macro-fat">F: 7g</span></div></div><div class="menu-item" data-name="Sheet Tray Carrots" data-calories="80" data-protein="1" data-carbs="11" data-fat="6" data-fiber="3" data-sodium="350" data-saturated-fat="0.1" data-price="$5.65"><div class="menu-item-header"><h4>Sheet Tray Carrots</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">80 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 11g</span> <span class="macro-fat">F: 6g</span></div></div><div class="menu-item" data-name="Roasted Sweet Potatoes" data-calories="260" data-protein="3" data-carbs="43" data-fat="6" data-fiber="6" data-sodium="220" data-saturated-fat="0.1" data-price="$5.65"><div class="menu-item-header"><h4>Roasted Sweet Potatoes</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">260 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 43g</span> <span class="macro-fat">F: 6g</span></div></div><div class="menu-item" data-name="Jasper Hill Mac &amp; Cheese" data-calories="390" data-protein="16" data-carbs="44" data-fat="15" data-fiber="3" data-sodium="510" data-cholesterol="50" data-saturated-fat="9" data-price="$5.95"><div class="menu-item-header"><h4>Jasper Hill Mac &amp; Cheese</h4><span class="item-price">$5.95</span></div><div class="menu-item-cal">390 cal</div><div class="macros"><span class="macro-pro">P: 16g</span> <span class="macro-carb">C: 44g</span> <span class="macro-fat">F: 15g</span></div></div><div class="menu-item" data-name="Cheesy Cauliflower" data-calories="160" data-protein="7" data-carbs="8" data-fat="12" data-fiber="3" data-sodium="580" data-cholesterol="15" data-saturated-fat="3.5" data-price="$5.65"><div class="menu-item-header"><h4>Cheesy Cauliflower</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">160 cal</div><div class="macros"><span class="macro-pro">P: 7g</span> <span class="macro-carb">C: 8g</span> <span class="macro-fat">F: 12g</span></div></div><div class="menu-item" data-name="Feta Grain Salad" data-calories="250" data-protein="6" data-carbs="26" data-fat="14" data-fiber="4" data-sodium="460" data-cholesterol="10" data-saturated-fat="3" data-price="$5.65"><div class="menu-item-header"><h4>Feta Grain Salad</h4><span class="item-price">$5.65</span></div><div class="menu-item-cal">250 cal</div><div class="macros"><span class="macro-pro">P: 6g</span> <span class="macro-carb">C: 26g</span> <span class="macro-fat">F: 14g</span></div></div><div class="menu-item" data-name="Lemon &amp; Herb Couscous" data-calories="190" data-protein="2" data-carbs="10" data-fat="5" data-fiber="0.1" data-sodium="770" data-saturated-fat="0.5"><div class="menu-item-header"><h4>Lemon &amp; Herb Couscous</h4></div><div class="menu-item-cal">190 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 10g</span> <span class="macro-fat">F: 5g</span></div></div><div class="menu-item" data-name="Calabrian Green Beans" data-calories="180" data-protein="3" data-carbs="21" data-fat="10" data-fiber="4" data-sodium="730" data-saturated-fat="0.5"><div class="menu-item-header"><h4>Calabrian Green Beans</h4></div><div class="menu-item-cal">180 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 21g</span> <span class="macro-fat">F: 10g</span></div></div></div><div class="rest-cat-group" data-category="Market Line - Mains" style="display:none"><div class="menu-item" data-name="Seared Wild Salmon" data-calories="270" data-protein="23" data-carbs="1" data-fat="19" data-fiber="0" data-sodium="770" data-cholesterol="70" data-saturated-fat="2.5" data-price="$8.33"><div class="menu-item-header"><h4>Seared Wild Salmon</h4><span class="item-price">$8.33</span></div><div class="menu-item-cal">270 cal</div><div class="macros"><span class="macro-pro">P: 23g</span> <span class="macro-carb">C: 1g</span> <span class="macro-fat">F: 19g</span></div></div><div class="menu-item" data-name="Crispy Tofu" data-calories="280" data-protein="19" data-carbs="8" data-fat="20" data-fiber="0.1" data-sodium="770" data-saturated-fat="1.5" data-price="$4.17"><div class="menu-item-header"><h4>Crispy Tofu</h4><span class="item-price">$4.17</span></div><div class="menu-item-cal">280 cal</div><div class="macros"><span class="macro-pro">P: 19g</span> <span class="macro-carb">C: 8g</span> <span class="macro-fat">F: 20g</span></div></div><div class="menu-item" data-name="Charred Chicken" data-calories="230" data-protein="28" data-carbs="1" data-fat="12" data-fiber="0.1" data-sodium="740" data-cholesterol="150" data-saturated-fat="3" data-price="$5.36"><div class="menu-item-header"><h4>Charred Chicken</h4><span class="item-price">$5.36</span></div><div class="menu-item-cal">230 cal</div><div class="macros"><span class="macro-pro">P: 28g</span> <span class="macro-carb">C: 1g</span> <span class="macro-fat">F: 12g</span></div></div><div class="menu-item" data-name="Herb Roasted Chicken" data-calories="170" data-protein="24" data-carbs="0.1" data-fat="8" data-fiber="0" data-sodium="420" data-cholesterol="65" data-saturated-fat="2" data-price="$7.14"><div class="menu-item-header"><h4>Herb Roasted Chicken</h4><span class="item-price">$7.14</span></div><div class="menu-item-cal">170 cal</div><div class="macros"><span class="macro-pro">P: 24g</span> <span class="macro-carb">C: 0.1g</span> <span class="macro-fat">F: 8g</span></div></div><div class="menu-item" data-name="Crispy Chicken" data-calories="320" data-protein="24" data-carbs="20" data-fat="15" data-fiber="0.1" data-sodium="840" data-cholesterol="100" data-saturated-fat="2" data-price="$5.95"><div class="menu-item-header"><h4>Crispy Chicken</h4><span class="item-price">$5.95</span></div><div class="menu-item-cal">320 cal</div><div class="macros"><span class="macro-pro">P: 24g</span> <span class="macro-carb">C: 20g</span> <span class="macro-fat">F: 15g</span></div></div><div class="menu-item" data-name="Hot Honey Chicken" data-calories="280" data-protein="28" data-carbs="13" data-fat="12" data-fiber="0.1" data-sodium="910" data-cholesterol="150" data-saturated-fat="3"><div class="menu-item-header"><h4>Hot Honey Chicken</h4></div><div class="menu-item-cal">280 cal</div><div class="macros"><span class="macro-pro">P: 28g</span> <span class="macro-carb">C: 13g</span> <span class="macro-fat">F: 12g</span></div></div><div class="menu-item" data-name="Lemon Piccata Crispy Chicken" data-calories="390" data-protein="25" data-carbs="24" data-fat="21" data-fiber="0.1" data-sodium="1170" data-cholesterol="120" data-saturated-fat="6" data-trans-fat="1.5"><div class="menu-item-header"><h4>Lemon Piccata Crispy Chicken</h4></div><div class="menu-item-cal">390 cal</div><div class="macros"><span class="macro-pro">P: 25g</span> <span class="macro-carb">C: 24g</span> <span class="macro-fat">F: 21g</span></div></div></div><div class="rest-cat-group" data-category="Market Line - Extras" style="display:none"><div class="menu-item" data-name="Avocado with Olive Oil and Maldon Salt" data-calories="140" data-protein="1" data-carbs="6" data-fat="13" data-fiber="5" data-sodium="115" data-saturated-fat="2" data-price="$2.50"><div class="menu-item-header"><h4>Avocado with Olive Oil and Maldon Salt</h4><span class="item-price">$2.50</span></div><div class="menu-item-cal">140 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 6g</span> <span class="macro-fat">F: 13g</span></div></div><div class="menu-item" data-name="Focaccia" data-calories="270" data-protein="7" data-carbs="43" data-fat="8" data-fiber="2" data-sodium="600" data-saturated-fat="1"><div class="menu-item-header"><h4>Focaccia</h4></div><div class="menu-item-cal">270 cal</div><div class="macros"><span class="macro-pro">P: 7g</span> <span class="macro-carb">C: 43g</span> <span class="macro-fat">F: 8g</span></div></div><div class="menu-item" data-name="Brioche Cheddar Pullapart" data-calories="170" data-protein="6" data-carbs="23" data-fat="7" data-fiber="1" data-sodium="280" data-cholesterol="20" data-saturated-fat="4" data-price="$2.74"><div class="menu-item-header"><h4>Brioche Cheddar Pullapart</h4><span class="item-price">$2.74</span></div><div class="menu-item-cal">170 cal</div><div class="macros"><span class="macro-pro">P: 6g</span> <span class="macro-carb">C: 23g</span> <span class="macro-fat">F: 7g</span></div></div></div><div class="rest-cat-group" data-category="Desserts" style="display:none"><div class="menu-item" data-name="Flourless Brownie" data-calories="270" data-protein="5" data-carbs="30" data-fat="15" data-fiber="0" data-sodium="350" data-cholesterol="60" data-saturated-fat="8" data-price="$3.75"><div class="menu-item-header"><h4>Flourless Brownie</h4><span class="item-price">$3.75</span></div><div class="menu-item-cal">270 cal</div><div class="macros"><span class="macro-pro">P: 5g</span> <span class="macro-carb">C: 30g</span> <span class="macro-fat">F: 15g</span></div></div><div class="menu-item" data-name="Chocolate Chip Cookie" data-calories="340" data-protein="4" data-carbs="43" data-fat="19" data-fiber="1" data-sodium="390" data-cholesterol="55" data-saturated-fat="12" data-trans-fat="0.1" data-price="$3.75"><div class="menu-item-header"><h4>Chocolate Chip Cookie</h4><span class="item-price">$3.75</span></div><div class="menu-item-cal">340 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 43g</span> <span class="macro-fat">F: 19g</span></div></div><div class="menu-item" data-name="Iced Lemon Cake" data-calories="330" data-protein="5" data-carbs="49" data-fat="13" data-fiber="0.1" data-sodium="220" data-cholesterol="80" data-saturated-fat="8" data-price="$3.75"><div class="menu-item-header"><h4>Iced Lemon Cake</h4><span class="item-price">$3.75</span></div><div class="menu-item-cal">330 cal</div><div class="macros"><span class="macro-pro">P: 5g</span> <span class="macro-carb">C: 49g</span> <span class="macro-fat">F: 13g</span></div></div></div><div class="rest-cat-group" data-category="Sauces" style="display:none"><div class="menu-item" data-name="Garlic Aioli" data-calories="80" data-protein="0.1" data-carbs="0.1" data-fat="8" data-fiber="0.1" data-sodium="100" data-saturated-fat="0.1" data-trans-fat="0.1" data-price="$0.82"><div class="menu-item-header"><h4>Garlic Aioli</h4><span class="item-price">$0.82</span></div><div class="menu-item-cal">80 cal</div><div class="macros"><span class="macro-pro">P: 0.1g</span> <span class="macro-carb">C: 0.1g</span> <span class="macro-fat">F: 8g</span></div></div><div class="menu-item" data-name="Hot Honey" data-calories="50" data-protein="0" data-carbs="12" data-fat="0" data-fiber="0" data-sodium="170" data-price="$0.82"><div class="menu-item-header"><h4>Hot Honey</h4><span class="item-price">$0.82</span></div><div class="menu-item-cal">50 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 12g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Pesto" data-calories="130" data-protein="0" data-carbs="0" data-fat="14" data-fiber="0" data-sodium="120" data-saturated-fat="1.5" data-price="$0.82"><div class="menu-item-header"><h4>Pesto</h4><span class="item-price">$0.82</span></div><div class="menu-item-cal">130 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 14g</span></div></div><div class="menu-item" data-name="Sriracha" data-calories="20" data-protein="0" data-carbs="3" data-fat="0" data-fiber="0" data-sodium="440" data-price="$0.82"><div class="menu-item-header"><h4>Sriracha</h4><span class="item-price">$0.82</span></div><div class="menu-item-cal">20 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 3g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Balsamic Vinaigrette" data-calories="110" data-protein="0" data-carbs="3" data-fat="11" data-fiber="0" data-sodium="240" data-saturated-fat="0.1" data-trans-fat="0.1" data-price="$0.82"><div class="menu-item-header"><h4>Balsamic Vinaigrette</h4><span class="item-price">$0.82</span></div><div class="menu-item-cal">110 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 3g</span> <span class="macro-fat">F: 11g</span></div></div><div class="menu-item" data-name="Lemon Piccata Sauce" data-calories="70" data-protein="1" data-carbs="4" data-fat="6" data-fiber="0.1" data-sodium="330" data-cholesterol="15" data-saturated-fat="3.5"><div class="menu-item-header"><h4>Lemon Piccata Sauce</h4></div><div class="menu-item-cal">70 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 4g</span> <span class="macro-fat">F: 6g</span></div></div></div><div class="rest-cat-group" data-category="Drinks" style="display:none"><div class="menu-item" data-name="Ginger Mint Lemonade" data-calories="120" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$4.46"><div class="menu-item-header"><h4>Ginger Mint Lemonade</h4><span class="item-price">$4.46</span></div><div class="menu-item-cal">120 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Spindrift Lemon" data-calories="3" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$3.39"><div class="menu-item-header"><h4>Spindrift Lemon</h4><span class="item-price">$3.39</span></div><div class="menu-item-cal">3 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Water" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$3.33"><div class="menu-item-header"><h4>Water</h4><span class="item-price">$3.33</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Orange Mango Culture Pop" data-calories="45" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$3.93"><div class="menu-item-header"><h4>Orange Mango Culture Pop</h4><span class="item-price">$3.93</span></div><div class="menu-item-cal">45 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Black Cherry Culture Pop" data-calories="45" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$3.93"><div class="menu-item-header"><h4>Black Cherry Culture Pop</h4><span class="item-price">$3.93</span></div><div class="menu-item-cal">45 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Spindrift Raspberry Lime" data-calories="5" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$3.39"><div class="menu-item-header"><h4>Spindrift Raspberry Lime</h4><span class="item-price">$3.39</span></div><div class="menu-item-cal">5 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Sparkling Water" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$3.39"><div class="menu-item-header"><h4>Sparkling Water</h4><span class="item-price">$3.39</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Coca Cola" data-calories="140" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$2.98"><div class="menu-item-header"><h4>Coca Cola</h4><span class="item-price">$2.98</span></div><div class="menu-item-cal">140 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Diet Coca Cola" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$2.98"><div class="menu-item-header"><h4>Diet Coca Cola</h4><span class="item-price">$2.98</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Harney &amp; Sons Peach Iced Tea" data-calories="40" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$4.28"><div class="menu-item-header"><h4>Harney &amp; Sons Peach Iced Tea</h4><span class="item-price">$4.28</span></div><div class="menu-item-cal">40 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div></div><div class="rest-cat-group" data-category="Large Sides (Serves 4)" style="display:none"><div class="menu-item" data-name="Jasper Hill Mac &amp; Cheese Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$23.80"><div class="menu-item-header"><h4>Jasper Hill Mac &amp; Cheese Large Side</h4><span class="item-price">$23.80</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Herb Roasted Chicken Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$24.99"><div class="menu-item-header"><h4>Herb Roasted Chicken Large Side</h4><span class="item-price">$24.99</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Crispy Chicken Thigh Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$21.42"><div class="menu-item-header"><h4>Crispy Chicken Thigh Large Side</h4><span class="item-price">$21.42</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tomatoes &amp; Cucumbers Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Tomatoes &amp; Cucumbers Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Brown Rice Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$11.90"><div class="menu-item-header"><h4>Brown Rice Large Side</h4><span class="item-price">$11.90</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Charred Chicken Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$19.04"><div class="menu-item-header"><h4>Charred Chicken Large Side</h4><span class="item-price">$19.04</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Sheet Tray Carrots Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Sheet Tray Carrots Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Cheesy Cauliflower Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Cheesy Cauliflower Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Feta Grain Salad Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Feta Grain Salad Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Herb Rice Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$11.90"><div class="menu-item-header"><h4>Herb Rice Large Side</h4><span class="item-price">$11.90</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Roasted Sweet Potatoes Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Roasted Sweet Potatoes Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Charred Broccoli with Lemon Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Charred Broccoli with Lemon Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Cashew Kale Caesar Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Cashew Kale Caesar Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Crispy Tofu Large Side" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$14.28"><div class="menu-item-header"><h4>Crispy Tofu Large Side</h4><span class="item-price">$14.28</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div></div></div>
+<div id="rest-detail"><div class="detail-card"><button class="detail-close" id="detail-close">&times;</button><h3>Classic Dig</h3><p class="item-price-detail">Price: $16.36</p><div class="nutrition-pills"><div class="nutrition-pill pill-cal"><div class="val">800</div><div class="lbl">Calories</div></div><div class="nutrition-pill pill-pro"><div class="val">38g</div><div class="lbl">Protein</div></div><div class="nutrition-pill pill-carb"><div class="val">94g</div><div class="lbl">Carbs</div></div><div class="nutrition-pill pill-fat"><div class="val">35g</div><div class="lbl">Fat</div></div><div class="nutrition-pill pill-fib"><div class="val">12g</div><div class="lbl">Fiber</div></div><div class="nutrition-pill pill-sod"><div class="val">1810mg</div><div class="lbl">Sodium</div></div><div class="nutrition-pill pill-chol"><div class="val">150mg</div><div class="lbl">Cholesterol</div></div><div class="nutrition-pill pill-sfat"><div class="val">3g</div><div class="lbl">Sat. Fat</div></div></div><div id="nutrition-facts-label"><div class="nf-label"><div class="nf-title">Nutrition Facts</div><div class="nf-divider-thick"></div><div class="nf-cal-row"><span class="nf-cal-label">Calories</span><span class="nf-cal-val">800</span></div><div class="nf-divider-medium"></div><div class="nf-dv-header">% Daily Value*</div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Fat</strong> 35g</span><span>45%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Saturated Fat 3g</span><span>15%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Cholesterol</strong> 150mg</span><span>50%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Sodium</strong> 1810mg</span><span>79%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Carbohydrate</strong> 94g</span><span>34%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Dietary Fiber 12g</span><span>43%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Protein</strong> 38g</span><span>76%</span></div><div class="nf-divider-thick"></div><div class="nf-footnote">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</div></div></div><button class="add-meal-btn" id="add-meal-btn">+ Add to My Meal</button></div></div>
+</div>
+</div>
+<div class="rest-right-col">
+<div id="rest-summary"><div class="meal-summary"><h3>My Meal <span class="meal-count">(0 items)</span> <button class="reset-btn" id="reset-meal">Reset</button></h3><div class="meal-progress"><div class="meal-progress-bar" style="width:0%"></div></div><div class="meal-progress-text">0 / 2,000 cal (0%)</div><div class="meal-totals"><div class="meal-total pill-cal"><div class="num">0</div><div class="lbl">Calories</div></div><div class="meal-total pill-pro"><div class="num">0g</div><div class="lbl">Protein</div></div><div class="meal-total pill-carb"><div class="num">0g</div><div class="lbl">Carbs</div></div><div class="meal-total pill-fat"><div class="num">0g</div><div class="lbl">Fat</div></div></div><div class="meal-items"><div class="empty-msg">No items added yet. Click items above and press "Add to My Meal".</div></div></div></div>
+</div>
+</div>
+</div>
+<div class="content-section">
+<h2>How to Use the DIG Nutrition Calculator</h2>
+<div class="steps-grid">
+<div class="step-card"><div class="step-num">1</div><h3>Browse Categories</h3><p>Click through the category tabs to explore different menu sections.</p></div>
+<div class="step-card"><div class="step-num">2</div><h3>Select Items</h3><p>Click on any menu item to see its detailed nutrition breakdown.</p></div>
+<div class="step-card"><div class="step-num">3</div><h3>Build Your Meal</h3><p>Add items to your meal tracker to see combined nutrition totals.</p></div>
+</div>
+<h2>About Dig</h2>
+<p>Our DIG Nutrition Calculator helps you make informed decisions about what you eat at Dig. Track calories, protein, carbs, fat, and more for every menu item. Build your complete meal and see the total nutritional impact before you order.</p>
+<p>All nutrition data is sourced from official Dig nutrition guides and FDA databases. Values may vary by location and preparation method.</p>
+</div>
+</section>
+<div class="social-share" id="social-share">
+  <span class="social-share-label">Share:</span>
+  <a class="social-btn social-twitter" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="social-btn social-facebook" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="social-btn social-linkedin" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a class="social-btn social-whatsapp" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a class="social-btn social-email" id="share-email" href="#" aria-label="Share via Email" title="Share via Email">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+  <button class="social-btn social-copy" id="share-copy" aria-label="Copy link" title="Copy link">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var tw = document.getElementById('share-twitter');
+  var fb = document.getElementById('share-facebook');
+  var li = document.getElementById('share-linkedin');
+  var wa = document.getElementById('share-whatsapp');
+  var em = document.getElementById('share-email');
+  var cp = document.getElementById('share-copy');
+  if(tw) tw.href = 'https://twitter.com/intent/tweet?url='+url+'&text='+title;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
+  if(wa) wa.href = 'https://wa.me/?text='+title+'%20'+url;
+  if(em) em.href = 'mailto:?subject='+title+'&body=Check%20this%20out:%20'+url;
+  if(cp) cp.addEventListener('click', function(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(function(){ cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'; }, 2000);
+    });
+  });
+})();
+</script>
+<footer class="footer">
+<div class="footer-inner">
+  <div class="footer-brand">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+    <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Popular Calculators</h4>
+    <ul>
+      <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+      <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+      <li><a href="/tdee-calculator/">TDEE Calculator</a></li>
+      <li><a href="/protein-calculator/">Protein Calculator</a></li>
+      <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+      <li><a href="/keto-macro-calculator/">Keto Macro Calculator</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Restaurant Calculators</h4>
+    <ul>
+      <li><a href="/starbucks-nutrition-calculator/">Starbucks</a></li>
+      <li><a href="/chipotle-nutrition-calculator/">Chipotle</a></li>
+      <li><a href="/mcdonalds-calories-calculator/">McDonald's</a></li>
+      <li><a href="/subway-nutrition-calculator/">Subway</a></li>
+      <li><a href="/five-guys-nutrition-calculator/">Five Guys</a></li>
+      <li><a href="/panda-express-nutrition-calculator/">Panda Express</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
+</footer>
+<script src="/js/site-config.js"></script>
+<script src="/js/scripts-config.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/restaurant.js"></script>
+<script>initRestaurant();</script>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+</script>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and for analytics. By continuing to use this site, you agree to our <a href="/cookie-policy/">Cookie Policy</a>.</p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+      <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if (localStorage.getItem('cookie-consent')) return;
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>

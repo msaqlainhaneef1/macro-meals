@@ -1,0 +1,826 @@
+{
+  "slug": "bibibop-calories-calculator",
+  "title": "🍚 BIBIBOP Nutrition Calculator",
+  "description": "Build your Asian bowl and track complete nutrition.",
+  "categories": [
+    {
+      "name": "Bases",
+      "items": [
+        {
+          "name": "Citrus Honey Kale",
+          "calories": 100.0,
+          "protein": 3.0,
+          "carbs": 11.0,
+          "fat": 6.0,
+          "fiber": 4.0,
+          "sodium": 70.0,
+          "saturated_fat": 0.5,
+          "sugars": 8.0
+        },
+        {
+          "name": "Crispy Romaine",
+          "calories": 45.0,
+          "protein": 1.0,
+          "carbs": 4.0,
+          "fat": 3.5,
+          "fiber": 2.0,
+          "sodium": 10.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Lemon Turmeric Rice",
+          "calories": 290.0,
+          "protein": 6.0,
+          "carbs": 60.0,
+          "fat": 3.5,
+          "fiber": 0.5,
+          "sodium": 1490.0
+        },
+        {
+          "name": "Purple Rice",
+          "calories": 170.0,
+          "protein": 4.0,
+          "carbs": 38.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweet Potato Noodles",
+          "calories": 300.0,
+          "protein": 6.0,
+          "carbs": 55.0,
+          "fat": 6.0,
+          "fiber": 3.0,
+          "sodium": 1090.0,
+          "saturated_fat": 0.5,
+          "sugars": 7.0
+        },
+        {
+          "name": "White Rice",
+          "calories": 180.0,
+          "protein": 4.0,
+          "carbs": 40.0,
+          "fat": 0.0,
+          "fiber": 0.5,
+          "sodium": 210.0
+        }
+      ]
+    },
+    {
+      "name": "Proteins",
+      "items": [
+        {
+          "name": "Chicken",
+          "calories": 170.0,
+          "protein": 20.0,
+          "carbs": 10.0,
+          "fat": 6.0,
+          "fiber": 0.5,
+          "sodium": 750.0,
+          "cholesterol": 85.0,
+          "saturated_fat": 1.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Korean BBQ Beef",
+          "calories": 160.0,
+          "protein": 14.0,
+          "carbs": 13.0,
+          "fat": 6.0,
+          "fiber": 0.0,
+          "sodium": 700.0,
+          "cholesterol": 40.0,
+          "sugars": 10.0
+        },
+        {
+          "name": "Korean Crispy Chicken",
+          "calories": 160.0,
+          "protein": 27.0,
+          "carbs": 45.0,
+          "fat": 3.0,
+          "fiber": 0.0,
+          "sodium": 230.0,
+          "cholesterol": 85.0
+        },
+        {
+          "name": "Miso Glazed Salmon",
+          "calories": 250.0,
+          "protein": 20.0,
+          "carbs": 8.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 590.0,
+          "cholesterol": 50.0,
+          "saturated_fat": 3.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Spicy Chicken",
+          "calories": 230.0,
+          "protein": 20.0,
+          "carbs": 8.0,
+          "fat": 11.0,
+          "fiber": 0.5,
+          "sodium": 730.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 2.5,
+          "sugars": 7.0
+        },
+        {
+          "name": "Steak",
+          "calories": 230.0,
+          "protein": 29.0,
+          "carbs": 5.0,
+          "fat": 9.0,
+          "fiber": 0.0,
+          "sodium": 260.0,
+          "cholesterol": 85.0,
+          "saturated_fat": 3.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Tofu",
+          "calories": 150.0,
+          "protein": 10.0,
+          "carbs": 8.0,
+          "fat": 10.0,
+          "fiber": 0.5,
+          "sodium": 250.0,
+          "saturated_fat": 1.0,
+          "sugars": 5.0
+        }
+      ]
+    },
+    {
+      "name": "Hot Toppings",
+      "items": [
+        {
+          "name": "Bean Sprouts",
+          "calories": 30.0,
+          "protein": 2.0,
+          "carbs": 3.0,
+          "fat": 1.5,
+          "fiber": 0.5,
+          "sodium": 170.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Black Beans",
+          "calories": 45.0,
+          "protein": 2.0,
+          "carbs": 9.0,
+          "fat": 0.5,
+          "fiber": 2.0,
+          "sodium": 150.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Curry Chickpeas",
+          "calories": 45.0,
+          "protein": 2.0,
+          "carbs": 6.0,
+          "fat": 1.5,
+          "fiber": 2.0,
+          "sodium": 90.0,
+          "saturated_fat": 1.0
+        },
+        {
+          "name": "Potatoes",
+          "calories": 90.0,
+          "protein": 2.0,
+          "carbs": 18.0,
+          "fat": 1.5,
+          "fiber": 2.0,
+          "sodium": 640.0,
+          "sugars": 0.5
+        },
+        {
+          "name": "Roasted Brussels Sprouts",
+          "calories": 40.0,
+          "protein": 2.0,
+          "carbs": 6.0,
+          "fat": 2.0,
+          "fiber": 2.0,
+          "sodium": 190.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Roasted Sesame Broccoli",
+          "calories": 60.0,
+          "protein": 2.0,
+          "carbs": 4.0,
+          "fat": 5.0,
+          "fiber": 1.0,
+          "sodium": 170.0,
+          "saturated_fat": 0.5,
+          "sugars": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Cold Toppings",
+      "items": [
+        {
+          "name": "Avocado",
+          "calories": 80.0,
+          "protein": 0.5,
+          "carbs": 4.0,
+          "fat": 7.0,
+          "fiber": 3.0,
+          "sodium": 55.0,
+          "saturated_fat": 1.0
+        },
+        {
+          "name": "Carrots",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 2.0,
+          "fat": 0.5,
+          "fiber": 0.5,
+          "sodium": 100.0,
+          "sugars": 0.5
+        },
+        {
+          "name": "Cheese",
+          "calories": 90.0,
+          "protein": 6.0,
+          "carbs": 0.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 150.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 5.0
+        },
+        {
+          "name": "Cucumbers",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 1.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Corn",
+          "calories": 20.0,
+          "protein": 0.5,
+          "carbs": 4.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 65.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Eggs",
+          "calories": 40.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 2.5,
+          "fiber": 0.0,
+          "sodium": 35.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 1.0
+        },
+        {
+          "name": "Honey Citrus Kale",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 0.5,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 5.0,
+          "sugars": 0.5
+        },
+        {
+          "name": "Kimchi",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 3.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 270.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Pickled Red Onion",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 3.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 5.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Pineapple",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 11.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0,
+          "sugars": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces",
+      "items": [
+        {
+          "name": "Yum Yum",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 2.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 220.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 2.5,
+          "sugars": 2.0
+        },
+        {
+          "name": "Teriyaki",
+          "calories": 70.0,
+          "protein": 1.0,
+          "carbs": 15.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 700.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "Gochujang",
+          "calories": 70.0,
+          "protein": 1.0,
+          "carbs": 14.0,
+          "fat": 1.0,
+          "fiber": 1.0,
+          "sodium": 640.0,
+          "sugars": 10.0
+        },
+        {
+          "name": "Spicy Sriracha",
+          "calories": 25.0,
+          "protein": 0.0,
+          "carbs": 5.0,
+          "fat": 0.5,
+          "fiber": 0.0,
+          "sodium": 420.0,
+          "saturated_fat": 0.5,
+          "sugars": 3.0
+        },
+        {
+          "name": "Sesame Ginger",
+          "calories": 100.0,
+          "protein": 1.0,
+          "carbs": 7.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 450.0,
+          "saturated_fat": 1.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Sesame Oil",
+          "calories": 70.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "saturated_fat": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Chef-Curated Bowls",
+      "items": [
+        {
+          "name": "Nourish Bowl",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Detox Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Avo Cobb Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "BIBIBOP Fan Favorite",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Double Protein Bowl",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Customizable Bowls",
+      "items": [
+        {
+          "name": "Original Bowl",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Small Bowl",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "BIBICUP",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Feeds 4-5",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Kimchi Side",
+          "calories": 30.0,
+          "protein": 1.0,
+          "carbs": 5.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 715.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Miso Soup",
+          "calories": 25.0,
+          "protein": 2.0,
+          "carbs": 3.0,
+          "fat": 1.0,
+          "fiber": 0.5,
+          "sodium": 290.0,
+          "sugars": 0.5
+        },
+        {
+          "name": "Pineapple Side",
+          "calories": 60.0,
+          "protein": 0.5,
+          "carbs": 6.3,
+          "fat": 0.0,
+          "fiber": 0.5,
+          "sodium": 0.0,
+          "sugars": 6.3
+        },
+        {
+          "name": "Purple Rice Side",
+          "calories": 230.0,
+          "protein": 5.0,
+          "carbs": 51.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "White Rice Side",
+          "calories": 270.0,
+          "protein": 5.0,
+          "carbs": 61.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Noodles Side",
+          "calories": 210.0,
+          "protein": 0.5,
+          "carbs": 42.0,
+          "fat": 4.0,
+          "fiber": 0.5,
+          "sodium": 310.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Veggie Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Chocolate Chip Cookie",
+          "calories": 380.0,
+          "protein": 4.0,
+          "carbs": 54.0,
+          "fat": 19.0,
+          "fiber": 3.0,
+          "sodium": 210.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 8.0,
+          "sugars": 33.0
+        },
+        {
+          "name": "Snickerdoodle Cookie",
+          "calories": 380.0,
+          "protein": 3.0,
+          "carbs": 55.0,
+          "fat": 17.0,
+          "fiber": 2.0,
+          "sodium": 270.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 6.0,
+          "sugars": 28.0
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "Coca-Cola Classic",
+          "calories": 220.0,
+          "protein": 0.0,
+          "carbs": 55.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 55.0,
+          "sugars": 55.0
+        },
+        {
+          "name": "Diet Coca-Cola",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 70.0
+        },
+        {
+          "name": "Coca-Cola Zero Sugar",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Coca-Cola Cherry",
+          "calories": 150.0,
+          "protein": 0.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 35.0,
+          "sugars": 42.0
+        },
+        {
+          "name": "Sprite",
+          "calories": 210.0,
+          "protein": 0.0,
+          "carbs": 50.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 95.0,
+          "sugars": 50.0
+        },
+        {
+          "name": "Fanta Orange",
+          "calories": 220.0,
+          "protein": 0.0,
+          "carbs": 56.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 55.0,
+          "sugars": 55.0
+        },
+        {
+          "name": "Barq's Root Beer",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 60.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 75.0,
+          "sugars": 60.0
+        },
+        {
+          "name": "Vitamin Water XXX",
+          "calories": 60.0,
+          "protein": 0.0,
+          "carbs": 20.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 19.0
+        },
+        {
+          "name": "Hi-C Flashin' Fruit Punch",
+          "calories": 210.0,
+          "protein": 0.0,
+          "carbs": 59.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 100.0,
+          "sugars": 57.0
+        },
+        {
+          "name": "Dr Pepper",
+          "calories": 200.0,
+          "protein": 0.0,
+          "carbs": 54.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 60.0,
+          "sugars": 53.0
+        },
+        {
+          "name": "Lemonade",
+          "calories": 210.0,
+          "protein": 0.0,
+          "carbs": 54.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 52.0
+        },
+        {
+          "name": "Passion Fruit Lemonade",
+          "calories": 190.0,
+          "protein": 0.0,
+          "carbs": 48.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 46.0
+        },
+        {
+          "name": "Black Current Tea",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweetened Green Tea",
+          "calories": 110.0,
+          "protein": 0.0,
+          "carbs": 29.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 29.0
+        },
+        {
+          "name": "Mixed Berry Omija Tea",
+          "calories": 120.0,
+          "protein": 0.0,
+          "carbs": 32.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 31.0
+        },
+        {
+          "name": "Honest Kids Appley Ever After",
+          "calories": 35.0,
+          "protein": 0.0,
+          "carbs": 9.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 15.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Honest Kids Super Fruit Punch",
+          "calories": 35.0,
+          "protein": 0.0,
+          "carbs": 8.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 15.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Kombucha Ginger Lemon",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 10.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 10.0
+        },
+        {
+          "name": "Kombucha Passionfruit Tangerine",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 11.0
+        },
+        {
+          "name": "Olipop Strawberry Vanilla",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Olipop Classic Grape",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spindrift Pineapple",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spindrift Raspberry Lime",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bottled Water",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

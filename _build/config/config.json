@@ -1,0 +1,86 @@
+{
+  "site": {
+    "name": "Macro & Meals",
+    "nameShort": "Macro And Meals",
+    "nameAbbr": "MM",
+    "domain": "macroandmeals.com",
+    "url": "https://macroandmeals.com",
+    "email": "contact@macroandmeals.com",
+    "tagline": "Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.",
+    "language": "en",
+    "themeColor": "#22c55e"
+  },
+  "seo": {
+    "defaultTitle": "Macro & Meals — Free Nutrition Calculators & Health Tools",
+    "defaultDescription": "Free nutrition calculators for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more.",
+    "ogType": "website",
+    "ogLocale": "en_US",
+    "twitterCard": "summary",
+    "robots": "index,follow"
+  },
+  "analytics": {
+    "googleAnalyticsId": "G-7Q3DMT4258",
+    "googleTagManagerId": "GTM-5FNQMD49",
+    "googleAdsenseId": "",
+    "facebookPixelId": "",
+    "hotjarId": "",
+    "clarityId": ""
+  },
+  "social": {
+    "twitter": "",
+    "facebook": "",
+    "instagram": "",
+    "pinterest": "",
+    "youtube": ""
+  },
+  "features": {
+    "cookieBanner": true,
+    "backToTop": true,
+    "breadcrumbs": true,
+    "scrollProgress": true,
+    "socialShare": true,
+    "announcementBar": false,
+    "printStyles": true
+  },
+  "announcement": {
+    "enabled": false,
+    "message": "New: Check out our <a href='/blog/'>latest blog post</a> on daily calorie needs!",
+    "dismissible": true
+  },
+  "build": {
+    "publicDir": "public_html",
+    "componentsDir": "public_html/components",
+    "cssDir": "public_html/css",
+    "jsDir": "public_html/js",
+    "imgDir": "public_html/img",
+    "dataDir": "public_html/data",
+    "scriptsDir": "scripts",
+    "configDir": "config"
+  },
+  "footer": {
+    "quickLinks": [
+      { "text": "Home", "href": "/" },
+      { "text": "About", "href": "/about/" },
+      { "text": "Contact", "href": "/contact/" },
+      { "text": "Privacy Policy", "href": "/privacy-policy/" },
+      { "text": "Terms & Conditions", "href": "/terms-conditions/" },
+      { "text": "Disclaimer", "href": "/disclaimer/" }
+    ],
+    "popularCalculators": [
+      { "text": "BMI Calculator", "href": "/bmi-calculator/" },
+      { "text": "BMR Calculator", "href": "/bmr-calculator/" },
+      { "text": "TDEE Calculator", "href": "/tdee-calculator/" },
+      { "text": "Protein Calculator", "href": "/protein-calculator/" },
+      { "text": "Calorie Deficit Calculator", "href": "/calorie-deficit-calculator/" },
+      { "text": "Keto Macro Calculator", "href": "/keto-macro-calculator/" }
+    ],
+    "restaurantCalculators": [
+      { "text": "Starbucks", "href": "/starbucks-nutrition-calculator/" },
+      { "text": "Chipotle", "href": "/chipotle-nutrition-calculator/" },
+      { "text": "McDonald's", "href": "/mcdonalds-calories-calculator/" },
+      { "text": "Subway", "href": "/subway-nutrition-calculator/" },
+      { "text": "Five Guys", "href": "/five-guys-nutrition-calculator/" },
+      { "text": "Panda Express", "href": "/panda-express-nutrition-calculator/" }
+    ]
+  }
+}

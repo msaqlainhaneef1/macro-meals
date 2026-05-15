@@ -1,0 +1,637 @@
+{
+  "slug": "blaze-pizza-calories-calculator",
+  "title": "🍕 Blaze Pizza Nutrition Calculator",
+  "description": "Customize your pizza and see complete nutrition facts.",
+  "categories": [
+    {
+      "name": "Pizza - 11 Inch",
+      "items": [
+        {
+          "name": "1 Top / 2 Top (1 of 6 slices)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Art Lover (1 of 6 slices)",
+          "calories": 130.0,
+          "protein": 6.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 250.0,
+          "cholesterol": 10.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "BBQ CHKN (1 of 6 slices)",
+          "calories": 150.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 330.0,
+          "cholesterol": 15.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Blazed BBQ (1 of 6 slices)",
+          "calories": 150.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 330.0,
+          "cholesterol": 15.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Build Your Own Pizza (1 of 6 slices)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Carnivore (1 of 6 slices)",
+          "calories": 180.0,
+          "protein": 9.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 490.0,
+          "cholesterol": 25.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Four Cheese (1 of 6 slices)",
+          "calories": 150.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 300.0,
+          "cholesterol": 20.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Green Stripe (1 of 6 slices)",
+          "calories": 150.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 260.0,
+          "cholesterol": 15.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Herbivore (1 of 6 slices)",
+          "calories": 130.0,
+          "protein": 6.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 340.0,
+          "cholesterol": 10.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Hot Link (1 of 6 slices)",
+          "calories": 150.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 430.0,
+          "cholesterol": 20.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Meatball Pie (1 of 6 slices)",
+          "calories": 170.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 420.0,
+          "cholesterol": 20.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Meat Eater (1 of 6 slices)",
+          "calories": 170.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 460.0,
+          "cholesterol": 20.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Red Vine (1 of 6 slices)",
+          "calories": 110.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 200.0,
+          "cholesterol": 10.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Simple Pie (1 of 6 slices)",
+          "calories": 120.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 210.0,
+          "cholesterol": 10.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Spicy Pepperoni (1 of 6 slices)",
+          "calories": 160.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 430.0,
+          "cholesterol": 20.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Sweet Heat (1 of 6 slices)",
+          "calories": 170.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 430.0,
+          "cholesterol": 20.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Veg Out (1 of 6 slices)",
+          "calories": 130.0,
+          "protein": 6.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 260.0,
+          "cholesterol": 10.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "White Top (1 of 6 slices)",
+          "calories": 160.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 280.0,
+          "cholesterol": 20.0,
+          "sugars": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Pizza - Large",
+      "items": [
+        {
+          "name": "1 Top / 2 Top (1 of 8 slices)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Art Lover (1 of 8 slices)",
+          "calories": 240.0,
+          "protein": 11.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 460.0,
+          "cholesterol": 20.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "BBQ CHKN (1 of 8 slices)",
+          "calories": 280.0,
+          "protein": 15.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 610.0,
+          "cholesterol": 30.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Blazed BBQ (1 of 8 slices)",
+          "calories": 280.0,
+          "protein": 15.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 610.0,
+          "cholesterol": 30.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Build Your Own Pizza (1 of 8 slices)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Carnivore (1 of 8 slices)",
+          "calories": 330.0,
+          "protein": 16.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 900.0,
+          "cholesterol": 45.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Four Cheese (1 of 8 slices)",
+          "calories": 280.0,
+          "protein": 13.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 550.0,
+          "cholesterol": 35.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Green Stripe (1 of 8 slices)",
+          "calories": 280.0,
+          "protein": 13.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 480.0,
+          "cholesterol": 30.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Herbivore (1 of 8 slices)",
+          "calories": 240.0,
+          "protein": 11.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 630.0,
+          "cholesterol": 20.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Hot Link (1 of 8 slices)",
+          "calories": 280.0,
+          "protein": 13.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 790.0,
+          "cholesterol": 35.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Meatball Pie (1 of 8 slices)",
+          "calories": 310.0,
+          "protein": 15.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 770.0,
+          "cholesterol": 35.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Meat Eater (1 of 8 slices)",
+          "calories": 310.0,
+          "protein": 15.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 850.0,
+          "cholesterol": 35.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Red Vine (1 of 8 slices)",
+          "calories": 200.0,
+          "protein": 9.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 370.0,
+          "cholesterol": 20.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Simple Pie (1 of 8 slices)",
+          "calories": 220.0,
+          "protein": 9.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 390.0,
+          "cholesterol": 20.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Spicy Pepperoni (1 of 8 slices)",
+          "calories": 290.0,
+          "protein": 13.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 790.0,
+          "cholesterol": 35.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Sweet Heat (1 of 8 slices)",
+          "calories": 310.0,
+          "protein": 13.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 790.0,
+          "cholesterol": 35.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Veg Out (1 of 8 slices)",
+          "calories": 240.0,
+          "protein": 11.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 480.0,
+          "cholesterol": 20.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "White Top (1 of 8 slices)",
+          "calories": 290.0,
+          "protein": 13.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 520.0,
+          "cholesterol": 35.0,
+          "sugars": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Take Two",
+      "items": [
+        {
+          "name": "Blazed BBQ Half 11-inch Pizza",
+          "calories": 450.0,
+          "protein": 24.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 990.0,
+          "cholesterol": 45.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "Build Your Own Half 11-inch Pizza",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Carnivore Half 11-inch Pizza",
+          "calories": 540.0,
+          "protein": 27.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1470.0,
+          "cholesterol": 75.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Cheesy Bread",
+          "calories": 430.0,
+          "protein": 18.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 820.0,
+          "cholesterol": 50.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Four Cheese Half 11-inch Pizza",
+          "calories": 450.0,
+          "protein": 21.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 900.0,
+          "cholesterol": 60.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Herbivore Half 11-inch Pizza",
+          "calories": 390.0,
+          "protein": 18.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1020.0,
+          "cholesterol": 30.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Meatball Pie Half 11-inch Pizza",
+          "calories": 510.0,
+          "protein": 24.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1260.0,
+          "cholesterol": 60.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Pesto Garlic Cheesy Bread",
+          "calories": 460.0,
+          "protein": 19.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 860.0,
+          "cholesterol": 55.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Side of Meatballs",
+          "calories": 220.0,
+          "protein": 14.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 740.0,
+          "cholesterol": 45.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Spicy Pepperoni Half 11-inch Pizza",
+          "calories": 480.0,
+          "protein": 21.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1290.0,
+          "cholesterol": 60.0,
+          "sugars": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Entrees",
+      "items": [
+        {
+          "name": "Pepperoni Fast Fire'd Fold",
+          "calories": 860.0,
+          "protein": 36.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2440.0,
+          "cholesterol": 100.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Fast Fire'd Meatballs",
+          "calories": 330.0,
+          "protein": 21.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1110.0,
+          "cholesterol": 65.0,
+          "sugars": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Simple Salads",
+      "items": [
+        {
+          "name": "Classic Caesar (Side)",
+          "calories": 400.0,
+          "protein": 10.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 820.0,
+          "cholesterol": 40.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Greek (Side)",
+          "calories": 240.0,
+          "protein": 6.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 940.0,
+          "cholesterol": 20.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Tomato & Mozzarella (Side)",
+          "calories": 160.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 230.0,
+          "cholesterol": 20.0,
+          "sugars": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Cheesy Bread",
+          "calories": 860.0,
+          "protein": 36.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1640.0,
+          "cholesterol": 100.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Pesto Garlic Cheesy Bread",
+          "calories": 920.0,
+          "protein": 38.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1720.0,
+          "cholesterol": 110.0,
+          "sugars": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Dessert",
+      "items": [
+        {
+          "name": "Chocolate Brownie",
+          "calories": 240.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 135.0,
+          "cholesterol": 35.0,
+          "sugars": 24.0
+        },
+        {
+          "name": "S'more Pie",
+          "calories": 220.0,
+          "protein": 2.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 160.0,
+          "cholesterol": 5.0,
+          "sugars": 20.0
+        }
+      ]
+    }
+  ]
+}

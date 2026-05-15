@@ -1,0 +1,162 @@
+{
+  "slug": "naked-juice-nutrition-calculator",
+  "title": "🧃 Naked Juice Nutrition Calculator",
+  "description": "Compare nutrition facts across Naked Juice products.",
+  "categories": [
+    {
+      "name": "Machines",
+      "items": [
+        {
+          "name": "Green Machine",
+          "calories": 270.0,
+          "protein": 4.0,
+          "carbs": 63.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 25.0,
+          "sugars": 53.0
+        },
+        {
+          "name": "Blue Machine",
+          "calories": 320.0,
+          "protein": 2.0,
+          "carbs": 76.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 15.0,
+          "sugars": 55.0
+        },
+        {
+          "name": "Mighty Mango Machine",
+          "calories": 290.0,
+          "protein": 2.0,
+          "carbs": 68.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 20.0,
+          "sugars": 57.0
+        },
+        {
+          "name": "Strawberry Banana Machine",
+          "calories": 250.0,
+          "protein": 2.0,
+          "carbs": 58.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 15.0,
+          "sugars": 43.0
+        },
+        {
+          "name": "Rainbow Machine",
+          "calories": 230.0,
+          "protein": 2.0,
+          "carbs": 54.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 20.0,
+          "sugars": 46.0
+        },
+        {
+          "name": "Pina Colada Machine",
+          "calories": 240.0,
+          "protein": 2.0,
+          "carbs": 57.0,
+          "fat": 2.0,
+          "fiber": 6.0,
+          "sodium": 20.0,
+          "sugars": 46.0
+        }
+      ]
+    },
+    {
+      "name": "Protein",
+      "items": [
+        {
+          "name": "Tropical Protein",
+          "calories": 240.0,
+          "protein": 20.0,
+          "carbs": 37.0,
+          "fat": 1.5,
+          "fiber": 6.0,
+          "sodium": 180.0,
+          "sugars": 26.0
+        },
+        {
+          "name": "Double Berry Protein",
+          "calories": 300.0,
+          "protein": 20.0,
+          "carbs": 48.0,
+          "fat": 1.5,
+          "fiber": 6.0,
+          "sodium": 180.0,
+          "sugars": 32.0
+        },
+        {
+          "name": "Coco Gauff's Pineapple Orange",
+          "calories": 240.0,
+          "protein": 20.0,
+          "carbs": 38.0,
+          "fat": 1.5,
+          "fiber": 6.0,
+          "sodium": 220.0,
+          "sugars": 26.0
+        }
+      ]
+    },
+    {
+      "name": "Fiber",
+      "items": [
+        {
+          "name": "Tropical Greens Fiber",
+          "calories": 150.0,
+          "protein": 1.0,
+          "carbs": 43.0,
+          "fat": 0.0,
+          "fiber": 9.0,
+          "sodium": 55.0,
+          "sugars": 27.0
+        },
+        {
+          "name": "Strawberry Lemon Ginger Fiber",
+          "calories": 150.0,
+          "protein": 1.0,
+          "carbs": 43.0,
+          "fat": 0.0,
+          "fiber": 9.0,
+          "sodium": 55.0,
+          "sugars": 27.0
+        }
+      ]
+    },
+    {
+      "name": "Coconut Water",
+      "items": [
+        {
+          "name": "Coconut Water",
+          "calories": 80.0,
+          "protein": 1.0,
+          "carbs": 21.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 95.0,
+          "sugars": 14.0
+        }
+      ]
+    },
+    {
+      "name": "Fruit",
+      "items": [
+        {
+          "name": "Berry Blast",
+          "calories": 250.0,
+          "protein": 2.0,
+          "carbs": 58.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 25.0,
+          "sugars": 43.0
+        }
+      ]
+    }
+  ]
+}

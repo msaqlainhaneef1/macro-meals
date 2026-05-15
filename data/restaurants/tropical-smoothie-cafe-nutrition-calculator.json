@@ -1,0 +1,977 @@
+{
+  "slug": "tropical-smoothie-cafe-nutrition-calculator",
+  "title": "🍹 Tropical Smoothie Cafe Calculator",
+  "description": "Check nutrition facts for smoothies and food items.",
+  "categories": [
+    {
+      "name": "Smoothies",
+      "items": [
+        {
+          "name": "Acai Berry Boost",
+          "calories": 420.0,
+          "protein": 2.0,
+          "carbs": 101.0,
+          "fat": 2.0,
+          "fiber": 6.0,
+          "sodium": 20.0,
+          "sugars": 86.0
+        },
+        {
+          "name": "Avocolada",
+          "calories": 600.0,
+          "protein": 4.0,
+          "carbs": 118.0,
+          "fat": 14.0,
+          "fiber": 6.0,
+          "sodium": 40.0,
+          "saturated_fat": 5.0,
+          "sugars": 110.0
+        },
+        {
+          "name": "Bahama Mama",
+          "calories": 540.0,
+          "protein": 3.0,
+          "carbs": 123.0,
+          "fat": 5.0,
+          "fiber": 5.0,
+          "sodium": 65.0,
+          "saturated_fat": 4.5,
+          "sugars": 115.0
+        },
+        {
+          "name": "Beach Bum",
+          "calories": 570.0,
+          "protein": 5.0,
+          "carbs": 134.0,
+          "fat": 4.5,
+          "fiber": 8.0,
+          "sodium": 85.0,
+          "saturated_fat": 3.0,
+          "sugars": 112.0
+        },
+        {
+          "name": "Blimey Limey",
+          "calories": 560.0,
+          "protein": 3.0,
+          "carbs": 136.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 20.0,
+          "sugars": 129.0
+        },
+        {
+          "name": "Blueberry Bliss",
+          "calories": 350.0,
+          "protein": 2.0,
+          "carbs": 87.0,
+          "fat": 1.0,
+          "fiber": 5.0,
+          "sodium": 10.0,
+          "sugars": 76.0
+        },
+        {
+          "name": "Chia Banana Boost",
+          "calories": 700.0,
+          "protein": 14.0,
+          "carbs": 111.0,
+          "fat": 28.0,
+          "fiber": 11.0,
+          "sodium": 130.0,
+          "saturated_fat": 6.0,
+          "sugars": 73.0
+        },
+        {
+          "name": "Detox Island Green",
+          "calories": 200.0,
+          "protein": 4.0,
+          "carbs": 52.0,
+          "fat": 1.0,
+          "fiber": 6.0,
+          "sodium": 30.0,
+          "sugars": 39.0
+        },
+        {
+          "name": "Island Green",
+          "calories": 430.0,
+          "protein": 4.0,
+          "carbs": 110.0,
+          "fat": 1.0,
+          "fiber": 6.0,
+          "sodium": 30.0,
+          "sugars": 97.0
+        },
+        {
+          "name": "Jetty Punch",
+          "calories": 390.0,
+          "protein": 2.0,
+          "carbs": 96.0,
+          "fat": 0.5,
+          "fiber": 6.0,
+          "sodium": 15.0,
+          "sugars": 80.0
+        },
+        {
+          "name": "Kiwi Quencher",
+          "calories": 480.0,
+          "protein": 3.0,
+          "carbs": 118.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 65.0,
+          "sugars": 109.0
+        },
+        {
+          "name": "Mango Magic",
+          "calories": 390.0,
+          "protein": 3.0,
+          "carbs": 95.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 60.0,
+          "sugars": 88.0
+        },
+        {
+          "name": "Mango Monsoon",
+          "calories": 460.0,
+          "protein": 2.0,
+          "carbs": 112.0,
+          "fat": 2.0,
+          "fiber": 6.0,
+          "sodium": 16.0,
+          "saturated_fat": 2.0,
+          "sugars": 107.0
+        },
+        {
+          "name": "Mocha Madness",
+          "calories": 810.0,
+          "protein": 9.0,
+          "carbs": 185.0,
+          "fat": 6.0,
+          "fiber": 3.0,
+          "sodium": 270.0,
+          "saturated_fat": 4.5,
+          "sugars": 163.0
+        },
+        {
+          "name": "Paradise Point",
+          "calories": 450.0,
+          "protein": 3.0,
+          "carbs": 112.0,
+          "fat": 1.0,
+          "fiber": 7.0,
+          "sodium": 20.0,
+          "sugars": 95.0
+        },
+        {
+          "name": "Peanut Butter Cup",
+          "calories": 710.0,
+          "protein": 11.0,
+          "carbs": 130.0,
+          "fat": 20.0,
+          "fiber": 7.0,
+          "sodium": 210.0,
+          "saturated_fat": 6.0,
+          "sugars": 107.0
+        },
+        {
+          "name": "Peanut Paradise with Pea",
+          "calories": 730.0,
+          "protein": 35.0,
+          "carbs": 112.0,
+          "fat": 17.0,
+          "fiber": 5.0,
+          "sodium": 610.0,
+          "saturated_fat": 3.5,
+          "sugars": 90.0
+        },
+        {
+          "name": "Peanut Paradise with Whey",
+          "calories": 690.0,
+          "protein": 22.0,
+          "carbs": 117.0,
+          "fat": 17.0,
+          "fiber": 3.0,
+          "sodium": 240.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 3.5,
+          "sugars": 91.0
+        },
+        {
+          "name": "Pomegranate Plunge",
+          "calories": 560.0,
+          "protein": 2.0,
+          "carbs": 139.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 30.0,
+          "sugars": 127.0
+        },
+        {
+          "name": "Sunrise Sunset",
+          "calories": 470.0,
+          "protein": 3.0,
+          "carbs": 117.0,
+          "fat": 1.0,
+          "fiber": 4.0,
+          "sodium": 15.0,
+          "sugars": 107.0
+        },
+        {
+          "name": "Tropical Dragon Passion",
+          "calories": 350.0,
+          "protein": 2.0,
+          "carbs": 86.0,
+          "fat": 0.0,
+          "fiber": 4.0,
+          "sodium": 25.0,
+          "sugars": 80.0
+        }
+      ]
+    },
+    {
+      "name": "Tropic Bowls",
+      "items": [
+        {
+          "name": "Acai Bowl",
+          "calories": 530.0,
+          "protein": 4.0,
+          "carbs": 100.0,
+          "fat": 17.0,
+          "fiber": 11.0,
+          "sodium": 135.0,
+          "saturated_fat": 5.0,
+          "sugars": 55.0
+        },
+        {
+          "name": "Acai Bowl with Nutella",
+          "calories": 680.0,
+          "protein": 6.0,
+          "carbs": 116.0,
+          "fat": 26.0,
+          "fiber": 12.0,
+          "sodium": 145.0,
+          "saturated_fat": 8.0,
+          "sugars": 70.0
+        },
+        {
+          "name": "Bahama Mama Bowl",
+          "calories": 400.0,
+          "protein": 3.0,
+          "carbs": 75.0,
+          "fat": 11.0,
+          "fiber": 16.0,
+          "sodium": 120.0,
+          "saturated_fat": 6.0,
+          "sugars": 46.0
+        },
+        {
+          "name": "Chia Oatmeal Pudding",
+          "calories": 740.0,
+          "protein": 14.0,
+          "carbs": 102.0,
+          "fat": 33.0,
+          "fiber": 10.0,
+          "sodium": 230.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 18.0,
+          "sugars": 50.0
+        },
+        {
+          "name": "Dragon Fruit Bowl",
+          "calories": 350.0,
+          "protein": 4.0,
+          "carbs": 77.0,
+          "fat": 5.0,
+          "fiber": 5.0,
+          "sodium": 80.0,
+          "saturated_fat": 4.0,
+          "sugars": 48.0
+        },
+        {
+          "name": "Mixed Berry Greek Yogurt",
+          "calories": 560.0,
+          "protein": 26.0,
+          "carbs": 64.0,
+          "fat": 23.0,
+          "fiber": 7.0,
+          "sodium": 270.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 8.0,
+          "sugars": 33.0
+        },
+        {
+          "name": "PB Protein Crunch",
+          "calories": 800.0,
+          "protein": 32.0,
+          "carbs": 71.0,
+          "fat": 45.0,
+          "fiber": 9.0,
+          "sodium": 380.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 14.0,
+          "sugars": 39.0
+        }
+      ]
+    },
+    {
+      "name": "Breakfast",
+      "items": [
+        {
+          "name": "All American Wrap - Bacon",
+          "calories": 410.0,
+          "protein": 17.0,
+          "carbs": 35.0,
+          "fat": 21.0,
+          "fiber": 0.0,
+          "sodium": 1040.0,
+          "cholesterol": 145.0,
+          "saturated_fat": 9.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "All American Wrap - Sausage",
+          "calories": 540.0,
+          "protein": 23.0,
+          "carbs": 36.0,
+          "fat": 33.0,
+          "fiber": 1.0,
+          "sodium": 1300.0,
+          "cholesterol": 170.0,
+          "saturated_fat": 13.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Cali Breakfast Flatbread - Chicken",
+          "calories": 560.0,
+          "protein": 27.0,
+          "carbs": 47.0,
+          "fat": 30.0,
+          "fiber": 4.0,
+          "sodium": 1210.0,
+          "cholesterol": 170.0,
+          "saturated_fat": 8.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Cali Breakfast Flatbread - Sausage",
+          "calories": 660.0,
+          "protein": 24.0,
+          "carbs": 46.0,
+          "fat": 43.0,
+          "fiber": 4.0,
+          "sodium": 1360.0,
+          "cholesterol": 165.0,
+          "saturated_fat": 13.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "PB Banana Crunch Flatbread",
+          "calories": 640.0,
+          "protein": 17.0,
+          "carbs": 87.0,
+          "fat": 26.0,
+          "fiber": 8.0,
+          "sodium": 810.0,
+          "saturated_fat": 4.5,
+          "sugars": 25.0
+        },
+        {
+          "name": "Sausage, Egg & Cheese 'Dilla",
+          "calories": 630.0,
+          "protein": 27.0,
+          "carbs": 39.0,
+          "fat": 40.0,
+          "fiber": 1.0,
+          "sodium": 2020.0,
+          "cholesterol": 180.0,
+          "saturated_fat": 16.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Southwest Wrap - Chicken",
+          "calories": 590.0,
+          "protein": 24.0,
+          "carbs": 38.0,
+          "fat": 38.0,
+          "fiber": 1.0,
+          "sodium": 1260.0,
+          "cholesterol": 170.0,
+          "saturated_fat": 10.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Southwest Wrap - Sausage",
+          "calories": 710.0,
+          "protein": 23.0,
+          "carbs": 38.0,
+          "fat": 51.0,
+          "fiber": 2.0,
+          "sodium": 1480.0,
+          "cholesterol": 175.0,
+          "saturated_fat": 15.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Spinach Feta & Pesto Breakfast Wrap",
+          "calories": 450.0,
+          "protein": 17.0,
+          "carbs": 38.0,
+          "fat": 26.0,
+          "fiber": 2.0,
+          "sodium": 1210.0,
+          "cholesterol": 170.0,
+          "saturated_fat": 12.0,
+          "sugars": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Wraps",
+      "items": [
+        {
+          "name": "Baja Chicken",
+          "calories": 760.0,
+          "protein": 38.0,
+          "carbs": 83.0,
+          "fat": 30.0,
+          "fiber": 7.0,
+          "sodium": 2050.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 10.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Buffalo Chicken",
+          "calories": 620.0,
+          "protein": 33.0,
+          "carbs": 59.0,
+          "fat": 27.0,
+          "fiber": 3.0,
+          "sodium": 2400.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 9.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Caribbean Jerk Chicken",
+          "calories": 700.0,
+          "protein": 38.0,
+          "carbs": 91.0,
+          "fat": 20.0,
+          "fiber": 5.0,
+          "sodium": 1820.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 8.0,
+          "sugars": 18.0
+        },
+        {
+          "name": "Hummus Veggie",
+          "calories": 830.0,
+          "protein": 23.0,
+          "carbs": 95.0,
+          "fat": 41.0,
+          "fiber": 11.0,
+          "sodium": 1910.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 10.0,
+          "sugars": 11.0
+        },
+        {
+          "name": "Supergreen Caesar Chicken",
+          "calories": 750.0,
+          "protein": 43.0,
+          "carbs": 55.0,
+          "fat": 39.0,
+          "fiber": 3.0,
+          "sodium": 1820.0,
+          "cholesterol": 125.0,
+          "saturated_fat": 13.0,
+          "sugars": 5.0,
+          "trans_fat": 0.5
+        },
+        {
+          "name": "Thai Chicken",
+          "calories": 600.0,
+          "protein": 31.0,
+          "carbs": 77.0,
+          "fat": 19.0,
+          "fiber": 3.0,
+          "sodium": 1690.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 3.5,
+          "sugars": 15.0
+        }
+      ]
+    },
+    {
+      "name": "Sandwiches",
+      "items": [
+        {
+          "name": "Turkey Bacon Ranch",
+          "calories": 500.0,
+          "protein": 39.0,
+          "carbs": 51.0,
+          "fat": 18.0,
+          "fiber": 4.0,
+          "sodium": 1510.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 6.0,
+          "sugars": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Flatbreads",
+      "items": [
+        {
+          "name": "Chicken Bacon Ranch",
+          "calories": 510.0,
+          "protein": 28.0,
+          "carbs": 47.0,
+          "fat": 23.0,
+          "fiber": 3.0,
+          "sodium": 1230.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 7.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Chicken Pesto",
+          "calories": 490.0,
+          "protein": 26.0,
+          "carbs": 46.0,
+          "fat": 22.0,
+          "fiber": 3.0,
+          "sodium": 1220.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 7.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Chipotle Chicken Club",
+          "calories": 520.0,
+          "protein": 27.0,
+          "carbs": 46.0,
+          "fat": 25.0,
+          "fiber": 3.0,
+          "sodium": 1160.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 7.0,
+          "sugars": 2.0
+        }
+      ]
+    },
+    {
+      "name": "'Dillas",
+      "items": [
+        {
+          "name": "Santa Fe Chicken",
+          "calories": 600.0,
+          "protein": 33.0,
+          "carbs": 49.0,
+          "fat": 29.0,
+          "fiber": 3.0,
+          "sodium": 2310.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 14.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Three Cheese Chicken",
+          "calories": 540.0,
+          "protein": 31.0,
+          "carbs": 39.0,
+          "fat": 27.0,
+          "fiber": 1.0,
+          "sodium": 1930.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 14.0,
+          "sugars": 5.0
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        {
+          "name": "Supergreen Caesar",
+          "calories": 600.0,
+          "protein": 35.0,
+          "carbs": 8.0,
+          "fat": 47.0,
+          "fiber": 3.0,
+          "sodium": 1150.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 13.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Thai Chicken",
+          "calories": 380.0,
+          "protein": 23.0,
+          "carbs": 41.0,
+          "fat": 14.0,
+          "fiber": 4.0,
+          "sodium": 1190.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 1.5,
+          "sugars": 21.0
+        }
+      ]
+    },
+    {
+      "name": "Kids Food Items",
+      "items": [
+        {
+          "name": "Cheese 'Dilla",
+          "calories": 400.0,
+          "protein": 17.0,
+          "carbs": 35.0,
+          "fat": 22.0,
+          "fiber": 0.0,
+          "sodium": 930.0,
+          "cholesterol": 55.0,
+          "saturated_fat": 11.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Cheese 'Dilla with Chicken",
+          "calories": 480.0,
+          "protein": 29.0,
+          "carbs": 36.0,
+          "fat": 23.0,
+          "fiber": 0.0,
+          "sodium": 1190.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 12.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Turkey & Cheddar Wrap",
+          "calories": 360.0,
+          "protein": 23.0,
+          "carbs": 35.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 1090.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 7.0,
+          "sugars": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Apple",
+          "calories": 90.0,
+          "protein": 0.0,
+          "carbs": 25.0,
+          "fat": 0.0,
+          "fiber": 4.0,
+          "sodium": 0.0,
+          "sugars": 19.0
+        },
+        {
+          "name": "Baked Lay's Original",
+          "calories": 140.0,
+          "protein": 2.0,
+          "carbs": 24.0,
+          "fat": 4.0,
+          "fiber": 2.0,
+          "sodium": 180.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Banana",
+          "calories": 110.0,
+          "protein": 1.0,
+          "carbs": 27.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 0.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "Jalapeño Corn",
+          "calories": 150.0,
+          "protein": 3.0,
+          "carbs": 22.0,
+          "fat": 5.0,
+          "fiber": 3.0,
+          "sodium": 170.0,
+          "saturated_fat": 1.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "Kale & Apple Slaw",
+          "calories": 130.0,
+          "protein": 1.0,
+          "carbs": 11.0,
+          "fat": 9.0,
+          "fiber": 2.0,
+          "sodium": 150.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 1.5,
+          "sugars": 8.0
+        },
+        {
+          "name": "Maple-Kissed Sweet Potatoes",
+          "calories": 140.0,
+          "protein": 2.0,
+          "carbs": 26.0,
+          "fat": 4.0,
+          "fiber": 3.0,
+          "sodium": 180.0,
+          "saturated_fat": 1.0,
+          "sugars": 17.0
+        },
+        {
+          "name": "Miss Vickie's Sea Salt & Vinegar",
+          "calories": 200.0,
+          "protein": 3.0,
+          "carbs": 23.0,
+          "fat": 11.0,
+          "fiber": 2.0,
+          "sodium": 240.0,
+          "saturated_fat": 1.5,
+          "sugars": 2.0
+        },
+        {
+          "name": "SunChips Harvest Cheddar",
+          "calories": 210.0,
+          "protein": 3.0,
+          "carbs": 28.0,
+          "fat": 9.0,
+          "fiber": 4.0,
+          "sodium": 260.0,
+          "saturated_fat": 1.0,
+          "sugars": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Cookies",
+      "items": [
+        {
+          "name": "Chocolate Chip",
+          "calories": 350.0,
+          "protein": 4.0,
+          "carbs": 43.0,
+          "fat": 19.0,
+          "fiber": 2.0,
+          "sodium": 230.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 11.0,
+          "sugars": 21.0
+        },
+        {
+          "name": "Snickerdoodle",
+          "calories": 330.0,
+          "protein": 3.0,
+          "carbs": 47.0,
+          "fat": 14.0,
+          "fiber": 1.0,
+          "sodium": 300.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 9.0,
+          "sugars": 24.0
+        }
+      ]
+    },
+    {
+      "name": "Supplements",
+      "items": [
+        {
+          "name": "Energizer",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fat Burner",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Multivitamin",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 4.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pea Protein Powder",
+          "calories": 130.0,
+          "protein": 24.0,
+          "carbs": 3.0,
+          "fat": 2.5,
+          "fiber": 0.0,
+          "sodium": 410.0
+        },
+        {
+          "name": "Probiotic",
+          "calories": 20.0,
+          "protein": 0.0,
+          "carbs": 6.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Vital Proteins Collagen",
+          "calories": 30.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 45.0
+        },
+        {
+          "name": "Vitamin B12",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 4.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Vitamin C Immune Complex",
+          "calories": 20.0,
+          "protein": 0.0,
+          "carbs": 5.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Whey Protein Powder",
+          "calories": 90.0,
+          "protein": 12.0,
+          "carbs": 8.0,
+          "fat": 1.0,
+          "fiber": 0.0,
+          "sodium": 35.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 1.0,
+          "sugars": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Bottled Beverages",
+      "items": [
+        {
+          "name": "Aquafina Bottled Water",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Brewed Sweet Tea",
+          "calories": 250.0,
+          "protein": 0.0,
+          "carbs": 62.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 62.0
+        },
+        {
+          "name": "Brewed Unsweet Tea",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 1.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Coca-Cola",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 65.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 75.0,
+          "sugars": 65.0
+        },
+        {
+          "name": "Diet Coke",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 70.0
+        },
+        {
+          "name": "Sprite",
+          "calories": 230.0,
+          "protein": 0.0,
+          "carbs": 62.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 65.0,
+          "sugars": 62.0
+        }
+      ]
+    },
+    {
+      "name": "Featured / Seasonal",
+      "items": [
+        {
+          "name": "Mango Tropiboba Bowl",
+          "calories": 550.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Berry Tropiboba Bowl",
+          "calories": 580.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cherry Berry Protein",
+          "calories": 450.0,
+          "protein": 33.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chocolate PB Protein",
+          "calories": 650.0,
+          "protein": 39.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

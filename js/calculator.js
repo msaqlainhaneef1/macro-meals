@@ -1,0 +1,199 @@
+/* ===== ENHANCED CALCULATOR ENGINE v2 ===== */
+function initCalculator(config){
+  var resultDiv=document.getElementById('calc-result');
+  if(!resultDiv||!config)return;
+
+  function getValues(){
+    var vals={};
+    config.fields.forEach(function(f){
+      var el=document.getElementById('field-'+f.name);
+      if(el)vals[f.name]=el.value;
+    });
+    return vals;
+  }
+
+  var colorMap={'text-green-600':'#059669','text-green-500':'#10b981','text-green-700':'#047857','text-blue-600':'#2563eb','text-yellow-600':'#d97706','text-yellow-500':'#eab308','text-orange-600':'#ea580c','text-red-600':'#dc2626','text-red-700':'#b91c1c','text-purple-600':'#9333ea','text-pink-600':'#db2777'};
+
+  function colorHex(c){return colorMap[c]||'#2563eb';}
+
+  function getCardClass(color){
+    if(!color)return 'primary';
+    if(color.indexOf('green')>-1)return 'success';
+    if(color.indexOf('red')>-1)return 'danger';
+    if(color.indexOf('yellow')>-1||color.indexOf('orange')>-1)return 'warning';
+    if(color.indexOf('purple')>-1)return 'info';
+    if(color.indexOf('pink')>-1)return 'pink';
+    return 'primary';
+  }
+
+  function getBadgeClass(color){
+    if(color&&color.indexOf('green')>-1)return 'badge-green';
+    if(color&&color.indexOf('red')>-1)return 'badge-red';
+    if(color&&color.indexOf('yellow')>-1)return 'badge-yellow';
+    if(color&&color.indexOf('orange')>-1)return 'badge-orange';
+    return 'badge-blue';
+  }
+
+  function renderCards(cards){
+    if(!cards||!cards.length)return '';
+    var html='<div class="results-grid">';
+    cards.forEach(function(c){
+      var cls=getCardClass(c.color||'');
+      html+='<div class="result-mini '+cls+'">';
+      if(c.icon)html+='<div class="r-icon">'+c.icon+'</div>';
+      html+='<div class="r-val" style="color:'+colorHex(c.color||'text-blue-600')+'">'+c.value+'</div>';
+      html+='<div class="r-label">'+c.label+'</div>';
+      if(c.sub)html+='<div class="r-sub" style="color:'+colorHex(c.color||'text-blue-600')+'">'+c.sub+'</div>';
+      html+='</div>';
+    });
+    html+='</div>';
+    return html;
+  }
+
+  function renderScale(scale){
+    if(!scale)return '';
+    var pct=Math.max(0,Math.min(100,scale.percent));
+    var html='<div class="visual-scale">';
+    html+='<div class="scale-bar"><div class="scale-marker" style="left:'+pct+'%"></div></div>';
+    if(scale.labels){
+      html+='<div class="scale-labels">';
+      scale.labels.forEach(function(l){
+        html+='<div class="scale-label'+(l.active?' active':'')+'">'+l.text+'</div>';
+      });
+      html+='</div>';
+    }
+    html+='</div>';
+    return html;
+  }
+
+  function renderMacroBars(macros){
+    if(!macros||!macros.length)return '';
+    var html='<div class="calc-card"><h3>Macro Breakdown</h3><div class="macro-bars">';
+    macros.forEach(function(m){
+      html+='<div class="macro-bar-row">';
+      html+='<div class="macro-bar-header"><span class="m-name">'+m.name+'</span><span class="m-val">'+m.value+'</span></div>';
+      html+='<div class="macro-bar-track"><div class="macro-bar-fill '+m.cls+'" style="width:'+Math.min(100,m.percent)+'%"></div></div>';
+      html+='</div>';
+    });
+    html+='</div></div>';
+    return html;
+  }
+
+  function renderRisks(risks){
+    if(!risks||!risks.length)return '';
+    var html='<div class="calc-card"><h3>Clinical Risk Assessment</h3><div class="risk-grid">';
+    risks.forEach(function(r){
+      html+='<div class="risk-item '+r.level+'"><div class="risk-label">'+r.label+'</div><div class="risk-value">'+r.value+'</div></div>';
+    });
+    html+='</div></div>';
+    return html;
+  }
+
+  function renderExtras(extras){
+    if(!extras||!extras.length)return '';
+    var html='<div class="result-extras">';
+    extras.forEach(function(e){
+      html+='<div class="result-extra"><div class="label">'+e.label+'</div><div class="value">'+e.value+'</div></div>';
+    });
+    html+='</div>';
+    return html;
+  }
+
+  function render(){
+    var vals=getValues();
+    var r=config.calculate(vals);
+    if(!r){
+      resultDiv.innerHTML='<div class="result-card"><p style="color:#94a3b8;text-align:center;padding:1rem">Enter your values above to see results</p></div>';
+      return;
+    }
+
+    var html='';
+
+    // Multi-card results
+    if(r.cards){
+      html+=renderCards(r.cards);
+    } else {
+      // Legacy single result
+      html+='<div class="result-card">';
+      html+='<div class="result-value" style="color:'+colorHex(r.color)+'">'+r.primary+'</div>';
+      html+='<div class="result-label">'+r.label+(r.unit?' ('+r.unit+')':'')+'</div>';
+      if(r.category)html+='<div class="result-badge '+getBadgeClass(r.color)+'">'+r.category+'</div>';
+      if(r.extras)html+=renderExtras(r.extras);
+      html+='</div>';
+    }
+
+    // Visual scale
+    if(r.scale)html+=renderScale(r.scale);
+
+    // Macro bars
+    if(r.macros)html+=renderMacroBars(r.macros);
+
+    // Risk assessment
+    if(r.risks)html+=renderRisks(r.risks);
+
+    // Pro tip
+    if(r.tip)html+='<div class="pro-tip"><strong>Pro Tip:</strong> '+r.tip+'</div>';
+
+    resultDiv.innerHTML=html;
+  }
+
+  // Bind events
+  config.fields.forEach(function(f){
+    var el=document.getElementById('field-'+f.name);
+    if(el){
+      el.addEventListener('input',render);
+      el.addEventListener('change',render);
+    }
+  });
+
+  // Calculate button
+  var calcBtn=document.getElementById('calc-btn');
+  if(calcBtn){
+    calcBtn.addEventListener('click',function(e){
+      e.preventDefault();
+      render();
+      resultDiv.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+  }
+
+  // Unit switcher
+  var unitBtns=document.querySelectorAll('.unit-btn');
+  unitBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      unitBtns.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var unit=btn.getAttribute('data-unit');
+      document.querySelectorAll('.unit-metric,.unit-imperial').forEach(function(el){el.style.display='none';});
+      document.querySelectorAll('.unit-'+unit).forEach(function(el){el.style.display='';});
+      render();
+    });
+  });
+
+  // Gender toggle
+  var genderBtns=document.querySelectorAll('.gender-btn');
+  genderBtns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      genderBtns.forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var gField=document.getElementById('field-gender');
+      if(gField)gField.value=btn.getAttribute('data-val');
+      render();
+    });
+  });
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(q){
+    q.addEventListener('click',function(){
+      var a=this.nextElementSibling;
+      var isOpen=this.classList.contains('open');
+      document.querySelectorAll('.faq-q').forEach(function(fq){fq.classList.remove('open');});
+      document.querySelectorAll('.faq-a').forEach(function(fa){fa.classList.remove('open');});
+      if(!isOpen){
+        this.classList.add('open');
+        a.classList.add('open');
+      }
+    });
+  });
+
+  render();
+}

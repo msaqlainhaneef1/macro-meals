@@ -1,0 +1,371 @@
+{
+  "slug": "daves-hot-chicken-nutrition-calculator",
+  "title": "🍗 Dave's Hot Chicken Calculator",
+  "description": "Track calories and macros for hot chicken and sides.",
+  "categories": [
+    {
+      "name": "Hot Meals (Combos)",
+      "items": [
+        {
+          "name": "Dave's #1: 2 Tenders w/ Fries",
+          "calories": 980.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dave's #2: 2 Sliders w/ Fries",
+          "calories": 1270.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dave's #3: 1 Tender & 1 Slider w/ Fries",
+          "calories": 1310.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dave's #4: 1 Slider w/ Fries",
+          "calories": 900.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Dave's NOT Chicken (Cauliflower)",
+      "items": [
+        {
+          "name": "1 Cauli Slider with Fries",
+          "calories": 850.0,
+          "protein": 8.0,
+          "carbs": 50.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 900.0
+        },
+        {
+          "name": "1 Cauli Tender & 1 Cauli Slider W/ Fries",
+          "calories": 1080.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "2 Cauli Sliders W/ Fries",
+          "calories": 1340.0,
+          "protein": 22.0,
+          "carbs": 158.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 3200.0
+        },
+        {
+          "name": "2 Cauli Tenders with Fries",
+          "calories": 750.0,
+          "protein": 13.0,
+          "carbs": 98.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2050.0
+        },
+        {
+          "name": "10 pc. Cauli Tender Bites W/ Fries",
+          "calories": 1270.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Single Cauli Slider",
+          "calories": 450.0,
+          "protein": 8.0,
+          "carbs": 50.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 900.0
+        },
+        {
+          "name": "Single Cauli Tender",
+          "calories": 350.0,
+          "protein": 6.0,
+          "carbs": 40.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 850.0
+        }
+      ]
+    },
+    {
+      "name": "Dave's Bites and Top Loaded Fries",
+      "items": [
+        {
+          "name": "10 pc. Dave's Bites W/ Fries",
+          "calories": 1180.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Large Top Loaded Fries",
+          "calories": 1800.0,
+          "protein": 45.0,
+          "carbs": 170.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2500.0
+        },
+        {
+          "name": "Regular Top Loaded Fries",
+          "calories": 1500.0,
+          "protein": 40.0,
+          "carbs": 150.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2300.0
+        },
+        {
+          "name": "Small Top Loaded Fries",
+          "calories": 1200.0,
+          "protein": 35.0,
+          "carbs": 130.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 2200.0
+        }
+      ]
+    },
+    {
+      "name": "Individual Items & Sides",
+      "items": [
+        {
+          "name": "Single Slider",
+          "calories": 680.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Single Tender",
+          "calories": 550.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fries",
+          "calories": 440.0,
+          "protein": 6.0,
+          "carbs": 60.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1200.0
+        },
+        {
+          "name": "Cheese Fries",
+          "calories": 460.0,
+          "protein": 6.0,
+          "carbs": 60.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1330.0
+        },
+        {
+          "name": "Mac & Cheese",
+          "calories": 300.0,
+          "protein": 14.0,
+          "carbs": 30.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 500.0
+        },
+        {
+          "name": "Kale Slaw",
+          "calories": 100.0,
+          "protein": 2.0,
+          "carbs": 8.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 150.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces",
+      "items": [
+        {
+          "name": "Dave's Sauce",
+          "calories": 180.0,
+          "protein": 0.0,
+          "carbs": 2.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 200.0
+        },
+        {
+          "name": "Large Dave's Sauce",
+          "calories": 1530.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Ranch Sauce",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Honey Sauce",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Reaper Sauce",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Shakes & Top-Loaded Shakes",
+      "items": [
+        {
+          "name": "Classic Shake (Chocolate, Vanilla, Strawberry)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Top-Loaded Shake (Fruity Pebbles, Oreo, M&M)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Feed A Crowd (Catering)",
+      "items": [
+        {
+          "name": "Hot Box - Sliders (10 Sliders)",
+          "calories": 6800.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hot Box - Tenders (10 Tenders)",
+          "calories": 4900.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hot Box - Dave's Bites",
+          "calories": 3600.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Box of Fries",
+          "calories": 900.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Secret Menu",
+      "items": [
+        {
+          "name": "Spicy Mac Slider",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Loaded Dave's Fries",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dave's Double Down",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Secret Reaper Challenge",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

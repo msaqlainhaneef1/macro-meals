@@ -1,0 +1,726 @@
+{
+  "slug": "bolay-nutrition-calculator",
+  "title": "🥙 Bolay Nutrition Calculator",
+  "description": "Build your Bolay bowl and track nutrition values.",
+  "categories": [
+    {
+      "name": "Chef Inspired Bols",
+      "items": [
+        {
+          "name": "Fiesta Garden Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tuscan Market Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pesto Power Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Floridita Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Taste the RainBol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "The Nood-trition Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Salmon Superfood Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Avocado Citrus Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Omega Miso Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fuel-Up Salmon Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Warrior Steak Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Teriyaki Zen Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Steak Street Salad",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Build Your Own Bol",
+      "items": [
+        {
+          "name": "Regular Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Large Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Kids Bol",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Garlic Broccoli Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Roasted Sweet Potatoes Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Power Bean Medley Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Street Corn Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Brussel Sprouts Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "Iced Teas & Organic Frescas",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Island Time (Strawberry Orange)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hawaiian Healer (Pineapple Ginger)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweet South Lemonade",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Celsius",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "San Pellegrino",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bottled Water",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bubly",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Poppi",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Chocolate Chip Cookie",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Snickerdoodle Cookie",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Strawberry Chia Seed Pudding",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Bases",
+      "items": [
+        {
+          "name": "Asian Sweet Potato Noodles",
+          "calories": 210.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 320.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "100% Whole Grain Black Rice",
+          "calories": 160.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 5.0,
+          "fiber": 0.0,
+          "sodium": 427.0,
+          "saturated_fat": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Pesto Noodles",
+          "calories": 183.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 6.0,
+          "fiber": 0.0,
+          "sodium": 535.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Jasmine Rice",
+          "calories": 225.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 5.0,
+          "fiber": 0.0,
+          "sodium": 315.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Chopped Kale Salad",
+          "calories": 135.0,
+          "protein": 2.0,
+          "carbs": 0.0,
+          "fat": 10.0,
+          "fiber": 3.0,
+          "sodium": 280.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Spinach and Almond Salad",
+          "calories": 92.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 7.0,
+          "fiber": 2.0,
+          "sodium": 5.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Mixed Greens",
+          "calories": 13.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 40.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Veggies",
+      "items": [
+        {
+          "name": "Cauliflower Rice",
+          "calories": 90.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 5.0,
+          "fiber": 3.0,
+          "sodium": 364.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Garlic Broccoli",
+          "calories": 50.0,
+          "protein": 4.0,
+          "carbs": 0.0,
+          "fat": 2.0,
+          "fiber": 4.0,
+          "sodium": 260.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Street Corn",
+          "calories": 80.0,
+          "protein": 2.0,
+          "carbs": 0.0,
+          "fat": 4.0,
+          "fiber": 2.0,
+          "sodium": 522.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Thyme Roasted Mushrooms",
+          "calories": 45.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 2.0,
+          "fiber": 1.0,
+          "sodium": 255.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Power Bean Medley",
+          "calories": 93.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 2.0,
+          "fiber": 5.0,
+          "sodium": 210.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Roasted Sweet Potatoes",
+          "calories": 130.0,
+          "protein": 2.0,
+          "carbs": 0.0,
+          "fat": 3.0,
+          "fiber": 4.0,
+          "sodium": 150.0,
+          "saturated_fat": 0.5,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Proteins",
+      "items": [
+        {
+          "name": "Lemon Chicken",
+          "calories": 180.0,
+          "protein": 22.0,
+          "carbs": 0.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 450.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Simply Grilled Chicken",
+          "calories": 250.0,
+          "protein": 26.0,
+          "carbs": 0.0,
+          "fat": 16.0,
+          "fiber": 0.0,
+          "sodium": 510.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 4.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Teriyaki Chicken",
+          "calories": 184.0,
+          "protein": 19.0,
+          "carbs": 0.0,
+          "fat": 9.0,
+          "fiber": 0.0,
+          "sodium": 680.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Rotisserie Chicken Thigh",
+          "calories": 276.0,
+          "protein": 32.0,
+          "carbs": 0.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 490.0,
+          "cholesterol": 110.0,
+          "saturated_fat": 4.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Miso Glazed Tofu",
+          "calories": 139.0,
+          "protein": 12.0,
+          "carbs": 0.0,
+          "fat": 6.0,
+          "fiber": 2.0,
+          "sodium": 420.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Roasted Coho Salmon",
+          "calories": 241.0,
+          "protein": 25.0,
+          "carbs": 0.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 380.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 3.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Signature Steak",
+          "calories": 170.0,
+          "protein": 24.0,
+          "carbs": 0.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 410.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 2.5,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Toppings",
+      "items": [
+        {
+          "name": "Fresh Avocado",
+          "calories": 86.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 8.0,
+          "fiber": 4.0,
+          "sodium": 170.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Chopped Cilantro",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Parmesan Cheese",
+          "calories": 50.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 4.0,
+          "fiber": 1.0,
+          "sodium": 180.0,
+          "cholesterol": 13.0,
+          "saturated_fat": 3.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Feta Cheese",
+          "calories": 35.0,
+          "protein": 2.0,
+          "carbs": 0.0,
+          "fat": 3.0,
+          "fiber": 0.0,
+          "sodium": 175.0,
+          "cholesterol": 7.5,
+          "saturated_fat": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Chimichurri Tomatoes",
+          "calories": 20.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 1.0,
+          "fiber": 0.0,
+          "sodium": 60.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Pickled Red Onions",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Toasted Sliced Almonds",
+          "calories": 90.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 7.0,
+          "fiber": 2.0,
+          "sodium": 280.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Banana Peppers",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 280.0,
+          "trans_fat": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces",
+      "items": [
+        {
+          "name": "Creamy Garlic & Herb",
+          "calories": 150.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 16.0,
+          "fiber": 0.0,
+          "sodium": 172.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Herb Pesto",
+          "calories": 107.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 9.0,
+          "fiber": 0.0,
+          "sodium": 350.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Extra Virgin Olive Oil",
+          "calories": 19.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "saturated_fat": 2.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Smoky Chipotle Sauce",
+          "calories": 26.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 2.0,
+          "fiber": 1.0,
+          "sodium": 505.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Cilantro Lime Vinaigrette",
+          "calories": 399.0,
+          "protein": 1.0,
+          "carbs": 0.0,
+          "fat": 42.0,
+          "fiber": 1.0,
+          "sodium": 590.0,
+          "saturated_fat": 6.0,
+          "trans_fat": 0.0
+        },
+        {
+          "name": "Ginger Turmeric",
+          "calories": 220.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 20.0,
+          "fiber": 0.0,
+          "sodium": 390.0,
+          "saturated_fat": 1.0,
+          "trans_fat": 0.0
+        }
+      ]
+    }
+  ]
+}

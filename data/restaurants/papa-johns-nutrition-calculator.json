@@ -1,0 +1,340 @@
+{
+  "slug": "papa-johns-nutrition-calculator",
+  "title": "🍕 Papa John's Nutrition Calculator",
+  "description": "Get nutrition info for pizza, sides, and desserts.",
+  "categories": [
+    {
+      "name": "Pizzas",
+      "items": [
+        {
+          "name": "Cheese Pizza",
+          "calories": 270.0,
+          "protein": 11.0,
+          "carbs": 0.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 670.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 5.0
+        },
+        {
+          "name": "Pepperoni Pizza",
+          "calories": 300.0,
+          "protein": 12.0,
+          "carbs": 0.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 755.0,
+          "cholesterol": 33.0,
+          "saturated_fat": 6.0
+        },
+        {
+          "name": "Sausage Pizza",
+          "calories": 310.0,
+          "protein": 12.0,
+          "carbs": 0.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 770.0,
+          "cholesterol": 33.0,
+          "saturated_fat": 7.0
+        },
+        {
+          "name": "The Works",
+          "calories": 295.0,
+          "protein": 12.0,
+          "carbs": 0.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 775.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 6.0
+        },
+        {
+          "name": "The Meats",
+          "calories": 330.0,
+          "protein": 14.0,
+          "carbs": 0.0,
+          "fat": 17.0,
+          "fiber": 0.0,
+          "sodium": 885.0,
+          "cholesterol": 43.0,
+          "saturated_fat": 8.0
+        },
+        {
+          "name": "Shaq-a-Roni",
+          "calories": 390.0,
+          "protein": 16.0,
+          "carbs": 0.0,
+          "fat": 17.0,
+          "fiber": 0.0,
+          "sodium": 980.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Papadias",
+      "items": [
+        {
+          "name": "Philly Cheesesteak Papadia",
+          "calories": 810.0,
+          "protein": 40.0,
+          "carbs": 0.0,
+          "fat": 35.0,
+          "fiber": 0.0,
+          "sodium": 2090.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 15.0
+        },
+        {
+          "name": "Grilled BBQ Chicken & Bacon Papadia",
+          "calories": 840.0,
+          "protein": 60.0,
+          "carbs": 0.0,
+          "fat": 28.0,
+          "fiber": 0.0,
+          "sodium": 2410.0,
+          "cholesterol": 160.0,
+          "saturated_fat": 13.0
+        },
+        {
+          "name": "Grilled Buffalo Chicken Papadia",
+          "calories": 920.0,
+          "protein": 63.0,
+          "carbs": 0.0,
+          "fat": 39.0,
+          "fiber": 0.0,
+          "sodium": 2860.0,
+          "cholesterol": 165.0,
+          "saturated_fat": 18.0
+        },
+        {
+          "name": "Italian Papadia",
+          "calories": 940.0,
+          "protein": 38.0,
+          "carbs": 0.0,
+          "fat": 53.0,
+          "fiber": 0.0,
+          "sodium": 2670.0,
+          "cholesterol": 135.0,
+          "saturated_fat": 21.0
+        },
+        {
+          "name": "Meatball Pepperoni Papadia",
+          "calories": 940.0,
+          "protein": 42.0,
+          "carbs": 0.0,
+          "fat": 49.0,
+          "fiber": 0.0,
+          "sodium": 2390.0,
+          "cholesterol": 140.0,
+          "saturated_fat": 21.0
+        }
+      ]
+    },
+    {
+      "name": "Papa Bowls",
+      "items": [
+        {
+          "name": "Chicken Alfredo Papa Bowl",
+          "calories": 570.0,
+          "protein": 62.0,
+          "carbs": 0.0,
+          "fat": 31.0,
+          "fiber": 0.0,
+          "sodium": 2050.0,
+          "cholesterol": 180.0,
+          "saturated_fat": 12.0
+        },
+        {
+          "name": "Italian Meats Trio Papa Bowl",
+          "calories": 880.0,
+          "protein": 46.0,
+          "carbs": 0.0,
+          "fat": 68.0,
+          "fiber": 0.0,
+          "sodium": 2460.0,
+          "cholesterol": 185.0,
+          "saturated_fat": 26.0
+        },
+        {
+          "name": "Garden Veggie Papa Bowl",
+          "calories": 380.0,
+          "protein": 22.0,
+          "carbs": 0.0,
+          "fat": 24.0,
+          "fiber": 0.0,
+          "sodium": 1610.0,
+          "cholesterol": 55.0,
+          "saturated_fat": 11.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Garlic Knots (8pc)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Original Breadsticks (10pc)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Garlic Parmesan Breadsticks (10pc)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cheesesticks (10 inch)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cheesesticks (12 inch)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Papa Bites (8pc)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Chocolate Chip Cookie",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Double Chocolate Chip Brownie",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cinnamon Pullaparts",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "Pepsi/Mountain Dew/Starry (20oz)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pepsi/Mountain Dew/Starry (2-Liter)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Dipping Sauces",
+      "items": [
+        {
+          "name": "Special Garlic",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 350.0
+        },
+        {
+          "name": "Pizza Sauce",
+          "calories": 20.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 1.0,
+          "fiber": 0.0,
+          "sodium": 230.0
+        },
+        {
+          "name": "Ranch Sauce",
+          "calories": 100.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 240.0
+        },
+        {
+          "name": "Blue Cheese",
+          "calories": 160.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 16.0,
+          "fiber": 0.0,
+          "sodium": 250.0
+        },
+        {
+          "name": "Buffalo Sauce",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.5,
+          "fiber": 0.0,
+          "sodium": 900.0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,487 @@
+{
+  "slug": "cupbop-nutrition-calculator",
+  "title": "🍜 Cupbop Nutrition Calculator",
+  "description": "Track nutrition for Korean BBQ cups and bowls.",
+  "categories": [
+    {
+      "name": "Entrees / Bowls",
+      "items": [
+        {
+          "name": "Snow Bop",
+          "calories": 1025.0,
+          "protein": 26.9,
+          "carbs": 121.6,
+          "fat": 46.1,
+          "fiber": 3.0,
+          "sodium": 1400.1,
+          "cholesterol": 121.5,
+          "saturated_fat": 9.1,
+          "sugars": 14.1,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Mando Bop",
+          "calories": 607.0,
+          "protein": 17.1,
+          "carbs": 116.7,
+          "fat": 8.2,
+          "fiber": 4.2,
+          "sodium": 1327.9,
+          "cholesterol": 31.2,
+          "saturated_fat": 0.4,
+          "sugars": 9.5
+        },
+        {
+          "name": "Rock Bop",
+          "calories": 1293.0,
+          "protein": 27.7,
+          "carbs": 130.0,
+          "fat": 35.8,
+          "fiber": 3.0,
+          "sodium": 1586.0,
+          "cholesterol": 111.2,
+          "saturated_fat": 7.6,
+          "sugars": 19.8,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Ugly Bop",
+          "calories": 884.0,
+          "protein": 26.8,
+          "carbs": 114.3,
+          "fat": 33.7,
+          "fiber": 3.0,
+          "sodium": 1146.7,
+          "cholesterol": 111.2,
+          "saturated_fat": 7.1,
+          "sugars": 7.8,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Krunch Bop",
+          "calories": 557.0,
+          "protein": 31.3,
+          "carbs": 107.2,
+          "fat": 4.0,
+          "fiber": 4.1,
+          "sodium": 793.3,
+          "cholesterol": 66.7,
+          "saturated_fat": 0.4,
+          "sugars": 11.1
+        },
+        {
+          "name": "Kko Kko Bop",
+          "calories": 593.0,
+          "protein": 26.3,
+          "carbs": 93.9,
+          "fat": 11.5,
+          "fiber": 2.4,
+          "sodium": 1287.9,
+          "cholesterol": 100.0,
+          "saturated_fat": 2.9,
+          "sugars": 11.1
+        },
+        {
+          "name": "Piggy Bop",
+          "calories": 693.0,
+          "protein": 28.0,
+          "carbs": 102.2,
+          "fat": 19.0,
+          "fiber": 2.4,
+          "sodium": 1259.9,
+          "cholesterol": 66.7,
+          "saturated_fat": 4.6,
+          "sugars": 14.4
+        },
+        {
+          "name": "Veggie Bop",
+          "calories": 499.0,
+          "protein": 7.3,
+          "carbs": 87.5,
+          "fat": 4.0,
+          "fiber": 3.4,
+          "sodium": 1359.9,
+          "saturated_fat": 0.4,
+          "sugars": 8.7
+        },
+        {
+          "name": "B Bop",
+          "calories": 643.0,
+          "protein": 28.0,
+          "carbs": 95.5,
+          "fat": 15.7,
+          "fiber": 2.4,
+          "sodium": 1109.9,
+          "cholesterol": 83.4,
+          "saturated_fat": 7.9,
+          "sugars": 14.4
+        },
+        {
+          "name": "Doochi Bop",
+          "calories": 532.0,
+          "protein": 31.6,
+          "carbs": 97.5,
+          "fat": 31.3,
+          "fiber": 7.7,
+          "sodium": 581.2,
+          "saturated_fat": 4.4,
+          "sugars": 11.5
+        },
+        {
+          "name": "Noodle Bop",
+          "calories": 574.0,
+          "protein": 7.4,
+          "carbs": 117.4,
+          "fat": 7.6,
+          "fiber": 2.4,
+          "sodium": 1104.2,
+          "saturated_fat": 0.7,
+          "sugars": 13.4
+        },
+        {
+          "name": "Salad Bop",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Combo Bop",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides & Snacks",
+      "items": [
+        {
+          "name": "Mandoo (3pcs)",
+          "calories": 99.0,
+          "protein": 5.4,
+          "carbs": 15.6,
+          "fat": 0.0,
+          "fiber": 0.9,
+          "sodium": 389.0,
+          "cholesterol": 15.6,
+          "sugars": 0.9
+        },
+        {
+          "name": "Kimchi",
+          "calories": 30.0,
+          "protein": 3.0,
+          "carbs": 6.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 690.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Turtle Chips (Corn)",
+          "calories": 160.0,
+          "protein": 1.0,
+          "carbs": 16.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 190.0,
+          "saturated_fat": 4.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Turtle Chips (Choco)",
+          "calories": 160.0,
+          "protein": 2.0,
+          "carbs": 19.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 75.0,
+          "saturated_fat": 5.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "Turtle Chips (Lime)",
+          "calories": 160.0,
+          "protein": 2.0,
+          "carbs": 17.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 390.0,
+          "saturated_fat": 4.5,
+          "sugars": 1.0
+        }
+      ]
+    },
+    {
+      "name": "K-Dawgs",
+      "items": [
+        {
+          "name": "K dawg (Cheese w/ Panko)",
+          "calories": 650.0,
+          "protein": 24.0,
+          "carbs": 85.0,
+          "fat": 24.0,
+          "fiber": 5.0,
+          "sodium": 650.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 11.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "K dawg (Cheese w/ Cereal Flakes)",
+          "calories": 650.0,
+          "protein": 22.0,
+          "carbs": 91.0,
+          "fat": 24.0,
+          "fiber": 4.0,
+          "sodium": 1050.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 11.0,
+          "sugars": 10.0
+        },
+        {
+          "name": "K dawg (cheese/sausage w/ Panko)",
+          "calories": 650.0,
+          "protein": 21.0,
+          "carbs": 88.0,
+          "fat": 24.0,
+          "fiber": 5.0,
+          "sodium": 680.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 9.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "K dawg (cheese/sausage w/ cereal flakes)",
+          "calories": 650.0,
+          "protein": 19.0,
+          "carbs": 94.0,
+          "fat": 24.0,
+          "fiber": 4.0,
+          "sodium": 1080.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 9.0,
+          "sugars": 10.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces",
+      "items": [
+        {
+          "name": "#1 Sauce",
+          "calories": 226.0,
+          "protein": 0.33,
+          "carbs": 28.0,
+          "fat": 12.96,
+          "fiber": 0.01,
+          "sodium": 243.0,
+          "cholesterol": 12.0,
+          "saturated_fat": 1.77,
+          "sugars": 27.3
+        },
+        {
+          "name": "#2 Sauce",
+          "calories": 231.0,
+          "protein": 0.34,
+          "carbs": 27.0,
+          "fat": 14.01,
+          "fiber": 0.02,
+          "sodium": 255.0,
+          "cholesterol": 12.0,
+          "saturated_fat": 1.85,
+          "sugars": 26.1
+        },
+        {
+          "name": "#3 Sauce",
+          "calories": 235.0,
+          "protein": 0.35,
+          "carbs": 26.0,
+          "fat": 15.06,
+          "fiber": 0.04,
+          "sodium": 266.0,
+          "cholesterol": 12.0,
+          "saturated_fat": 1.93,
+          "sugars": 24.9,
+          "trans_fat": 0.01
+        },
+        {
+          "name": "#4 Sauce",
+          "calories": 272.0,
+          "protein": 0.37,
+          "carbs": 25.0,
+          "fat": 19.55,
+          "fiber": 0.07,
+          "sodium": 303.0,
+          "cholesterol": 14.0,
+          "saturated_fat": 2.42,
+          "sugars": 23.82,
+          "trans_fat": 0.01
+        },
+        {
+          "name": "#5 Sauce",
+          "calories": 285.0,
+          "protein": 0.39,
+          "carbs": 24.0,
+          "fat": 21.46,
+          "fiber": 0.09,
+          "sodium": 320.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 2.6,
+          "sugars": 22.65,
+          "trans_fat": 0.02
+        },
+        {
+          "name": "#6 Sauce",
+          "calories": 268.0,
+          "protein": 0.32,
+          "carbs": 19.0,
+          "fat": 21.47,
+          "fiber": 0.11,
+          "sodium": 352.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 2.61,
+          "sugars": 18.26,
+          "trans_fat": 0.02
+        },
+        {
+          "name": "#7 Sauce",
+          "calories": 224.0,
+          "protein": 0.32,
+          "carbs": 20.0,
+          "fat": 16.33,
+          "fiber": 0.11,
+          "sodium": 445.0,
+          "cholesterol": 11.0,
+          "saturated_fat": 1.98,
+          "sugars": 18.7,
+          "trans_fat": 0.01
+        },
+        {
+          "name": "#7.5 Sauce",
+          "calories": 225.0,
+          "protein": 0.33,
+          "carbs": 20.0,
+          "fat": 16.34,
+          "fiber": 0.12,
+          "sodium": 495.0,
+          "cholesterol": 11.0,
+          "saturated_fat": 1.99,
+          "sugars": 18.93,
+          "trans_fat": 0.01
+        },
+        {
+          "name": "#8 Sauce",
+          "calories": 123.0,
+          "protein": 0.25,
+          "carbs": 11.0,
+          "fat": 8.71,
+          "fiber": 0.24,
+          "sodium": 569.0,
+          "cholesterol": 6.0,
+          "saturated_fat": 1.06,
+          "sugars": 10.67,
+          "trans_fat": 0.01
+        },
+        {
+          "name": "#9 Sauce",
+          "calories": 121.0,
+          "protein": 0.33,
+          "carbs": 11.0,
+          "fat": 8.82,
+          "fiber": 0.41,
+          "sodium": 689.0,
+          "cholesterol": 6.0,
+          "saturated_fat": 1.08,
+          "sugars": 9.83,
+          "trans_fat": 0.01
+        },
+        {
+          "name": "#10 Sauce",
+          "calories": 41.0,
+          "protein": 0.3,
+          "carbs": 10.0,
+          "fat": 0.23,
+          "fiber": 0.37,
+          "sodium": 625.0,
+          "saturated_fat": 0.04,
+          "sugars": 9.53
+        },
+        {
+          "name": "GF Bulgogi Sauce",
+          "calories": 221.0,
+          "protein": 1.6,
+          "carbs": 54.0,
+          "fat": 0.0,
+          "fiber": 0.01,
+          "sodium": 1538.0,
+          "sugars": 52.3
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "Milkis",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Yogo Vera",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Soda",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Ramune",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Energy Drink",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bottled Drink",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

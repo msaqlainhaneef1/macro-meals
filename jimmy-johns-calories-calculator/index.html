@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jimmy John's Nutrition Calculator | Macro & Meals</title>
+<meta name="description" content="Calculate calories and macros for subs and sides.">
+<link rel="canonical" href="https://macroandmeals.com/jimmy-johns-calories-calculator/">
+<meta property="og:title" content="Jimmy John's Nutrition Calculator">
+<meta property="og:description" content="Calculate calories and macros for subs and sides.">
+<meta property="og:url" content="https://macroandmeals.com/jimmy-johns-calories-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macro & Meals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Jimmy John's Nutrition Calculator">
+<meta name="twitter:description" content="Calculate calories and macros for subs and sides.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Jimmy John's Nutrition Calculator","url":"https://macroandmeals.com/jimmy-johns-calories-calculator/","applicationCategory":"HealthApplication","operatingSystem":"All"}</script>
+<style media="print">
+  @media print {
+    .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
+    .nav-dropdown, .back-to-top, .cookie-banner, .social-share,
+    .announcement-bar, .scroll-progress, #back-to-top,
+    .breadcrumbs, .hero-search, #search-results {
+      display: none !important;
+    }
+    body {
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 1cm;
+    }
+    .container, .hero, .hero-home, section {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+    a[href^="/"]::after { content: " (macroandmeals.com" attr(href) ")"; font-size: 0.8em; color: #666; }
+    h1, h2, h3 { page-break-after: avoid; color: #000; }
+    img { max-width: 100%; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; }
+    @page { margin: 2cm; }
+  }
+</style>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7Q3DMT4258');
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FNQMD49');</script>
+<meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#22c55e">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNQMD49"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="scroll-progress" class="scroll-progress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>
+<div id="announcement-bar" class="announcement-bar" data-enabled="false">
+  <div class="announcement-bar-inner">
+    <span class="announcement-text">New: Check out our <a href="/blog/">latest blog post</a> on daily calorie needs!</span>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('announcement-bar');
+  if (!bar || bar.dataset.enabled !== 'true') { if(bar) bar.style.display='none'; return; }
+  if (sessionStorage.getItem('announcement-closed')) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  document.getElementById('announcement-close').addEventListener('click', function(){
+    bar.style.display = 'none';
+    sessionStorage.setItem('announcement-closed', '1');
+  });
+})();
+</script>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+<nav class="nav-desktop">
+  <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="vitamins">Vitamins &amp; Micronutrients <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="body">Body Composition &amp; Health <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="diet">Diet &amp; Macro Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="pregnancy">Pregnancy &amp; Specialty <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+</nav>
+<button class="mobile-toggle" id="mobile-toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div class="nav-dropdown" id="dropdown-nutrition"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-menu"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-vitamins"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-body"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-diet"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-pregnancy"><div class="nav-dropdown-inner"></div></div>
+<div class="mobile-nav" id="mobile-nav"></div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+<script>
+(function(){
+  var ol = document.querySelector('.breadcrumbs ol');
+  if (!ol) return;
+  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
+  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
+  var h1 = document.querySelector('h1');
+  for (var i = 0; i < path.length; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('itemprop','itemListElement');
+    li.setAttribute('itemscope','');
+    li.setAttribute('itemtype','https://schema.org/ListItem');
+    var isLast = (i === path.length - 1);
+    var slug = path[i];
+    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    if (isLast) {
+      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+    } else {
+      var href = '/' + path.slice(0, i+1).join('/') + '/';
+      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+    }
+    ol.appendChild(li);
+  }
+})();
+</script>
+
+<section class="hero"><div class="container"><h1>&#129386; Jimmy John's Nutrition Calculator</h1><p>Calculate calories and macros for subs and sides.</p></div></section>
+<section class="section"><div class="container" style="max-width:1200px;margin:0 auto">
+<div id="rest-layout-wrapper">
+<div class="rest-left-col">
+<div class="calc-card">
+<div id="rest-tabs" class="cat-tabs"><div class="cat-tabs-scroll"><button class="cat-tab active" data-cat="Little Johns">Little Johns <span class="cat-count">7</span></button><button class="cat-tab" data-cat="8&quot; French Sandwiches (Originals &amp; Favorites)">8&quot; French Sandwiches (Originals &amp; Favorites) <span class="cat-count">19</span></button><button class="cat-tab" data-cat="Sides &amp; Desserts">Sides &amp; Desserts <span class="cat-count">11</span></button><button class="cat-tab" data-cat="New Items &amp; Gyros">New Items &amp; Gyros <span class="cat-count">4</span></button></div><div class="rest-search"><input type="text" id="rest-search-input" class="rest-search-input" placeholder="Search items..."></div></div>
+<div id="rest-grid" class="menu-grid"><div class="rest-cat-group" data-category="Little Johns"><div class="menu-item" data-name="Little John 1 (Ham &amp; Provolone)" data-calories="300" data-protein="15" data-carbs="25" data-fat="15" data-fiber="2" data-sodium="770" data-cholesterol="35" data-saturated-fat="4" data-price="$3.50"><div class="menu-item-header"><h4>Little John 1 (Ham &amp; Provolone)</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">300 cal</div><div class="macros"><span class="macro-pro">P: 15g</span> <span class="macro-carb">C: 25g</span> <span class="macro-fat">F: 15g</span></div></div><div class="menu-item" data-name="Little John 2 (Roast Beef)" data-calories="250" data-protein="13" data-carbs="24" data-fat="11" data-fiber="2" data-sodium="560" data-cholesterol="30" data-saturated-fat="2" data-price="$3.50"><div class="menu-item-header"><h4>Little John 2 (Roast Beef)</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">250 cal</div><div class="macros"><span class="macro-pro">P: 13g</span> <span class="macro-carb">C: 24g</span> <span class="macro-fat">F: 11g</span></div></div><div class="menu-item" data-name="Little John 3 (Tuna Salad)" data-calories="250" data-protein="10" data-carbs="26" data-fat="11" data-fiber="3" data-sodium="590" data-cholesterol="15" data-saturated-fat="1.5" data-price="$3.50"><div class="menu-item-header"><h4>Little John 3 (Tuna Salad)</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">250 cal</div><div class="macros"><span class="macro-pro">P: 10g</span> <span class="macro-carb">C: 26g</span> <span class="macro-fat">F: 11g</span></div></div><div class="menu-item" data-name="Little John 4 (Turkey)" data-calories="240" data-protein="12" data-carbs="24" data-fat="10" data-fiber="2" data-sodium="580" data-cholesterol="25" data-saturated-fat="1.5" data-price="$3.50"><div class="menu-item-header"><h4>Little John 4 (Turkey)</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 12g</span> <span class="macro-carb">C: 24g</span> <span class="macro-fat">F: 10g</span></div></div><div class="menu-item" data-name="Little John 5 (Salami, Capocollo &amp; Provolone)" data-calories="290" data-protein="16" data-carbs="26" data-fat="13" data-fiber="2" data-sodium="900" data-cholesterol="40" data-saturated-fat="5" data-price="$3.50"><div class="menu-item-header"><h4>Little John 5 (Salami, Capocollo &amp; Provolone)</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">290 cal</div><div class="macros"><span class="macro-pro">P: 16g</span> <span class="macro-carb">C: 26g</span> <span class="macro-fat">F: 13g</span></div></div><div class="menu-item" data-name="Little John 6 (Veggie)" data-calories="340" data-protein="13" data-carbs="25" data-fat="20" data-fiber="3" data-sodium="580" data-cholesterol="30" data-saturated-fat="7" data-price="$3.50"><div class="menu-item-header"><h4>Little John 6 (Veggie)</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">340 cal</div><div class="macros"><span class="macro-pro">P: 13g</span> <span class="macro-carb">C: 25g</span> <span class="macro-fat">F: 20g</span></div></div><div class="menu-item" data-name="Little John BLT" data-calories="300" data-protein="12" data-carbs="24" data-fat="16" data-fiber="2" data-sodium="680" data-cholesterol="25" data-saturated-fat="4.5" data-price="$3.50"><div class="menu-item-header"><h4>Little John BLT</h4><span class="item-price">$3.50</span></div><div class="menu-item-cal">300 cal</div><div class="macros"><span class="macro-pro">P: 12g</span> <span class="macro-carb">C: 24g</span> <span class="macro-fat">F: 16g</span></div></div></div><div class="rest-cat-group" data-category="8&quot; French Sandwiches (Originals &amp; Favorites)" style="display:none"><div class="menu-item" data-name="Slim 1" data-calories="540" data-protein="33" data-carbs="69" data-fat="13" data-fiber="0" data-sodium="1610" data-saturated-fat="6" data-price="$6.49"><div class="menu-item-header"><h4>Slim 1</h4><span class="item-price">$6.49</span></div><div class="menu-item-cal">540 cal</div><div class="macros"><span class="macro-pro">P: 33g</span> <span class="macro-carb">C: 69g</span> <span class="macro-fat">F: 13g</span></div></div><div class="menu-item" data-name="The Pepe" data-calories="600" data-protein="29" data-carbs="50" data-fat="29" data-fiber="0" data-sodium="1570" data-saturated-fat="9" data-price="$7.49"><div class="menu-item-header"><h4>The Pepe</h4><span class="item-price">$7.49</span></div><div class="menu-item-cal">600 cal</div><div class="macros"><span class="macro-pro">P: 29g</span> <span class="macro-carb">C: 50g</span> <span class="macro-fat">F: 29g</span></div></div><div class="menu-item" data-name="Big John" data-calories="500" data-protein="26" data-carbs="47" data-fat="21" data-fiber="0" data-sodium="1110" data-saturated-fat="3.5" data-price="$7.49"><div class="menu-item-header"><h4>Big John</h4><span class="item-price">$7.49</span></div><div class="menu-item-cal">500 cal</div><div class="macros"><span class="macro-pro">P: 26g</span> <span class="macro-carb">C: 47g</span> <span class="macro-fat">F: 21g</span></div></div><div class="menu-item" data-name="Totally Tuna" data-calories="510" data-protein="21" data-carbs="51" data-fat="22" data-fiber="0" data-sodium="1160" data-saturated-fat="3" data-price="$7.49"><div class="menu-item-header"><h4>Totally Tuna</h4><span class="item-price">$7.49</span></div><div class="menu-item-cal">510 cal</div><div class="macros"><span class="macro-pro">P: 21g</span> <span class="macro-carb">C: 51g</span> <span class="macro-fat">F: 22g</span></div></div><div class="menu-item" data-name="Turkey Tom" data-calories="480" data-protein="23" data-carbs="48" data-fat="19" data-fiber="0" data-sodium="1160" data-saturated-fat="2.5" data-price="$7.49"><div class="menu-item-header"><h4>Turkey Tom</h4><span class="item-price">$7.49</span></div><div class="menu-item-cal">480 cal</div><div class="macros"><span class="macro-pro">P: 23g</span> <span class="macro-carb">C: 48g</span> <span class="macro-fat">F: 19g</span></div></div><div class="menu-item" data-name="Vito" data-calories="570" data-protein="32" data-carbs="52" data-fat="26" data-fiber="0" data-sodium="1850" data-saturated-fat="11" data-price="$7.49"><div class="menu-item-header"><h4>Vito</h4><span class="item-price">$7.49</span></div><div class="menu-item-cal">570 cal</div><div class="macros"><span class="macro-pro">P: 32g</span> <span class="macro-carb">C: 52g</span> <span class="macro-fat">F: 26g</span></div></div><div class="menu-item" data-name="The Veggie" data-calories="670" data-protein="27" data-carbs="50" data-fat="38" data-fiber="0" data-sodium="1260" data-saturated-fat="14" data-price="$7.49"><div class="menu-item-header"><h4>The Veggie</h4><span class="item-price">$7.49</span></div><div class="menu-item-cal">670 cal</div><div class="macros"><span class="macro-pro">P: 27g</span> <span class="macro-carb">C: 50g</span> <span class="macro-fat">F: 38g</span></div></div><div class="menu-item" data-name="Spicy East Coast Italian" data-calories="850" data-protein="46" data-carbs="53" data-fat="49" data-fiber="0" data-sodium="3020" data-saturated-fat="17" data-price="$8.99"><div class="menu-item-header"><h4>Spicy East Coast Italian</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">850 cal</div><div class="macros"><span class="macro-pro">P: 46g</span> <span class="macro-carb">C: 53g</span> <span class="macro-fat">F: 49g</span></div></div><div class="menu-item" data-name="Billy Club" data-calories="810" data-protein="50" data-carbs="73" data-fat="32" data-fiber="0" data-sodium="2360" data-saturated-fat="10" data-price="$8.99"><div class="menu-item-header"><h4>Billy Club</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">810 cal</div><div class="macros"><span class="macro-pro">P: 50g</span> <span class="macro-carb">C: 73g</span> <span class="macro-fat">F: 32g</span></div></div><div class="menu-item" data-name="Italian Night Club" data-calories="930" data-protein="48" data-carbs="77" data-fat="46" data-fiber="0" data-sodium="2850" data-saturated-fat="14" data-price="$8.99"><div class="menu-item-header"><h4>Italian Night Club</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">930 cal</div><div class="macros"><span class="macro-pro">P: 48g</span> <span class="macro-carb">C: 77g</span> <span class="macro-fat">F: 46g</span></div></div><div class="menu-item" data-name="Hunter's Club" data-calories="830" data-protein="55" data-carbs="70" data-fat="34" data-fiber="0" data-sodium="2080" data-saturated-fat="10" data-price="$8.99"><div class="menu-item-header"><h4>Hunter's Club</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">830 cal</div><div class="macros"><span class="macro-pro">P: 55g</span> <span class="macro-carb">C: 70g</span> <span class="macro-fat">F: 34g</span></div></div><div class="menu-item" data-name="Country Club" data-calories="780" data-protein="48" data-carbs="74" data-fat="30" data-fiber="0" data-sodium="2350" data-saturated-fat="9" data-price="$8.99"><div class="menu-item-header"><h4>Country Club</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">780 cal</div><div class="macros"><span class="macro-pro">P: 48g</span> <span class="macro-carb">C: 74g</span> <span class="macro-fat">F: 30g</span></div></div><div class="menu-item" data-name="Beach Club" data-calories="850" data-protein="45" data-carbs="75" data-fat="39" data-fiber="0" data-sodium="2050" data-saturated-fat="14" data-price="$8.99"><div class="menu-item-header"><h4>Beach Club</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">850 cal</div><div class="macros"><span class="macro-pro">P: 45g</span> <span class="macro-carb">C: 75g</span> <span class="macro-fat">F: 39g</span></div></div><div class="menu-item" data-name="Jimmy Cubano" data-calories="710" data-protein="38" data-carbs="48" data-fat="38" data-fiber="0" data-sodium="2630" data-saturated-fat="13" data-price="$8.99"><div class="menu-item-header"><h4>Jimmy Cubano</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">710 cal</div><div class="macros"><span class="macro-pro">P: 38g</span> <span class="macro-carb">C: 48g</span> <span class="macro-fat">F: 38g</span></div></div><div class="menu-item" data-name="Bootlegger Club" data-calories="680" data-protein="44" data-carbs="71" data-fat="23" data-fiber="0" data-sodium="1890" data-saturated-fat="3.5" data-price="$8.99"><div class="menu-item-header"><h4>Bootlegger Club</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">680 cal</div><div class="macros"><span class="macro-pro">P: 44g</span> <span class="macro-carb">C: 71g</span> <span class="macro-fat">F: 23g</span></div></div><div class="menu-item" data-name="Club Tuna" data-calories="860" data-protein="42" data-carbs="76" data-fat="40" data-fiber="0" data-sodium="1980" data-saturated-fat="14" data-price="$8.99"><div class="menu-item-header"><h4>Club Tuna</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">860 cal</div><div class="macros"><span class="macro-pro">P: 42g</span> <span class="macro-carb">C: 76g</span> <span class="macro-fat">F: 40g</span></div></div><div class="menu-item" data-name="Club Lulu" data-calories="690" data-protein="35" data-carbs="71" data-fat="26" data-fiber="0" data-sodium="1760" data-saturated-fat="5" data-price="$8.99"><div class="menu-item-header"><h4>Club Lulu</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">690 cal</div><div class="macros"><span class="macro-pro">P: 35g</span> <span class="macro-carb">C: 71g</span> <span class="macro-fat">F: 26g</span></div></div><div class="menu-item" data-name="Ultimate Porker" data-calories="690" data-protein="33" data-carbs="72" data-fat="28" data-fiber="0" data-sodium="1890" data-saturated-fat="6" data-price="$8.99"><div class="menu-item-header"><h4>Ultimate Porker</h4><span class="item-price">$8.99</span></div><div class="menu-item-cal">690 cal</div><div class="macros"><span class="macro-pro">P: 33g</span> <span class="macro-carb">C: 72g</span> <span class="macro-fat">F: 28g</span></div></div><div class="menu-item" data-name="The J.J. Gargantuan" data-calories="1080" data-protein="78" data-carbs="78" data-fat="49" data-fiber="0" data-sodium="3930" data-saturated-fat="15" data-price="$12.00"><div class="menu-item-header"><h4>The J.J. Gargantuan</h4><span class="item-price">$12.00</span></div><div class="menu-item-cal">1080 cal</div><div class="macros"><span class="macro-pro">P: 78g</span> <span class="macro-carb">C: 78g</span> <span class="macro-fat">F: 49g</span></div></div></div><div class="rest-cat-group" data-category="Sides &amp; Desserts" style="display:none"><div class="menu-item" data-name="Chocolate Chip Cookie" data-calories="410" data-protein="5" data-carbs="56" data-fat="19" data-fiber="0" data-sodium="290" data-saturated-fat="12" data-price="$1.99"><div class="menu-item-header"><h4>Chocolate Chip Cookie</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">410 cal</div><div class="macros"><span class="macro-pro">P: 5g</span> <span class="macro-carb">C: 56g</span> <span class="macro-fat">F: 19g</span></div></div><div class="menu-item" data-name="Oatmeal Raisin Cookie" data-calories="370" data-protein="6" data-carbs="57" data-fat="13" data-fiber="0" data-sodium="390" data-saturated-fat="8" data-price="$1.99"><div class="menu-item-header"><h4>Oatmeal Raisin Cookie</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">370 cal</div><div class="macros"><span class="macro-pro">P: 6g</span> <span class="macro-carb">C: 57g</span> <span class="macro-fat">F: 13g</span></div></div><div class="menu-item" data-name="Fudge Chocolate Brownie" data-calories="350" data-protein="4" data-carbs="46" data-fat="19" data-fiber="0" data-sodium="135" data-saturated-fat="6" data-price="$1.99"><div class="menu-item-header"><h4>Fudge Chocolate Brownie</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">350 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 46g</span> <span class="macro-fat">F: 19g</span></div></div><div class="menu-item" data-name="Regular Jimmy Chips" data-calories="300" data-protein="3" data-carbs="33" data-fat="18" data-fiber="0" data-sodium="180" data-saturated-fat="3" data-price="$1.99"><div class="menu-item-header"><h4>Regular Jimmy Chips</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">300 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 33g</span> <span class="macro-fat">F: 18g</span></div></div><div class="menu-item" data-name="BBQ Jimmy Chips" data-calories="290" data-protein="3" data-carbs="34" data-fat="16" data-fiber="0" data-sodium="230" data-saturated-fat="3" data-price="$1.99"><div class="menu-item-header"><h4>BBQ Jimmy Chips</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">290 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 34g</span> <span class="macro-fat">F: 16g</span></div></div><div class="menu-item" data-name="Jalapeño Jimmy Chips" data-calories="290" data-protein="3" data-carbs="33" data-fat="17" data-fiber="0" data-sodium="320" data-saturated-fat="3" data-price="$1.99"><div class="menu-item-header"><h4>Jalapeño Jimmy Chips</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">290 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 33g</span> <span class="macro-fat">F: 17g</span></div></div><div class="menu-item" data-name="Salt &amp; Vinegar Jimmy Chips" data-calories="290" data-protein="3" data-carbs="33" data-fat="17" data-fiber="0" data-sodium="360" data-saturated-fat="3" data-price="$1.99"><div class="menu-item-header"><h4>Salt &amp; Vinegar Jimmy Chips</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">290 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 33g</span> <span class="macro-fat">F: 17g</span></div></div><div class="menu-item" data-name="Thinny Chips" data-calories="260" data-protein="4" data-carbs="39" data-fat="11" data-fiber="0" data-sodium="190" data-saturated-fat="2" data-price="$1.99"><div class="menu-item-header"><h4>Thinny Chips</h4><span class="item-price">$1.99</span></div><div class="menu-item-cal">260 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 39g</span> <span class="macro-fat">F: 11g</span></div></div><div class="menu-item" data-name="Jumbo Kosher Dill Pickle" data-calories="20" data-protein="1" data-carbs="3" data-fat="0" data-fiber="0" data-sodium="1710" data-price="$1.50"><div class="menu-item-header"><h4>Jumbo Kosher Dill Pickle</h4><span class="item-price">$1.50</span></div><div class="menu-item-cal">20 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 3g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Pesto Bowtie Pasta Salad" data-calories="280" data-protein="6" data-carbs="26" data-fat="16" data-fiber="0" data-sodium="520" data-saturated-fat="3" data-price="$2.25"><div class="menu-item-header"><h4>Pesto Bowtie Pasta Salad</h4><span class="item-price">$2.25</span></div><div class="menu-item-cal">280 cal</div><div class="macros"><span class="macro-pro">P: 6g</span> <span class="macro-carb">C: 26g</span> <span class="macro-fat">F: 16g</span></div></div><div class="menu-item" data-name="Homestyle Potato Salad" data-calories="220" data-protein="6" data-carbs="17" data-fat="14" data-fiber="0" data-sodium="650" data-saturated-fat="3" data-price="$2.25"><div class="menu-item-header"><h4>Homestyle Potato Salad</h4><span class="item-price">$2.25</span></div><div class="menu-item-cal">220 cal</div><div class="macros"><span class="macro-pro">P: 6g</span> <span class="macro-carb">C: 17g</span> <span class="macro-fat">F: 14g</span></div></div></div><div class="rest-cat-group" data-category="New Items &amp; Gyros" style="display:none"><div class="menu-item" data-name="Greek Gyro" data-calories="930" data-protein="38" data-carbs="75" data-fat="49" data-fiber="0" data-sodium="2330" data-saturated-fat="10" data-price="$13.59"><div class="menu-item-header"><h4>Greek Gyro</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">930 cal</div><div class="macros"><span class="macro-pro">P: 38g</span> <span class="macro-carb">C: 75g</span> <span class="macro-fat">F: 49g</span></div></div><div class="menu-item" data-name="Chicken Gyro" data-calories="850" data-protein="40" data-carbs="68" data-fat="44" data-fiber="0" data-sodium="1810" data-saturated-fat="11" data-price="$13.59"><div class="menu-item-header"><h4>Chicken Gyro</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">850 cal</div><div class="macros"><span class="macro-pro">P: 40g</span> <span class="macro-carb">C: 68g</span> <span class="macro-fat">F: 44g</span></div></div><div class="menu-item" data-name="Toasted Chicken Bacon Ranch" data-calories="1375" data-protein="60" data-carbs="90" data-fat="80" data-fiber="0" data-sodium="3500" data-saturated-fat="25" data-price="$13.75"><div class="menu-item-header"><h4>Toasted Chicken Bacon Ranch</h4><span class="item-price">$13.75</span></div><div class="menu-item-cal">1375 cal</div><div class="macros"><span class="macro-pro">P: 60g</span> <span class="macro-carb">C: 90g</span> <span class="macro-fat">F: 80g</span></div></div><div class="menu-item" data-name="Toasted Roast Beef + Cheddar" data-calories="1375" data-protein="65" data-carbs="85" data-fat="75" data-fiber="0" data-sodium="3200" data-saturated-fat="22" data-price="$13.75"><div class="menu-item-header"><h4>Toasted Roast Beef + Cheddar</h4><span class="item-price">$13.75</span></div><div class="menu-item-cal">1375 cal</div><div class="macros"><span class="macro-pro">P: 65g</span> <span class="macro-carb">C: 85g</span> <span class="macro-fat">F: 75g</span></div></div></div></div>
+<div id="rest-detail"><div class="detail-card"><button class="detail-close" id="detail-close">&times;</button><h3>Little John 1 (Ham &amp; Provolone)</h3><p class="item-price-detail">Price: $3.50</p><div class="nutrition-pills"><div class="nutrition-pill pill-cal"><div class="val">300</div><div class="lbl">Calories</div></div><div class="nutrition-pill pill-pro"><div class="val">15g</div><div class="lbl">Protein</div></div><div class="nutrition-pill pill-carb"><div class="val">25g</div><div class="lbl">Carbs</div></div><div class="nutrition-pill pill-fat"><div class="val">15g</div><div class="lbl">Fat</div></div><div class="nutrition-pill pill-fib"><div class="val">2g</div><div class="lbl">Fiber</div></div><div class="nutrition-pill pill-sod"><div class="val">770mg</div><div class="lbl">Sodium</div></div><div class="nutrition-pill pill-chol"><div class="val">35mg</div><div class="lbl">Cholesterol</div></div><div class="nutrition-pill pill-sfat"><div class="val">4g</div><div class="lbl">Sat. Fat</div></div></div><div id="nutrition-facts-label"><div class="nf-label"><div class="nf-title">Nutrition Facts</div><div class="nf-divider-thick"></div><div class="nf-cal-row"><span class="nf-cal-label">Calories</span><span class="nf-cal-val">300</span></div><div class="nf-divider-medium"></div><div class="nf-dv-header">% Daily Value*</div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Fat</strong> 15g</span><span>19%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Saturated Fat 4g</span><span>20%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Cholesterol</strong> 35mg</span><span>12%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Sodium</strong> 770mg</span><span>33%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Carbohydrate</strong> 25g</span><span>9%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Dietary Fiber 2g</span><span>7%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Protein</strong> 15g</span><span>30%</span></div><div class="nf-divider-thick"></div><div class="nf-footnote">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</div></div></div><button class="add-meal-btn" id="add-meal-btn">+ Add to My Meal</button></div></div>
+</div>
+</div>
+<div class="rest-right-col">
+<div id="rest-summary"><div class="meal-summary"><h3>My Meal <span class="meal-count">(0 items)</span> <button class="reset-btn" id="reset-meal">Reset</button></h3><div class="meal-progress"><div class="meal-progress-bar" style="width:0%"></div></div><div class="meal-progress-text">0 / 2,000 cal (0%)</div><div class="meal-totals"><div class="meal-total pill-cal"><div class="num">0</div><div class="lbl">Calories</div></div><div class="meal-total pill-pro"><div class="num">0g</div><div class="lbl">Protein</div></div><div class="meal-total pill-carb"><div class="num">0g</div><div class="lbl">Carbs</div></div><div class="meal-total pill-fat"><div class="num">0g</div><div class="lbl">Fat</div></div></div><div class="meal-items"><div class="empty-msg">No items added yet. Click items above and press "Add to My Meal".</div></div></div></div>
+</div>
+</div>
+</div>
+<div class="content-section">
+<h2>How to Use the Jimmy John's Nutrition Calculator</h2>
+<div class="steps-grid">
+<div class="step-card"><div class="step-num">1</div><h3>Browse Categories</h3><p>Click through the category tabs to explore different menu sections.</p></div>
+<div class="step-card"><div class="step-num">2</div><h3>Select Items</h3><p>Click on any menu item to see its detailed nutrition breakdown.</p></div>
+<div class="step-card"><div class="step-num">3</div><h3>Build Your Meal</h3><p>Add items to your meal tracker to see combined nutrition totals.</p></div>
+</div>
+<h2>About Jimmy John's</h2>
+<p>Our Jimmy John's Nutrition Calculator helps you make informed decisions about what you eat at Jimmy John's. Track calories, protein, carbs, fat, and more for every menu item. Build your complete meal and see the total nutritional impact before you order.</p>
+<p>All nutrition data is sourced from official Jimmy John's nutrition guides and FDA databases. Values may vary by location and preparation method.</p>
+</div>
+</section>
+<div class="social-share" id="social-share">
+  <span class="social-share-label">Share:</span>
+  <a class="social-btn social-twitter" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="social-btn social-facebook" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="social-btn social-linkedin" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a class="social-btn social-whatsapp" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a class="social-btn social-email" id="share-email" href="#" aria-label="Share via Email" title="Share via Email">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+  <button class="social-btn social-copy" id="share-copy" aria-label="Copy link" title="Copy link">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var tw = document.getElementById('share-twitter');
+  var fb = document.getElementById('share-facebook');
+  var li = document.getElementById('share-linkedin');
+  var wa = document.getElementById('share-whatsapp');
+  var em = document.getElementById('share-email');
+  var cp = document.getElementById('share-copy');
+  if(tw) tw.href = 'https://twitter.com/intent/tweet?url='+url+'&text='+title;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
+  if(wa) wa.href = 'https://wa.me/?text='+title+'%20'+url;
+  if(em) em.href = 'mailto:?subject='+title+'&body=Check%20this%20out:%20'+url;
+  if(cp) cp.addEventListener('click', function(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(function(){ cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'; }, 2000);
+    });
+  });
+})();
+</script>
+<footer class="footer">
+<div class="footer-inner">
+  <div class="footer-brand">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+    <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Popular Calculators</h4>
+    <ul>
+      <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+      <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+      <li><a href="/tdee-calculator/">TDEE Calculator</a></li>
+      <li><a href="/protein-calculator/">Protein Calculator</a></li>
+      <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+      <li><a href="/keto-macro-calculator/">Keto Macro Calculator</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Restaurant Calculators</h4>
+    <ul>
+      <li><a href="/starbucks-nutrition-calculator/">Starbucks</a></li>
+      <li><a href="/chipotle-nutrition-calculator/">Chipotle</a></li>
+      <li><a href="/mcdonalds-calories-calculator/">McDonald's</a></li>
+      <li><a href="/subway-nutrition-calculator/">Subway</a></li>
+      <li><a href="/five-guys-nutrition-calculator/">Five Guys</a></li>
+      <li><a href="/panda-express-nutrition-calculator/">Panda Express</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
+</footer>
+<script src="/js/site-config.js"></script>
+<script src="/js/scripts-config.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/restaurant.js"></script>
+<script>initRestaurant();</script>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+</script>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and for analytics. By continuing to use this site, you agree to our <a href="/cookie-policy/">Cookie Policy</a>.</p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+      <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if (localStorage.getItem('cookie-consent')) return;
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>

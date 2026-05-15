@@ -1,0 +1,608 @@
+{
+  "slug": "sweetgreen-nutrition-calculator",
+  "title": "🥗 Sweetgreen Nutrition Calculator",
+  "description": "Build your salad or bowl and view nutrition breakdown.",
+  "categories": [
+    {
+      "name": "SIGNATURE SALADS",
+      "items": [
+        {
+          "name": "GUACAMOLE GREENS",
+          "calories": 515.0,
+          "protein": 27.0,
+          "carbs": 27.0,
+          "fat": 31.0,
+          "fiber": 14.0,
+          "sodium": 334.0,
+          "cholesterol": 58.0,
+          "saturated_fat": 5.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "KALE CAESAR",
+          "calories": 405.0,
+          "protein": 35.0,
+          "carbs": 13.0,
+          "fat": 24.0,
+          "fiber": 5.0,
+          "sodium": 1244.0,
+          "cholesterol": 93.0,
+          "saturated_fat": 8.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "BBQ CHICKEN SALAD",
+          "calories": 480.0,
+          "protein": 27.0,
+          "carbs": 31.0,
+          "fat": 25.0,
+          "fiber": 9.0,
+          "sodium": 904.0,
+          "cholesterol": 109.0,
+          "saturated_fat": 6.0,
+          "sugars": 15.0
+        },
+        {
+          "name": "ITALIAN CHOPPED",
+          "calories": 390.0,
+          "protein": 17.0,
+          "carbs": 20.0,
+          "fat": 28.0,
+          "fiber": 6.0,
+          "sodium": 1919.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 6.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "HUMMUS CRUNCH SALAD",
+          "calories": 380.0,
+          "protein": 13.0,
+          "carbs": 38.0,
+          "fat": 21.0,
+          "fiber": 7.0,
+          "sodium": 1041.0,
+          "saturated_fat": 2.0,
+          "sugars": 4.0
+        }
+      ]
+    },
+    {
+      "name": "SIGNATURE BOWLS",
+      "items": [
+        {
+          "name": "HARVEST BOWL",
+          "calories": 685.0,
+          "protein": 37.0,
+          "carbs": 62.0,
+          "fat": 32.0,
+          "fiber": 9.0,
+          "sodium": 1090.0,
+          "cholesterol": 73.0,
+          "saturated_fat": 8.0,
+          "sugars": 15.0
+        },
+        {
+          "name": "CHICKEN PESTO PARM",
+          "calories": 495.0,
+          "protein": 36.0,
+          "carbs": 41.0,
+          "fat": 21.0,
+          "fiber": 8.0,
+          "sodium": 1410.0,
+          "cholesterol": 58.0,
+          "saturated_fat": 3.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "SHROOMAMI",
+          "calories": 600.0,
+          "protein": 21.0,
+          "carbs": 49.0,
+          "fat": 35.0,
+          "fiber": 11.0,
+          "sodium": 1118.0,
+          "saturated_fat": 4.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "CRISPY RICE BOWL",
+          "calories": 600.0,
+          "protein": 31.0,
+          "carbs": 61.0,
+          "fat": 26.0,
+          "fiber": 9.0,
+          "sodium": 979.0,
+          "cholesterol": 99.0,
+          "saturated_fat": 4.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "CHICKEN AVOCADO RANCH",
+          "calories": 695.0,
+          "protein": 29.0,
+          "carbs": 58.0,
+          "fat": 39.0,
+          "fiber": 15.0,
+          "sodium": 1036.0,
+          "cholesterol": 109.0,
+          "saturated_fat": 9.0,
+          "sugars": 8.0
+        }
+      ]
+    },
+    {
+      "name": "SIGNATURE PLATES",
+      "items": [
+        {
+          "name": "HOT HONEY CHICKEN",
+          "calories": 855.0,
+          "protein": 49.0,
+          "carbs": 73.0,
+          "fat": 39.0,
+          "fiber": 9.0,
+          "sodium": 2090.0,
+          "cholesterol": 170.0,
+          "saturated_fat": 6.0,
+          "sugars": 11.0
+        },
+        {
+          "name": "SOUTHWEST CHICKEN FAJITA",
+          "calories": 830.0,
+          "protein": 47.0,
+          "carbs": 83.0,
+          "fat": 34.0,
+          "fiber": 9.0,
+          "sodium": 1455.0,
+          "cholesterol": 180.0,
+          "saturated_fat": 6.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "MISO GLAZED SALMON",
+          "calories": 860.0,
+          "protein": 33.0,
+          "carbs": 88.0,
+          "fat": 42.0,
+          "fiber": 12.0,
+          "sodium": 1272.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 10.0,
+          "sugars": 17.0
+        },
+        {
+          "name": "MISO GLAZED STEELHEAD",
+          "calories": 770.0,
+          "protein": 33.0,
+          "carbs": 84.0,
+          "fat": 35.0,
+          "fiber": 12.0,
+          "sodium": 1272.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 7.0,
+          "sugars": 13.0
+        }
+      ]
+    },
+    {
+      "name": "ONLINE EXCLUSIVES",
+      "items": [
+        {
+          "name": "GARDEN COBB",
+          "calories": 675.0,
+          "protein": 22.0,
+          "carbs": 37.0,
+          "fat": 48.0,
+          "fiber": 16.0,
+          "sodium": 936.0,
+          "cholesterol": 215.0,
+          "saturated_fat": 13.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "BUFFALO CHICKEN",
+          "calories": 500.0,
+          "protein": 36.0,
+          "carbs": 30.0,
+          "fat": 27.0,
+          "fiber": 9.0,
+          "sodium": 1677.0,
+          "cholesterol": 134.0,
+          "saturated_fat": 9.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "FISH TACO",
+          "calories": 805.0,
+          "protein": 35.0,
+          "carbs": 58.0,
+          "fat": 48.0,
+          "fiber": 16.0,
+          "sodium": 1080.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 9.0,
+          "sugars": 15.0
+        },
+        {
+          "name": "SUPER GREEN GODDESS",
+          "calories": 415.0,
+          "protein": 11.0,
+          "carbs": 37.0,
+          "fat": 25.0,
+          "fiber": 10.0,
+          "sodium": 1046.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 4.0,
+          "sugars": 12.0
+        },
+        {
+          "name": "ELOTE BOWL",
+          "calories": 515.0,
+          "protein": 17.0,
+          "carbs": 48.0,
+          "fat": 29.0,
+          "fiber": 8.0,
+          "sodium": 770.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 7.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "BBQ SALMON",
+          "calories": 790.0,
+          "protein": 33.0,
+          "carbs": 99.0,
+          "fat": 26.0,
+          "fiber": 8.0,
+          "sodium": 1615.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 5.0,
+          "sugars": 24.0
+        }
+      ]
+    },
+    {
+      "name": "KIDS MEALS",
+      "items": [
+        {
+          "name": "RANCHY CHICKEN + RICE",
+          "calories": 515.0,
+          "protein": 31.0,
+          "carbs": 35.0,
+          "fat": 27.0,
+          "fiber": 2.0,
+          "sodium": 1184.0,
+          "cholesterol": 93.0,
+          "saturated_fat": 8.0
+        },
+        {
+          "name": "LITTLE HARVEST",
+          "calories": 360.0,
+          "protein": 23.0,
+          "carbs": 26.0,
+          "fat": 18.0,
+          "fiber": 3.0,
+          "sodium": 684.0,
+          "cholesterol": 58.0,
+          "saturated_fat": 2.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "MINI MEZZE",
+          "calories": 275.0,
+          "protein": 26.0,
+          "carbs": 19.0,
+          "fat": 11.0,
+          "fiber": 1.0,
+          "sodium": 444.0,
+          "cholesterol": 58.0,
+          "saturated_fat": 2.0
+        }
+      ]
+    },
+    {
+      "name": "SIDES",
+      "items": [
+        {
+          "name": "ROASTED SWEET POTATOES + GREEN GODDESS RANCH",
+          "calories": 315.0,
+          "protein": 5.0,
+          "carbs": 30.0,
+          "fat": 20.0,
+          "fiber": 5.0,
+          "sodium": 739.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 3.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "ROASTED SWEET POTATOES + HOT HONEY MUSTARD",
+          "calories": 290.0,
+          "protein": 4.0,
+          "carbs": 36.0,
+          "fat": 15.0,
+          "fiber": 5.0,
+          "sodium": 679.0,
+          "saturated_fat": 1.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "ROSEMARY FOCACCIA",
+          "calories": 230.0,
+          "protein": 8.0,
+          "carbs": 34.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 530.0,
+          "saturated_fat": 1.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "HUMMUS + FOCACCIA",
+          "calories": 290.0,
+          "protein": 10.0,
+          "carbs": 37.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 660.0,
+          "saturated_fat": 1.0,
+          "sugars": 3.0
+        }
+      ]
+    },
+    {
+      "name": "BEVERAGES",
+      "items": [
+        {
+          "name": "STILL WATER",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "SPARKLING WATER",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "SPINDRIFT GRAPEFRUIT",
+          "calories": 17.0,
+          "protein": 0.0,
+          "carbs": 4.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "OLIPOP VINTAGE COLA",
+          "calories": 35.0,
+          "protein": 0.0,
+          "carbs": 16.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 25.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "OLIPOP LEMON LIME SODA",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 16.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 25.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "HEALTH-ADE KOMBUCHA PINK LADY APPLE",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 12.0
+        },
+        {
+          "name": "HARNEY & SONS ORGANIC LEMONADE",
+          "calories": 80.0,
+          "protein": 0.0,
+          "carbs": 20.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 20.0
+        }
+      ]
+    },
+    {
+      "name": "RETAIL",
+      "items": [
+        {
+          "name": "CRISPY RICE TREAT",
+          "calories": 190.0,
+          "protein": 2.0,
+          "carbs": 23.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 80.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 5.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "HU SALTY DARK CHOCOLATE BAR",
+          "calories": 380.0,
+          "protein": 6.0,
+          "carbs": 28.0,
+          "fat": 28.0,
+          "fiber": 6.0,
+          "sodium": 200.0,
+          "saturated_fat": 16.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "HU CASHEWS + VANILLA BEAN HUNKS",
+          "calories": 170.0,
+          "protein": 4.0,
+          "carbs": 10.0,
+          "fat": 12.0,
+          "fiber": 2.0,
+          "sodium": 75.0,
+          "saturated_fat": 5.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "SG X SIETE: GREEN GODDESS RANCH POTATO CHIPS",
+          "calories": 220.0,
+          "protein": 3.0,
+          "carbs": 23.0,
+          "fat": 13.0,
+          "fiber": 3.0,
+          "sodium": 220.0,
+          "saturated_fat": 1.5
+        },
+        {
+          "name": "SIETE SEA SALT POTATO CHIPS",
+          "calories": 210.0,
+          "protein": 3.0,
+          "carbs": 27.0,
+          "fat": 10.0,
+          "fiber": 2.0,
+          "sodium": 180.0,
+          "saturated_fat": 1.5
+        }
+      ]
+    },
+    {
+      "name": "OTHER",
+      "items": [
+        {
+          "name": "CREATE YOUR OWN",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "STEAK HONEY CRUNCH",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "CARAMELIZED GARLIC STEAK",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "STEAK MEZZE",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "CHICKEN SESAME CRUNCH",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "KBBQ CHICKEN BOWL",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "SPINDRIFT RASPBERRY LIME",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "HEALTH-ADE KOMBUCHA BLUEBERRY POMEGRANATE",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "OLIPOP ROOT BEER",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "JUST ICE TEA PEACH OOLONG",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "JUST ICE TEA ORIGINAL GREEN",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "SPINDRIFT LEMON",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "HONEST KIDS APPLE JUICE",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

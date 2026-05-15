@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chipotle Nutrition Calculator | Macro & Meals</title>
+<meta name="description" content="Build your burrito or bowl and calculate precise nutrition totals.">
+<link rel="canonical" href="https://macroandmeals.com/chipotle-nutrition-calculator/">
+<meta property="og:title" content="Chipotle Nutrition Calculator">
+<meta property="og:description" content="Build your burrito or bowl and calculate precise nutrition totals.">
+<meta property="og:url" content="https://macroandmeals.com/chipotle-nutrition-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macro & Meals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chipotle Nutrition Calculator">
+<meta name="twitter:description" content="Build your burrito or bowl and calculate precise nutrition totals.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Chipotle Nutrition Calculator","url":"https://macroandmeals.com/chipotle-nutrition-calculator/","applicationCategory":"HealthApplication","operatingSystem":"All"}</script>
+<style media="print">
+  @media print {
+    .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
+    .nav-dropdown, .back-to-top, .cookie-banner, .social-share,
+    .announcement-bar, .scroll-progress, #back-to-top,
+    .breadcrumbs, .hero-search, #search-results {
+      display: none !important;
+    }
+    body {
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 1cm;
+    }
+    .container, .hero, .hero-home, section {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+    a[href^="/"]::after { content: " (macroandmeals.com" attr(href) ")"; font-size: 0.8em; color: #666; }
+    h1, h2, h3 { page-break-after: avoid; color: #000; }
+    img { max-width: 100%; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; }
+    @page { margin: 2cm; }
+  }
+</style>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7Q3DMT4258');
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FNQMD49');</script>
+<meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#22c55e">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNQMD49"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="scroll-progress" class="scroll-progress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>
+<div id="announcement-bar" class="announcement-bar" data-enabled="false">
+  <div class="announcement-bar-inner">
+    <span class="announcement-text">New: Check out our <a href="/blog/">latest blog post</a> on daily calorie needs!</span>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('announcement-bar');
+  if (!bar || bar.dataset.enabled !== 'true') { if(bar) bar.style.display='none'; return; }
+  if (sessionStorage.getItem('announcement-closed')) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  document.getElementById('announcement-close').addEventListener('click', function(){
+    bar.style.display = 'none';
+    sessionStorage.setItem('announcement-closed', '1');
+  });
+})();
+</script>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+<nav class="nav-desktop">
+  <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="vitamins">Vitamins &amp; Micronutrients <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="body">Body Composition &amp; Health <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="diet">Diet &amp; Macro Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="pregnancy">Pregnancy &amp; Specialty <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+</nav>
+<button class="mobile-toggle" id="mobile-toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div class="nav-dropdown" id="dropdown-nutrition"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-menu"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-vitamins"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-body"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-diet"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-pregnancy"><div class="nav-dropdown-inner"></div></div>
+<div class="mobile-nav" id="mobile-nav"></div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+<script>
+(function(){
+  var ol = document.querySelector('.breadcrumbs ol');
+  if (!ol) return;
+  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
+  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
+  var h1 = document.querySelector('h1');
+  for (var i = 0; i < path.length; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('itemprop','itemListElement');
+    li.setAttribute('itemscope','');
+    li.setAttribute('itemtype','https://schema.org/ListItem');
+    var isLast = (i === path.length - 1);
+    var slug = path[i];
+    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    if (isLast) {
+      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+    } else {
+      var href = '/' + path.slice(0, i+1).join('/') + '/';
+      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+    }
+    ol.appendChild(li);
+  }
+})();
+</script>
+
+<section class="hero"><div class="container"><h1>&#127791; Chipotle Nutrition Calculator</h1><p>Build your burrito or bowl and calculate precise nutrition totals.</p></div></section>
+<section class="section"><div class="container" style="max-width:1200px;margin:0 auto">
+<div id="rest-layout-wrapper">
+<div class="rest-left-col">
+<div class="calc-card">
+<div id="rest-tabs" class="cat-tabs"><div class="cat-tabs-scroll"><button class="cat-tab active" data-cat="Proteins (Entrée Fillings)">Proteins (Entrée Fillings) <span class="cat-count">9</span></button><button class="cat-tab" data-cat="Bases &amp; Tortillas">Bases &amp; Tortillas <span class="cat-count">8</span></button><button class="cat-tab" data-cat="Toppings &amp; Salsas">Toppings &amp; Salsas <span class="cat-count">12</span></button><button class="cat-tab" data-cat="Lifestyle Bowls">Lifestyle Bowls <span class="cat-count">7</span></button><button class="cat-tab" data-cat="Quesadillas">Quesadillas <span class="cat-count">8</span></button><button class="cat-tab" data-cat="Sides">Sides <span class="cat-count">6</span></button><button class="cat-tab" data-cat="Beverages">Beverages <span class="cat-count">13</span></button></div><div class="rest-search"><input type="text" id="rest-search-input" class="rest-search-input" placeholder="Search items..."></div></div>
+<div id="rest-grid" class="menu-grid"><div class="rest-cat-group" data-category="Proteins (Entrée Fillings)"><div class="menu-item" data-name="Chicken" data-calories="180" data-protein="32" data-carbs="0" data-fat="7" data-fiber="0" data-sodium="310" data-cholesterol="125" data-saturated-fat="3"><div class="menu-item-header"><h4>Chicken</h4></div><div class="menu-item-cal">180 cal</div><div class="macros"><span class="macro-pro">P: 32g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 7g</span></div></div><div class="menu-item" data-name="Chicken Al Pastor" data-calories="200" data-protein="32" data-carbs="0" data-fat="11" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Chicken Al Pastor</h4></div><div class="menu-item-cal">200 cal</div><div class="macros"><span class="macro-pro">P: 32g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 11g</span></div></div><div class="menu-item" data-name="Steak" data-calories="150" data-protein="21" data-carbs="1" data-fat="6" data-fiber="0" data-sodium="330" data-cholesterol="80" data-saturated-fat="2.5"><div class="menu-item-header"><h4>Steak</h4></div><div class="menu-item-cal">150 cal</div><div class="macros"><span class="macro-pro">P: 21g</span> <span class="macro-carb">C: 1g</span> <span class="macro-fat">F: 6g</span></div></div><div class="menu-item" data-name="Carne Asada" data-calories="250" data-protein="29" data-carbs="0" data-fat="14" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Carne Asada</h4></div><div class="menu-item-cal">250 cal</div><div class="macros"><span class="macro-pro">P: 29g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 14g</span></div></div><div class="menu-item" data-name="Barbacoa" data-calories="170" data-protein="24" data-carbs="2" data-fat="7" data-fiber="1" data-sodium="530" data-cholesterol="65" data-saturated-fat="2.5"><div class="menu-item-header"><h4>Barbacoa</h4></div><div class="menu-item-cal">170 cal</div><div class="macros"><span class="macro-pro">P: 24g</span> <span class="macro-carb">C: 2g</span> <span class="macro-fat">F: 7g</span></div></div><div class="menu-item" data-name="Carnitas" data-calories="210" data-protein="23" data-carbs="0" data-fat="12" data-fiber="0" data-sodium="450" data-cholesterol="65" data-saturated-fat="7"><div class="menu-item-header"><h4>Carnitas</h4></div><div class="menu-item-cal">210 cal</div><div class="macros"><span class="macro-pro">P: 23g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 12g</span></div></div><div class="menu-item" data-name="Sofritas" data-calories="150" data-protein="8" data-carbs="9" data-fat="10" data-fiber="3" data-sodium="560" data-sugars="5" data-saturated-fat="1.5"><div class="menu-item-header"><h4>Sofritas</h4></div><div class="menu-item-cal">150 cal</div><div class="macros"><span class="macro-pro">P: 8g</span> <span class="macro-carb">C: 9g</span> <span class="macro-fat">F: 10g</span></div></div><div class="menu-item" data-name="Plant Based Chorizo" data-calories="220" data-protein="16" data-carbs="0" data-fat="14" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Plant Based Chorizo</h4></div><div class="menu-item-cal">220 cal</div><div class="macros"><span class="macro-pro">P: 16g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 14g</span></div></div><div class="menu-item" data-name="Vegetarian (includes Guacamole)" data-calories="230" data-protein="2" data-carbs="8" data-fat="22" data-fiber="6" data-sodium="370" data-sugars="1" data-saturated-fat="3.5"><div class="menu-item-header"><h4>Vegetarian (includes Guacamole)</h4></div><div class="menu-item-cal">230 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 8g</span> <span class="macro-fat">F: 22g</span></div></div></div><div class="rest-cat-group" data-category="Bases &amp; Tortillas" style="display:none"><div class="menu-item" data-name="Flour Tortilla (burrito)" data-calories="320" data-protein="8" data-carbs="50" data-fat="9" data-fiber="3" data-sodium="600" data-saturated-fat="0.5"><div class="menu-item-header"><h4>Flour Tortilla (burrito)</h4></div><div class="menu-item-cal">320 cal</div><div class="macros"><span class="macro-pro">P: 8g</span> <span class="macro-carb">C: 50g</span> <span class="macro-fat">F: 9g</span></div></div><div class="menu-item" data-name="Flour Tortilla (taco)" data-calories="80" data-protein="2" data-carbs="13" data-fat="2.5" data-fiber="1" data-sodium="160"><div class="menu-item-header"><h4>Flour Tortilla (taco)</h4></div><div class="menu-item-cal">80 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 13g</span> <span class="macro-fat">F: 2.5g</span></div></div><div class="menu-item" data-name="Crispy Corn Tortilla" data-calories="70" data-protein="1" data-carbs="10" data-fat="3" data-fiber="2" data-sodium="0"><div class="menu-item-header"><h4>Crispy Corn Tortilla</h4></div><div class="menu-item-cal">70 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 10g</span> <span class="macro-fat">F: 3g</span></div></div><div class="menu-item" data-name="Cilantro-Lime Brown Rice" data-calories="210" data-protein="4" data-carbs="36" data-fat="6" data-fiber="2" data-sodium="190" data-saturated-fat="1"><div class="menu-item-header"><h4>Cilantro-Lime Brown Rice</h4></div><div class="menu-item-cal">210 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 36g</span> <span class="macro-fat">F: 6g</span></div></div><div class="menu-item" data-name="Cilantro-Lime White Rice" data-calories="210" data-protein="4" data-carbs="40" data-fat="4" data-fiber="1" data-sodium="350" data-saturated-fat="1"><div class="menu-item-header"><h4>Cilantro-Lime White Rice</h4></div><div class="menu-item-cal">210 cal</div><div class="macros"><span class="macro-pro">P: 4g</span> <span class="macro-carb">C: 40g</span> <span class="macro-fat">F: 4g</span></div></div><div class="menu-item" data-name="Cilantro-Lime Cauliflower Rice" data-calories="40" data-protein="1" data-carbs="4" data-fat="3" data-fiber="2" data-sodium="150"><div class="menu-item-header"><h4>Cilantro-Lime Cauliflower Rice</h4></div><div class="menu-item-cal">40 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 4g</span> <span class="macro-fat">F: 3g</span></div></div><div class="menu-item" data-name="Black Beans" data-calories="130" data-protein="8" data-carbs="22" data-fat="1.5" data-fiber="7" data-sodium="210" data-sugars="1"><div class="menu-item-header"><h4>Black Beans</h4></div><div class="menu-item-cal">130 cal</div><div class="macros"><span class="macro-pro">P: 8g</span> <span class="macro-carb">C: 22g</span> <span class="macro-fat">F: 1.5g</span></div></div><div class="menu-item" data-name="Pinto Beans" data-calories="130" data-protein="8" data-carbs="21" data-fat="1.5" data-fiber="8" data-sodium="210" data-sugars="1"><div class="menu-item-header"><h4>Pinto Beans</h4></div><div class="menu-item-cal">130 cal</div><div class="macros"><span class="macro-pro">P: 8g</span> <span class="macro-carb">C: 21g</span> <span class="macro-fat">F: 1.5g</span></div></div></div><div class="rest-cat-group" data-category="Toppings &amp; Salsas" style="display:none"><div class="menu-item" data-name="Fajita Vegetables" data-calories="20" data-protein="1" data-carbs="5" data-fat="0" data-fiber="1" data-sodium="150" data-sugars="2"><div class="menu-item-header"><h4>Fajita Vegetables</h4></div><div class="menu-item-cal">20 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 5g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Fresh Tomato Salsa" data-calories="25" data-protein="0" data-carbs="4" data-fat="0" data-fiber="1" data-sodium="550" data-sugars="1"><div class="menu-item-header"><h4>Fresh Tomato Salsa</h4></div><div class="menu-item-cal">25 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 4g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Roasted Chili-Corn Salsa" data-calories="80" data-protein="3" data-carbs="16" data-fat="1.5" data-fiber="3" data-sodium="330" data-sugars="4"><div class="menu-item-header"><h4>Roasted Chili-Corn Salsa</h4></div><div class="menu-item-cal">80 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 16g</span> <span class="macro-fat">F: 1.5g</span></div></div><div class="menu-item" data-name="Tomatillo-Green Chili Salsa" data-calories="15" data-protein="0" data-carbs="4" data-fat="0" data-fiber="0" data-sodium="260" data-sugars="2"><div class="menu-item-header"><h4>Tomatillo-Green Chili Salsa</h4></div><div class="menu-item-cal">15 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 4g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tomatillo-Red Chili Salsa" data-calories="30" data-protein="0" data-carbs="4" data-fat="0" data-fiber="1" data-sodium="500"><div class="menu-item-header"><h4>Tomatillo-Red Chili Salsa</h4></div><div class="menu-item-cal">30 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 4g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Cheese" data-calories="110" data-protein="6" data-carbs="1" data-fat="8" data-fiber="0" data-sodium="190" data-cholesterol="30" data-saturated-fat="5"><div class="menu-item-header"><h4>Cheese</h4></div><div class="menu-item-cal">110 cal</div><div class="macros"><span class="macro-pro">P: 6g</span> <span class="macro-carb">C: 1g</span> <span class="macro-fat">F: 8g</span></div></div><div class="menu-item" data-name="Sour Cream" data-calories="110" data-protein="2" data-carbs="2" data-fat="9" data-fiber="0" data-sodium="30" data-sugars="2" data-cholesterol="40" data-saturated-fat="7"><div class="menu-item-header"><h4>Sour Cream</h4></div><div class="menu-item-cal">110 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 2g</span> <span class="macro-fat">F: 9g</span></div></div><div class="menu-item" data-name="Guacamole" data-calories="230" data-protein="2" data-carbs="8" data-fat="22" data-fiber="6" data-sodium="370" data-sugars="1" data-saturated-fat="3.5"><div class="menu-item-header"><h4>Guacamole</h4></div><div class="menu-item-cal">230 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 8g</span> <span class="macro-fat">F: 22g</span></div></div><div class="menu-item" data-name="Queso Blanco" data-calories="240" data-protein="10" data-carbs="7" data-fat="18" data-fiber="0" data-sodium="490" data-sugars="2" data-cholesterol="60" data-saturated-fat="12" data-trans-fat="0.5"><div class="menu-item-header"><h4>Queso Blanco</h4></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 10g</span> <span class="macro-carb">C: 7g</span> <span class="macro-fat">F: 18g</span></div></div><div class="menu-item" data-name="Romaine Lettuce" data-calories="5" data-protein="0" data-carbs="1" data-fat="0" data-fiber="1" data-sodium="0"><div class="menu-item-header"><h4>Romaine Lettuce</h4></div><div class="menu-item-cal">5 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 1g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Supergreens" data-calories="15" data-protein="1" data-carbs="3" data-fat="0" data-fiber="2" data-sodium="0"><div class="menu-item-header"><h4>Supergreens</h4></div><div class="menu-item-cal">15 cal</div><div class="macros"><span class="macro-pro">P: 1g</span> <span class="macro-carb">C: 3g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Chipotle-Honey Vinaigrette" data-calories="220" data-protein="0" data-carbs="18" data-fat="16" data-fiber="1" data-sodium="850" data-sugars="12" data-saturated-fat="2.5"><div class="menu-item-header"><h4>Chipotle-Honey Vinaigrette</h4></div><div class="menu-item-cal">220 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 18g</span> <span class="macro-fat">F: 16g</span></div></div></div><div class="rest-cat-group" data-category="Lifestyle Bowls" style="display:none"><div class="menu-item" data-name="Balanced Macros Bowl" data-calories="805" data-protein="51" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Balanced Macros Bowl</h4></div><div class="menu-item-cal">805 cal</div><div class="macros"><span class="macro-pro">P: 51g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Go Half Bowl" data-calories="615" data-protein="38" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Go Half Bowl</h4></div><div class="menu-item-cal">615 cal</div><div class="macros"><span class="macro-pro">P: 38g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Plant Powered Bowl" data-calories="720" data-protein="24" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Plant Powered Bowl</h4></div><div class="menu-item-cal">720 cal</div><div class="macros"><span class="macro-pro">P: 24g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Veggie Full Bowl" data-calories="695" data-protein="20" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Veggie Full Bowl</h4></div><div class="menu-item-cal">695 cal</div><div class="macros"><span class="macro-pro">P: 20g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Grain Freedom Bowl" data-calories="460" data-protein="35" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Grain Freedom Bowl</h4></div><div class="menu-item-cal">460 cal</div><div class="macros"><span class="macro-pro">P: 35g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="High Protein Bowl" data-calories="845" data-protein="81" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>High Protein Bowl</h4></div><div class="menu-item-cal">845 cal</div><div class="macros"><span class="macro-pro">P: 81g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Wholesome Bowl" data-calories="460" data-protein="35" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Wholesome Bowl</h4></div><div class="menu-item-cal">460 cal</div><div class="macros"><span class="macro-pro">P: 35g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div></div><div class="rest-cat-group" data-category="Quesadillas" style="display:none"><div class="menu-item" data-name="Barbacoa Quesadilla" data-calories="820" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Barbacoa Quesadilla</h4></div><div class="menu-item-cal">820 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Carnitas Quesadilla" data-calories="860" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Carnitas Quesadilla</h4></div><div class="menu-item-cal">860 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Cheese Quesadilla" data-calories="650" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Cheese Quesadilla</h4></div><div class="menu-item-cal">650 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Chicken Quesadilla" data-calories="830" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Chicken Quesadilla</h4></div><div class="menu-item-cal">830 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Plant Based Chorizo Quesadilla" data-calories="870" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Plant Based Chorizo Quesadilla</h4></div><div class="menu-item-cal">870 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Sofritas Quesadilla" data-calories="800" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Sofritas Quesadilla</h4></div><div class="menu-item-cal">800 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Steak Quesadilla" data-calories="800" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Steak Quesadilla</h4></div><div class="menu-item-cal">800 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Vegetable Quesadilla" data-calories="670" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Vegetable Quesadilla</h4></div><div class="menu-item-cal">670 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div></div><div class="rest-cat-group" data-category="Sides" style="display:none"><div class="menu-item" data-name="Chips" data-calories="540" data-protein="7" data-carbs="73" data-fat="25" data-fiber="7" data-sodium="390" data-sugars="1" data-saturated-fat="3.5" data-price="$1.85"><div class="menu-item-header"><h4>Chips</h4><span class="item-price">$1.85</span></div><div class="menu-item-cal">540 cal</div><div class="macros"><span class="macro-pro">P: 7g</span> <span class="macro-carb">C: 73g</span> <span class="macro-fat">F: 25g</span></div></div><div class="menu-item" data-name="Chips &amp; Guacamole" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$4.50"><div class="menu-item-header"><h4>Chips &amp; Guacamole</h4><span class="item-price">$4.50</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Chips &amp; Queso Blanco" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$4.50"><div class="menu-item-header"><h4>Chips &amp; Queso Blanco</h4><span class="item-price">$4.50</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Chips &amp; Salsa" data-calories="0" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0" data-price="$2.30"><div class="menu-item-header"><h4>Chips &amp; Salsa</h4><span class="item-price">$2.30</span></div><div class="menu-item-cal">0 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Guacamole (Side)" data-calories="230" data-protein="2" data-carbs="8" data-fat="22" data-fiber="6" data-sodium="370" data-sugars="1" data-saturated-fat="3.5" data-price="$2.65"><div class="menu-item-header"><h4>Guacamole (Side)</h4><span class="item-price">$2.65</span></div><div class="menu-item-cal">230 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 8g</span> <span class="macro-fat">F: 22g</span></div></div><div class="menu-item" data-name="Queso Blanco (Side)" data-calories="240" data-protein="10" data-carbs="7" data-fat="18" data-fiber="0" data-sodium="490" data-sugars="2" data-cholesterol="60" data-saturated-fat="12" data-trans-fat="0.5" data-price="$2.65"><div class="menu-item-header"><h4>Queso Blanco (Side)</h4><span class="item-price">$2.65</span></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 10g</span> <span class="macro-carb">C: 7g</span> <span class="macro-fat">F: 18g</span></div></div></div><div class="rest-cat-group" data-category="Beverages" style="display:none"><div class="menu-item" data-name="Izze Sparkling Blackberry Soda" data-calories="170" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Izze Sparkling Blackberry Soda</h4></div><div class="menu-item-cal">170 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Izze Sparkling Clementine Soda" data-calories="160" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Izze Sparkling Clementine Soda</h4></div><div class="menu-item-cal">160 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Izze Sparkling Grapefruit Soda" data-calories="160" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Izze Sparkling Grapefruit Soda</h4></div><div class="menu-item-cal">160 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Nantucket Nectars Apple Juice" data-calories="240" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Nantucket Nectars Apple Juice</h4></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Nantucket Nectars Peach Orange Juice" data-calories="260" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Nantucket Nectars Peach Orange Juice</h4></div><div class="menu-item-cal">260 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Nantucket Nectars Pineapple Orange Banana Juice" data-calories="280" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Nantucket Nectars Pineapple Orange Banana Juice</h4></div><div class="menu-item-cal">280 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Nantucket Nectars Pomegranate Cherry Juice" data-calories="240" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Nantucket Nectars Pomegranate Cherry Juice</h4></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Patron Margarita" data-calories="240" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Patron Margarita</h4></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tractor Berry Agua Fresca" data-calories="245" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Tractor Berry Agua Fresca</h4></div><div class="menu-item-cal">245 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tractor Hibiscus Lemonade" data-calories="180" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Tractor Hibiscus Lemonade</h4></div><div class="menu-item-cal">180 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tractor Lemonade" data-calories="185" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Tractor Lemonade</h4></div><div class="menu-item-cal">185 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tractor Mandarin Agua Fresca" data-calories="235" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Tractor Mandarin Agua Fresca</h4></div><div class="menu-item-cal">235 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div><div class="menu-item" data-name="Tractor Organic Black Tea" data-calories="30" data-protein="0" data-carbs="0" data-fat="0" data-fiber="0" data-sodium="0"><div class="menu-item-header"><h4>Tractor Organic Black Tea</h4></div><div class="menu-item-cal">30 cal</div><div class="macros"><span class="macro-pro">P: 0g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 0g</span></div></div></div></div>
+<div id="rest-detail"><div class="detail-card"><button class="detail-close" id="detail-close">&times;</button><h3>Chicken</h3><div class="nutrition-pills"><div class="nutrition-pill pill-cal"><div class="val">180</div><div class="lbl">Calories</div></div><div class="nutrition-pill pill-pro"><div class="val">32g</div><div class="lbl">Protein</div></div><div class="nutrition-pill pill-carb"><div class="val">0g</div><div class="lbl">Carbs</div></div><div class="nutrition-pill pill-fat"><div class="val">7g</div><div class="lbl">Fat</div></div><div class="nutrition-pill pill-sod"><div class="val">310mg</div><div class="lbl">Sodium</div></div><div class="nutrition-pill pill-chol"><div class="val">125mg</div><div class="lbl">Cholesterol</div></div><div class="nutrition-pill pill-sfat"><div class="val">3g</div><div class="lbl">Sat. Fat</div></div></div><div id="nutrition-facts-label"><div class="nf-label"><div class="nf-title">Nutrition Facts</div><div class="nf-divider-thick"></div><div class="nf-cal-row"><span class="nf-cal-label">Calories</span><span class="nf-cal-val">180</span></div><div class="nf-divider-medium"></div><div class="nf-dv-header">% Daily Value*</div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Fat</strong> 7g</span><span>9%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Saturated Fat 3g</span><span>15%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Cholesterol</strong> 125mg</span><span>42%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Sodium</strong> 310mg</span><span>13%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Carbohydrate</strong> 0g</span><span></span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Protein</strong> 32g</span><span>64%</span></div><div class="nf-divider-thick"></div><div class="nf-footnote">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</div></div></div><button class="add-meal-btn" id="add-meal-btn">+ Add to My Meal</button></div></div>
+</div>
+</div>
+<div class="rest-right-col">
+<div id="rest-summary"><div class="meal-summary"><h3>My Meal <span class="meal-count">(0 items)</span> <button class="reset-btn" id="reset-meal">Reset</button></h3><div class="meal-progress"><div class="meal-progress-bar" style="width:0%"></div></div><div class="meal-progress-text">0 / 2,000 cal (0%)</div><div class="meal-totals"><div class="meal-total pill-cal"><div class="num">0</div><div class="lbl">Calories</div></div><div class="meal-total pill-pro"><div class="num">0g</div><div class="lbl">Protein</div></div><div class="meal-total pill-carb"><div class="num">0g</div><div class="lbl">Carbs</div></div><div class="meal-total pill-fat"><div class="num">0g</div><div class="lbl">Fat</div></div></div><div class="meal-items"><div class="empty-msg">No items added yet. Click items above and press "Add to My Meal".</div></div></div></div>
+</div>
+</div>
+</div>
+<div class="content-section">
+<h2>How to Use the Chipotle Nutrition Calculator</h2>
+<div class="steps-grid">
+<div class="step-card"><div class="step-num">1</div><h3>Browse Categories</h3><p>Click through the category tabs to explore different menu sections.</p></div>
+<div class="step-card"><div class="step-num">2</div><h3>Select Items</h3><p>Click on any menu item to see its detailed nutrition breakdown.</p></div>
+<div class="step-card"><div class="step-num">3</div><h3>Build Your Meal</h3><p>Add items to your meal tracker to see combined nutrition totals.</p></div>
+</div>
+<h2>About Chipotle Mexican Grill</h2>
+<p>Our Chipotle Nutrition Calculator helps you make informed decisions about what you eat at Chipotle Mexican Grill. Track calories, protein, carbs, fat, and more for every menu item. Build your complete meal and see the total nutritional impact before you order.</p>
+<p>All nutrition data is sourced from official Chipotle Mexican Grill nutrition guides and FDA databases. Values may vary by location and preparation method.</p>
+</div>
+</section>
+<div class="social-share" id="social-share">
+  <span class="social-share-label">Share:</span>
+  <a class="social-btn social-twitter" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="social-btn social-facebook" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="social-btn social-linkedin" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a class="social-btn social-whatsapp" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a class="social-btn social-email" id="share-email" href="#" aria-label="Share via Email" title="Share via Email">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+  <button class="social-btn social-copy" id="share-copy" aria-label="Copy link" title="Copy link">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var tw = document.getElementById('share-twitter');
+  var fb = document.getElementById('share-facebook');
+  var li = document.getElementById('share-linkedin');
+  var wa = document.getElementById('share-whatsapp');
+  var em = document.getElementById('share-email');
+  var cp = document.getElementById('share-copy');
+  if(tw) tw.href = 'https://twitter.com/intent/tweet?url='+url+'&text='+title;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
+  if(wa) wa.href = 'https://wa.me/?text='+title+'%20'+url;
+  if(em) em.href = 'mailto:?subject='+title+'&body=Check%20this%20out:%20'+url;
+  if(cp) cp.addEventListener('click', function(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(function(){ cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'; }, 2000);
+    });
+  });
+})();
+</script>
+<footer class="footer">
+<div class="footer-inner">
+  <div class="footer-brand">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+    <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Popular Calculators</h4>
+    <ul>
+      <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+      <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+      <li><a href="/tdee-calculator/">TDEE Calculator</a></li>
+      <li><a href="/protein-calculator/">Protein Calculator</a></li>
+      <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+      <li><a href="/keto-macro-calculator/">Keto Macro Calculator</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Restaurant Calculators</h4>
+    <ul>
+      <li><a href="/starbucks-nutrition-calculator/">Starbucks</a></li>
+      <li><a href="/chipotle-nutrition-calculator/">Chipotle</a></li>
+      <li><a href="/mcdonalds-calories-calculator/">McDonald's</a></li>
+      <li><a href="/subway-nutrition-calculator/">Subway</a></li>
+      <li><a href="/five-guys-nutrition-calculator/">Five Guys</a></li>
+      <li><a href="/panda-express-nutrition-calculator/">Panda Express</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
+</footer>
+<script src="/js/site-config.js"></script>
+<script src="/js/scripts-config.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/restaurant.js"></script>
+<script>initRestaurant();</script>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+</script>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and for analytics. By continuing to use this site, you agree to our <a href="/cookie-policy/">Cookie Policy</a>.</p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+      <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if (localStorage.getItem('cookie-consent')) return;
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>

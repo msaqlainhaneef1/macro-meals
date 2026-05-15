@@ -1,0 +1,13 @@
+{
+  "name": "Macro & Meals",
+  "short_name": "Macro & Meals",
+  "description": "Free nutrition calculators and health tools",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#22c55e",
+  "icons": [
+    { "src": "/img/favicon-192x192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/img/favicon-512x512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

@@ -1,0 +1,38 @@
+<!-- ============================== -->
+<!-- Macro & Meals — Breadcrumbs Navigation -->
+<!-- Auto-generated from URL path. Improves UX + SEO. -->
+<!-- Edit this file and run build.py to update all pages -->
+<!-- ============================== -->
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+<script>
+(function(){
+  var ol = document.querySelector('.breadcrumbs ol');
+  if (!ol) return;
+  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
+  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
+  var h1 = document.querySelector('h1');
+  for (var i = 0; i < path.length; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('itemprop','itemListElement');
+    li.setAttribute('itemscope','');
+    li.setAttribute('itemtype','https://schema.org/ListItem');
+    var isLast = (i === path.length - 1);
+    var slug = path[i];
+    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    if (isLast) {
+      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+    } else {
+      var href = '/' + path.slice(0, i+1).join('/') + '/';
+      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+    }
+    ol.appendChild(li);
+  }
+})();
+</script>

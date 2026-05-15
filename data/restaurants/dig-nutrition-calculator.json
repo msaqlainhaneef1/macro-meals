@@ -1,0 +1,801 @@
+{
+  "slug": "dig-nutrition-calculator",
+  "title": "🍽 DIG Nutrition Calculator",
+  "description": "Build your DIG plate and estimate total calorie intake.",
+  "categories": [
+    {
+      "name": "Chef's Specials",
+      "items": [
+        {
+          "name": "Classic Dig",
+          "calories": 800.0,
+          "protein": 38.0,
+          "carbs": 94.0,
+          "fat": 35.0,
+          "fiber": 12.0,
+          "sodium": 1810.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 3.0
+        },
+        {
+          "name": "Vegan Dig Classic",
+          "calories": 940.0,
+          "protein": 31.0,
+          "carbs": 101.0,
+          "fat": 52.0,
+          "fiber": 13.0,
+          "sodium": 1990.0,
+          "saturated_fat": 4.0
+        },
+        {
+          "name": "Spicy Salmon Bowl",
+          "calories": 860.0,
+          "protein": 33.0,
+          "carbs": 97.0,
+          "fat": 42.0,
+          "fiber": 12.0,
+          "sodium": 2280.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 4.0
+        },
+        {
+          "name": "Hot Honey Chicken Bowl",
+          "calories": 850.0,
+          "protein": 48.0,
+          "carbs": 77.0,
+          "fat": 40.0,
+          "fiber": 9.0,
+          "sodium": 2190.0,
+          "cholesterol": 200.0,
+          "saturated_fat": 12.0
+        }
+      ]
+    },
+    {
+      "name": "Seasonal Specials",
+      "items": [
+        {
+          "name": "Lemon Piccata Chicken Plate",
+          "calories": 610.0,
+          "protein": 30.0,
+          "carbs": 35.0,
+          "fat": 29.0,
+          "fiber": 5.0,
+          "sodium": 2250.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 6.5,
+          "trans_fat": 1.5
+        },
+        {
+          "name": "Lemon Piccata Caesar Plate",
+          "calories": 660.0,
+          "protein": 34.0,
+          "carbs": 26.0,
+          "fat": 55.0,
+          "fiber": 10.0,
+          "sodium": 1590.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 11.0,
+          "trans_fat": 1.5
+        },
+        {
+          "name": "Spring Chicken Plate",
+          "calories": 730.0,
+          "protein": 33.0,
+          "carbs": 47.0,
+          "fat": 46.0,
+          "fiber": 8.0,
+          "sodium": 1730.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 7.0
+        },
+        {
+          "name": "Cheesy Cauliflower Chicken Plate",
+          "calories": 660.0,
+          "protein": 38.0,
+          "carbs": 40.0,
+          "fat": 37.0,
+          "fiber": 7.0,
+          "sodium": 1910.0,
+          "cholesterol": 170.0,
+          "saturated_fat": 7.0,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Feta Grain Bowl",
+          "calories": 600.0,
+          "protein": 8.0,
+          "carbs": 45.0,
+          "fat": 46.0,
+          "fiber": 12.0,
+          "sodium": 1095.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 6.0
+        }
+      ]
+    },
+    {
+      "name": "All Day Deals",
+      "items": [
+        {
+          "name": "Fan Faves Plate",
+          "calories": 390.0,
+          "protein": 29.0,
+          "carbs": 19.0,
+          "fat": 28.0,
+          "fiber": 5.0,
+          "sodium": 1130.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 3.5
+        },
+        {
+          "name": "Vegan Favorites Plate",
+          "calories": 560.0,
+          "protein": 25.0,
+          "carbs": 38.0,
+          "fat": 37.0,
+          "fiber": 7.0,
+          "sodium": 1190.0,
+          "saturated_fat": 2.0
+        },
+        {
+          "name": "Charred Chicken & Rice",
+          "calories": 670.0,
+          "protein": 60.0,
+          "carbs": 43.0,
+          "fat": 34.0,
+          "fiber": 3.0,
+          "sodium": 1910.0,
+          "cholesterol": 300.0,
+          "saturated_fat": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        {
+          "name": "Kale Caesar Salad",
+          "calories": 550.0,
+          "protein": 12.0,
+          "carbs": 41.0,
+          "fat": 47.0,
+          "fiber": 11.0,
+          "sodium": 1140.0,
+          "saturated_fat": 5.0
+        },
+        {
+          "name": "Kale Caesar Salad with Crispy Chicken",
+          "calories": 860.0,
+          "protein": 36.0,
+          "carbs": 61.0,
+          "fat": 62.0,
+          "fiber": 11.0,
+          "sodium": 1980.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 7.0
+        }
+      ]
+    },
+    {
+      "name": "Little Digs",
+      "items": [
+        {
+          "name": "Kid's Classic",
+          "calories": 400.0,
+          "protein": 19.0,
+          "carbs": 47.0,
+          "fat": 18.0,
+          "fiber": 6.0,
+          "sodium": 910.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 3.0
+        },
+        {
+          "name": "Old Macdonald",
+          "calories": 360.0,
+          "protein": 21.0,
+          "carbs": 33.0,
+          "fat": 18.0,
+          "fiber": 4.5,
+          "sodium": 820.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Market Line - Sides",
+      "items": [
+        {
+          "name": "Brown Rice",
+          "calories": 210.0,
+          "protein": 4.0,
+          "carbs": 41.0,
+          "fat": 10.0,
+          "fiber": 3.0,
+          "sodium": 430.0
+        },
+        {
+          "name": "Herb Rice",
+          "calories": 180.0,
+          "protein": 3.0,
+          "carbs": 31.0,
+          "fat": 4.5,
+          "fiber": 3.0,
+          "sodium": 490.0
+        },
+        {
+          "name": "Farm Greens with Mint",
+          "calories": 10.0,
+          "protein": 0.1,
+          "carbs": 2.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 10.0
+        },
+        {
+          "name": "Cashew Kale Caesar",
+          "calories": 140.0,
+          "protein": 4.0,
+          "carbs": 8.0,
+          "fat": 14.0,
+          "fiber": 2.0,
+          "sodium": 360.0,
+          "saturated_fat": 1.5
+        },
+        {
+          "name": "Tomatoes & Cucumbers",
+          "calories": 25.0,
+          "protein": 0.1,
+          "carbs": 6.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 85.0
+        },
+        {
+          "name": "Marinated Cannellini Beans",
+          "calories": 160.0,
+          "protein": 5.0,
+          "carbs": 17.0,
+          "fat": 8.0,
+          "fiber": 6.0,
+          "sodium": 520.0,
+          "saturated_fat": 0.1
+        },
+        {
+          "name": "Charred Broccoli with Lemon",
+          "calories": 100.0,
+          "protein": 3.0,
+          "carbs": 9.0,
+          "fat": 7.0,
+          "fiber": 3.0,
+          "sodium": 420.0,
+          "saturated_fat": 0.1
+        },
+        {
+          "name": "Sheet Tray Carrots",
+          "calories": 80.0,
+          "protein": 1.0,
+          "carbs": 11.0,
+          "fat": 6.0,
+          "fiber": 3.0,
+          "sodium": 350.0,
+          "saturated_fat": 0.1
+        },
+        {
+          "name": "Roasted Sweet Potatoes",
+          "calories": 260.0,
+          "protein": 3.0,
+          "carbs": 43.0,
+          "fat": 6.0,
+          "fiber": 6.0,
+          "sodium": 220.0,
+          "saturated_fat": 0.1
+        },
+        {
+          "name": "Jasper Hill Mac & Cheese",
+          "calories": 390.0,
+          "protein": 16.0,
+          "carbs": 44.0,
+          "fat": 15.0,
+          "fiber": 3.0,
+          "sodium": 510.0,
+          "cholesterol": 50.0,
+          "saturated_fat": 9.0
+        },
+        {
+          "name": "Cheesy Cauliflower",
+          "calories": 160.0,
+          "protein": 7.0,
+          "carbs": 8.0,
+          "fat": 12.0,
+          "fiber": 3.0,
+          "sodium": 580.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 3.5
+        },
+        {
+          "name": "Feta Grain Salad",
+          "calories": 250.0,
+          "protein": 6.0,
+          "carbs": 26.0,
+          "fat": 14.0,
+          "fiber": 4.0,
+          "sodium": 460.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 3.0
+        },
+        {
+          "name": "Lemon & Herb Couscous",
+          "calories": 190.0,
+          "protein": 2.0,
+          "carbs": 10.0,
+          "fat": 5.0,
+          "fiber": 0.1,
+          "sodium": 770.0,
+          "saturated_fat": 0.5
+        },
+        {
+          "name": "Calabrian Green Beans",
+          "calories": 180.0,
+          "protein": 3.0,
+          "carbs": 21.0,
+          "fat": 10.0,
+          "fiber": 4.0,
+          "sodium": 730.0,
+          "saturated_fat": 0.5
+        }
+      ]
+    },
+    {
+      "name": "Market Line - Mains",
+      "items": [
+        {
+          "name": "Seared Wild Salmon",
+          "calories": 270.0,
+          "protein": 23.0,
+          "carbs": 1.0,
+          "fat": 19.0,
+          "fiber": 0.0,
+          "sodium": 770.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 2.5
+        },
+        {
+          "name": "Crispy Tofu",
+          "calories": 280.0,
+          "protein": 19.0,
+          "carbs": 8.0,
+          "fat": 20.0,
+          "fiber": 0.1,
+          "sodium": 770.0,
+          "saturated_fat": 1.5
+        },
+        {
+          "name": "Charred Chicken",
+          "calories": 230.0,
+          "protein": 28.0,
+          "carbs": 1.0,
+          "fat": 12.0,
+          "fiber": 0.1,
+          "sodium": 740.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 3.0
+        },
+        {
+          "name": "Herb Roasted Chicken",
+          "calories": 170.0,
+          "protein": 24.0,
+          "carbs": 0.1,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 420.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 2.0
+        },
+        {
+          "name": "Crispy Chicken",
+          "calories": 320.0,
+          "protein": 24.0,
+          "carbs": 20.0,
+          "fat": 15.0,
+          "fiber": 0.1,
+          "sodium": 840.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 2.0
+        },
+        {
+          "name": "Hot Honey Chicken",
+          "calories": 280.0,
+          "protein": 28.0,
+          "carbs": 13.0,
+          "fat": 12.0,
+          "fiber": 0.1,
+          "sodium": 910.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 3.0
+        },
+        {
+          "name": "Lemon Piccata Crispy Chicken",
+          "calories": 390.0,
+          "protein": 25.0,
+          "carbs": 24.0,
+          "fat": 21.0,
+          "fiber": 0.1,
+          "sodium": 1170.0,
+          "cholesterol": 120.0,
+          "saturated_fat": 6.0,
+          "trans_fat": 1.5
+        }
+      ]
+    },
+    {
+      "name": "Market Line - Extras",
+      "items": [
+        {
+          "name": "Avocado with Olive Oil and Maldon Salt",
+          "calories": 140.0,
+          "protein": 1.0,
+          "carbs": 6.0,
+          "fat": 13.0,
+          "fiber": 5.0,
+          "sodium": 115.0,
+          "saturated_fat": 2.0
+        },
+        {
+          "name": "Focaccia",
+          "calories": 270.0,
+          "protein": 7.0,
+          "carbs": 43.0,
+          "fat": 8.0,
+          "fiber": 2.0,
+          "sodium": 600.0,
+          "saturated_fat": 1.0
+        },
+        {
+          "name": "Brioche Cheddar Pullapart",
+          "calories": 170.0,
+          "protein": 6.0,
+          "carbs": 23.0,
+          "fat": 7.0,
+          "fiber": 1.0,
+          "sodium": 280.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Flourless Brownie",
+          "calories": 270.0,
+          "protein": 5.0,
+          "carbs": 30.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 350.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 8.0
+        },
+        {
+          "name": "Chocolate Chip Cookie",
+          "calories": 340.0,
+          "protein": 4.0,
+          "carbs": 43.0,
+          "fat": 19.0,
+          "fiber": 1.0,
+          "sodium": 390.0,
+          "cholesterol": 55.0,
+          "saturated_fat": 12.0,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Iced Lemon Cake",
+          "calories": 330.0,
+          "protein": 5.0,
+          "carbs": 49.0,
+          "fat": 13.0,
+          "fiber": 0.1,
+          "sodium": 220.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces",
+      "items": [
+        {
+          "name": "Garlic Aioli",
+          "calories": 80.0,
+          "protein": 0.1,
+          "carbs": 0.1,
+          "fat": 8.0,
+          "fiber": 0.1,
+          "sodium": 100.0,
+          "saturated_fat": 0.1,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Hot Honey",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 170.0
+        },
+        {
+          "name": "Pesto",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 120.0,
+          "saturated_fat": 1.5
+        },
+        {
+          "name": "Sriracha",
+          "calories": 20.0,
+          "protein": 0.0,
+          "carbs": 3.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 440.0
+        },
+        {
+          "name": "Balsamic Vinaigrette",
+          "calories": 110.0,
+          "protein": 0.0,
+          "carbs": 3.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 240.0,
+          "saturated_fat": 0.1,
+          "trans_fat": 0.1
+        },
+        {
+          "name": "Lemon Piccata Sauce",
+          "calories": 70.0,
+          "protein": 1.0,
+          "carbs": 4.0,
+          "fat": 6.0,
+          "fiber": 0.1,
+          "sodium": 330.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 3.5
+        }
+      ]
+    },
+    {
+      "name": "Drinks",
+      "items": [
+        {
+          "name": "Ginger Mint Lemonade",
+          "calories": 120.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spindrift Lemon",
+          "calories": 3.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Water",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Orange Mango Culture Pop",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Black Cherry Culture Pop",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spindrift Raspberry Lime",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sparkling Water",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Coca Cola",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Diet Coca Cola",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Harney & Sons Peach Iced Tea",
+          "calories": 40.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Large Sides (Serves 4)",
+      "items": [
+        {
+          "name": "Jasper Hill Mac & Cheese Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Herb Roasted Chicken Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Crispy Chicken Thigh Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tomatoes & Cucumbers Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Brown Rice Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Charred Chicken Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sheet Tray Carrots Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cheesy Cauliflower Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Feta Grain Salad Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Herb Rice Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Roasted Sweet Potatoes Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Charred Broccoli with Lemon Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cashew Kale Caesar Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Crispy Tofu Large Side",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

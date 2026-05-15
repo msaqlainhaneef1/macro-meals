@@ -1,0 +1,422 @@
+{
+  "slug": "five-guys-nutrition-calculator",
+  "title": "🍔 Five Guys Nutrition Calculator",
+  "description": "Customize burgers and toppings while tracking nutrition.",
+  "categories": [
+    {
+      "name": "Burgers",
+      "items": [
+        {
+          "name": "Hamburger",
+          "calories": 700.0,
+          "protein": 39.0,
+          "carbs": 39.0,
+          "fat": 43.0,
+          "fiber": 2.0,
+          "sodium": 430.0,
+          "cholesterol": 160.0,
+          "saturated_fat": 19.5,
+          "sugars": 8.0,
+          "trans_fat": 2.0
+        },
+        {
+          "name": "Cheeseburger",
+          "calories": 840.0,
+          "protein": 47.0,
+          "carbs": 40.0,
+          "fat": 55.0,
+          "fiber": 2.0,
+          "sodium": 1050.0,
+          "cholesterol": 200.0,
+          "saturated_fat": 26.5,
+          "sugars": 9.0,
+          "trans_fat": 2.0
+        },
+        {
+          "name": "Bacon Burger",
+          "calories": 780.0,
+          "protein": 45.0,
+          "carbs": 39.0,
+          "fat": 49.0,
+          "fiber": 2.0,
+          "sodium": 640.0,
+          "cholesterol": 175.0,
+          "saturated_fat": 21.5,
+          "sugars": 8.0,
+          "trans_fat": 2.0
+        },
+        {
+          "name": "Bacon Cheeseburger",
+          "calories": 920.0,
+          "protein": 53.0,
+          "carbs": 40.0,
+          "fat": 62.0,
+          "fiber": 2.0,
+          "sodium": 1260.0,
+          "cholesterol": 215.0,
+          "saturated_fat": 29.5,
+          "sugars": 9.0,
+          "trans_fat": 2.0
+        },
+        {
+          "name": "Little Hamburger",
+          "calories": 480.0,
+          "protein": 23.0,
+          "carbs": 39.0,
+          "fat": 26.0,
+          "fiber": 2.0,
+          "sodium": 380.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 11.5,
+          "sugars": 8.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Little Cheeseburger",
+          "calories": 550.0,
+          "protein": 27.0,
+          "carbs": 39.5,
+          "fat": 32.0,
+          "fiber": 2.0,
+          "sodium": 690.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 15.0,
+          "sugars": 8.5,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Little Bacon Burger",
+          "calories": 560.0,
+          "protein": 29.0,
+          "carbs": 39.0,
+          "fat": 33.0,
+          "fiber": 2.0,
+          "sodium": 590.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 13.5,
+          "sugars": 8.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Little Bacon Cheeseburger",
+          "calories": 630.0,
+          "protein": 33.0,
+          "carbs": 39.5,
+          "fat": 39.0,
+          "fiber": 2.0,
+          "sodium": 900.0,
+          "cholesterol": 115.0,
+          "saturated_fat": 17.0,
+          "sugars": 8.5,
+          "trans_fat": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Hot Dogs",
+      "items": [
+        {
+          "name": "Kosher Style Hot Dog",
+          "calories": 545.0,
+          "protein": 18.0,
+          "carbs": 40.0,
+          "fat": 33.0,
+          "fiber": 2.0,
+          "sodium": 1130.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 12.5,
+          "sugars": 8.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Cheese Dog",
+          "calories": 615.0,
+          "protein": 22.0,
+          "carbs": 40.5,
+          "fat": 39.0,
+          "fiber": 2.0,
+          "sodium": 1440.0,
+          "cholesterol": 85.0,
+          "saturated_fat": 16.0,
+          "sugars": 8.5,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Bacon Dog",
+          "calories": 625.0,
+          "protein": 24.0,
+          "carbs": 40.0,
+          "fat": 39.0,
+          "fiber": 2.0,
+          "sodium": 1340.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 14.5,
+          "sugars": 8.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Bacon Cheese Dog",
+          "calories": 695.0,
+          "protein": 28.0,
+          "carbs": 40.5,
+          "fat": 45.0,
+          "fiber": 2.0,
+          "sodium": 1650.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 18.0,
+          "sugars": 8.5,
+          "trans_fat": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Sandwiches",
+      "items": [
+        {
+          "name": "Veggie Sandwich",
+          "calories": 440.0,
+          "protein": 8.0,
+          "carbs": 60.0,
+          "fat": 15.0,
+          "fiber": 3.0,
+          "sodium": 382.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 3.5,
+          "sugars": 9.0
+        },
+        {
+          "name": "Cheese Veggie Sandwich",
+          "calories": 510.0,
+          "protein": 12.0,
+          "carbs": 60.5,
+          "fat": 21.0,
+          "fiber": 3.0,
+          "sodium": 692.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 7.0,
+          "sugars": 9.5
+        },
+        {
+          "name": "Grilled Cheese",
+          "calories": 470.0,
+          "protein": 15.0,
+          "carbs": 41.0,
+          "fat": 24.0,
+          "fiber": 2.0,
+          "sodium": 930.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 10.5,
+          "sugars": 8.0
+        },
+        {
+          "name": "BLT",
+          "calories": 533.0,
+          "protein": 17.0,
+          "carbs": 40.0,
+          "fat": 34.0,
+          "fiber": 2.0,
+          "sodium": 1011.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 10.0,
+          "sugars": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Fries",
+      "items": [
+        {
+          "name": "Little Fries",
+          "calories": 526.0,
+          "protein": 8.0,
+          "carbs": 72.0,
+          "fat": 23.0,
+          "fiber": 8.0,
+          "sodium": 531.0,
+          "saturated_fat": 4.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Regular Fries",
+          "calories": 953.0,
+          "protein": 15.0,
+          "carbs": 131.0,
+          "fat": 41.0,
+          "fiber": 15.0,
+          "sodium": 962.0,
+          "saturated_fat": 7.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Large Fries",
+          "calories": 1314.0,
+          "protein": 20.0,
+          "carbs": 181.0,
+          "fat": 57.0,
+          "fiber": 21.0,
+          "sodium": 1327.0,
+          "saturated_fat": 10.0,
+          "sugars": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Milkshakes",
+      "items": [
+        {
+          "name": "Five Guys Shake Base",
+          "calories": 670.0,
+          "protein": 13.0,
+          "carbs": 84.0,
+          "fat": 32.0,
+          "fiber": 0.0,
+          "sodium": 360.0,
+          "cholesterol": 130.0,
+          "saturated_fat": 21.0,
+          "sugars": 82.0,
+          "trans_fat": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Toppings",
+      "items": [
+        {
+          "name": "Mayo",
+          "calories": 100.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 70.0
+        },
+        {
+          "name": "Lettuce",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 3.0
+        },
+        {
+          "name": "Pickles",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 260.0
+        },
+        {
+          "name": "Tomatoes",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 3.0
+        },
+        {
+          "name": "Grilled Onions",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1.0
+        },
+        {
+          "name": "Grilled Mushrooms",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 50.0
+        },
+        {
+          "name": "Ketchup",
+          "calories": 30.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 160.0
+        },
+        {
+          "name": "Mustard",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 55.0
+        },
+        {
+          "name": "Relish",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 85.0
+        },
+        {
+          "name": "Onions",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1.0
+        },
+        {
+          "name": "Jalapeño Peppers",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Green Peppers",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1.0
+        },
+        {
+          "name": "A.1. Sauce",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 280.0
+        },
+        {
+          "name": "BBQ Sauce",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 400.0
+        },
+        {
+          "name": "Hot Sauce",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 200.0
+        }
+      ]
+    }
+  ]
+}

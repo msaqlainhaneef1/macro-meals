@@ -1,0 +1,407 @@
+{
+  "slug": "sheetz-nutrition-calculator",
+  "title": "🏪 Sheetz Nutrition Calculator",
+  "description": "Calculate calories and macros for Sheetz made-to-order meals.",
+  "categories": [
+    {
+      "name": "Breakfast Sandwiches",
+      "items": [
+        {
+          "name": "Dreamy Bacon Croissant",
+          "calories": 400.0,
+          "protein": 19.0,
+          "carbs": 31.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 890.0,
+          "cholesterol": 145.0,
+          "saturated_fat": 10.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Fried Bacon & Egg Sammich",
+          "calories": 941.0,
+          "protein": 38.0,
+          "carbs": 58.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 1850.0,
+          "cholesterol": 480.0,
+          "saturated_fat": 24.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Twisted BLT",
+          "calories": 710.0,
+          "protein": 24.0,
+          "carbs": 52.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1620.0,
+          "saturated_fat": 15.0
+        },
+        {
+          "name": "Walker Breakfast Ranger",
+          "calories": 549.0,
+          "protein": 21.0,
+          "carbs": 45.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1240.0,
+          "saturated_fat": 12.0
+        }
+      ]
+    },
+    {
+      "name": "MTO Burgerz",
+      "items": [
+        {
+          "name": "Big Mozz Burger",
+          "calories": 673.0,
+          "protein": 37.0,
+          "carbs": 57.0,
+          "fat": 0.0,
+          "fiber": 4.0,
+          "sodium": 1324.0,
+          "cholesterol": 123.0,
+          "saturated_fat": 12.4,
+          "sugars": 5.0,
+          "trans_fat": 1.1
+        },
+        {
+          "name": "Boss Bacon Burger",
+          "calories": 792.0,
+          "protein": 45.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1650.0,
+          "saturated_fat": 18.0
+        },
+        {
+          "name": "MTO Burger (Base)",
+          "calories": 221.0,
+          "protein": 21.0,
+          "carbs": 2.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 450.0,
+          "saturated_fat": 5.0
+        },
+        {
+          "name": "Cowboy Burger",
+          "calories": 650.0,
+          "protein": 35.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Chicken Sandwiches",
+      "items": [
+        {
+          "name": "Atomic Chicken Sandwich",
+          "calories": 320.0,
+          "protein": 18.0,
+          "carbs": 35.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 980.0
+        },
+        {
+          "name": "Big Mozz Chicken Sandwich",
+          "calories": 453.0,
+          "protein": 24.0,
+          "carbs": 48.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1150.0
+        },
+        {
+          "name": "Boss Bacon Chicken Sandwich",
+          "calories": 571.0,
+          "protein": 32.0,
+          "carbs": 45.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1420.0
+        },
+        {
+          "name": "Carolina Slaw Chicken Sandwich",
+          "calories": 346.0,
+          "protein": 18.0,
+          "carbs": 38.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1050.0
+        },
+        {
+          "name": "Twisted Brunch Chicken Sandwich",
+          "calories": 644.0,
+          "protein": 28.0,
+          "carbs": 52.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1580.0
+        }
+      ]
+    },
+    {
+      "name": "Hot Dogz",
+      "items": [
+        {
+          "name": "BLT Dog",
+          "calories": 305.0,
+          "protein": 12.0,
+          "carbs": 24.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 850.0
+        },
+        {
+          "name": "Firehouse Dog",
+          "calories": 251.0,
+          "protein": 10.0,
+          "carbs": 22.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 720.0
+        },
+        {
+          "name": "Junkyard Dog",
+          "calories": 194.0,
+          "protein": 8.0,
+          "carbs": 18.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 580.0
+        },
+        {
+          "name": "Philly Dog",
+          "calories": 219.0,
+          "protein": 9.0,
+          "carbs": 20.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 650.0
+        },
+        {
+          "name": "Shmokehouse Dog",
+          "calories": 247.0,
+          "protein": 10.0,
+          "carbs": 21.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 710.0
+        }
+      ]
+    },
+    {
+      "name": "Appz & Sidez",
+      "items": [
+        {
+          "name": "Mac 'N Cheese Bites",
+          "calories": 371.0,
+          "protein": 11.0,
+          "carbs": 32.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 920.0
+        },
+        {
+          "name": "Jalapeno Poppers",
+          "calories": 333.0,
+          "protein": 10.0,
+          "carbs": 28.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 850.0
+        },
+        {
+          "name": "Onion Rings (Regular)",
+          "calories": 235.0,
+          "protein": 3.0,
+          "carbs": 28.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 450.0
+        },
+        {
+          "name": "Fried Pickles",
+          "calories": 224.0,
+          "protein": 4.0,
+          "carbs": 25.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1100.0
+        },
+        {
+          "name": "Fries (Bag)",
+          "calories": 240.0,
+          "protein": 3.0,
+          "carbs": 39.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 340.0,
+          "saturated_fat": 1.0
+        },
+        {
+          "name": "Loaded Fryz",
+          "calories": 596.0,
+          "protein": 12.0,
+          "carbs": 52.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 1250.0
+        },
+        {
+          "name": "Mozzarella Cheese Sticks",
+          "calories": 415.0,
+          "protein": 18.0,
+          "carbs": 38.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 980.0
+        }
+      ]
+    },
+    {
+      "name": "MexAmerican",
+      "items": [
+        {
+          "name": "Pork Quesadilla",
+          "calories": 860.0,
+          "protein": 42.0,
+          "carbs": 62.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Taco Salad",
+          "calories": 680.0,
+          "protein": 32.0,
+          "carbs": 45.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Pizza Flatz",
+      "items": [
+        {
+          "name": "Chicken Bacon Ranch Pizza Flat",
+          "calories": 840.0,
+          "protein": 59.0,
+          "carbs": 51.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pepperoni Pizza Flat",
+          "calories": 650.0,
+          "protein": 35.0,
+          "carbs": 48.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Bakery & Shweetz",
+      "items": [
+        {
+          "name": "Glazed Donut",
+          "calories": 190.0,
+          "protein": 3.0,
+          "carbs": 25.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Blueberry Fritter Donut",
+          "calories": 500.0,
+          "protein": 4.0,
+          "carbs": 68.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Apple Strudel",
+          "calories": 510.0,
+          "protein": 5.0,
+          "carbs": 64.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Specialty Drinkz",
+      "items": [
+        {
+          "name": "Frozen Chai Tea (Small)",
+          "calories": 217.0,
+          "protein": 3.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 120.0
+        },
+        {
+          "name": "Frozen Latte (Small)",
+          "calories": 64.0,
+          "protein": 2.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 45.0
+        },
+        {
+          "name": "Cake Batter Frozen Creamz (Small)",
+          "calories": 286.0,
+          "protein": 4.0,
+          "carbs": 40.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 180.0
+        }
+      ]
+    },
+    {
+      "name": "Self-Serve Drinkz",
+      "items": [
+        {
+          "name": "Coke (8 FL OZ)",
+          "calories": 99.0,
+          "protein": 0.0,
+          "carbs": 27.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 6.0,
+          "sugars": 27.0
+        },
+        {
+          "name": "Cheerwine (8 FL OZ)",
+          "calories": 150.0,
+          "protein": 0.0,
+          "carbs": 42.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 25.0,
+          "sugars": 42.0
+        }
+      ]
+    }
+  ]
+}

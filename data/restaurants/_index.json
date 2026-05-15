@@ -1,0 +1,308 @@
+[
+  {
+    "slug": "albaik-nutrition-calculator",
+    "title": "🍗 Albaik Nutrition Calculator",
+    "description": "Check calories and macros for Albaik chicken and meals.",
+    "itemCount": 31
+  },
+  {
+    "slug": "applebees-nutrition-calculator",
+    "title": "🍽 Applebee's Nutrition Calculator",
+    "description": "Track nutrition for entrees, appetizers, and desserts.",
+    "itemCount": 51
+  },
+  {
+    "slug": "arbys-nutrition-calculator",
+    "title": "🥩 Arby's Nutrition Calculator",
+    "description": "Analyze calories and macros for Arby's sandwiches and sides.",
+    "itemCount": 132
+  },
+  {
+    "slug": "bibibop-calories-calculator",
+    "title": "🍚 BIBIBOP Nutrition Calculator",
+    "description": "Build your Asian bowl and track complete nutrition.",
+    "itemCount": 77
+  },
+  {
+    "slug": "black-rock-coffee-nutrition-calculator",
+    "title": "☕ Black Rock Coffee Calculator",
+    "description": "Track calories in Black Rock Coffee beverages.",
+    "itemCount": 93
+  },
+  {
+    "slug": "blank-street-coffee-calories-calculator",
+    "title": "☕ Blank Street Coffee Calculator",
+    "description": "Track calories in Blank Street Coffee drinks.",
+    "itemCount": 50
+  },
+  {
+    "slug": "blaze-pizza-calories-calculator",
+    "title": "🍕 Blaze Pizza Nutrition Calculator",
+    "description": "Customize your pizza and see complete nutrition facts.",
+    "itemCount": 55
+  },
+  {
+    "slug": "bolay-nutrition-calculator",
+    "title": "🥙 Bolay Nutrition Calculator",
+    "description": "Build your Bolay bowl and track nutrition values.",
+    "itemCount": 67
+  },
+  {
+    "slug": "bolthouse-farms-nutrition-calculator",
+    "title": "🥕 Bolthouse Farms Calculator",
+    "description": "Compare nutrition across Bolthouse Farms products.",
+    "itemCount": 50
+  },
+  {
+    "slug": "brassica-nutrition-calculator",
+    "title": "🥗 Brassica Nutrition Calculator",
+    "description": "Track nutrition for Brassica bowls and salads.",
+    "itemCount": 37
+  },
+  {
+    "slug": "burger-king-calories-calculator",
+    "title": "🍔 Burger King Nutrition Calculator",
+    "description": "Check nutrition for Whoppers, sides, and beverages.",
+    "itemCount": 138
+  },
+  {
+    "slug": "cafe-rio-calories-calculator",
+    "title": "🌯 Cafe Rio Nutrition Calculator",
+    "description": "Track calories for burritos, salads, and Mexican favorites.",
+    "itemCount": 82
+  },
+  {
+    "slug": "carls-jr-calories-calculator",
+    "title": "🍔 Carl's Jr. Nutrition Calculator",
+    "description": "Calculate nutrition for burgers, chicken, and sides.",
+    "itemCount": 68
+  },
+  {
+    "slug": "cava-nutrition-calculator",
+    "title": "🥙 CAVA Nutrition Calculator",
+    "description": "Customize your Mediterranean bowl and review nutrition.",
+    "itemCount": 45
+  },
+  {
+    "slug": "chilis-calories-calculator",
+    "title": "🌶 Chili's Nutrition Calculator",
+    "description": "Track nutrition for Chili's entrees, appetizers, and more.",
+    "itemCount": 230
+  },
+  {
+    "slug": "chipotle-nutrition-calculator",
+    "title": "🌯 Chipotle Nutrition Calculator",
+    "description": "Build your burrito or bowl and calculate precise nutrition totals.",
+    "itemCount": 63
+  },
+  {
+    "slug": "cupbop-nutrition-calculator",
+    "title": "🍜 Cupbop Nutrition Calculator",
+    "description": "Track nutrition for Korean BBQ cups and bowls.",
+    "itemCount": 40
+  },
+  {
+    "slug": "daves-hot-chicken-nutrition-calculator",
+    "title": "🍗 Dave's Hot Chicken Calculator",
+    "description": "Track calories and macros for hot chicken and sides.",
+    "itemCount": 36
+  },
+  {
+    "slug": "dig-nutrition-calculator",
+    "title": "🍽 DIG Nutrition Calculator",
+    "description": "Build your DIG plate and estimate total calorie intake.",
+    "itemCount": 73
+  },
+  {
+    "slug": "dutch-bros-nutrition-calculator",
+    "title": "☕ Dutch Bros Nutrition Calculator",
+    "description": "Track calories in your Dutch Bros coffee drinks and more.",
+    "itemCount": 517
+  },
+  {
+    "slug": "five-guys-nutrition-calculator",
+    "title": "🍔 Five Guys Nutrition Calculator",
+    "description": "Customize burgers and toppings while tracking nutrition.",
+    "itemCount": 35
+  },
+  {
+    "slug": "jamba-juice-nutrition-calculator",
+    "title": "🥤 Jamba Juice Nutrition Calculator",
+    "description": "Compare smoothie nutrition and customize your blend.",
+    "itemCount": 31
+  },
+  {
+    "slug": "jersey-mikes-calories-calculator",
+    "title": "🥪 Jersey Mike's Nutrition Calculator",
+    "description": "Estimate calories and nutrition for subs and wraps.",
+    "itemCount": 34
+  },
+  {
+    "slug": "jimmy-johns-calories-calculator",
+    "title": "🥪 Jimmy John's Nutrition Calculator",
+    "description": "Calculate calories and macros for subs and sides.",
+    "itemCount": 41
+  },
+  {
+    "slug": "mcdonalds-calories-calculator",
+    "title": "🍟 McDonald's Nutrition Calculator",
+    "description": "Calculate nutrition values for all McDonald's menu items.",
+    "itemCount": 471
+  },
+  {
+    "slug": "mellow-mushroom-nutrition-calculator",
+    "title": "🍕 Mellow Mushroom Nutrition Calculator",
+    "description": "Calculate nutrition for artisan pizzas and sides.",
+    "itemCount": 381
+  },
+  {
+    "slug": "mod-pizza-calories-calculator",
+    "title": "🍕 MOD Pizza Nutrition Calculator",
+    "description": "Build your custom pizza and track nutrition details.",
+    "itemCount": 32
+  },
+  {
+    "slug": "mucho-burrito-nutrition-calculator",
+    "title": "🌯 Mucho Burrito Nutrition Calculator",
+    "description": "Build your burrito and see full nutrition breakdown.",
+    "itemCount": 53
+  },
+  {
+    "slug": "naked-juice-nutrition-calculator",
+    "title": "🧃 Naked Juice Nutrition Calculator",
+    "description": "Compare nutrition facts across Naked Juice products.",
+    "itemCount": 13
+  },
+  {
+    "slug": "nandos-nutrition-calculator",
+    "title": "🍗 Nando's Nutrition Calculator",
+    "description": "Check nutrition for flame-grilled chicken and sides.",
+    "itemCount": 109
+  },
+  {
+    "slug": "nifty-fifty-nutrition-calculator",
+    "title": "🍽 Nifty Fifty Nutrition Calculator",
+    "description": "Calculate nutrition for classic diner favorites.",
+    "itemCount": 51
+  },
+  {
+    "slug": "panda-express-nutrition-calculator",
+    "title": "🥡 Panda Express Nutrition Calculator",
+    "description": "Combine entrees and sides to see total calories and macros.",
+    "itemCount": 84
+  },
+  {
+    "slug": "papa-johns-nutrition-calculator",
+    "title": "🍕 Papa John's Nutrition Calculator",
+    "description": "Get nutrition info for pizza, sides, and desserts.",
+    "itemCount": 30
+  },
+  {
+    "slug": "qdoba-nutrition-calculator",
+    "title": "🌯 Qdoba Nutrition Calculator",
+    "description": "Create your burrito or bowl and calculate total nutrition.",
+    "itemCount": 22
+  },
+  {
+    "slug": "raising-canes-calculator",
+    "title": "🍗 Raising Cane's Calculator",
+    "description": "Check calories and macros for chicken fingers and combos.",
+    "itemCount": 0
+  },
+  {
+    "slug": "salad-master-nutrition-calculator",
+    "title": "🥗 Salad Master Nutrition Calculator",
+    "description": "Build your salad and calculate total nutritional values.",
+    "itemCount": 53
+  },
+  {
+    "slug": "sheetz-nutrition-calculator",
+    "title": "🏪 Sheetz Nutrition Calculator",
+    "description": "Calculate calories and macros for Sheetz made-to-order meals.",
+    "itemCount": 37
+  },
+  {
+    "slug": "smoothie-king-nutrition-calculator",
+    "title": "🥤 Smoothie King Nutrition Calculator",
+    "description": "Track calories and macros in your Smoothie King order.",
+    "itemCount": 132
+  },
+  {
+    "slug": "sonic-drive-in-nutrition-calculator",
+    "title": "🍔 Sonic Drive-In Nutrition Calculator",
+    "description": "Calculate nutrition for Sonic burgers, drinks, and treats.",
+    "itemCount": 647
+  },
+  {
+    "slug": "starbucks-nutrition-calculator",
+    "title": "☕ Starbucks Nutrition Calculator",
+    "description": "Customize your favorite Starbucks drinks and track complete nutrition information.",
+    "itemCount": 1517
+  },
+  {
+    "slug": "subway-nutrition-calculator",
+    "title": "🥖 Subway Nutrition Calculator",
+    "description": "Customize sandwiches and check complete nutrition information.",
+    "itemCount": 55
+  },
+  {
+    "slug": "sweetgreen-nutrition-calculator",
+    "title": "🥗 Sweetgreen Nutrition Calculator",
+    "description": "Build your salad or bowl and view nutrition breakdown.",
+    "itemCount": 52
+  },
+  {
+    "slug": "taco-bell-nutrition-calculator",
+    "title": "🌮 Taco Bell Nutrition Calculator",
+    "description": "Calculate nutrition values for tacos, burritos, and combos.",
+    "itemCount": 149
+  },
+  {
+    "slug": "taim-mediterranean-kitchen-nutrition-calculator",
+    "title": "🧆 Taim Mediterranean Kitchen Calculator",
+    "description": "Track nutrition for falafel, bowls, and Mediterranean dishes.",
+    "itemCount": 44
+  },
+  {
+    "slug": "tropical-smoothie-cafe-nutrition-calculator",
+    "title": "🍹 Tropical Smoothie Cafe Calculator",
+    "description": "Check nutrition facts for smoothies and food items.",
+    "itemCount": 83
+  },
+  {
+    "slug": "via-313-nutrition-calculator",
+    "title": "🍕 Via 313 Nutrition Calculator",
+    "description": "Track nutrition for Detroit-style pizzas and sides.",
+    "itemCount": 0
+  },
+  {
+    "slug": "wawa-nutrition-calculator",
+    "title": "🥪 Wawa Nutrition Calculator",
+    "description": "Review nutrition facts for Wawa hoagies, bowls, and beverages.",
+    "itemCount": 323
+  },
+  {
+    "slug": "wendys-nutrition-calculator",
+    "title": "🍔 Wendy's Nutrition Calculator",
+    "description": "Track nutrition for Wendy's burgers, chicken, and sides.",
+    "itemCount": 0
+  },
+  {
+    "slug": "whataburger-nutrition-calculator",
+    "title": "🍔 Whataburger Nutrition Calculator",
+    "description": "Estimate calories and macros for burgers, sides, and drinks.",
+    "itemCount": 26
+  },
+  {
+    "slug": "wingstop-calories-calculator",
+    "title": "🍗 Wingstop Calories Calculator",
+    "description": "Calculate calories for wings, sides, and dipping sauces.",
+    "itemCount": 60
+  },
+  {
+    "slug": "zao-asian-cafe-nutrition-calculator",
+    "title": "🍜 Zao Asian Cafe Nutrition Calculator",
+    "description": "Calculate nutrition for Asian-inspired bowls and entrees.",
+    "itemCount": 0
+  }
+]

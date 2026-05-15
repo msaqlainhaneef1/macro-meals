@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Conception Calculator | Macro & Meals</title>
+<meta name="description" content="Estimate when conception likely occurred based on your due date or last menstrual period.">
+<link rel="canonical" href="https://macroandmeals.com/conception-calculator/">
+<meta property="og:title" content="Conception Calculator">
+<meta property="og:description" content="Estimate when conception likely occurred based on your due date or last menstrual period.">
+<meta property="og:url" content="https://macroandmeals.com/conception-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macro & Meals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Conception Calculator">
+<meta name="twitter:description" content="Estimate when conception likely occurred based on your due date or last menstrual period.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Conception Calculator","url":"https://macroandmeals.com/conception-calculator/","applicationCategory":"HealthApplication","operatingSystem":"All"}</script>
+<style media="print">
+  @media print {
+    .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
+    .nav-dropdown, .back-to-top, .cookie-banner, .social-share,
+    .announcement-bar, .scroll-progress, #back-to-top,
+    .breadcrumbs, .hero-search, #search-results {
+      display: none !important;
+    }
+    body {
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 1cm;
+    }
+    .container, .hero, .hero-home, section {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+    a[href^="/"]::after { content: " (macroandmeals.com" attr(href) ")"; font-size: 0.8em; color: #666; }
+    h1, h2, h3 { page-break-after: avoid; color: #000; }
+    img { max-width: 100%; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; }
+    @page { margin: 2cm; }
+  }
+</style>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7Q3DMT4258');
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FNQMD49');</script>
+<meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#22c55e">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNQMD49"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="scroll-progress" class="scroll-progress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>
+<div id="announcement-bar" class="announcement-bar" data-enabled="false">
+  <div class="announcement-bar-inner">
+    <span class="announcement-text">New: Check out our <a href="/blog/">latest blog post</a> on daily calorie needs!</span>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('announcement-bar');
+  if (!bar || bar.dataset.enabled !== 'true') { if(bar) bar.style.display='none'; return; }
+  if (sessionStorage.getItem('announcement-closed')) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  document.getElementById('announcement-close').addEventListener('click', function(){
+    bar.style.display = 'none';
+    sessionStorage.setItem('announcement-closed', '1');
+  });
+})();
+</script>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+<nav class="nav-desktop">
+  <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="vitamins">Vitamins &amp; Micronutrients <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="body">Body Composition &amp; Health <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="diet">Diet &amp; Macro Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="pregnancy">Pregnancy &amp; Specialty <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+</nav>
+<button class="mobile-toggle" id="mobile-toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div class="nav-dropdown" id="dropdown-nutrition"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-menu"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-vitamins"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-body"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-diet"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-pregnancy"><div class="nav-dropdown-inner"></div></div>
+<div class="mobile-nav" id="mobile-nav"></div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+<script>
+(function(){
+  var ol = document.querySelector('.breadcrumbs ol');
+  if (!ol) return;
+  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
+  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
+  var h1 = document.querySelector('h1');
+  for (var i = 0; i < path.length; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('itemprop','itemListElement');
+    li.setAttribute('itemscope','');
+    li.setAttribute('itemtype','https://schema.org/ListItem');
+    var isLast = (i === path.length - 1);
+    var slug = path[i];
+    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    if (isLast) {
+      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+    } else {
+      var href = '/' + path.slice(0, i+1).join('/') + '/';
+      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+    }
+    ol.appendChild(li);
+  }
+})();
+</script>
+
+<section class="hero"><div class="container"><h1>Conception Calculator</h1><p>Estimate when conception likely occurred based on your due date or last menstrual period.</p></div></section>
+<section class="section"><div class="calc-wrap">
+<div class="calc-card"><h3>Enter Your Values</h3><div class="field-group"><label for="field-method">Calculate By</label><select id="field-method"><option value="Due Date" selected>Due Date</option><option value="Last Menstrual Period">Last Menstrual Period</option></select></div>
+<div class="field-group"><label for="field-date">Date</label><input type="date" id="field-date" value=""></div>
+<div class="field-group"><label for="field-cycleLength">Cycle Length (days)</label><input type="number" id="field-cycleLength" value="28" step="any"></div>
+<button class="calc-btn" id="calc-btn">Calculate</button></div>
+<div id="calc-result"></div>
+</div>
+<div class="content-section">
+<h2>About Conception Dating</h2><p>Conception occurs when a sperm fertilizes an egg. This typically happens within 24 hours of ovulation. This calculator works backward from your due date or forward from your last period to estimate when conception likely occurred.</p>
+<div class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><button class="faq-q">How accurate is the conception date?<span class="faq-arrow">&#9660;</span></button><div class="faq-a"><p>The estimated conception date is approximate. It could vary by several days since sperm can survive up to 5 days and the exact time of ovulation isn't always predictable.</p></div></div></div>
+<div class="disclaimer-box"><strong>Disclaimer:</strong> This calculator is for educational and informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider before making health decisions.</div>
+<div class="related-section"><h2>Related Calculators</h2><div class="related-grid"><a href="/ovulation-calculator/" class="related-card"><span class="rc-icon">🌸</span><span class="rc-text">Ovulation Calculator</span></a><a href="/pregnancy-calculator/" class="related-card"><span class="rc-icon">🤰</span><span class="rc-text">Pregnancy Calculator</span></a><a href="/due-date-calculator/" class="related-card"><span class="rc-icon">📅</span><span class="rc-text">Due Date Calculator</span></a></div></div>
+</div>
+</section>
+<div class="social-share" id="social-share">
+  <span class="social-share-label">Share:</span>
+  <a class="social-btn social-twitter" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="social-btn social-facebook" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="social-btn social-linkedin" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a class="social-btn social-whatsapp" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a class="social-btn social-email" id="share-email" href="#" aria-label="Share via Email" title="Share via Email">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+  <button class="social-btn social-copy" id="share-copy" aria-label="Copy link" title="Copy link">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var tw = document.getElementById('share-twitter');
+  var fb = document.getElementById('share-facebook');
+  var li = document.getElementById('share-linkedin');
+  var wa = document.getElementById('share-whatsapp');
+  var em = document.getElementById('share-email');
+  var cp = document.getElementById('share-copy');
+  if(tw) tw.href = 'https://twitter.com/intent/tweet?url='+url+'&text='+title;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
+  if(wa) wa.href = 'https://wa.me/?text='+title+'%20'+url;
+  if(em) em.href = 'mailto:?subject='+title+'&body=Check%20this%20out:%20'+url;
+  if(cp) cp.addEventListener('click', function(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(function(){ cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'; }, 2000);
+    });
+  });
+})();
+</script>
+<footer class="footer">
+<div class="footer-inner">
+  <div class="footer-brand">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+    <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Popular Calculators</h4>
+    <ul>
+      <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+      <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+      <li><a href="/tdee-calculator/">TDEE Calculator</a></li>
+      <li><a href="/protein-calculator/">Protein Calculator</a></li>
+      <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+      <li><a href="/keto-macro-calculator/">Keto Macro Calculator</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Restaurant Calculators</h4>
+    <ul>
+      <li><a href="/starbucks-nutrition-calculator/">Starbucks</a></li>
+      <li><a href="/chipotle-nutrition-calculator/">Chipotle</a></li>
+      <li><a href="/mcdonalds-calories-calculator/">McDonald's</a></li>
+      <li><a href="/subway-nutrition-calculator/">Subway</a></li>
+      <li><a href="/five-guys-nutrition-calculator/">Five Guys</a></li>
+      <li><a href="/panda-express-nutrition-calculator/">Panda Express</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
+</footer>
+<script src="/js/site-config.js"></script>
+<script src="/js/scripts-config.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/calculator.js"></script>
+<script>
+initCalculator({
+  fields: [{"name":"method","label":"Calculate By","type":"select","options":["Due Date","Last Menstrual Period"],"defaultVal":"Due Date"},{"name":"date","label":"Date","type":"date","options":[],"defaultVal":""},{"name":"cycleLength","label":"Cycle Length (days)","type":"number","options":[],"defaultVal":"28"}],
+  calculate: function(v){
+  if(!v.date)return null;
+  var d=new Date(v.date);var cl=parseInt(v.cycleLength)||28;
+  var conception;
+  if(v.method==="Due Date"){
+    conception=new Date(d);conception.setDate(conception.getDate()-266);
+  }else{
+    conception=new Date(d);conception.setDate(conception.getDate()+(cl-14));
+  }
+  var windowStart=new Date(conception);windowStart.setDate(windowStart.getDate()-3);
+  var windowEnd=new Date(conception);windowEnd.setDate(windowEnd.getDate()+1);
+  return{
+    cards:[
+      {icon:"👶",value:conception.toLocaleDateString(),label:"Estimated Conception",sub:"Most likely date",color:"text-pink-600"},
+      {icon:"❤️",value:windowStart.toLocaleDateString()+" - "+windowEnd.toLocaleDateString(),label:"Conception Window",sub:"Possible range",color:"text-red-600"}
+    ],
+    tip:"Conception typically occurs 12-24 hours after ovulation, but sperm can survive up to 5 days. The conception date is an estimate within a window of several days."
+  };
+}
+});
+</script>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+</script>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and for analytics. By continuing to use this site, you agree to our <a href="/cookie-policy/">Cookie Policy</a>.</p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+      <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if (localStorage.getItem('cookie-consent')) return;
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>

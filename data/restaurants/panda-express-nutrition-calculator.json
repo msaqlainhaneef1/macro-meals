@@ -1,0 +1,974 @@
+{
+  "slug": "panda-express-nutrition-calculator",
+  "title": "🥡 Panda Express Nutrition Calculator",
+  "description": "Combine entrees and sides to see total calories and macros.",
+  "categories": [
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Chow Mein",
+          "calories": 510.0,
+          "protein": 13.0,
+          "carbs": 65.0,
+          "fat": 22.0,
+          "fiber": 4.0,
+          "sodium": 980.0,
+          "saturated_fat": 4.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "Chow Fun*",
+          "calories": 410.0,
+          "protein": 9.0,
+          "carbs": 73.0,
+          "fat": 9.0,
+          "fiber": 1.0,
+          "sodium": 1110.0,
+          "saturated_fat": 1.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Fried Rice",
+          "calories": 520.0,
+          "protein": 12.0,
+          "carbs": 82.0,
+          "fat": 16.0,
+          "fiber": 1.0,
+          "sodium": 790.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 3.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Brown Steamed Rice",
+          "calories": 420.0,
+          "protein": 9.0,
+          "carbs": 86.0,
+          "fat": 4.0,
+          "fiber": 4.0,
+          "sodium": 15.0,
+          "saturated_fat": 1.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "White Steamed Rice",
+          "calories": 380.0,
+          "protein": 7.0,
+          "carbs": 87.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mixed Vegetables (Side)",
+          "calories": 80.0,
+          "protein": 4.0,
+          "carbs": 16.0,
+          "fat": 0.5,
+          "fiber": 5.0,
+          "sodium": 540.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Chow Mein",
+          "calories": 280.0,
+          "protein": 7.0,
+          "carbs": 36.0,
+          "fat": 12.0,
+          "fiber": 2.0,
+          "sodium": 540.0,
+          "saturated_fat": 2.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Chow Fun*",
+          "calories": 300.0,
+          "protein": 6.0,
+          "carbs": 53.0,
+          "fat": 6.0,
+          "fiber": 1.0,
+          "sodium": 810.0,
+          "saturated_fat": 0.5,
+          "sugars": 4.0
+        },
+        {
+          "name": "Fried Rice",
+          "calories": 350.0,
+          "protein": 8.0,
+          "carbs": 55.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 530.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 2.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Brown Steamed Rice",
+          "calories": 310.0,
+          "protein": 7.0,
+          "carbs": 64.0,
+          "fat": 3.0,
+          "fiber": 3.0,
+          "sodium": 10.0,
+          "saturated_fat": 0.5,
+          "sugars": 1.0
+        },
+        {
+          "name": "White Steamed Rice",
+          "calories": 240.0,
+          "protein": 5.0,
+          "carbs": 54.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mixed Veggies (Side)",
+          "calories": 70.0,
+          "protein": 3.0,
+          "carbs": 12.0,
+          "fat": 0.0,
+          "fiber": 4.0,
+          "sodium": 400.0,
+          "sugars": 4.0
+        }
+      ]
+    },
+    {
+      "name": "Vegetables",
+      "items": [
+        {
+          "name": "Country Style Bean Curd*",
+          "calories": 191.0,
+          "protein": 7.0,
+          "carbs": 14.0,
+          "fat": 12.0,
+          "fiber": 2.0,
+          "sodium": 945.0,
+          "saturated_fat": 1.5,
+          "sugars": 8.0
+        },
+        {
+          "name": "Eggplant Tofu*",
+          "calories": 340.0,
+          "protein": 7.0,
+          "carbs": 23.0,
+          "fat": 24.0,
+          "fiber": 3.0,
+          "sodium": 520.0,
+          "saturated_fat": 3.5,
+          "sugars": 17.0
+        },
+        {
+          "name": "Hot Szechuan Tofu*",
+          "calories": 140.0,
+          "protein": 6.0,
+          "carbs": 10.0,
+          "fat": 8.0,
+          "fiber": 2.0,
+          "sodium": 580.0,
+          "saturated_fat": 1.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Mixed Veggies (Entree)",
+          "calories": 35.0,
+          "protein": 2.0,
+          "carbs": 8.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 280.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Country Style Bean Curd*",
+          "calories": 122.0,
+          "protein": 4.0,
+          "carbs": 9.0,
+          "fat": 8.0,
+          "fiber": 1.0,
+          "sodium": 600.0,
+          "saturated_fat": 1.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Eggplant Tofu*",
+          "calories": 250.0,
+          "protein": 5.0,
+          "carbs": 17.0,
+          "fat": 18.0,
+          "fiber": 2.0,
+          "sodium": 390.0,
+          "saturated_fat": 2.5,
+          "sugars": 13.0
+        },
+        {
+          "name": "Hot Szechuan Tofu*",
+          "calories": 100.0,
+          "protein": 4.0,
+          "carbs": 7.0,
+          "fat": 6.0,
+          "fiber": 1.0,
+          "sodium": 430.0,
+          "saturated_fat": 0.5,
+          "sugars": 4.0
+        },
+        {
+          "name": "Mixed Veggies (Entree)",
+          "calories": 30.0,
+          "protein": 2.0,
+          "carbs": 6.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 200.0,
+          "sugars": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Chicken Entrees",
+      "items": [
+        {
+          "name": "Black Pepper Chicken",
+          "calories": 280.0,
+          "protein": 13.0,
+          "carbs": 14.0,
+          "fat": 19.0,
+          "fiber": 1.0,
+          "sodium": 1140.0,
+          "cholesterol": 52.0,
+          "saturated_fat": 3.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Kung Pao Chicken",
+          "calories": 290.0,
+          "protein": 16.0,
+          "carbs": 14.0,
+          "fat": 19.0,
+          "fiber": 2.0,
+          "sodium": 970.0,
+          "cholesterol": 53.0,
+          "saturated_fat": 3.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Grilled Teriyaki Chicken",
+          "calories": 300.0,
+          "protein": 36.0,
+          "carbs": 8.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 530.0,
+          "cholesterol": 185.0,
+          "saturated_fat": 4.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Grilled Asian Chicken",
+          "calories": 300.0,
+          "protein": 36.0,
+          "carbs": 8.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 530.0,
+          "cholesterol": 185.0,
+          "saturated_fat": 4.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Teriyaki Chicken",
+          "calories": 340.0,
+          "protein": 41.0,
+          "carbs": 14.0,
+          "fat": 13.0,
+          "fiber": 3.0,
+          "sodium": 630.0,
+          "cholesterol": 195.0,
+          "saturated_fat": 3.5,
+          "sugars": 10.0
+        },
+        {
+          "name": "Asian Chicken",
+          "calories": 340.0,
+          "protein": 41.0,
+          "carbs": 14.0,
+          "fat": 13.0,
+          "fiber": 3.0,
+          "sodium": 630.0,
+          "cholesterol": 195.0,
+          "saturated_fat": 3.5,
+          "sugars": 10.0
+        },
+        {
+          "name": "Mushroom Chicken",
+          "calories": 170.0,
+          "protein": 12.0,
+          "carbs": 11.0,
+          "fat": 9.0,
+          "fiber": 1.0,
+          "sodium": 750.0,
+          "cholesterol": 41.0,
+          "saturated_fat": 2.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Orange Chicken",
+          "calories": 380.0,
+          "protein": 14.0,
+          "carbs": 45.0,
+          "fat": 18.0,
+          "fiber": 0.0,
+          "sodium": 620.0,
+          "cholesterol": 80.0,
+          "saturated_fat": 3.5,
+          "sugars": 19.0
+        },
+        {
+          "name": "Potato Chicken*",
+          "calories": 190.0,
+          "protein": 8.0,
+          "carbs": 18.0,
+          "fat": 10.0,
+          "fiber": 2.0,
+          "sodium": 680.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 2.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Kung Pao Chicken",
+          "calories": 200.0,
+          "protein": 11.0,
+          "carbs": 10.0,
+          "fat": 14.0,
+          "fiber": 2.0,
+          "sodium": 690.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.5,
+          "sugars": 4.0
+        },
+        {
+          "name": "Grilled Teriyaki Chicken",
+          "calories": 180.0,
+          "protein": 22.0,
+          "carbs": 5.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 320.0,
+          "cholesterol": 110.0,
+          "saturated_fat": 2.5,
+          "sugars": 5.0
+        },
+        {
+          "name": "Grilled Asian Chicken",
+          "calories": 180.0,
+          "protein": 22.0,
+          "carbs": 5.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 320.0,
+          "cholesterol": 110.0,
+          "saturated_fat": 2.5,
+          "sugars": 5.0
+        },
+        {
+          "name": "Teriyaki Chicken",
+          "calories": 200.0,
+          "protein": 25.0,
+          "carbs": 8.0,
+          "fat": 8.0,
+          "fiber": 2.0,
+          "sodium": 380.0,
+          "cholesterol": 115.0,
+          "saturated_fat": 2.0,
+          "sugars": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Chicken Breast Entrees",
+      "items": [
+        {
+          "name": "String Bean Chicken Breast",
+          "calories": 190.0,
+          "protein": 14.0,
+          "carbs": 13.0,
+          "fat": 9.0,
+          "fiber": 4.0,
+          "sodium": 590.0,
+          "cholesterol": 34.0,
+          "saturated_fat": 2.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Sweet & Sour Chicken Breast*",
+          "calories": 300.0,
+          "protein": 10.0,
+          "carbs": 40.0,
+          "fat": 12.0,
+          "fiber": 1.0,
+          "sodium": 260.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 3.0,
+          "sugars": 24.0
+        },
+        {
+          "name": "String Bean Chicken Breast",
+          "calories": 140.0,
+          "protein": 11.0,
+          "carbs": 10.0,
+          "fat": 7.0,
+          "fiber": 3.0,
+          "sodium": 440.0,
+          "cholesterol": 26.0,
+          "saturated_fat": 1.5,
+          "sugars": 3.0
+        },
+        {
+          "name": "Sweet & Sour Chicken Breast*",
+          "calories": 270.0,
+          "protein": 9.0,
+          "carbs": 35.0,
+          "fat": 10.0,
+          "fiber": 1.0,
+          "sodium": 220.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 2.0,
+          "sugars": 21.0
+        }
+      ]
+    },
+    {
+      "name": "Beef Entrees",
+      "items": [
+        {
+          "name": "Broccoli Beef",
+          "calories": 150.0,
+          "protein": 9.0,
+          "carbs": 13.0,
+          "fat": 7.0,
+          "fiber": 2.0,
+          "sodium": 520.0,
+          "cholesterol": 12.0,
+          "saturated_fat": 1.5,
+          "sugars": 7.0
+        },
+        {
+          "name": "Broccoli Beef",
+          "calories": 110.0,
+          "protein": 7.0,
+          "carbs": 10.0,
+          "fat": 6.0,
+          "fiber": 2.0,
+          "sodium": 400.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 1.0,
+          "sugars": 5.0
+        }
+      ]
+    },
+    {
+      "name": "Pork Entrees",
+      "items": [
+        {
+          "name": "Chinese Spare Ribs*",
+          "calories": 370.0,
+          "protein": 28.0,
+          "carbs": 7.0,
+          "fat": 25.0,
+          "fiber": 1.0,
+          "sodium": 740.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 9.0,
+          "sugars": 7.0
+        }
+      ]
+    },
+    {
+      "name": "Seafood Entrees",
+      "items": [
+        {
+          "name": "Honey Walnut Shrimp",
+          "calories": 360.0,
+          "protein": 13.0,
+          "carbs": 35.0,
+          "fat": 23.0,
+          "fiber": 2.0,
+          "sodium": 440.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 3.5,
+          "sugars": 9.0
+        },
+        {
+          "name": "Golden Treasure Shrimp*",
+          "calories": 360.0,
+          "protein": 14.0,
+          "carbs": 35.0,
+          "fat": 18.0,
+          "fiber": 2.0,
+          "sodium": 440.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 3.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "Steamed Ginger Fish*",
+          "calories": 200.0,
+          "protein": 15.0,
+          "carbs": 8.0,
+          "fat": 12.0,
+          "fiber": 0.0,
+          "sodium": 1990.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.5,
+          "sugars": 6.0
+        },
+        {
+          "name": "Golden Treasure Shrimp*",
+          "calories": 360.0,
+          "protein": 14.0,
+          "carbs": 35.0,
+          "fat": 18.0,
+          "fiber": 2.0,
+          "sodium": 440.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 3.0,
+          "sugars": 14.0
+        }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "items": [
+        {
+          "name": "Veggie Spring Roll                 3.4 oz /",
+          "calories": 190.0,
+          "protein": 3.0,
+          "carbs": 27.0,
+          "fat": 8.0,
+          "fiber": 2.0,
+          "sodium": 520.0,
+          "saturated_fat": 1.5,
+          "sugars": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Soups",
+      "items": [
+        {
+          "name": "Hot & Sour Soup (Cup)",
+          "calories": 120.0,
+          "protein": 7.0,
+          "carbs": 14.0,
+          "fat": 4.5,
+          "fiber": 1.0,
+          "sodium": 880.0,
+          "cholesterol": 65.0,
+          "saturated_fat": 0.5,
+          "sugars": 4.0
+        },
+        {
+          "name": "Hot & Sour Soup (Bowl)",
+          "calories": 170.0,
+          "protein": 10.0,
+          "carbs": 20.0,
+          "fat": 6.0,
+          "fiber": 1.0,
+          "sodium": 1260.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 1.0,
+          "sugars": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces & Cookies",
+      "items": [
+        {
+          "name": "Teriyaki Sauce",
+          "calories": 70.0,
+          "protein": 0.0,
+          "carbs": 16.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 380.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "Sweet & Sour Sauce",
+          "calories": 70.0,
+          "protein": 0.0,
+          "carbs": 21.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 115.0,
+          "sugars": 20.0
+        },
+        {
+          "name": "Hot Mustard                        1 Packet",
+          "calories": 10.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 1.0,
+          "fiber": 0.0,
+          "sodium": 115.0
+        },
+        {
+          "name": "Plum Sauce                          1 Packet",
+          "calories": 15.0,
+          "protein": 0.0,
+          "carbs": 3.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 55.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Fortune Cookies                         8 g /",
+          "calories": 32.0,
+          "protein": 1.0,
+          "carbs": 7.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 8.0,
+          "sugars": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "Pepsi® (Sm.)",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 67.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 60.0,
+          "sugars": 65.0
+        },
+        {
+          "name": "Diet Pepsi® (Sm.)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 60.0
+        },
+        {
+          "name": "Diet Pepsi® (Med.)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 80.0
+        },
+        {
+          "name": "Mountain Dew® (Sm.)",
+          "calories": 260.0,
+          "protein": 0.0,
+          "carbs": 70.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 85.0,
+          "sugars": 70.0
+        },
+        {
+          "name": "Mountain Dew® (Med.)",
+          "calories": 360.0,
+          "protein": 0.0,
+          "carbs": 95.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 115.0,
+          "sugars": 95.0
+        },
+        {
+          "name": "Dr Pepper® (Sm.)",
+          "calories": 206.0,
+          "protein": 0.0,
+          "carbs": 56.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 72.0,
+          "sugars": 56.0
+        },
+        {
+          "name": "Dr. Pepper (Lrg.)",
+          "calories": 394.0,
+          "protein": 0.0,
+          "carbs": 106.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 138.0,
+          "sugars": 106.0
+        },
+        {
+          "name": "Mug Root Beer® (Sm.)",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 63.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 35.0,
+          "sugars": 63.0
+        },
+        {
+          "name": "Mug Root Beer® (Med.)",
+          "calories": 330.0,
+          "protein": 0.0,
+          "carbs": 85.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 50.0,
+          "sugars": 85.0
+        },
+        {
+          "name": "Sierra Mist® (Sm.)",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 65.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 50.0,
+          "sugars": 65.0
+        },
+        {
+          "name": "Lipton No Calorie Brisk Peach® (Sm.)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 170.0
+        },
+        {
+          "name": "Lipton No Calorie Brisk Peach® (Med.)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 230.0
+        },
+        {
+          "name": "Lipton Brisk Raspberry® (Med.)",
+          "calories": 260.0,
+          "protein": 0.0,
+          "carbs": 69.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 80.0,
+          "sugars": 69.0
+        },
+        {
+          "name": "Sobe Lean® (Med.)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 80.0
+        },
+        {
+          "name": "Tropicana Fruit Punch® (Med.)",
+          "calories": 360.0,
+          "protein": 0.0,
+          "carbs": 98.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 80.0,
+          "sugars": 98.0
+        },
+        {
+          "name": "Tropicana Fruit Punch® (Lrg.)",
+          "calories": 510.0,
+          "protein": 0.0,
+          "carbs": 138.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 115.0,
+          "sugars": 138.0
+        },
+        {
+          "name": "Tropicana Lemonade® (Med.)",
+          "calories": 330.0,
+          "protein": 0.0,
+          "carbs": 89.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 345.0,
+          "sugars": 89.0
+        },
+        {
+          "name": "Tropicana Pink Lemonade® (Med.)",
+          "calories": 330.0,
+          "protein": 0.0,
+          "carbs": 89.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 345.0,
+          "sugars": 89.0
+        },
+        {
+          "name": "China Mist Iced Tea® (Med.)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pepsi ® (Kids)",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 37.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 35.0,
+          "sugars": 35.0
+        },
+        {
+          "name": "Diet Pepsi® (Kids)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 35.0
+        },
+        {
+          "name": "Mountain Dew® (Kids)",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 38.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 45.0,
+          "sugars": 38.0
+        },
+        {
+          "name": "Mug Root Beer® (Kids)",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 34.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 20.0,
+          "sugars": 34.0
+        },
+        {
+          "name": "Sierra Mist® (Kids)",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 35.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 25.0,
+          "sugars": 35.0
+        },
+        {
+          "name": "Sobe Lean® (Kids)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 35.0
+        },
+        {
+          "name": "Tropicana Fruit Punch® (Kids)",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 39.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 35.0,
+          "sugars": 39.0
+        },
+        {
+          "name": "China Mist Iced Tea® (Kids)",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Kids Meal",
+      "items": [
+        {
+          "name": "Asian Chicken",
+          "calories": 200.0,
+          "protein": 25.0,
+          "carbs": 8.0,
+          "fat": 8.0,
+          "fiber": 2.0,
+          "sodium": 380.0,
+          "cholesterol": 115.0,
+          "saturated_fat": 2.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Mushroom Chicken",
+          "calories": 130.0,
+          "protein": 10.0,
+          "carbs": 8.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 650.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Orange Chicken",
+          "calories": 260.0,
+          "protein": 10.0,
+          "carbs": 32.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 450.0,
+          "cholesterol": 60.0,
+          "saturated_fat": 2.5,
+          "sugars": 14.0
+        },
+        {
+          "name": "Potato Chicken*",
+          "calories": 140.0,
+          "protein": 6.0,
+          "carbs": 15.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 510.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 1.5,
+          "sugars": 3.0
+        },
+        {
+          "name": "Steamed Ginger Fish*",
+          "calories": 70.0,
+          "protein": 5.0,
+          "carbs": 3.0,
+          "fat": 4.0,
+          "fiber": 0.0,
+          "sodium": 660.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 1.0,
+          "sugars": 2.0
+        }
+      ]
+    }
+  ]
+}

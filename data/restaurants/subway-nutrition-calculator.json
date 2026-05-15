@@ -1,0 +1,555 @@
+{
+  "slug": "subway-nutrition-calculator",
+  "title": "🥖 Subway Nutrition Calculator",
+  "description": "Customize sandwiches and check complete nutrition information.",
+  "categories": [
+    {
+      "name": "Sandwiches & Subs (US/Global Classics)",
+      "items": [
+        {
+          "name": "Steak Philly",
+          "calories": 510.0,
+          "protein": 28.0,
+          "carbs": 43.0,
+          "fat": 25.0,
+          "fiber": 0.0,
+          "sodium": 1320.0
+        },
+        {
+          "name": "Chipotle Philly",
+          "calories": 490.0,
+          "protein": 30.0,
+          "carbs": 44.0,
+          "fat": 22.0,
+          "fiber": 0.0,
+          "sodium": 1440.0
+        },
+        {
+          "name": "Italian B.M.T.",
+          "calories": 610.0,
+          "protein": 27.0,
+          "carbs": 44.0,
+          "fat": 36.0,
+          "fiber": 0.0,
+          "sodium": 1500.0
+        },
+        {
+          "name": "Turkey Breast",
+          "calories": 480.0,
+          "protein": 26.0,
+          "carbs": 42.0,
+          "fat": 23.0,
+          "fiber": 0.0,
+          "sodium": 1150.0
+        },
+        {
+          "name": "Meatball Marinara",
+          "calories": 570.0,
+          "protein": 27.0,
+          "carbs": 53.0,
+          "fat": 28.0,
+          "fiber": 0.0,
+          "sodium": 1370.0
+        },
+        {
+          "name": "Tuna",
+          "calories": 530.0,
+          "protein": 25.0,
+          "carbs": 44.0,
+          "fat": 29.0,
+          "fiber": 0.0,
+          "sodium": 1120.0
+        },
+        {
+          "name": "Veggie Delite",
+          "calories": 320.0,
+          "protein": 17.0,
+          "carbs": 41.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 600.0
+        },
+        {
+          "name": "Black Forest Ham",
+          "calories": 490.0,
+          "protein": 25.0,
+          "carbs": 44.0,
+          "fat": 23.0,
+          "fiber": 0.0,
+          "sodium": 1190.0
+        },
+        {
+          "name": "Roast Beef",
+          "calories": 500.0,
+          "protein": 31.0,
+          "carbs": 44.0,
+          "fat": 23.0,
+          "fiber": 0.0,
+          "sodium": 1120.0
+        },
+        {
+          "name": "Cold Cut Combo",
+          "calories": 530.0,
+          "protein": 21.0,
+          "carbs": 44.0,
+          "fat": 29.0,
+          "fiber": 0.0,
+          "sodium": 1320.0
+        },
+        {
+          "name": "Buffalo Chicken",
+          "calories": 510.0,
+          "protein": 31.0,
+          "carbs": 55.0,
+          "fat": 19.0,
+          "fiber": 0.0,
+          "sodium": 1780.0
+        },
+        {
+          "name": "Sweet Onion Teriyaki Chicken",
+          "calories": 430.0,
+          "protein": 31.0,
+          "carbs": 55.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 1250.0
+        },
+        {
+          "name": "Chicken & Bacon Ranch",
+          "calories": 580.0,
+          "protein": 35.0,
+          "carbs": 49.0,
+          "fat": 29.0,
+          "fiber": 0.0,
+          "sodium": 1280.0
+        },
+        {
+          "name": "Spicy Italian",
+          "calories": 680.0,
+          "protein": 27.0,
+          "carbs": 46.0,
+          "fat": 44.0,
+          "fiber": 0.0,
+          "sodium": 1940.0
+        },
+        {
+          "name": "Subway Club",
+          "calories": 500.0,
+          "protein": 31.0,
+          "carbs": 43.0,
+          "fat": 24.0,
+          "fiber": 0.0,
+          "sodium": 1520.0
+        }
+      ]
+    },
+    {
+      "name": "UK & Ireland Specifics",
+      "items": [
+        {
+          "name": "Shawarma Spiced Chicken",
+          "calories": 350.0,
+          "protein": 25.0,
+          "carbs": 40.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Jacket Potato with Beans",
+          "calories": 400.0,
+          "protein": 15.0,
+          "carbs": 80.0,
+          "fat": 2.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Poached Egg and Cheese",
+          "calories": 294.0,
+          "protein": 16.0,
+          "carbs": 37.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "T.L.C. (Tastes Like Chicken) - Plant Based",
+          "calories": 320.0,
+          "protein": 20.0,
+          "carbs": 35.0,
+          "fat": 12.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Australia & New Zealand Specifics",
+      "items": [
+        {
+          "name": "Steak & Beetroot",
+          "calories": 450.0,
+          "protein": 28.0,
+          "carbs": 45.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Falafel Delight",
+          "calories": 380.0,
+          "protein": 15.0,
+          "carbs": 50.0,
+          "fat": 12.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fiery Harissa Steak",
+          "calories": 480.0,
+          "protein": 30.0,
+          "carbs": 42.0,
+          "fat": 20.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "India Specifics (Vegetarian & Non-Veg)",
+      "items": [
+        {
+          "name": "Potato Chilli Cheese",
+          "calories": 410.0,
+          "protein": 10.0,
+          "carbs": 60.0,
+          "fat": 15.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Paneer Tikka",
+          "calories": 450.0,
+          "protein": 18.0,
+          "carbs": 55.0,
+          "fat": 20.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chicken Tikka",
+          "calories": 380.0,
+          "protein": 25.0,
+          "carbs": 45.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Lamb Keema",
+          "calories": 420.0,
+          "protein": 22.0,
+          "carbs": 40.0,
+          "fat": 18.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Subway Series (Specialty)",
+      "items": [
+        {
+          "name": "The Beast",
+          "calories": 730.0,
+          "protein": 40.0,
+          "carbs": 48.0,
+          "fat": 45.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "The Boss",
+          "calories": 580.0,
+          "protein": 29.0,
+          "carbs": 50.0,
+          "fat": 35.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "The Monster",
+          "calories": 540.0,
+          "protein": 35.0,
+          "carbs": 45.0,
+          "fat": 32.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "The Philly",
+          "calories": 480.0,
+          "protein": 31.0,
+          "carbs": 43.0,
+          "fat": 25.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "The Titan Turkey",
+          "calories": 490.0,
+          "protein": 30.0,
+          "carbs": 44.0,
+          "fat": 23.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Breakfast & Sliders",
+      "items": [
+        {
+          "name": "Bacon, Egg & Cheese",
+          "calories": 450.0,
+          "protein": 25.0,
+          "carbs": 45.0,
+          "fat": 20.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Ham & Jack Slider",
+          "calories": 150.0,
+          "protein": 8.0,
+          "carbs": 15.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Little Turkey Slider",
+          "calories": 200.0,
+          "protein": 8.0,
+          "carbs": 15.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides, Snacks & Desserts",
+      "items": [
+        {
+          "name": "Chocolate Chip Cookie",
+          "calories": 210.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 18.0
+        },
+        {
+          "name": "White Chip Macadamia Nut Cookie",
+          "calories": 220.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 19.0
+        },
+        {
+          "name": "Raspberry Cheesecake Cookie",
+          "calories": 210.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 9.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 17.0
+        },
+        {
+          "name": "Footlong Cookie",
+          "calories": 1440.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 70.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 120.0
+        },
+        {
+          "name": "Footlong Churro",
+          "calories": 190.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 10.0
+        },
+        {
+          "name": "Footlong Pretzel",
+          "calories": 330.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 5.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Potato Chips (Lays)",
+          "calories": 160.0,
+          "protein": 0.0,
+          "carbs": 15.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Breads & Wraps",
+      "items": [
+        {
+          "name": "Italian (White) Bread",
+          "calories": 160.0,
+          "protein": 5.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "9-Grain Wheat Bread",
+          "calories": 190.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 3.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Honey Oat Bread",
+          "calories": 230.0,
+          "protein": 9.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 4.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Italian Herbs & Cheese Bread",
+          "calories": 200.0,
+          "protein": 7.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Gluten-Free Bread",
+          "calories": 294.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 1.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Tomato Basil Wrap",
+          "calories": 290.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spinach Wrap",
+          "calories": 290.0,
+          "protein": 8.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 2.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sauces & Condiments",
+      "items": [
+        {
+          "name": "Baja Chipotle",
+          "calories": 100.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 10.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Peppercorn Ranch",
+          "calories": 80.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 9.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweet Onion Teriyaki",
+          "calories": 40.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "Roasted Garlic Aioli",
+          "calories": 80.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Honey Mustard",
+          "calories": 40.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 9.0
+        },
+        {
+          "name": "Mayonnaise",
+          "calories": 100.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 11.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Yellow Mustard",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

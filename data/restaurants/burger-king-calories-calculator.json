@@ -1,0 +1,1508 @@
+{
+  "slug": "burger-king-calories-calculator",
+  "title": "🍔 Burger King Nutrition Calculator",
+  "description": "Check nutrition for Whoppers, sides, and beverages.",
+  "categories": [
+    {
+      "name": "Whopper by You",
+      "items": [
+        {
+          "name": "Peppercorn BLT Whopper®",
+          "calories": 790.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Peppercorn BLT Whopper® with Bacon",
+          "calories": 760.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Peppercorn BLT Whopper® Jr.",
+          "calories": 380.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper®",
+          "calories": 880.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Maple Bourbon BBQ Whopper® with Bacon",
+          "calories": 870.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper® Jr.",
+          "calories": 540.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Digital Exclusives",
+      "items": [
+        {
+          "name": "Apple Pie Delight Bundle",
+          "calories": 450.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Ultimate Wrap Party",
+          "calories": 3400.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "The King of Wrap",
+          "calories": 1500.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Limited Time Only",
+      "items": [
+        {
+          "name": "Peppercorn BLT Whopper®",
+          "calories": 790.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Peppercorn BLT Whopper® with Bacon",
+          "calories": 760.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Peppercorn BLT Whopper® Jr.",
+          "calories": 380.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper®",
+          "calories": 880.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Maple Bourbon BBQ Whopper® with Bacon",
+          "calories": 870.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper® Jr.",
+          "calories": 540.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Frozen Strawberries & Cream",
+          "calories": 300.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Signature Watermelon Lemonade",
+          "calories": 260.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Duo",
+          "calories": 680.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Trio",
+          "calories": 1020.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cinnamon Apple Pie",
+          "calories": 270.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Cheesy Bacon Tots",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Jalapeño Cheddar Bites",
+          "calories": 230.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Meals",
+      "items": [
+        {
+          "name": "Peppercorn BLT Whopper® Meal",
+          "calories": 1430.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Peppercorn BLT Whopper® with Bacon Meal",
+          "calories": 1130.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Peppercorn BLT Whopper® Jr. Meal",
+          "calories": 1020.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper® Meal",
+          "calories": 1250.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Maple Bourbon BBQ Whopper® with Bacon Meal",
+          "calories": 1240.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper®Jr Meal",
+          "calories": 910.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Whopper Meals",
+          "calories": 1190.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Whopper Meals",
+          "calories": 1310.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Double Cheeseburger Meal",
+          "calories": 1100.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Texas Double Whopper Meals",
+          "calories": 1750.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Double Whopper Meals",
+          "calories": 1460.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Bacon King Meals",
+          "calories": 1890.0,
+          "protein": 47.0,
+          "carbs": 88.0,
+          "fat": 72.0,
+          "fiber": 9.0,
+          "sodium": 2140.0,
+          "cholesterol": 135.0,
+          "saturated_fat": 21.0,
+          "sugars": 19.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Whopper Jr Meals",
+          "calories": 640.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Two Cheeseburger Meal",
+          "calories": 970.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Royal Crispy Chicken Meals",
+          "calories": 1230.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spicy Royal Crispy Chicken Meals",
+          "calories": 1390.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bacon & Swiss Royal Crispy Chicken Meals",
+          "calories": 1400.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Two Royal Crispy Wraps Meal",
+          "calories": 1090.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Original Chicken Sandwich Meals",
+          "calories": 1310.0,
+          "protein": 28.0,
+          "carbs": 48.0,
+          "fat": 40.0,
+          "fiber": 2.0,
+          "sodium": 1170.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 7.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Chicken Nuggets Meal",
+          "calories": 890.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mozzarella Fries Meal",
+          "calories": 910.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Big Fish Meals",
+          "calories": 1210.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Flame Grilled Burgers",
+      "items": [
+        {
+          "name": "Peppercorn BLT Whopper®",
+          "calories": 790.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Peppercorn BLT Whopper® with Bacon",
+          "calories": 760.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Peppercorn BLT Whopper® Jr.",
+          "calories": 380.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper®",
+          "calories": 880.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Maple Bourbon BBQ Whopper® with Bacon",
+          "calories": 870.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Maple Bourbon BBQ Whopper® Jr.",
+          "calories": 540.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Whopper",
+          "calories": 710.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Impossible™ Whopper",
+          "calories": 670.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Texas Double Whopper",
+          "calories": 1120.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Double Whopper",
+          "calories": 980.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Triple Whopper",
+          "calories": 1250.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Bacon King",
+          "calories": 1260.0,
+          "protein": 47.0,
+          "carbs": 88.0,
+          "fat": 72.0,
+          "fiber": 9.0,
+          "sodium": 2140.0,
+          "cholesterol": 135.0,
+          "saturated_fat": 21.0,
+          "sugars": 19.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "BBQ Bacon Whopper Jr.",
+          "calories": 390.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Double Whopper Jr.",
+          "calories": 450.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Whopper Jr.",
+          "calories": 340.0,
+          "protein": 29.0,
+          "carbs": 51.0,
+          "fat": 40.0,
+          "fiber": 3.0,
+          "sodium": 980.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 11.0,
+          "sugars": 11.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Bacon Double Cheeseburger",
+          "calories": 500.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Bacon Cheeseburger",
+          "calories": 350.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Double Cheeseburger",
+          "calories": 460.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Cheeseburger",
+          "calories": 300.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Rodeo Double Cheeseburger",
+          "calories": 530.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Rodeo Burger",
+          "calories": 340.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hamburger",
+          "calories": 260.0,
+          "protein": 13.0,
+          "carbs": 29.0,
+          "fat": 10.0,
+          "fiber": 1.0,
+          "sodium": 560.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 4.0,
+          "sugars": 7.0
+        }
+      ]
+    },
+    {
+      "name": "Chicken & Fish",
+      "items": [
+        {
+          "name": "Original Chicken Sandwich",
+          "calories": 680.0,
+          "protein": 28.0,
+          "carbs": 48.0,
+          "fat": 40.0,
+          "fiber": 2.0,
+          "sodium": 1170.0,
+          "cholesterol": 70.0,
+          "saturated_fat": 7.0,
+          "sugars": 5.0
+        },
+        {
+          "name": "Royal Crispy Chicken",
+          "calories": 600.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spicy Royal Crispy Chicken",
+          "calories": 760.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Bacon and Swiss Royal Crispy Chicken",
+          "calories": 740.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chicken Jr.",
+          "calories": 440.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Royal Crispy Wrap",
+          "calories": 310.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Spicy Royal Crispy Wrap",
+          "calories": 390.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Honey Mustard Royal Crispy Wrap",
+          "calories": 290.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chicken Fries",
+          "calories": 110.0,
+          "protein": 13.0,
+          "carbs": 16.0,
+          "fat": 12.0,
+          "fiber": 1.0,
+          "sodium": 680.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.5
+        },
+        {
+          "name": "Chicken Nuggets",
+          "calories": 210.0,
+          "protein": 9.0,
+          "carbs": 12.0,
+          "fat": 12.0,
+          "fiber": 1.0,
+          "sodium": 490.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 2.5
+        },
+        {
+          "name": "Big Fish",
+          "calories": 570.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "French Fries",
+          "calories": 370.0,
+          "protein": 5.0,
+          "carbs": 54.0,
+          "fat": 16.0,
+          "fiber": 4.0,
+          "sodium": 270.0,
+          "saturated_fat": 2.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Onion Rings",
+          "calories": 290.0,
+          "protein": 4.0,
+          "carbs": 48.0,
+          "fat": 16.0,
+          "fiber": 5.0,
+          "sodium": 640.0,
+          "saturated_fat": 2.5,
+          "sugars": 5.0
+        },
+        {
+          "name": "Have-sies™",
+          "calories": 350.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mozzarella Fries",
+          "calories": 220.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chicken Fries",
+          "calories": 110.0,
+          "protein": 13.0,
+          "carbs": 16.0,
+          "fat": 12.0,
+          "fiber": 1.0,
+          "sodium": 680.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 2.5
+        },
+        {
+          "name": "Chicken Nuggets",
+          "calories": 210.0,
+          "protein": 9.0,
+          "carbs": 12.0,
+          "fat": 12.0,
+          "fiber": 1.0,
+          "sodium": 490.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 2.5
+        },
+        {
+          "name": "Cheesy Bacon Tots",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Jalapeño Cheddar Bites",
+          "calories": 230.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mott's® Applesauce",
+          "calories": 50.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Drinks & Coffee",
+      "items": [
+        {
+          "name": "Coca-Cola",
+          "calories": 270.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Diet Coke",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Coca-Cola Zero Sugar",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Dr Pepper®",
+          "calories": 260.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sprite",
+          "calories": 260.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pure Life® Purified Water",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Signature Watermelon Lemonade",
+          "calories": 260.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Signature Strawberry Lemonade",
+          "calories": 250.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweetened Iced Tea",
+          "calories": 170.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Unsweetened Iced Tea",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Barq's",
+          "calories": 300.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "HI-C Fruit Punch",
+          "calories": 310.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "HI-C Pink Lemonade",
+          "calories": 250.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fanta Orange",
+          "calories": 280.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Honest Kids® Apple Juice Drink",
+          "calories": 35.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Shakes",
+          "calories": 640.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Frozen Strawberries & Cream",
+          "calories": 300.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Frozen Coke®",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Frozen Fanta® Strawberry",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Frozen Fanta® Blue Raspberry",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Brewed Coffee",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Iced Coffee",
+          "calories": 150.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Fat Free Milk",
+          "calories": 100.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chocolate Milk",
+          "calories": 170.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Simply® Orange Juice",
+          "calories": 160.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Sweets",
+      "items": [
+        {
+          "name": "Cinnamon Apple Pie",
+          "calories": 270.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "OREO® Sundae",
+          "calories": 310.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "HERSHEY'S® Sundae",
+          "calories": 230.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "HERSHEY'S® Sundae Pie",
+          "calories": 310.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Classic Oreo® Shake",
+          "calories": 640.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chocolate Oreo® Shake",
+          "calories": 670.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chocolate Shake",
+          "calories": 590.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Vanilla Shake",
+          "calories": 560.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Strawberry Shake",
+          "calories": 610.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Soft Serve Cup",
+          "calories": 180.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Soft Serve Cone",
+          "calories": 200.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Chocolate Chip Cookies",
+          "calories": 160.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    },
+    {
+      "name": "King Jr. Kids Meals",
+      "items": [
+        {
+          "name": "Cheeseburger King Jr. Meal",
+          "calories": 565.0,
+          "protein": 15.0,
+          "carbs": 30.0,
+          "fat": 13.0,
+          "fiber": 1.0,
+          "sodium": 780.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 6.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "4 Pc. Chicken Nuggets King Jr. Meal",
+          "calories": 455.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "6 Pc. Chicken Nuggets King Jr. Meal",
+          "calories": 555.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hamburger King Jr. Meal",
+          "calories": 525.0,
+          "protein": 13.0,
+          "carbs": 29.0,
+          "fat": 10.0,
+          "fiber": 1.0,
+          "sodium": 560.0,
+          "cholesterol": 30.0,
+          "saturated_fat": 4.0,
+          "sugars": 7.0
+        }
+      ]
+    },
+    {
+      "name": "Condiments",
+      "items": [
+        {
+          "name": "BBQ Dipping Sauce",
+          "calories": 35.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Buffalo Dipping Sauce",
+          "calories": 70.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Honey Mustard Dipping Sauce",
+          "calories": 70.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Hidden Valley Ranch Dipping Sauce",
+          "calories": 110.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Sweet & Sour Dipping Sauce",
+          "calories": 45.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Zesty Dipping Sauce",
+          "calories": 140.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Ketchup Packet",
+          "calories": 9.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mayo Packet",
+          "calories": 86.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Mustard Packet",
+          "calories": 5.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Salt Packet",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        },
+        {
+          "name": "Pepper Packet",
+          "calories": 0.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0
+        }
+      ]
+    }
+  ]
+}

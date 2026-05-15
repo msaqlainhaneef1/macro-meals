@@ -1,0 +1,263 @@
+{
+  "slug": "qdoba-nutrition-calculator",
+  "title": "🌯 Qdoba Nutrition Calculator",
+  "description": "Create your burrito or bowl and calculate total nutrition.",
+  "categories": [
+    {
+      "name": "Ingredients for Entrées",
+      "items": [
+        {
+          "name": "Bacon (1 oz.)",
+          "calories": 120.0,
+          "protein": 9.0,
+          "carbs": 1.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 430.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 3.5
+        },
+        {
+          "name": "Black Beans (4 oz.)",
+          "calories": 140.0,
+          "protein": 9.0,
+          "carbs": 24.0,
+          "fat": 1.0,
+          "fiber": 14.0,
+          "sodium": 330.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Brisket Birria (3.5 oz)",
+          "calories": 140.0,
+          "protein": 15.0,
+          "carbs": 3.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 450.0,
+          "cholesterol": 50.0,
+          "saturated_fat": 3.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Chile Crema (1 oz)",
+          "calories": 130.0,
+          "protein": 0.0,
+          "carbs": 1.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 290.0,
+          "cholesterol": 10.0,
+          "saturated_fat": 2.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Cholula Hot & Sweet Chicken (3.5 oz)",
+          "calories": 190.0,
+          "protein": 16.0,
+          "carbs": 10.0,
+          "fat": 10.0,
+          "fiber": 1.0,
+          "sodium": 540.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 2.5,
+          "sugars": 8.0
+        },
+        {
+          "name": "Cilantro Lime Rice (4 oz.)",
+          "calories": 190.0,
+          "protein": 3.0,
+          "carbs": 38.0,
+          "fat": 2.5,
+          "fiber": 1.0,
+          "sodium": 390.0,
+          "saturated_fat": 0.5
+        },
+        {
+          "name": "Grilled Adobo Chicken (3.5 oz.)",
+          "calories": 190.0,
+          "protein": 19.0,
+          "carbs": 2.0,
+          "fat": 12.0,
+          "fiber": 0.45,
+          "sodium": 440.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 3.5,
+          "sugars": 1.0
+        },
+        {
+          "name": "Grilled Steak (3.5 oz.)",
+          "calories": 360.0,
+          "protein": 20.0,
+          "carbs": 5.0,
+          "fat": 28.0,
+          "fiber": 0.66,
+          "sodium": 600.0,
+          "cholesterol": 85.0,
+          "saturated_fat": 10.0,
+          "sugars": 1.0,
+          "trans_fat": 1.0
+        },
+        {
+          "name": "Pork Carnitas (3.5 oz.)",
+          "calories": 110.0,
+          "protein": 14.0,
+          "carbs": 0.0,
+          "fat": 4.5,
+          "fiber": 0.0,
+          "sodium": 560.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 2.5,
+          "sugars": 1.0
+        },
+        {
+          "name": "Three Cheese Queso (2 oz.)",
+          "calories": 80.0,
+          "protein": 3.0,
+          "carbs": 3.0,
+          "fat": 8.0,
+          "fiber": 0.0,
+          "sodium": 340.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 5.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Hand Crafted Guacamole (2 oz.)",
+          "calories": 80.0,
+          "protein": 1.0,
+          "carbs": 5.0,
+          "fat": 8.0,
+          "fiber": 4.0,
+          "sodium": 160.0,
+          "saturated_fat": 1.0
+        },
+        {
+          "name": "Flour Tortilla (10 inch)",
+          "calories": 210.0,
+          "protein": 6.0,
+          "carbs": 36.0,
+          "fat": 5.0,
+          "fiber": 2.0,
+          "sodium": 490.0,
+          "saturated_fat": 2.0,
+          "sugars": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Signature Eats (Full Entrées)",
+      "items": [
+        {
+          "name": "Chicken Queso Bowl",
+          "calories": 750.0,
+          "protein": 43.0,
+          "carbs": 74.0,
+          "fat": 33.0,
+          "fiber": 0.0,
+          "sodium": 1820.0
+        },
+        {
+          "name": "Quesabirria Burrito",
+          "calories": 980.0,
+          "protein": 46.0,
+          "carbs": 124.0,
+          "fat": 95.0,
+          "fiber": 0.0,
+          "sodium": 2600.0
+        },
+        {
+          "name": "Fajita Vegan Bowl",
+          "calories": 530.0,
+          "protein": 17.0,
+          "carbs": 79.0,
+          "fat": 17.0,
+          "fiber": 0.0,
+          "sodium": 1350.0
+        },
+        {
+          "name": "Surf & Turf Bowl",
+          "calories": 870.0,
+          "protein": 42.0,
+          "carbs": 73.0,
+          "fat": 47.0,
+          "fiber": 0.0,
+          "sodium": 2430.0
+        }
+      ]
+    },
+    {
+      "name": "Kids Items",
+      "items": [
+        {
+          "name": "Kids Grilled Chicken (1.75 oz.)",
+          "calories": 90.0,
+          "protein": 10.0,
+          "carbs": 0.0,
+          "fat": 6.0,
+          "fiber": 0.0,
+          "sodium": 220.0
+        },
+        {
+          "name": "Kids Grilled Steak (1.75 oz.)",
+          "calories": 180.0,
+          "protein": 10.0,
+          "carbs": 0.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 300.0
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "items": [
+        {
+          "name": "Coca-Cola (Reg)",
+          "calories": 240.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 67.0
+        },
+        {
+          "name": "Gold Peak Classic Sweet Tea (Reg)",
+          "calories": 160.0,
+          "protein": 0.0,
+          "carbs": 0.0,
+          "fat": 0.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 39.0
+        }
+      ]
+    },
+    {
+      "name": "Desserts",
+      "items": [
+        {
+          "name": "Double Chocolate Brownie (US)",
+          "calories": 390.0,
+          "protein": 6.0,
+          "carbs": 0.0,
+          "fat": 19.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 36.0
+        },
+        {
+          "name": "Chocolate Chunk Cookie (US)",
+          "calories": 250.0,
+          "protein": 3.0,
+          "carbs": 0.0,
+          "fat": 12.0,
+          "fiber": 0.0,
+          "sodium": 0.0,
+          "sugars": 20.0
+        }
+      ]
+    }
+  ]
+}

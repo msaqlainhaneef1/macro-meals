@@ -1,0 +1,24 @@
+<!-- ============================== -->
+<!-- Macro & Meals — Announcement Bar -->
+<!-- Top banner for promotions, updates, or notices -->
+<!-- Set enabled=true and edit the message below, then run build.py -->
+<!-- To disable: set data-enabled="false" or remove this component -->
+<!-- ============================== -->
+<div id="announcement-bar" class="announcement-bar" data-enabled="false">
+  <div class="announcement-bar-inner">
+    <span class="announcement-text">New: Check out our <a href="/blog/">latest blog post</a> on daily calorie needs!</span>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('announcement-bar');
+  if (!bar || bar.dataset.enabled !== 'true') { if(bar) bar.style.display='none'; return; }
+  if (sessionStorage.getItem('announcement-closed')) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  document.getElementById('announcement-close').addEventListener('click', function(){
+    bar.style.display = 'none';
+    sessionStorage.setItem('announcement-closed', '1');
+  });
+})();
+</script>

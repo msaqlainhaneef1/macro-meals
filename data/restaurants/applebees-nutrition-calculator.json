@@ -1,0 +1,656 @@
+{
+  "slug": "applebees-nutrition-calculator",
+  "title": "🍽 Applebee's Nutrition Calculator",
+  "description": "Track nutrition for entrees, appetizers, and desserts.",
+  "categories": [
+    {
+      "name": "Meal Components",
+      "items": [
+        {
+          "name": "American Cheese",
+          "calories": 140.0,
+          "protein": 7.0,
+          "carbs": 1.0,
+          "fat": 12.0,
+          "fiber": 0.0,
+          "sodium": 680.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 7.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Bacon",
+          "calories": 100.0,
+          "protein": 7.0,
+          "carbs": 1.0,
+          "fat": 7.0,
+          "fiber": 0.0,
+          "sodium": 310.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 2.5,
+          "sugars": 1.0
+        },
+        {
+          "name": "Beef Patty",
+          "calories": 410.0,
+          "protein": 32.0,
+          "carbs": 1.0,
+          "fat": 31.0,
+          "fiber": 0.0,
+          "sodium": 290.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 13.0
+        },
+        {
+          "name": "Black Bean Patty",
+          "calories": 190.0,
+          "protein": 17.0,
+          "carbs": 22.0,
+          "fat": 7.0,
+          "fiber": 8.0,
+          "sodium": 540.0,
+          "saturated_fat": 1.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Breadstick",
+          "calories": 190.0,
+          "protein": 5.0,
+          "carbs": 25.0,
+          "fat": 7.0,
+          "fiber": 1.0,
+          "sodium": 290.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 2.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Cheddar Cheese",
+          "calories": 170.0,
+          "protein": 10.0,
+          "carbs": 1.0,
+          "fat": 14.0,
+          "fiber": 0.0,
+          "sodium": 260.0,
+          "cholesterol": 45.0,
+          "saturated_fat": 9.0
+        },
+        {
+          "name": "Fried Egg",
+          "calories": 70.0,
+          "protein": 6.0,
+          "carbs": 1.0,
+          "fat": 5.0,
+          "fiber": 0.0,
+          "sodium": 170.0,
+          "cholesterol": 160.0,
+          "saturated_fat": 2.0
+        },
+        {
+          "name": "Fried Shrimp",
+          "calories": 511.0,
+          "protein": 13.0,
+          "carbs": 37.0,
+          "fat": 34.0,
+          "fiber": 3.0,
+          "sodium": 1750.0,
+          "cholesterol": 100.0,
+          "saturated_fat": 6.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "Grilled Shrimp",
+          "calories": 150.0,
+          "protein": 15.0,
+          "carbs": 5.0,
+          "fat": 8.0,
+          "fiber": 1.0,
+          "sodium": 980.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 4.0,
+          "sugars": 1.0
+        },
+        {
+          "name": "Grilled Shrimp Skewer",
+          "calories": 120.0,
+          "protein": 10.0,
+          "carbs": 1.0,
+          "fat": 9.0,
+          "fiber": 0.0,
+          "sodium": 520.0,
+          "cholesterol": 115.0,
+          "saturated_fat": 4.0
+        },
+        {
+          "name": "Pepper Jack Cheese",
+          "calories": 160.0,
+          "protein": 10.0,
+          "carbs": 1.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 270.0,
+          "cholesterol": 35.0,
+          "saturated_fat": 8.0
+        },
+        {
+          "name": "Swiss Cheese",
+          "calories": 170.0,
+          "protein": 11.0,
+          "carbs": 1.0,
+          "fat": 13.0,
+          "fiber": 0.0,
+          "sodium": 80.0,
+          "cholesterol": 40.0,
+          "saturated_fat": 8.0
+        },
+        {
+          "name": "Turkey Patty",
+          "calories": 340.0,
+          "protein": 24.0,
+          "carbs": 0.0,
+          "fat": 27.0,
+          "fiber": 0.0,
+          "sodium": 740.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 8.0
+        },
+        {
+          "name": "Veggie Patty",
+          "calories": 170.0,
+          "protein": 7.0,
+          "carbs": 21.0,
+          "fat": 6.0,
+          "fiber": 5.0,
+          "sodium": 310.0,
+          "sugars": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Sandwiches & Wraps",
+      "items": [
+        {
+          "name": "Bacon Cheddar Grilled Chicken Sandwich",
+          "calories": 891.0,
+          "protein": 65.0,
+          "carbs": 49.0,
+          "fat": 48.0,
+          "fiber": 3.0,
+          "sodium": 2420.0,
+          "cholesterol": 235.0,
+          "saturated_fat": 17.0,
+          "sugars": 11.0
+        },
+        {
+          "name": "Chicken Fajita Rollup",
+          "calories": 1091.0,
+          "protein": 60.0,
+          "carbs": 67.0,
+          "fat": 65.0,
+          "fiber": 5.0,
+          "sodium": 3480.0,
+          "cholesterol": 215.0,
+          "saturated_fat": 27.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Clubhouse Grille Sandwich",
+          "calories": 1061.0,
+          "protein": 52.0,
+          "carbs": 79.0,
+          "fat": 60.0,
+          "fiber": 6.0,
+          "sodium": 2700.0,
+          "cholesterol": 125.0,
+          "saturated_fat": 17.0,
+          "sugars": 24.0
+        },
+        {
+          "name": "Grilled Chicken Bacon Wrap",
+          "calories": 771.0,
+          "protein": 60.0,
+          "carbs": 73.0,
+          "fat": 27.0,
+          "fiber": 3.0,
+          "sodium": 3400.0,
+          "cholesterol": 190.0,
+          "saturated_fat": 10.0,
+          "sugars": 21.0
+        },
+        {
+          "name": "Zesty Chicken Sandwich",
+          "calories": 881.0,
+          "protein": 34.0,
+          "carbs": 69.0,
+          "fat": 52.0,
+          "fiber": 4.0,
+          "sodium": 2550.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 11.0,
+          "sugars": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Seafood",
+      "items": [
+        {
+          "name": "Baked Haddock",
+          "calories": 591.0,
+          "protein": 45.0,
+          "carbs": 12.0,
+          "fat": 40.0,
+          "fiber": 2.0,
+          "sodium": 890.0,
+          "cholesterol": 195.0,
+          "saturated_fat": 18.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Cedar Salmon with Maple Mustard Glaze",
+          "calories": 350.0,
+          "protein": 37.0,
+          "carbs": 28.0,
+          "fat": 10.0,
+          "fiber": 2.0,
+          "sodium": 1660.0,
+          "cholesterol": 95.0,
+          "saturated_fat": 2.0,
+          "sugars": 18.0
+        },
+        {
+          "name": "Double Crunch Shrimp, with Fries & Slaw",
+          "calories": 1321.0,
+          "protein": 33.0,
+          "carbs": 130.0,
+          "fat": 74.0,
+          "fiber": 9.0,
+          "sodium": 3700.0,
+          "cholesterol": 200.0,
+          "saturated_fat": 13.0,
+          "sugars": 25.0
+        }
+      ]
+    },
+    {
+      "name": "Sides",
+      "items": [
+        {
+          "name": "Baked Potato",
+          "calories": 530.0,
+          "protein": 9.0,
+          "carbs": 59.0,
+          "fat": 31.0,
+          "fiber": 4.0,
+          "sodium": 1120.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 17.0,
+          "sugars": 4.0
+        },
+        {
+          "name": "Classic Fries",
+          "calories": 430.0,
+          "protein": 5.0,
+          "carbs": 57.0,
+          "fat": 20.0,
+          "fiber": 4.0,
+          "sodium": 960.0,
+          "saturated_fat": 3.5
+        },
+        {
+          "name": "Fire-Grilled Veggies",
+          "calories": 150.0,
+          "protein": 2.0,
+          "carbs": 9.0,
+          "fat": 12.0,
+          "fiber": 3.0,
+          "sodium": 420.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 5.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Garlic Mashed Potatoes",
+          "calories": 280.0,
+          "protein": 5.0,
+          "carbs": 37.0,
+          "fat": 14.0,
+          "fiber": 4.0,
+          "sodium": 780.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 3.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Garlicky Green Beans",
+          "calories": 160.0,
+          "protein": 2.0,
+          "carbs": 10.0,
+          "fat": 13.0,
+          "fiber": 3.0,
+          "sodium": 350.0,
+          "cholesterol": 5.0,
+          "saturated_fat": 3.5,
+          "sugars": 2.0
+        },
+        {
+          "name": "House Salad",
+          "calories": 120.0,
+          "protein": 6.0,
+          "carbs": 12.0,
+          "fat": 6.0,
+          "fiber": 2.0,
+          "sodium": 190.0,
+          "cholesterol": 15.0,
+          "saturated_fat": 3.0,
+          "sugars": 3.0
+        },
+        {
+          "name": "Steamed Broccoli",
+          "calories": 100.0,
+          "protein": 3.0,
+          "carbs": 6.0,
+          "fat": 8.0,
+          "fiber": 3.0,
+          "sodium": 280.0,
+          "cholesterol": 20.0,
+          "saturated_fat": 4.5,
+          "sugars": 2.0
+        }
+      ]
+    },
+    {
+      "name": "Pastas",
+      "items": [
+        {
+          "name": "Blackened Shrimp Alfredo Pasta",
+          "calories": 1161.0,
+          "protein": 52.0,
+          "carbs": 80.0,
+          "fat": 73.0,
+          "fiber": 8.0,
+          "sodium": 2810.0,
+          "cholesterol": 365.0,
+          "saturated_fat": 45.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Classic Broccoli Chicken Alfredo Pasta",
+          "calories": 1271.0,
+          "protein": 75.0,
+          "carbs": 78.0,
+          "fat": 76.0,
+          "fiber": 8.0,
+          "sodium": 2950.0,
+          "cholesterol": 365.0,
+          "saturated_fat": 47.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Classic Chicken Parmesan",
+          "calories": 1381.0,
+          "protein": 84.0,
+          "carbs": 136.0,
+          "fat": 57.0,
+          "fiber": 13.0,
+          "sodium": 2970.0,
+          "cholesterol": 175.0,
+          "saturated_fat": 18.0,
+          "sugars": 19.0
+        },
+        {
+          "name": "Four-Cheese Mac & Cheese with Honey Pepper Chicken Tenders",
+          "calories": 1461.0,
+          "protein": 63.0,
+          "carbs": 150.0,
+          "fat": 68.0,
+          "fiber": 6.0,
+          "sodium": 3250.0,
+          "cholesterol": 195.0,
+          "saturated_fat": 30.0,
+          "sugars": 54.0
+        },
+        {
+          "name": "Three Cheese Chicken Penne",
+          "calories": 1171.0,
+          "protein": 69.0,
+          "carbs": 72.0,
+          "fat": 69.0,
+          "fiber": 5.0,
+          "sodium": 2860.0,
+          "cholesterol": 340.0,
+          "saturated_fat": 42.0,
+          "sugars": 8.0
+        }
+      ]
+    },
+    {
+      "name": "Salads",
+      "items": [
+        {
+          "name": "Oriental Crispy Chicken Salad",
+          "calories": 1441.0,
+          "protein": 36.0,
+          "carbs": 110.0,
+          "fat": 97.0,
+          "fiber": 11.0,
+          "sodium": 1640.0,
+          "cholesterol": 50.0,
+          "saturated_fat": 15.0,
+          "sugars": 37.0
+        },
+        {
+          "name": "Quesadilla Chicken Salad",
+          "calories": 1230.0,
+          "protein": 66.0,
+          "carbs": 80.0,
+          "fat": 73.0,
+          "fiber": 11.0,
+          "sodium": 3440.0,
+          "cholesterol": 200.0,
+          "saturated_fat": 20.0,
+          "sugars": 14.0
+        },
+        {
+          "name": "Thai Shrimp Salad",
+          "calories": 390.0,
+          "protein": 26.0,
+          "carbs": 30.0,
+          "fat": 19.0,
+          "fiber": 8.0,
+          "sodium": 1460.0,
+          "cholesterol": 150.0,
+          "saturated_fat": 3.0,
+          "sugars": 14.0
+        }
+      ]
+    },
+    {
+      "name": "Main Dishes",
+      "items": [
+        {
+          "name": "Bourbon Street Chicken & Shrimp",
+          "calories": 780.0,
+          "protein": 55.0,
+          "carbs": 48.0,
+          "fat": 43.0,
+          "fiber": 6.0,
+          "sodium": 2580.0,
+          "cholesterol": 225.0,
+          "saturated_fat": 10.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Cedar Grilled Lemon Chicken",
+          "calories": 600.0,
+          "protein": 43.0,
+          "carbs": 51.0,
+          "fat": 26.0,
+          "fiber": 5.0,
+          "sodium": 2680.0,
+          "cholesterol": 135.0,
+          "saturated_fat": 5.0,
+          "sugars": 16.0
+        },
+        {
+          "name": "Fiesta Lime Chicken",
+          "calories": 1170.0,
+          "protein": 60.0,
+          "carbs": 97.0,
+          "fat": 61.0,
+          "fiber": 6.0,
+          "sodium": 3740.0,
+          "cholesterol": 175.0,
+          "saturated_fat": 14.0,
+          "sugars": 8.0
+        },
+        {
+          "name": "Sirloin Steak (6 oz)",
+          "calories": 200.0,
+          "protein": 34.0,
+          "carbs": 1.0,
+          "fat": 7.0,
+          "fiber": 1.0,
+          "sodium": 950.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 3.0
+        }
+      ]
+    },
+    {
+      "name": "Appetizers",
+      "items": [
+        {
+          "name": "Boneless Wings",
+          "calories": 681.0,
+          "protein": 39.0,
+          "carbs": 52.0,
+          "fat": 35.0,
+          "fiber": 4.0,
+          "sodium": 1600.0,
+          "cholesterol": 90.0,
+          "saturated_fat": 6.0,
+          "sugars": 2.0
+        },
+        {
+          "name": "Brew Pub Pretzels & Beer Cheese Dip",
+          "calories": 1201.0,
+          "protein": 38.0,
+          "carbs": 154.0,
+          "fat": 47.0,
+          "fiber": 7.0,
+          "sodium": 4460.0,
+          "cholesterol": 50.0,
+          "saturated_fat": 14.0,
+          "sugars": 19.0
+        },
+        {
+          "name": "Chicken Wonton Tacos",
+          "calories": 571.0,
+          "protein": 36.0,
+          "carbs": 46.0,
+          "fat": 27.0,
+          "fiber": 3.0,
+          "sodium": 1550.0,
+          "cholesterol": 120.0,
+          "saturated_fat": 6.0,
+          "sugars": 16.0
+        },
+        {
+          "name": "Mozzarella Sticks (With Marinara Sauce)",
+          "calories": 901.0,
+          "protein": 43.0,
+          "carbs": 80.0,
+          "fat": 46.0,
+          "fiber": 6.0,
+          "sodium": 2690.0,
+          "cholesterol": 75.0,
+          "saturated_fat": 19.0,
+          "sugars": 12.0
+        },
+        {
+          "name": "Spinach & Artichoke Dip, with Salsa & Chips",
+          "calories": 931.0,
+          "protein": 18.0,
+          "carbs": 88.0,
+          "fat": 57.0,
+          "fiber": 6.0,
+          "sodium": 2630.0,
+          "cholesterol": 25.0,
+          "saturated_fat": 15.0,
+          "sugars": 5.0
+        }
+      ]
+    },
+    {
+      "name": "Irresist-A-Bowls",
+      "items": [
+        {
+          "name": "Southwest Chicken Bowl",
+          "calories": 820.0,
+          "protein": 54.0,
+          "carbs": 90.0,
+          "fat": 29.0,
+          "fiber": 10.0,
+          "sodium": 2430.0,
+          "cholesterol": 130.0,
+          "saturated_fat": 5.0,
+          "sugars": 6.0
+        },
+        {
+          "name": "Tex-Mex Shrimp Bowl",
+          "calories": 710.0,
+          "protein": 30.0,
+          "carbs": 91.0,
+          "fat": 27.0,
+          "fiber": 10.0,
+          "sodium": 2170.0,
+          "cholesterol": 165.0,
+          "saturated_fat": 4.5,
+          "sugars": 6.0
+        }
+      ]
+    },
+    {
+      "name": "Burgers",
+      "items": [
+        {
+          "name": "Classic Burger",
+          "calories": 781.0,
+          "protein": 42.0,
+          "carbs": 45.0,
+          "fat": 48.0,
+          "fiber": 3.0,
+          "sodium": 940.0,
+          "cholesterol": 135.0,
+          "saturated_fat": 16.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Quesadilla Burger",
+          "calories": 1331.0,
+          "protein": 74.0,
+          "carbs": 50.0,
+          "fat": 93.0,
+          "fiber": 6.0,
+          "sodium": 3000.0,
+          "cholesterol": 240.0,
+          "saturated_fat": 38.0,
+          "sugars": 7.0
+        },
+        {
+          "name": "Whisky Bacon Burger",
+          "calories": 1291.0,
+          "protein": 62.0,
+          "carbs": 72.0,
+          "fat": 84.0,
+          "fiber": 4.0,
+          "sodium": 1870.0,
+          "cholesterol": 210.0,
+          "saturated_fat": 30.0,
+          "sugars": 18.0
+        }
+      ]
+    }
+  ]
+}

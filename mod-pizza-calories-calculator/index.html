@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MOD Pizza Nutrition Calculator | Macro & Meals</title>
+<meta name="description" content="Build your custom pizza and track nutrition details.">
+<link rel="canonical" href="https://macroandmeals.com/mod-pizza-calories-calculator/">
+<meta property="og:title" content="MOD Pizza Nutrition Calculator">
+<meta property="og:description" content="Build your custom pizza and track nutrition details.">
+<meta property="og:url" content="https://macroandmeals.com/mod-pizza-calories-calculator/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Macro & Meals">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="MOD Pizza Nutrition Calculator">
+<meta name="twitter:description" content="Build your custom pizza and track nutrition details.">
+<meta name="robots" content="index,follow">
+<link rel="stylesheet" href="/css/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"MOD Pizza Nutrition Calculator","url":"https://macroandmeals.com/mod-pizza-calories-calculator/","applicationCategory":"HealthApplication","operatingSystem":"All"}</script>
+<style media="print">
+  @media print {
+    .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
+    .nav-dropdown, .back-to-top, .cookie-banner, .social-share,
+    .announcement-bar, .scroll-progress, #back-to-top,
+    .breadcrumbs, .hero-search, #search-results {
+      display: none !important;
+    }
+    body {
+      font-size: 12pt;
+      line-height: 1.6;
+      color: #000;
+      background: #fff;
+      margin: 0;
+      padding: 1cm;
+    }
+    .container, .hero, .hero-home, section {
+      max-width: 100% !important;
+      padding: 0 !important;
+      margin: 0 !important;
+    }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+    a[href^="/"]::after { content: " (macroandmeals.com" attr(href) ")"; font-size: 0.8em; color: #666; }
+    h1, h2, h3 { page-break-after: avoid; color: #000; }
+    img { max-width: 100%; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ccc; padding: 0.5em; }
+    @page { margin: 2cm; }
+  }
+</style>
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-7Q3DMT4258');
+</script>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FNQMD49');</script>
+<meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
+<link rel="stylesheet" href="/css/style.css">
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#22c55e">
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNQMD49"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<div id="scroll-progress" class="scroll-progress"></div>
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  window.addEventListener('scroll', function(){
+    var h = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = h > 0 ? (window.scrollY / h * 100) + '%' : '0%';
+  });
+})();
+</script>
+<div id="announcement-bar" class="announcement-bar" data-enabled="false">
+  <div class="announcement-bar-inner">
+    <span class="announcement-text">New: Check out our <a href="/blog/">latest blog post</a> on daily calorie needs!</span>
+    <button class="announcement-close" id="announcement-close" aria-label="Close">&times;</button>
+  </div>
+</div>
+<script>
+(function(){
+  var bar = document.getElementById('announcement-bar');
+  if (!bar || bar.dataset.enabled !== 'true') { if(bar) bar.style.display='none'; return; }
+  if (sessionStorage.getItem('announcement-closed')) { bar.style.display='none'; return; }
+  bar.style.display = 'block';
+  document.getElementById('announcement-close').addEventListener('click', function(){
+    bar.style.display = 'none';
+    sessionStorage.setItem('announcement-closed', '1');
+  });
+})();
+</script>
+<header class="header">
+<div class="header-inner">
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+<nav class="nav-desktop">
+  <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="vitamins">Vitamins &amp; Micronutrients <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="body">Body Composition &amp; Health <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="diet">Diet &amp; Macro Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+  <button class="nav-btn" data-cat="pregnancy">Pregnancy &amp; Specialty <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+</nav>
+<button class="mobile-toggle" id="mobile-toggle"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+</div>
+<div class="nav-dropdown" id="dropdown-nutrition"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-menu"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-vitamins"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-body"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-diet"><div class="nav-dropdown-inner"></div></div>
+<div class="nav-dropdown" id="dropdown-pregnancy"><div class="nav-dropdown-inner"></div></div>
+<div class="mobile-nav" id="mobile-nav"></div>
+</header>
+<nav class="breadcrumbs" aria-label="Breadcrumb">
+  <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+  </ol>
+</nav>
+<script>
+(function(){
+  var ol = document.querySelector('.breadcrumbs ol');
+  if (!ol) return;
+  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
+  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
+  var h1 = document.querySelector('h1');
+  for (var i = 0; i < path.length; i++) {
+    var li = document.createElement('li');
+    li.setAttribute('itemprop','itemListElement');
+    li.setAttribute('itemscope','');
+    li.setAttribute('itemtype','https://schema.org/ListItem');
+    var isLast = (i === path.length - 1);
+    var slug = path[i];
+    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    if (isLast) {
+      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+    } else {
+      var href = '/' + path.slice(0, i+1).join('/') + '/';
+      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+    }
+    ol.appendChild(li);
+  }
+})();
+</script>
+
+<section class="hero"><div class="container"><h1>&#127829; MOD Pizza Nutrition Calculator</h1><p>Build your custom pizza and track nutrition details.</p></div></section>
+<section class="section"><div class="container" style="max-width:1200px;margin:0 auto">
+<div id="rest-layout-wrapper">
+<div class="rest-left-col">
+<div class="calc-card">
+<div id="rest-tabs" class="cat-tabs"><div class="cat-tabs-scroll"><button class="cat-tab active" data-cat="Pizza">Pizza <span class="cat-count">27</span></button><button class="cat-tab" data-cat="Dessert">Dessert <span class="cat-count">2</span></button><button class="cat-tab" data-cat="Topping">Topping <span class="cat-count">3</span></button></div><div class="rest-search"><input type="text" id="rest-search-input" class="rest-search-input" placeholder="Search items..."></div></div>
+<div id="rest-grid" class="menu-grid"><div class="rest-cat-group" data-category="Pizza"><div class="menu-item" data-name="Caspian Pizza (Mini)" data-calories="436.5" data-protein="22.1" data-carbs="56.2" data-fat="13.1" data-fiber="2.2" data-sodium="1278" data-sugars="11.7" data-cholesterol="51.8" data-saturated-fat="5.9" data-trans-fat="0.5" data-price="$9.59"><div class="menu-item-header"><h4>Caspian Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">436.5 cal</div><div class="macros"><span class="macro-pro">P: 22.1g</span> <span class="macro-carb">C: 56.2g</span> <span class="macro-fat">F: 13.1g</span></div></div><div class="menu-item" data-name="Caspian Pizza (MOD)" data-calories="970" data-protein="49" data-carbs="125" data-fat="29" data-fiber="5" data-sodium="2840" data-sugars="26" data-cholesterol="115" data-saturated-fat="13" data-trans-fat="1" data-price="$11.59"><div class="menu-item-header"><h4>Caspian Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">970 cal</div><div class="macros"><span class="macro-pro">P: 49g</span> <span class="macro-carb">C: 125g</span> <span class="macro-fat">F: 29g</span></div></div><div class="menu-item" data-name="Caspian Pizza (Mega)" data-calories="1455" data-protein="73.5" data-carbs="187.5" data-fat="43.5" data-fiber="7.5" data-sodium="4260" data-sugars="39" data-cholesterol="172.5" data-saturated-fat="19.5" data-trans-fat="1.5" data-price="$13.59"><div class="menu-item-header"><h4>Caspian Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1455 cal</div><div class="macros"><span class="macro-pro">P: 73.5g</span> <span class="macro-carb">C: 187.5g</span> <span class="macro-fat">F: 43.5g</span></div></div><div class="menu-item" data-name="Calexico Pizza (Mini)" data-calories="387" data-protein="22.5" data-carbs="42.8" data-fat="12.6" data-fiber="2.2" data-sodium="1453.5" data-sugars="1.4" data-cholesterol="49.5" data-saturated-fat="6.3" data-trans-fat="0.5" data-price="$9.59"><div class="menu-item-header"><h4>Calexico Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">387 cal</div><div class="macros"><span class="macro-pro">P: 22.5g</span> <span class="macro-carb">C: 42.8g</span> <span class="macro-fat">F: 12.6g</span></div></div><div class="menu-item" data-name="Calexico Pizza (MOD)" data-calories="860" data-protein="50" data-carbs="95" data-fat="28" data-fiber="5" data-sodium="3230" data-sugars="3" data-cholesterol="110" data-saturated-fat="14" data-trans-fat="1" data-price="$11.59"><div class="menu-item-header"><h4>Calexico Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">860 cal</div><div class="macros"><span class="macro-pro">P: 50g</span> <span class="macro-carb">C: 95g</span> <span class="macro-fat">F: 28g</span></div></div><div class="menu-item" data-name="Calexico Pizza (Mega)" data-calories="1290" data-protein="75" data-carbs="142.5" data-fat="42" data-fiber="7.5" data-sodium="4845" data-sugars="4.5" data-cholesterol="165" data-saturated-fat="21" data-trans-fat="1.5" data-price="$13.59"><div class="menu-item-header"><h4>Calexico Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1290 cal</div><div class="macros"><span class="macro-pro">P: 75g</span> <span class="macro-carb">C: 142.5g</span> <span class="macro-fat">F: 42g</span></div></div><div class="menu-item" data-name="Dillon James Pizza (Mini)" data-calories="373.5" data-protein="18" data-carbs="45.9" data-fat="12.6" data-fiber="2.7" data-sodium="972" data-sugars="2.7" data-cholesterol="31.5" data-saturated-fat="5.9" data-trans-fat="0.5" data-price="$9.59"><div class="menu-item-header"><h4>Dillon James Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">373.5 cal</div><div class="macros"><span class="macro-pro">P: 18g</span> <span class="macro-carb">C: 45.9g</span> <span class="macro-fat">F: 12.6g</span></div></div><div class="menu-item" data-name="Dillon James Pizza (MOD)" data-calories="830" data-protein="40" data-carbs="102" data-fat="28" data-fiber="6" data-sodium="2160" data-sugars="6" data-cholesterol="70" data-saturated-fat="13" data-trans-fat="1" data-price="$11.59"><div class="menu-item-header"><h4>Dillon James Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">830 cal</div><div class="macros"><span class="macro-pro">P: 40g</span> <span class="macro-carb">C: 102g</span> <span class="macro-fat">F: 28g</span></div></div><div class="menu-item" data-name="Dillon James Pizza (Mega)" data-calories="1245" data-protein="60" data-carbs="153" data-fat="42" data-fiber="9" data-sodium="3240" data-sugars="9" data-cholesterol="105" data-saturated-fat="19.5" data-trans-fat="1.5" data-price="$13.59"><div class="menu-item-header"><h4>Dillon James Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1245 cal</div><div class="macros"><span class="macro-pro">P: 60g</span> <span class="macro-carb">C: 153g</span> <span class="macro-fat">F: 42g</span></div></div><div class="menu-item" data-name="Jasper Pizza (Mini)" data-calories="355.5" data-protein="18.4" data-carbs="43.2" data-fat="11.2" data-fiber="2.2" data-sodium="1075.5" data-sugars="1.4" data-cholesterol="40.5" data-saturated-fat="3.6" data-trans-fat="0.2" data-price="$9.59"><div class="menu-item-header"><h4>Jasper Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">355.5 cal</div><div class="macros"><span class="macro-pro">P: 18.4g</span> <span class="macro-carb">C: 43.2g</span> <span class="macro-fat">F: 11.2g</span></div></div><div class="menu-item" data-name="Jasper Pizza (MOD)" data-calories="790" data-protein="41" data-carbs="96" data-fat="25" data-fiber="5" data-sodium="2390" data-sugars="3" data-cholesterol="90" data-saturated-fat="8" data-trans-fat="0.5" data-price="$11.59"><div class="menu-item-header"><h4>Jasper Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">790 cal</div><div class="macros"><span class="macro-pro">P: 41g</span> <span class="macro-carb">C: 96g</span> <span class="macro-fat">F: 25g</span></div></div><div class="menu-item" data-name="Jasper Pizza (Mega)" data-calories="1185" data-protein="61.5" data-carbs="144" data-fat="37.5" data-fiber="7.5" data-sodium="3585" data-sugars="4.5" data-cholesterol="135" data-saturated-fat="12" data-trans-fat="0.8" data-price="$13.59"><div class="menu-item-header"><h4>Jasper Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1185 cal</div><div class="macros"><span class="macro-pro">P: 61.5g</span> <span class="macro-carb">C: 144g</span> <span class="macro-fat">F: 37.5g</span></div></div><div class="menu-item" data-name="Lucy Sunshine Pizza (Mini)" data-calories="369" data-protein="17.6" data-carbs="78.3" data-fat="11.7" data-fiber="2.7" data-sodium="1062" data-sugars="1.8" data-cholesterol="29.2" data-saturated-fat="5" data-trans-fat="0.5" data-price="$9.59"><div class="menu-item-header"><h4>Lucy Sunshine Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">369 cal</div><div class="macros"><span class="macro-pro">P: 17.6g</span> <span class="macro-carb">C: 78.3g</span> <span class="macro-fat">F: 11.7g</span></div></div><div class="menu-item" data-name="Lucy Sunshine Pizza (MOD)" data-calories="820" data-protein="39" data-carbs="174" data-fat="26" data-fiber="6" data-sodium="2360" data-sugars="4" data-cholesterol="65" data-saturated-fat="11" data-trans-fat="1" data-price="$11.59"><div class="menu-item-header"><h4>Lucy Sunshine Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">820 cal</div><div class="macros"><span class="macro-pro">P: 39g</span> <span class="macro-carb">C: 174g</span> <span class="macro-fat">F: 26g</span></div></div><div class="menu-item" data-name="Lucy Sunshine Pizza (Mega)" data-calories="1230" data-protein="58.5" data-carbs="261" data-fat="39" data-fiber="9" data-sodium="3540" data-sugars="6" data-cholesterol="97.5" data-saturated-fat="16.5" data-trans-fat="1.5" data-price="$13.59"><div class="menu-item-header"><h4>Lucy Sunshine Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1230 cal</div><div class="macros"><span class="macro-pro">P: 58.5g</span> <span class="macro-carb">C: 261g</span> <span class="macro-fat">F: 39g</span></div></div><div class="menu-item" data-name="Dominic Pizza (Mini)" data-calories="315" data-protein="12.2" data-carbs="44.1" data-fat="9" data-fiber="2.2" data-sodium="810" data-sugars="2.2" data-cholesterol="15.8" data-saturated-fat="3.1" data-price="$9.59"><div class="menu-item-header"><h4>Dominic Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">315 cal</div><div class="macros"><span class="macro-pro">P: 12.2g</span> <span class="macro-carb">C: 44.1g</span> <span class="macro-fat">F: 9g</span></div></div><div class="menu-item" data-name="Dominic Pizza (MOD)" data-calories="700" data-protein="27" data-carbs="98" data-fat="20" data-fiber="5" data-sodium="1800" data-sugars="5" data-cholesterol="35" data-saturated-fat="7" data-price="$11.59"><div class="menu-item-header"><h4>Dominic Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">700 cal</div><div class="macros"><span class="macro-pro">P: 27g</span> <span class="macro-carb">C: 98g</span> <span class="macro-fat">F: 20g</span></div></div><div class="menu-item" data-name="Dominic Pizza (Mega)" data-calories="1050" data-protein="40.5" data-carbs="147" data-fat="30" data-fiber="7.5" data-sodium="2700" data-sugars="7.5" data-cholesterol="52.5" data-saturated-fat="10.5" data-price="$13.59"><div class="menu-item-header"><h4>Dominic Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1050 cal</div><div class="macros"><span class="macro-pro">P: 40.5g</span> <span class="macro-carb">C: 147g</span> <span class="macro-fat">F: 30g</span></div></div><div class="menu-item" data-name="Tristan Pizza (Mini)" data-calories="400.5" data-protein="18" data-carbs="42.3" data-fat="15.1" data-fiber="1.8" data-sodium="1003.5" data-sugars="0.9" data-cholesterol="33.8" data-saturated-fat="5.9" data-trans-fat="0.5" data-price="$9.59"><div class="menu-item-header"><h4>Tristan Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">400.5 cal</div><div class="macros"><span class="macro-pro">P: 18g</span> <span class="macro-carb">C: 42.3g</span> <span class="macro-fat">F: 15.1g</span></div></div><div class="menu-item" data-name="Tristan Pizza (MOD)" data-calories="890" data-protein="40" data-carbs="94" data-fat="33.5" data-fiber="4" data-sodium="2230" data-sugars="2" data-cholesterol="75" data-saturated-fat="13" data-trans-fat="1" data-price="$11.59"><div class="menu-item-header"><h4>Tristan Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">890 cal</div><div class="macros"><span class="macro-pro">P: 40g</span> <span class="macro-carb">C: 94g</span> <span class="macro-fat">F: 33.5g</span></div></div><div class="menu-item" data-name="Tristan Pizza (Mega)" data-calories="1335" data-protein="60" data-carbs="141" data-fat="50.2" data-fiber="6" data-sodium="3345" data-sugars="3" data-cholesterol="112.5" data-saturated-fat="19.5" data-trans-fat="1.5" data-price="$13.59"><div class="menu-item-header"><h4>Tristan Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1335 cal</div><div class="macros"><span class="macro-pro">P: 60g</span> <span class="macro-carb">C: 141g</span> <span class="macro-fat">F: 50.2g</span></div></div><div class="menu-item" data-name="Mad Dog Pizza (Mini)" data-calories="441" data-protein="22.1" data-carbs="42.8" data-fat="19.4" data-fiber="1.8" data-sodium="1219.5" data-sugars="1.4" data-cholesterol="49.5" data-saturated-fat="7.7" data-trans-fat="0.5" data-price="$9.59"><div class="menu-item-header"><h4>Mad Dog Pizza (Mini)</h4><span class="item-price">$9.59</span></div><div class="menu-item-cal">441 cal</div><div class="macros"><span class="macro-pro">P: 22.1g</span> <span class="macro-carb">C: 42.8g</span> <span class="macro-fat">F: 19.4g</span></div></div><div class="menu-item" data-name="Mad Dog Pizza (MOD)" data-calories="980" data-protein="49" data-carbs="95" data-fat="43" data-fiber="4" data-sodium="2710" data-sugars="3" data-cholesterol="110" data-saturated-fat="17" data-trans-fat="1" data-price="$11.59"><div class="menu-item-header"><h4>Mad Dog Pizza (MOD)</h4><span class="item-price">$11.59</span></div><div class="menu-item-cal">980 cal</div><div class="macros"><span class="macro-pro">P: 49g</span> <span class="macro-carb">C: 95g</span> <span class="macro-fat">F: 43g</span></div></div><div class="menu-item" data-name="Mad Dog Pizza (Mega)" data-calories="1470" data-protein="73.5" data-carbs="142.5" data-fat="64.5" data-fiber="6" data-sodium="4065" data-sugars="4.5" data-cholesterol="165" data-saturated-fat="25.5" data-trans-fat="1.5" data-price="$13.59"><div class="menu-item-header"><h4>Mad Dog Pizza (Mega)</h4><span class="item-price">$13.59</span></div><div class="menu-item-cal">1470 cal</div><div class="macros"><span class="macro-pro">P: 73.5g</span> <span class="macro-carb">C: 142.5g</span> <span class="macro-fat">F: 64.5g</span></div></div><div class="menu-item" data-name="Cheese (The Maddy) Pizza (Mini)" data-calories="319.5" data-protein="14.4" data-carbs="42.3" data-fat="9.5" data-fiber="1.8" data-sodium="882" data-sugars="1.4" data-cholesterol="24.8" data-saturated-fat="4" data-trans-fat="0.2" data-price="$6.59"><div class="menu-item-header"><h4>Cheese (The Maddy) Pizza (Mini)</h4><span class="item-price">$6.59</span></div><div class="menu-item-cal">319.5 cal</div><div class="macros"><span class="macro-pro">P: 14.4g</span> <span class="macro-carb">C: 42.3g</span> <span class="macro-fat">F: 9.5g</span></div></div><div class="menu-item" data-name="Cheese (The Maddy) Pizza (MOD)" data-calories="710" data-protein="32" data-carbs="94" data-fat="21" data-fiber="4" data-sodium="1960" data-sugars="3" data-cholesterol="55" data-saturated-fat="9" data-trans-fat="0.5" data-price="$8.59"><div class="menu-item-header"><h4>Cheese (The Maddy) Pizza (MOD)</h4><span class="item-price">$8.59</span></div><div class="menu-item-cal">710 cal</div><div class="macros"><span class="macro-pro">P: 32g</span> <span class="macro-carb">C: 94g</span> <span class="macro-fat">F: 21g</span></div></div><div class="menu-item" data-name="Cheese (The Maddy) Pizza (Mega)" data-calories="1065" data-protein="48" data-carbs="141" data-fat="31.5" data-fiber="6" data-sodium="2940" data-sugars="4.5" data-cholesterol="82.5" data-saturated-fat="13.5" data-trans-fat="0.8" data-price="$10.59"><div class="menu-item-header"><h4>Cheese (The Maddy) Pizza (Mega)</h4><span class="item-price">$10.59</span></div><div class="menu-item-cal">1065 cal</div><div class="macros"><span class="macro-pro">P: 48g</span> <span class="macro-carb">C: 141g</span> <span class="macro-fat">F: 31.5g</span></div></div></div><div class="rest-cat-group" data-category="Dessert" style="display:none"><div class="menu-item" data-name="No Name Cake" data-calories="300" data-protein="3" data-carbs="42" data-fat="15" data-fiber="2" data-sodium="150" data-sugars="32" data-cholesterol="15" data-saturated-fat="9" data-price="$3.19"><div class="menu-item-header"><h4>No Name Cake</h4><span class="item-price">$3.19</span></div><div class="menu-item-cal">300 cal</div><div class="macros"><span class="macro-pro">P: 3g</span> <span class="macro-carb">C: 42g</span> <span class="macro-fat">F: 15g</span></div></div><div class="menu-item" data-name="Mega Cookie" data-calories="1610" data-protein="19" data-carbs="190" data-fat="79" data-fiber="7" data-sodium="890" data-sugars="147" data-cholesterol="80" data-saturated-fat="40" data-trans-fat="0.5" data-price="$4.99"><div class="menu-item-header"><h4>Mega Cookie</h4><span class="item-price">$4.99</span></div><div class="menu-item-cal">1610 cal</div><div class="macros"><span class="macro-pro">P: 19g</span> <span class="macro-carb">C: 190g</span> <span class="macro-fat">F: 79g</span></div></div></div><div class="rest-cat-group" data-category="Topping" style="display:none"><div class="menu-item" data-name="Pepperoni" data-calories="50" data-protein="2" data-carbs="0" data-fat="4.5" data-fiber="0" data-sodium="180" data-price="Included"><div class="menu-item-header"><h4>Pepperoni</h4><span class="item-price">Included</span></div><div class="menu-item-cal">50 cal</div><div class="macros"><span class="macro-pro">P: 2g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 4.5g</span></div></div><div class="menu-item" data-name="Mild Italian Sausage" data-calories="240" data-protein="13" data-carbs="0" data-fat="20" data-fiber="0" data-sodium="300" data-price="Included"><div class="menu-item-header"><h4>Mild Italian Sausage</h4><span class="item-price">Included</span></div><div class="menu-item-cal">240 cal</div><div class="macros"><span class="macro-pro">P: 13g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 20g</span></div></div><div class="menu-item" data-name="Grilled Chicken" data-calories="70" data-protein="12" data-carbs="0" data-fat="2.5" data-fiber="0" data-sodium="260" data-price="Included"><div class="menu-item-header"><h4>Grilled Chicken</h4><span class="item-price">Included</span></div><div class="menu-item-cal">70 cal</div><div class="macros"><span class="macro-pro">P: 12g</span> <span class="macro-carb">C: 0g</span> <span class="macro-fat">F: 2.5g</span></div></div></div></div>
+<div id="rest-detail"><div class="detail-card"><button class="detail-close" id="detail-close">&times;</button><h3>Caspian Pizza (Mini)</h3><p class="item-price-detail">Price: $9.59</p><div class="nutrition-pills"><div class="nutrition-pill pill-cal"><div class="val">436.5</div><div class="lbl">Calories</div></div><div class="nutrition-pill pill-pro"><div class="val">22.1g</div><div class="lbl">Protein</div></div><div class="nutrition-pill pill-carb"><div class="val">56.2g</div><div class="lbl">Carbs</div></div><div class="nutrition-pill pill-fat"><div class="val">13.1g</div><div class="lbl">Fat</div></div><div class="nutrition-pill pill-fib"><div class="val">2.2g</div><div class="lbl">Fiber</div></div><div class="nutrition-pill pill-sod"><div class="val">1278mg</div><div class="lbl">Sodium</div></div><div class="nutrition-pill pill-sug"><div class="val">11.7g</div><div class="lbl">Sugars</div></div><div class="nutrition-pill pill-chol"><div class="val">51.8mg</div><div class="lbl">Cholesterol</div></div><div class="nutrition-pill pill-sfat"><div class="val">5.9g</div><div class="lbl">Sat. Fat</div></div></div><div id="nutrition-facts-label"><div class="nf-label"><div class="nf-title">Nutrition Facts</div><div class="nf-divider-thick"></div><div class="nf-cal-row"><span class="nf-cal-label">Calories</span><span class="nf-cal-val">436.5</span></div><div class="nf-divider-medium"></div><div class="nf-dv-header">% Daily Value*</div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Fat</strong> 13.1g</span><span>17%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Saturated Fat 5.9g</span><span>30%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Trans Fat 0.5g</span><span></span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Cholesterol</strong> 51.8mg</span><span>17%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Sodium</strong> 1278mg</span><span>56%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Total Carbohydrate</strong> 56.2g</span><span>20%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Dietary Fiber 2.2g</span><span>8%</span></div><div class="nf-divider-thin"></div><div class="nf-row nf-indent"><span>Total Sugars 11.7g</span><span>23%</span></div><div class="nf-divider-thin"></div><div class="nf-row"><span><strong>Protein</strong> 22.1g</span><span>44%</span></div><div class="nf-divider-thick"></div><div class="nf-footnote">* The % Daily Value (DV) tells you how much a nutrient in a serving of food contributes to a daily diet. 2,000 calories a day is used for general nutrition advice.</div></div></div><button class="add-meal-btn" id="add-meal-btn">+ Add to My Meal</button></div></div>
+</div>
+</div>
+<div class="rest-right-col">
+<div id="rest-summary"><div class="meal-summary"><h3>My Meal <span class="meal-count">(0 items)</span> <button class="reset-btn" id="reset-meal">Reset</button></h3><div class="meal-progress"><div class="meal-progress-bar" style="width:0%"></div></div><div class="meal-progress-text">0 / 2,000 cal (0%)</div><div class="meal-totals"><div class="meal-total pill-cal"><div class="num">0</div><div class="lbl">Calories</div></div><div class="meal-total pill-pro"><div class="num">0g</div><div class="lbl">Protein</div></div><div class="meal-total pill-carb"><div class="num">0g</div><div class="lbl">Carbs</div></div><div class="meal-total pill-fat"><div class="num">0g</div><div class="lbl">Fat</div></div></div><div class="meal-items"><div class="empty-msg">No items added yet. Click items above and press "Add to My Meal".</div></div></div></div>
+</div>
+</div>
+</div>
+<div class="content-section">
+<h2>How to Use the MOD Pizza Nutrition Calculator</h2>
+<div class="steps-grid">
+<div class="step-card"><div class="step-num">1</div><h3>Browse Categories</h3><p>Click through the category tabs to explore different menu sections.</p></div>
+<div class="step-card"><div class="step-num">2</div><h3>Select Items</h3><p>Click on any menu item to see its detailed nutrition breakdown.</p></div>
+<div class="step-card"><div class="step-num">3</div><h3>Build Your Meal</h3><p>Add items to your meal tracker to see combined nutrition totals.</p></div>
+</div>
+<h2>About Mod Pizza</h2>
+<p>Our MOD Pizza Nutrition Calculator helps you make informed decisions about what you eat at Mod Pizza. Track calories, protein, carbs, fat, and more for every menu item. Build your complete meal and see the total nutritional impact before you order.</p>
+<p>All nutrition data is sourced from official Mod Pizza nutrition guides and FDA databases. Values may vary by location and preparation method.</p>
+</div>
+</section>
+<div class="social-share" id="social-share">
+  <span class="social-share-label">Share:</span>
+  <a class="social-btn social-twitter" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+  </a>
+  <a class="social-btn social-facebook" id="share-facebook" href="#" target="_blank" rel="noopener" aria-label="Share on Facebook" title="Share on Facebook">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  </a>
+  <a class="social-btn social-linkedin" id="share-linkedin" href="#" target="_blank" rel="noopener" aria-label="Share on LinkedIn" title="Share on LinkedIn">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a class="social-btn social-whatsapp" id="share-whatsapp" href="#" target="_blank" rel="noopener" aria-label="Share on WhatsApp" title="Share on WhatsApp">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+  <a class="social-btn social-email" id="share-email" href="#" aria-label="Share via Email" title="Share via Email">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+  <button class="social-btn social-copy" id="share-copy" aria-label="Copy link" title="Copy link">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+  </button>
+</div>
+<script>
+(function(){
+  var url = encodeURIComponent(window.location.href);
+  var title = encodeURIComponent(document.title);
+  var tw = document.getElementById('share-twitter');
+  var fb = document.getElementById('share-facebook');
+  var li = document.getElementById('share-linkedin');
+  var wa = document.getElementById('share-whatsapp');
+  var em = document.getElementById('share-email');
+  var cp = document.getElementById('share-copy');
+  if(tw) tw.href = 'https://twitter.com/intent/tweet?url='+url+'&text='+title;
+  if(fb) fb.href = 'https://www.facebook.com/sharer/sharer.php?u='+url;
+  if(li) li.href = 'https://www.linkedin.com/sharing/share-offsite/?url='+url;
+  if(wa) wa.href = 'https://wa.me/?text='+title+'%20'+url;
+  if(em) em.href = 'mailto:?subject='+title+'&body=Check%20this%20out:%20'+url;
+  if(cp) cp.addEventListener('click', function(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+      setTimeout(function(){ cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'; }, 2000);
+    });
+  });
+})();
+</script>
+<footer class="footer">
+<div class="footer-inner">
+  <div class="footer-brand">
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+    <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
+  </div>
+  <div>
+    <h4>Quick Links</h4>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-conditions/">Terms &amp; Conditions</a></li>
+      <li><a href="/disclaimer/">Disclaimer</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Popular Calculators</h4>
+    <ul>
+      <li><a href="/bmi-calculator/">BMI Calculator</a></li>
+      <li><a href="/bmr-calculator/">BMR Calculator</a></li>
+      <li><a href="/tdee-calculator/">TDEE Calculator</a></li>
+      <li><a href="/protein-calculator/">Protein Calculator</a></li>
+      <li><a href="/calorie-deficit-calculator/">Calorie Deficit Calculator</a></li>
+      <li><a href="/keto-macro-calculator/">Keto Macro Calculator</a></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Restaurant Calculators</h4>
+    <ul>
+      <li><a href="/starbucks-nutrition-calculator/">Starbucks</a></li>
+      <li><a href="/chipotle-nutrition-calculator/">Chipotle</a></li>
+      <li><a href="/mcdonalds-calories-calculator/">McDonald's</a></li>
+      <li><a href="/subway-nutrition-calculator/">Subway</a></li>
+      <li><a href="/five-guys-nutrition-calculator/">Five Guys</a></li>
+      <li><a href="/panda-express-nutrition-calculator/">Panda Express</a></li>
+    </ul>
+  </div>
+</div>
+<div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
+</footer>
+<script src="/js/site-config.js"></script>
+<script src="/js/scripts-config.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/restaurant.js"></script>
+<script>initRestaurant();</script>
+<button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/>
+  </svg>
+</button>
+<script>
+(function(){
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  window.addEventListener('scroll', function(){
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+  btn.addEventListener('click', function(){
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+})();
+</script>
+<div id="cookie-banner" class="cookie-banner" style="display:none;">
+  <div class="cookie-banner-inner">
+    <p>We use cookies to improve your experience and for analytics. By continuing to use this site, you agree to our <a href="/cookie-policy/">Cookie Policy</a>.</p>
+    <div class="cookie-banner-actions">
+      <button id="cookie-accept" class="cookie-btn cookie-btn-accept">Accept</button>
+      <button id="cookie-decline" class="cookie-btn cookie-btn-decline">Decline</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  if (localStorage.getItem('cookie-consent')) return;
+  var banner = document.getElementById('cookie-banner');
+  if (!banner) return;
+  banner.style.display = 'block';
+  document.getElementById('cookie-accept').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'accepted');
+    banner.style.display = 'none';
+  });
+  document.getElementById('cookie-decline').addEventListener('click', function(){
+    localStorage.setItem('cookie-consent', 'declined');
+    banner.style.display = 'none';
+  });
+})();
+</script>
+</body>
+</html>
