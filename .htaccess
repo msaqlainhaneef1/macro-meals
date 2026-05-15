@@ -67,6 +67,9 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   # Remove server software info (if exposed)
   Header always unset X-Powered-By
   Header always unset Server
+
+  # LLM Discoverability — HTTP Link headers (llmstxt.org standard)
+  Header always set Link "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Summary\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Full Reference\""
 </IfModule>
 
 # ============================================================
@@ -234,7 +237,7 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # Allow specific public files that are needed
-<FilesMatch "^(robots\.txt|sitemap\.xml|sitemap\.php|site\.webmanifest|ads\.txt|app-ads\.txt)$">
+<FilesMatch "^(robots\.txt|sitemap\.xml|sitemap\.php|site\.webmanifest|ads\.txt|app-ads\.txt|llms\.txt|llms-full\.txt)$">
   <IfModule mod_authz_core.c>
     Require all granted
   </IfModule>
@@ -256,6 +259,15 @@ AddDefaultCharset UTF-8
     Require all denied
   </IfModule>
 </FilesMatch>
+
+# ============================================================
+# LLM DISCOVERABILITY — .well-known redirect
+# ============================================================
+<IfModule mod_rewrite.c>
+  # .well-known/llms.txt → /llms.txt (standard discovery path)
+  RewriteRule ^\.well-known/llms\.txt$ /llms.txt [L]
+  RewriteRule ^\.well-known/llms-full\.txt$ /llms-full.txt [L]
+</IfModule>
 
 # ============================================================
 # SEO — Clean URL handling
