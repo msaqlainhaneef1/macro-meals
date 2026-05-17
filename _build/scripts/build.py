@@ -289,10 +289,13 @@ def inject_cookie_banner(html):
     return html
 
 def inject_breadcrumbs(html):
-    """Add breadcrumb navigation after <header> if not already present."""
+    """Add or replace breadcrumb navigation after <header>."""
+    import re
     component = COMPONENTS.get('breadcrumbs.html', '')
-    if not component or 'breadcrumbs' in html:
+    if not component:
         return html
+    # Remove existing breadcrumbs block if present
+    html = re.sub(r'<nav class="breadcrumbs"[^>]*>.*?</script>\s*', '', html, flags=re.DOTALL)
     html = html.replace('</header>', '</header>\n' + component)
     return html
 
@@ -305,10 +308,13 @@ def inject_scroll_progress(html):
     return html
 
 def inject_social_share(html):
-    """Add social share buttons before <footer> if not already present."""
+    """Add or replace social share buttons before <footer>."""
     component = COMPONENTS.get('social-share.html', '')
-    if not component or 'social-share' in html:
+    if not component:
         return html
+    # Remove existing social-share block if present (between <div class="social-share" and its closing </script>)
+    import re
+    html = re.sub(r'<div class="social-share"[^>]*>.*?</script>\s*', '', html, flags=re.DOTALL)
     html = html.replace('<footer class="footer">', component + '\n<footer class="footer">')
     return html
 

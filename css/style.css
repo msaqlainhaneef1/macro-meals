@@ -1271,41 +1271,59 @@ input, select, textarea, button { font-family: inherit; font-size: inherit; }
 
 /* ===== BREADCRUMBS ===== */
 .breadcrumbs {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0.75rem 1.5rem;
-  font-size: 0.85rem;
+  background: var(--bg-subtle);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
 }
 .breadcrumbs ol {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 0.65rem 1.5rem;
+  margin: 0 auto;
+  max-width: 1200px;
   gap: 0;
 }
 .breadcrumbs li {
   display: flex;
   align-items: center;
   color: var(--text-muted);
+  line-height: 1.4;
 }
 .breadcrumbs li:not(:last-child)::after {
-  content: "/";
-  margin: 0 0.5rem;
-  color: #cbd5e1;
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-right: 1.5px solid var(--text-light);
+  border-top: 1.5px solid var(--text-light);
+  transform: rotate(45deg);
+  margin: 0 0.6rem;
+  flex-shrink: 0;
 }
 .breadcrumbs a {
-  color: var(--primary);
+  color: var(--text-muted);
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: 500;
 }
 .breadcrumbs a:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
+  color: var(--primary);
 }
 .breadcrumbs li:last-child {
   color: var(--text-main);
-  font-weight: 500;
+  font-weight: 600;
+  max-width: 280px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@media (max-width: 479px) {
+  .breadcrumbs ol { padding: 0.55rem 1rem; font-size: 0.75rem; }
+  .breadcrumbs li:last-child { max-width: 160px; }
 }
 
 /* ===== SCROLL PROGRESS BAR ===== */
@@ -1321,50 +1339,105 @@ input, select, textarea, button { font-family: inherit; font-size: inherit; }
   pointer-events: none;
 }
 
-/* ===== SOCIAL SHARE BUTTONS ===== */
+/* ===== SOCIAL SHARE BUTTONS — Sticky Sidebar ===== */
 .social-share {
+  position: fixed;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.6rem;
-  padding: 1.5rem 0;
-  flex-wrap: wrap;
-  border-top: 1px solid var(--border-color);
-  margin-top: 1rem;
+  gap: 0.5rem;
+  padding: 0.6rem;
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.social-share.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 .social-share-label {
-  font-size: 0.85rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  color: var(--text-muted);
-  margin-right: 0.25rem;
+  color: var(--text-light);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  writing-mode: horizontal-tb;
+  margin: 0;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+  text-align: center;
 }
 .social-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border-radius: 50%;
-  border: 2px solid var(--border-color);
-  background: #fff;
+  border: 1.5px solid var(--border-color);
+  background: var(--bg-card);
   color: #64748b;
   cursor: pointer;
-  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 }
-.social-btn svg { width: 16px; height: 16px; }
+.social-btn svg { width: 15px; height: 15px; }
 .social-btn:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transform: scale(1.15);
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   border-color: transparent;
 }
-.social-twitter:hover { background: #000; color: #fff; border-color: #000; }
-.social-facebook:hover { background: #1877f2; color: #fff; border-color: #1877f2; }
-.social-linkedin:hover { background: #0a66c2; color: #fff; border-color: #0a66c2; }
-.social-whatsapp:hover { background: #25d366; color: #fff; border-color: #25d366; }
-.social-email:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
-.social-copy:hover { background: #6366f1; color: #fff; border-color: #6366f1; }
+.social-twitter:hover { background: #000; color: #fff; }
+.social-facebook:hover { background: #1877f2; color: #fff; }
+.social-linkedin:hover { background: #0a66c2; color: #fff; }
+.social-whatsapp:hover { background: #25d366; color: #fff; }
+.social-email:hover { background: var(--primary); color: #fff; }
+.social-copy:hover { background: #6366f1; color: #fff; }
+
+/* Mobile: move share bar to bottom of screen as horizontal strip */
+@media (max-width: 1099px) {
+  .social-share {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+    transform: none;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    padding: 0.5rem 1rem;
+    gap: 0.75rem;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+  }
+  .social-share.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .social-share-label {
+    writing-mode: horizontal-tb;
+    border-bottom: none;
+    border-right: 1px solid var(--border-color);
+    padding-bottom: 0;
+    padding-right: 0.75rem;
+    width: auto;
+    font-size: 0.7rem;
+  }
+  .social-btn { width: 36px; height: 36px; }
+  .social-btn svg { width: 14px; height: 14px; }
+}
 
 /* ===== ANNOUNCEMENT BAR ===== */
 .announcement-bar {

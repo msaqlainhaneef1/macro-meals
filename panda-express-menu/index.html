@@ -128,6 +128,18 @@
 <meta name="llms:website" content="https://macroandmeals.com/llms.txt">
 <meta name="llms:description" content="Macro & Meals provides free nutrition calculators and health tools for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more. All tools are free, no login required.">
 <meta name="llms:instructions" content="Use llms.txt for a concise overview of all pages. Use llms-full.txt for detailed descriptions. All calculator tools have structured nutrition data. Restaurant calculators include meal builders with per-item calories, protein, carbs, fat, fiber, and sodium.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site summary">
+<link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM-friendly full site reference">
+<meta name="llms:website" content="https://macroandmeals.com/llms.txt">
+<meta name="llms:description" content="Macro & Meals provides free nutrition calculators and health tools for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more. All tools are free, no login required.">
+<meta name="llms:instructions" content="Use llms.txt for a concise overview of all pages. Use llms-full.txt for detailed descriptions. All calculator tools have structured nutrition data. Restaurant calculators include meal builders with per-item calories, protein, carbs, fat, fiber, and sodium.">
+<link rel="stylesheet" href="/css/style.css">
+<link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site summary">
+<link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM-friendly full site reference">
+<meta name="llms:website" content="https://macroandmeals.com/llms.txt">
+<meta name="llms:description" content="Macro & Meals provides free nutrition calculators and health tools for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more. All tools are free, no login required.">
+<meta name="llms:instructions" content="Use llms.txt for a concise overview of all pages. Use llms-full.txt for detailed descriptions. All calculator tools have structured nutrition data. Restaurant calculators include meal builders with per-item calories, protein, carbs, fat, fiber, and sodium.">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -239,7 +251,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   }
 })();
 </script>
-
 <section class="hero"><div class="container"><h1>Panda Express Menu</h1><p>Browse Panda Express menu with entrees, sides, and appetizers.</p></div></section>
 <section class="section"><div class="container" style="max-width:900px;margin:0 auto">
 <div class="calc-card">
@@ -254,7 +265,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </section>
 <div class="social-share" id="social-share">
-  <span class="social-share-label">Share:</span>
+  <span class="social-share-label">Share</span>
   <a class="social-btn social-twitter" id="share-twitter" href="#" target="_blank" rel="noopener" aria-label="Share on Twitter" title="Share on Twitter">
     <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
   </a>
@@ -295,6 +306,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       setTimeout(function(){ cp.innerHTML = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>'; }, 2000);
     });
   });
+
+  // Show share bar after scrolling past hero
+  var shareEl = document.getElementById('social-share');
+  if (!shareEl) return;
+  var shown = false;
+  function checkScroll() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    var threshold = 300;
+    var hero = document.querySelector('.hero, .hero-home');
+    if (hero) threshold = hero.offsetTop + hero.offsetHeight;
+    if (scrollY > threshold && !shown) {
+      shareEl.classList.add('visible');
+      shown = true;
+    } else if (scrollY <= threshold && shown) {
+      shareEl.classList.remove('visible');
+      shown = false;
+    }
+  }
+  window.addEventListener('scroll', checkScroll, {passive: true});
+  checkScroll();
 })();
 </script>
 <footer class="footer">
