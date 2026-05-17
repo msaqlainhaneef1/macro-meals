@@ -217,19 +217,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 
-  // Show share bar after scrolling past hero
+  // Show share bar only in the main content area (between header/hero and footer)
   var shareEl = document.getElementById('social-share');
   if (!shareEl) return;
   var shown = false;
   function checkScroll() {
     var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    var threshold = 300;
+    var winH = window.innerHeight;
+    // Top threshold: below hero or header
+    var topThreshold = 300;
     var hero = document.querySelector('.hero, .hero-home');
-    if (hero) threshold = hero.offsetTop + hero.offsetHeight;
-    if (scrollY > threshold && !shown) {
+    if (hero) topThreshold = hero.offsetTop + hero.offsetHeight;
+    // Bottom threshold: hide before footer
+    var footer = document.querySelector('.footer, footer');
+    var bottomLimit = document.body.scrollHeight;
+    if (footer) bottomLimit = footer.offsetTop;
+    var inContent = scrollY > topThreshold && (scrollY + winH) < (bottomLimit + 100);
+    if (inContent && !shown) {
       shareEl.classList.add('visible');
       shown = true;
-    } else if (scrollY <= threshold && shown) {
+    } else if (!inContent && shown) {
       shareEl.classList.remove('visible');
       shown = false;
     }
