@@ -31,6 +31,30 @@ RewriteCond %{REQUEST_URI} !\.(txt|xml|json|css|js|png|jpg|jpeg|gif|svg|webp|ico
 RewriteRule ^(.+)$ /$1/ [R=301,L]
 
 # ============================================================
+# SEO — Clean URLs
+# ============================================================
+<IfModule mod_rewrite.c>
+  # Redirect /page.html → /page/ (uses THE_REQUEST to avoid double-processing)
+  RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+  RewriteCond %{REQUEST_URI} !^/404\.html$
+  RewriteCond %{REQUEST_URI} !/index\.html$
+  RewriteRule ^ /%1/ [R=301,L]
+
+  # Internally map clean URLs — prefer directory index first, then .html fallback
+  # /blog/ → blog/index.html (if directory has index.html)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f
+  RewriteRule ^(.+?)/$ $1/index.html [L]
+
+  # /about/ → about.html (if .html file exists)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+  RewriteRule ^(.+?)/$ $1.html [L]
+</IfModule>
+
+# ============================================================
 # SECURITY HEADERS
 # ============================================================
 <IfModule mod_headers.c>
@@ -40,9 +64,6 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   # Clickjacking protection — only allow framing from same origin
   Header always set X-Frame-Options "SAMEORIGIN"
 
-  # XSS filter (legacy browsers)
-  Header always set X-XSS-Protection "1; mode=block"
-
   # Control referrer information
   Header always set Referrer-Policy "strict-origin-when-cross-origin"
 
@@ -50,6 +71,7 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   Header always set Permissions-Policy "interest-cohort=()"
 
   # Content Security Policy — allow Google Analytics, GTM, AdSense, fonts
+  # Note: 'unsafe-inline' required for GTM/AdSense, 'unsafe-eval' required for GTM custom templates
   Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://tpc.googlesyndication.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://*.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://api.nal.usda.gov https://world.openfoodfacts.org; frame-src 'self' https://www.googletagmanager.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 
   # Strict Transport Security — force HTTPS for 1 year + subdomains
@@ -64,14 +86,12 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
 
   # LLM Discoverability — HTTP Link headers (llmstxt.org standard)
   Header always set Link "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Summary\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Full Reference\""
-
 </IfModule>
 
 # ============================================================
-# GZIP / BROTLI COMPRESSION
+# GZIP COMPRESSION
 # ============================================================
 <IfModule mod_deflate.c>
-  # Compress text-based resources
   AddOutputFilterByType DEFLATE text/html
   AddOutputFilterByType DEFLATE text/css
   AddOutputFilterByType DEFLATE text/javascript
@@ -97,7 +117,10 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   BrowserMatch ^Mozilla/4 gzip-only-text/html
   BrowserMatch ^Mozilla/4\.0[678] no-gzip
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+
+  # Vary headers for proper caching with compression
   Header append Vary User-Agent env=!dont-vary
+  Header append Vary Accept-Encoding
 </IfModule>
 
 # Brotli compression (if supported — faster + smaller than GZIP)
@@ -204,21 +227,12 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # ============================================================
-# HOTLINK PROTECTION — Prevent other sites from using your images
+# HOTLINK PROTECTION — Simple and safe
 # ============================================================
 <IfModule mod_rewrite.c>
   RewriteCond %{HTTP_REFERER} !^$ [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?macroandmeals\.com [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?google\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?bing\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?pinterest\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?facebook\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?twitter\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?reddit\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?linkedin\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?whatsapp\. [NC]
-  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?t\.co [NC]
-  RewriteRule \.(jpg|jpeg|png|gif|webp|avif|svg)$ - [F,L]
+  RewriteCond %{HTTP_REFERER} !macroandmeals\.com [NC]
+  RewriteRule \.(jpg|jpeg|png|gif|webp|avif|svg)$ - [F]
 </IfModule>
 
 # ============================================================
@@ -273,45 +287,17 @@ AddDefaultCharset UTF-8
 # LLM DISCOVERABILITY — .well-known redirect
 # ============================================================
 <IfModule mod_rewrite.c>
-  # .well-known/llms.txt → /llms.txt (standard discovery path)
   RewriteRule ^\.well-known/llms\.txt$ /llms.txt [L]
   RewriteRule ^\.well-known/llms-full\.txt$ /llms-full.txt [L]
 </IfModule>
 
 # ============================================================
-# SEO — Clean URLs
+# PERFORMANCE — ETags
 # ============================================================
-<IfModule mod_rewrite.c>
-  # Redirect /page.html → /page/ (external redirect)
-  RewriteCond %{REQUEST_URI} \.html$
-  RewriteCond %{REQUEST_URI} !^/404\.html$
-  RewriteCond %{REQUEST_URI} !/index\.html$
-  RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
-
-  # Internally map clean URLs — prefer directory index first, then .html fallback
-  # /blog/ → blog/index.html (if exists)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
-  RewriteRule ^(.+?)/$ $1/index.html [L]
-
-  # /about/ → about.html (if exists)
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^(.+?)/$ $1.html [L]
-</IfModule>
-
-# ============================================================
-# PERFORMANCE — ETags and Keep-Alive
-# ============================================================
-
-# Disable ETags (avoids caching inconsistencies across CDNs)
 FileETag None
 <IfModule mod_headers.c>
   Header unset ETag
 </IfModule>
-
 
 # ============================================================
 # SPAM & BOT PROTECTION
@@ -320,18 +306,13 @@ FileETag None
   # Block known spam/malicious bots only (search engines + SEO audit tools allowed)
   RewriteCond %{HTTP_USER_AGENT} (Xenu|Zeus|Morfeus|spbot|linkfluence) [NC]
   RewriteRule .* - [F,L]
-
-  # Block empty user agents (usually bots)
-  RewriteCond %{HTTP_USER_AGENT} ^$ [NC]
-  RewriteCond %{REQUEST_URI} !^/api/ [NC]
-  RewriteRule .* - [F,L]
 </IfModule>
 
 # ============================================================
 # PREVENT COMMON EXPLOITS
 # ============================================================
 <IfModule mod_rewrite.c>
-  # Block SQL injection attempts (strict patterns to avoid false positives)
+  # Block SQL injection attempts (word boundaries to avoid false positives)
   RewriteCond %{QUERY_STRING} (\bunion\b.*\bselect\b|\bselect\b.*\bfrom\b|\binsert\b.*\binto\b|\bdrop\b.*\btable\b|\bdelete\b.*\bfrom\b|\bupdate\b.*\bset\b) [NC]
   RewriteRule .* - [F,L]
 
@@ -356,15 +337,7 @@ FileETag None
 # CORS — Allow fonts and API access
 # ============================================================
 <IfModule mod_headers.c>
-  # Allow cross-origin font loading
   <FilesMatch "\.(woff|woff2|ttf|otf|eot|svg)$">
     Header set Access-Control-Allow-Origin "*"
-  </FilesMatch>
-
-  # Allow API access from same domain
-  <FilesMatch "\.php$">
-    Header set Access-Control-Allow-Origin "*"
-    Header set Access-Control-Allow-Methods "GET, POST, OPTIONS"
-    Header set Access-Control-Allow-Headers "Content-Type"
   </FilesMatch>
 </IfModule>
