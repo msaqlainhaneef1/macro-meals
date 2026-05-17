@@ -288,11 +288,17 @@ AddDefaultCharset UTF-8
   RewriteCond %{REQUEST_URI} !/index\.html$
   RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
 
-  # Internally map /page/ → page.html (supports nested URLs like /blog/post/)
-  RewriteCond %{REQUEST_FILENAME} !-d
+  # Internally map clean URLs — prefer directory index first, then .html fallback
+  # /blog/ → blog/index.html (if exists)
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f [OR]
-  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+  RewriteRule ^(.+?)/$ $1/index.html [L]
+
+  # /about/ → about.html (if exists)
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
   RewriteRule ^(.+?)/$ $1.html [L]
 </IfModule>
 
@@ -302,7 +308,9 @@ AddDefaultCharset UTF-8
 
 # Disable ETags (avoids caching inconsistencies across CDNs)
 FileETag None
-Header unset ETag
+<IfModule mod_headers.c>
+  Header unset ETag
+</IfModule>
 
 
 # ============================================================
@@ -324,7 +332,7 @@ Header unset ETag
 # ============================================================
 <IfModule mod_rewrite.c>
   # Block SQL injection attempts (strict patterns to avoid false positives)
-  RewriteCond %{QUERY_STRING} (union.*select|select.*from|insert.*into|drop.*table|delete.*from|update.*set) [NC]
+  RewriteCond %{QUERY_STRING} (\bunion\b.*\bselect\b|\bselect\b.*\bfrom\b|\binsert\b.*\binto\b|\bdrop\b.*\btable\b|\bdelete\b.*\bfrom\b|\bupdate\b.*\bset\b) [NC]
   RewriteRule .* - [F,L]
 
   # Block base64 encoded content in query strings
