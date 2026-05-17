@@ -288,14 +288,28 @@ def inject_cookie_banner(html):
     html = html.replace('</body>', component + '\n</body>')
     return html
 
-def inject_breadcrumbs(html):
+# Pages that should NOT get breadcrumbs or share buttons
+NO_BREADCRUMBS_SHARE = {
+    '404.html', 'index.html',
+    'about/index.html', 'contact/index.html',
+    'privacy-policy/index.html', 'terms-conditions/index.html',
+    'disclaimer/index.html', 'dmca/index.html',
+    'cookie-policy/index.html', 'accessibility/index.html',
+    'sitemap-page/index.html',
+}
+
+def inject_breadcrumbs(html, filepath=''):
     """Add or replace breadcrumb navigation after <header>."""
     import re
+    # Always remove existing breadcrumbs first
+    html = re.sub(r'<nav class="breadcrumbs"[^>]*>.*?</script>\s*', '', html, flags=re.DOTALL)
+    # Skip injection for non-content pages
+    rel = os.path.relpath(filepath, ROOT) if filepath else ''
+    if rel in NO_BREADCRUMBS_SHARE:
+        return html
     component = COMPONENTS.get('breadcrumbs.html', '')
     if not component:
         return html
-    # Remove existing breadcrumbs block if present
-    html = re.sub(r'<nav class="breadcrumbs"[^>]*>.*?</script>\s*', '', html, flags=re.DOTALL)
     html = html.replace('</header>', '</header>\n' + component)
     return html
 
@@ -307,14 +321,18 @@ def inject_scroll_progress(html):
     html = html.replace('<body>', '<body>\n' + component)
     return html
 
-def inject_social_share(html):
+def inject_social_share(html, filepath=''):
     """Add or replace social share buttons before <footer>."""
+    import re
+    # Always remove existing social-share first
+    html = re.sub(r'<div class="social-share"[^>]*>.*?</script>\s*', '', html, flags=re.DOTALL)
+    # Skip injection for non-content pages
+    rel = os.path.relpath(filepath, ROOT) if filepath else ''
+    if rel in NO_BREADCRUMBS_SHARE:
+        return html
     component = COMPONENTS.get('social-share.html', '')
     if not component:
         return html
-    # Remove existing social-share block if present (between <div class="social-share" and its closing </script>)
-    import re
-    html = re.sub(r'<div class="social-share"[^>]*>.*?</script>\s*', '', html, flags=re.DOTALL)
     html = html.replace('<footer class="footer">', component + '\n<footer class="footer">')
     return html
 
@@ -369,8 +387,8 @@ def process_html_file(filepath):
     content = fix_favicon_refs(content)
     content = inject_announcement_bar(content)
     content = inject_scroll_progress(content)
-    content = inject_breadcrumbs(content)
-    content = inject_social_share(content)
+    content = inject_breadcrumbs(content, filepath)
+    content = inject_social_share(content, filepath)
     content = inject_back_to_top(content)
     content = inject_cookie_banner(content)
     content = inject_print_styles(content)
