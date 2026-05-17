@@ -247,33 +247,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a itemprop="item" href="/"><span itemprop="name">Home</span></a>
       <meta itemprop="position" content="1">
     </li>
+    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+      <span itemprop="name">Page Not Found</span>
+      <meta itemprop="position" content="2">
+    </li>
   </ol>
 </nav>
-<script>
-(function(){
-  var ol = document.querySelector('.breadcrumbs ol');
-  if (!ol) return;
-  var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
-  if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
-  var h1 = document.querySelector('h1');
-  for (var i = 0; i < path.length; i++) {
-    var li = document.createElement('li');
-    li.setAttribute('itemprop','itemListElement');
-    li.setAttribute('itemscope','');
-    li.setAttribute('itemtype','https://schema.org/ListItem');
-    var isLast = (i === path.length - 1);
-    var slug = path[i];
-    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
-    if (isLast) {
-      li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
-    } else {
-      var href = '/' + path.slice(0, i+1).join('/') + '/';
-      li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
-    }
-    ol.appendChild(li);
-  }
-})();
-</script>
 <section class="error-page">
 <div class="error-content">
 
@@ -411,25 +390,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   });
 
-  // Show share bar after scrolling past hero
+  // Show share bar immediately on 404 page (no hero to scroll past)
   var shareEl = document.getElementById('social-share');
-  if (!shareEl) return;
-  var shown = false;
-  function checkScroll() {
-    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
-    var threshold = 300;
-    var hero = document.querySelector('.hero, .hero-home');
-    if (hero) threshold = hero.offsetTop + hero.offsetHeight;
-    if (scrollY > threshold && !shown) {
-      shareEl.classList.add('visible');
-      shown = true;
-    } else if (scrollY <= threshold && shown) {
-      shareEl.classList.remove('visible');
-      shown = false;
-    }
-  }
-  window.addEventListener('scroll', checkScroll, {passive: true});
-  checkScroll();
+  if (shareEl) shareEl.classList.add('visible');
 })();
 </script>
 <footer class="footer">
