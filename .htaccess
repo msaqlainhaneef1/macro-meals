@@ -301,8 +301,9 @@ AddDefaultCharset UTF-8
 # PERFORMANCE — ETags and Keep-Alive
 # ============================================================
 
-# Use strong ETags based on file content
-FileETag MTime Size
+# Disable ETags (avoids caching inconsistencies across CDNs)
+FileETag None
+Header unset ETag
 
 # Keep-Alive for connection reuse
 <IfModule mod_headers.c>
