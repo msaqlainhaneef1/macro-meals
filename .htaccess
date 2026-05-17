@@ -65,8 +65,6 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   # LLM Discoverability — HTTP Link headers (llmstxt.org standard)
   Header always set Link "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Summary\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Full Reference\""
 
-  # Canonical URL header (extra SEO signal)
-  Header append Link "<https://macroandmeals.com%{REQUEST_URI}>; rel=\"canonical\""
 </IfModule>
 
 # ============================================================
@@ -290,11 +288,12 @@ AddDefaultCharset UTF-8
   RewriteCond %{REQUEST_URI} !/index\.html$
   RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
 
-  # Internally map /page/ → page.html (for non-directory clean URLs)
+  # Internally map /page/ → page.html (supports nested URLs like /blog/post/)
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
-  RewriteRule ^([^/]+)/$ $1.html [L]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f [OR]
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
+  RewriteRule ^(.+?)/$ $1.html [L]
 </IfModule>
 
 # ============================================================
@@ -305,10 +304,6 @@ AddDefaultCharset UTF-8
 FileETag None
 Header unset ETag
 
-# Keep-Alive for connection reuse
-<IfModule mod_headers.c>
-  Header set Connection keep-alive
-</IfModule>
 
 # ============================================================
 # SPAM & BOT PROTECTION
