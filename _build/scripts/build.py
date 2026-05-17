@@ -256,6 +256,13 @@ def ensure_common_head(html):
     html = re.sub(r'<link rel="apple-touch-icon"[^>]*/?>\s*', '', html)
     html = re.sub(r'<link rel="manifest"[^>]*/?>\s*', '', html)
     html = re.sub(r'<meta name="theme-color"[^>]*/?>\s*', '', html)
+    # Remove old stylesheet links to avoid duplicates
+    html = re.sub(r'<link rel="stylesheet" href="/css/style\.css">\s*', '', html)
+    # Remove old LLM discoverability tags to avoid duplicates
+    html = re.sub(r'<link rel="alternate" type="text/plain" href="/llms[^"]*"[^>]*>\s*', '', html)
+    html = re.sub(r'<meta name="llms:[^"]*"[^>]*/?>\s*', '', html)
+    # Remove HTML comment blocks for LLM discoverability that may have been injected
+    html = re.sub(r'<!-- LLM Discoverability[^>]*-->\s*', '', html)
     # Inject component before </head>
     html = html.replace('</head>', head_common + '\n</head>')
     return html
@@ -296,6 +303,8 @@ NO_BREADCRUMBS_SHARE = {
     'disclaimer/index.html', 'dmca/index.html',
     'cookie-policy/index.html', 'accessibility/index.html',
     'sitemap-page/index.html',
+    'blog/index.html',
+    'blog/how-to-calculate-your-daily-calorie-needs/index.html',
 }
 
 def inject_breadcrumbs(html, filepath=''):
