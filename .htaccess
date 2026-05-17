@@ -24,12 +24,6 @@ RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\.macroandmeals\.com$ [NC]
 RewriteRule ^(.*)$ https://macroandmeals.com/$1 [R=301,L]
 
-# Add trailing slash to paths that are not real files
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_URI} !/$
-RewriteCond %{REQUEST_URI} !\.(txt|xml|json|css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|otf|webmanifest)$ [NC]
-RewriteRule ^(.+)$ /$1/ [R=301,L]
-
 # ============================================================
 # SEO — Clean URLs
 # ============================================================
@@ -44,15 +38,21 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   # /blog/ → blog/index.html (if directory has index.html)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}index.html -f
   RewriteRule ^(.+?)/$ $1/index.html [L]
 
   # /about/ → about.html (if .html file exists)
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI}.html -f
   RewriteRule ^(.+?)/$ $1.html [L]
 </IfModule>
+
+# Add trailing slash to paths that are not real files (runs after clean URL logic)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.(txt|xml|json|css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|otf|webmanifest)$ [NC]
+RewriteRule ^(.+)$ /$1/ [R=301,L]
 
 # ============================================================
 # SECURITY HEADERS
@@ -72,7 +72,7 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
 
   # Content Security Policy — allow Google Analytics, GTM, AdSense, fonts
   # Note: 'unsafe-inline' required for GTM/AdSense, 'unsafe-eval' required for GTM custom templates
-  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://tpc.googlesyndication.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://*.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://api.nal.usda.gov https://world.openfoodfacts.org; frame-src 'self' https://www.googletagmanager.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://pagead2.googlesyndication.com https://adservice.google.com https://tpc.googlesyndication.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https: https://www.google-analytics.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://*.doubleclick.net; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://www.googletagmanager.com https://pagead2.googlesyndication.com https://api.nal.usda.gov https://world.openfoodfacts.org; frame-src 'self' https://www.googletagmanager.com https://tpc.googlesyndication.com https://googleads.g.doubleclick.net; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
 
   # Strict Transport Security — force HTTPS for 1 year + subdomains
   Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
@@ -86,6 +86,9 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
 
   # LLM Discoverability — HTTP Link headers (llmstxt.org standard)
   Header always set Link "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Summary\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Full Reference\""
+
+  # Canonical URL header (SEO signal)
+  Header append Link "<https://macroandmeals.com%{REQUEST_URI}>; rel=\"canonical\""
 </IfModule>
 
 # ============================================================
@@ -232,7 +235,7 @@ AddDefaultCharset UTF-8
 # ============================================================
 <IfModule mod_rewrite.c>
   RewriteCond %{HTTP_REFERER} !^$ [NC]
-  RewriteCond %{HTTP_REFERER} !macroandmeals\.com [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?macroandmeals\.com [NC]
   RewriteRule \.(jpg|jpeg|png|gif|webp|avif|svg)$ - [F,L]
 </IfModule>
 
