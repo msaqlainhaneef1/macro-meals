@@ -19,18 +19,15 @@ ServerSignature Off
 RewriteEngine On
 RewriteBase /
 
-# Force HTTPS (all HTTP → HTTPS)
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Force HTTPS + remove www in ONE redirect (no redirect chains)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.macroandmeals\.com$ [NC]
+RewriteRule ^(.*)$ https://macroandmeals.com/$1 [R=301,L]
 
-# Remove www (www.macroandmeals.com → macroandmeals.com)
-RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-
-# Add trailing slash to directories that have index.html (for clean URLs)
-# Skip if the URI already has a trailing slash or is a real file
-RewriteCond %{REQUEST_FILENAME} -d
+# Add trailing slash to paths that are not real files
+RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_URI} !/$
+RewriteCond %{REQUEST_URI} !\.(txt|xml|json|css|js|png|jpg|jpeg|gif|svg|webp|ico|woff|woff2|ttf|otf|webmanifest)$ [NC]
 RewriteRule ^(.+)$ /$1/ [R=301,L]
 
 # ============================================================
@@ -67,6 +64,9 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
 
   # LLM Discoverability — HTTP Link headers (llmstxt.org standard)
   Header always set Link "</llms.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Summary\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\"; title=\"LLM Full Reference\""
+
+  # Canonical URL header (extra SEO signal)
+  Header append Link "<https://macroandmeals.com%{REQUEST_URI}>; rel=\"canonical\""
 </IfModule>
 
 # ============================================================
@@ -100,6 +100,16 @@ RewriteRule ^(.+)$ /$1/ [R=301,L]
   BrowserMatch ^Mozilla/4\.0[678] no-gzip
   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
   Header append Vary User-Agent env=!dont-vary
+</IfModule>
+
+# Brotli compression (if supported — faster + smaller than GZIP)
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html text/plain text/css
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript text/javascript
+  AddOutputFilterByType BROTLI_COMPRESS application/json application/xml text/xml
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+  AddOutputFilterByType BROTLI_COMPRESS application/xhtml+xml
+  AddOutputFilterByType BROTLI_COMPRESS font/ttf font/otf font/woff font/woff2
 </IfModule>
 
 # ============================================================
@@ -206,6 +216,10 @@ AddDefaultCharset UTF-8
   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?pinterest\. [NC]
   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?facebook\. [NC]
   RewriteCond %{HTTP_REFERER} !^https?://(www\.)?twitter\. [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?reddit\. [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?linkedin\. [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?whatsapp\. [NC]
+  RewriteCond %{HTTP_REFERER} !^https?://(www\.)?t\.co [NC]
   RewriteRule \.(jpg|jpeg|png|gif|webp|avif|svg)$ - [F,L]
 </IfModule>
 
@@ -227,11 +241,9 @@ AddDefaultCharset UTF-8
   </IfModule>
 </FilesMatch>
 
-# Block JSON files by default (except in data/ directory)
+# Block only sensitive JSON paths (allow JSON globally for structured data, APIs)
 <IfModule mod_rewrite.c>
-  RewriteCond %{REQUEST_URI} \.json$ [NC]
-  RewriteCond %{REQUEST_URI} !^/data/ [NC]
-  RewriteCond %{REQUEST_URI} !^/site\.webmanifest$ [NC]
+  RewriteCond %{REQUEST_URI} ^/(private|config|_build)/.*\.json$ [NC]
   RewriteRule .* - [F,L]
 </IfModule>
 
@@ -271,9 +283,19 @@ AddDefaultCharset UTF-8
 # ============================================================
 # SEO — Clean URLs
 # ============================================================
-# All pages use directory/index.html structure (e.g., /blog/index.html
-# served as /blog/). DirectoryIndex handles this automatically.
-# No .html extension removal needed — it would break index.html serving.
+<IfModule mod_rewrite.c>
+  # Redirect /page.html → /page/ (external redirect)
+  RewriteCond %{REQUEST_URI} \.html$
+  RewriteCond %{REQUEST_URI} !^/404\.html$
+  RewriteCond %{REQUEST_URI} !/index\.html$
+  RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
+
+  # Internally map /page/ → page.html (for non-directory clean URLs)
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+  RewriteRule ^([^/]+)/$ $1.html [L]
+</IfModule>
 
 # ============================================================
 # PERFORMANCE — ETags and Keep-Alive
@@ -291,8 +313,8 @@ FileETag MTime Size
 # SPAM & BOT PROTECTION
 # ============================================================
 <IfModule mod_rewrite.c>
-  # Block known spam/malicious bots only (SEO audit tools like Ahrefs, Semrush are allowed)
-  RewriteCond %{HTTP_USER_AGENT} (Xenu|Zeus|Morfeus|PetalBot|ZoominfoBot|BaiduSpider|YandexBot|spbot|linkfluence) [NC]
+  # Block known spam/malicious bots only (search engines + SEO audit tools allowed)
+  RewriteCond %{HTTP_USER_AGENT} (Xenu|Zeus|Morfeus|spbot|linkfluence) [NC]
   RewriteRule .* - [F,L]
 
   # Block empty user agents (usually bots)
@@ -305,8 +327,8 @@ FileETag MTime Size
 # PREVENT COMMON EXPLOITS
 # ============================================================
 <IfModule mod_rewrite.c>
-  # Block SQL injection attempts
-  RewriteCond %{QUERY_STRING} (union|select|insert|drop|delete|update|alter|create|truncate) [NC]
+  # Block SQL injection attempts (strict patterns to avoid false positives)
+  RewriteCond %{QUERY_STRING} (union.*select|select.*from|insert.*into|drop.*table|delete.*from|update.*set) [NC]
   RewriteRule .* - [F,L]
 
   # Block base64 encoded content in query strings
