@@ -47,6 +47,10 @@
     @page { margin: 2cm; }
   }
 </style>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.google-analytics.com">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -73,6 +77,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <meta name="llms:instructions" content="Use llms.txt for a concise overview of all pages. Use llms-full.txt for detailed descriptions. All calculator tools have structured nutrition data. Restaurant calculators include meal builders with per-item calories, protein, carbs, fat, fiber, and sodium.">
 </head>
 <body>
+<a class="skip-to-content" href="#main-content">Skip to content</a>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5FNQMD49"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="scroll-progress" class="scroll-progress"></div>
@@ -140,6 +145,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
   if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
   var h1 = document.querySelector('h1');
+  var origin = window.location.origin;
+  var jsonItems = [{"@type":"ListItem","position":1,"name":"Home","item":origin+"/"}];
   for (var i = 0; i < path.length; i++) {
     var li = document.createElement('li');
     li.setAttribute('itemprop','itemListElement');
@@ -147,15 +154,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     li.setAttribute('itemtype','https://schema.org/ListItem');
     var isLast = (i === path.length - 1);
     var slug = path[i];
-    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    var name = isLast && h1 ? h1.textContent.trim() : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    var href = '/' + path.slice(0, i+1).join('/') + '/';
     if (isLast) {
       li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+      jsonItems.push({"@type":"ListItem","position":i+2,"name":name});
     } else {
-      var href = '/' + path.slice(0, i+1).join('/') + '/';
       li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+      jsonItems.push({"@type":"ListItem","position":i+2,"name":name,"item":origin+href});
     }
     ol.appendChild(li);
   }
+  var ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":jsonItems});
+  document.head.appendChild(ld);
 })();
 </script>
 <section class="hero"><div class="container"><h1>Anorexic BMI Calculator</h1><p>Understand BMI ranges associated with anorexia nervosa and when to seek help.</p></div></section>

@@ -258,11 +258,15 @@ def ensure_common_head(html):
     html = re.sub(r'<meta name="theme-color"[^>]*/?>\s*', '', html)
     # Remove old stylesheet links to avoid duplicates
     html = re.sub(r'<link rel="stylesheet" href="/css/style\.css">\s*', '', html)
+    # Remove old preconnect/dns-prefetch to avoid duplicates
+    html = re.sub(r'<link rel="preconnect"[^>]*>\s*', '', html)
+    html = re.sub(r'<link rel="dns-prefetch"[^>]*>\s*', '', html)
     # Remove old LLM discoverability tags to avoid duplicates
     html = re.sub(r'<link rel="alternate" type="text/plain" href="/llms[^"]*"[^>]*>\s*', '', html)
     html = re.sub(r'<meta name="llms:[^"]*"[^>]*/?>\s*', '', html)
-    # Remove HTML comment blocks for LLM discoverability that may have been injected
+    # Remove HTML comment blocks for LLM discoverability and DNS prefetch
     html = re.sub(r'<!-- LLM Discoverability[^>]*-->\s*', '', html)
+    html = re.sub(r'<!-- DNS Prefetch[^>]*-->\s*', '', html)
     # Inject component before </head>
     html = html.replace('</head>', head_common + '\n</head>')
     return html
@@ -295,16 +299,10 @@ def inject_cookie_banner(html):
     html = html.replace('</body>', component + '\n</body>')
     return html
 
-# Pages that should NOT get breadcrumbs or share buttons
+# Only error pages should NOT get breadcrumbs or share buttons
 NO_BREADCRUMBS_SHARE = {
-    '404.html', 'index.html',
-    'about/index.html', 'contact/index.html',
-    'privacy-policy/index.html', 'terms-conditions/index.html',
-    'disclaimer/index.html', 'dmca/index.html',
-    'cookie-policy/index.html', 'accessibility/index.html',
-    'sitemap-page/index.html',
-    'blog/index.html',
-    'blog/how-to-calculate-your-daily-calorie-needs/index.html',
+    '404.html',
+    'index.html',
 }
 
 def inject_breadcrumbs(html, filepath=''):
@@ -375,6 +373,14 @@ def fix_favicon_refs(html):
     html = html.replace('#10b981', '#22c55e')
     return html
 
+def inject_skip_to_content(html):
+    """Add skip-to-content accessibility link after <body>."""
+    skip_link = '<a class="skip-to-content" href="#main-content">Skip to content</a>'
+    # Remove existing skip links to avoid duplicates
+    html = re.sub(r'<a class="skip-to-content"[^>]*>[^<]*</a>\s*', '', html)
+    html = html.replace('<body>', '<body>\n' + skip_link)
+    return html
+
 def process_html_file(filepath):
     """Apply all transformations to an HTML file."""
     # Skip component files themselves
@@ -394,6 +400,7 @@ def process_html_file(filepath):
     content = ensure_common_head(content)
     content = ensure_common_scripts(content)
     content = fix_favicon_refs(content)
+    content = inject_skip_to_content(content)
     content = inject_announcement_bar(content)
     content = inject_scroll_progress(content)
     content = inject_breadcrumbs(content, filepath)

@@ -1,6 +1,6 @@
 <!-- ============================== -->
 <!-- Macro & Meals — Breadcrumbs Navigation -->
-<!-- Auto-generated from URL path. Improves UX + SEO. -->
+<!-- Auto-generated from URL path. Microdata + JSON-LD schema. -->
 <!-- Edit this file and run build.py to update all pages -->
 <!-- ============================== -->
 <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -18,6 +18,8 @@
   var path = window.location.pathname.replace(/\/+$/,'').split('/').filter(Boolean);
   if (!path.length) { ol.closest('.breadcrumbs').style.display = 'none'; return; }
   var h1 = document.querySelector('h1');
+  var origin = window.location.origin;
+  var jsonItems = [{"@type":"ListItem","position":1,"name":"Home","item":origin+"/"}];
   for (var i = 0; i < path.length; i++) {
     var li = document.createElement('li');
     li.setAttribute('itemprop','itemListElement');
@@ -25,14 +27,20 @@
     li.setAttribute('itemtype','https://schema.org/ListItem');
     var isLast = (i === path.length - 1);
     var slug = path[i];
-    var name = isLast && h1 ? h1.textContent : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    var name = isLast && h1 ? h1.textContent.trim() : slug.replace(/-/g,' ').replace(/\b\w/g, function(c){return c.toUpperCase();});
+    var href = '/' + path.slice(0, i+1).join('/') + '/';
     if (isLast) {
       li.innerHTML = '<span itemprop="name">' + name + '</span><meta itemprop="position" content="' + (i+2) + '">';
+      jsonItems.push({"@type":"ListItem","position":i+2,"name":name});
     } else {
-      var href = '/' + path.slice(0, i+1).join('/') + '/';
       li.innerHTML = '<a itemprop="item" href="' + href + '"><span itemprop="name">' + name + '</span></a><meta itemprop="position" content="' + (i+2) + '">';
+      jsonItems.push({"@type":"ListItem","position":i+2,"name":name,"item":origin+href});
     }
     ol.appendChild(li);
   }
+  var ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":jsonItems});
+  document.head.appendChild(ld);
 })();
 </script>
