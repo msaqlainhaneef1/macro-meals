@@ -269,14 +269,11 @@ AddDefaultCharset UTF-8
 </IfModule>
 
 # ============================================================
-# SEO — Clean URL handling
+# SEO — Clean URLs
 # ============================================================
-<IfModule mod_rewrite.c>
-  # Remove .html extension (example.com/about.html → example.com/about/)
-  RewriteCond %{REQUEST_URI} \.html$
-  RewriteCond %{REQUEST_URI} !^/404\.html$
-  RewriteRule ^(.+)\.html$ /$1/ [R=301,L]
-</IfModule>
+# All pages use directory/index.html structure (e.g., /blog/index.html
+# served as /blog/). DirectoryIndex handles this automatically.
+# No .html extension removal needed — it would break index.html serving.
 
 # ============================================================
 # PERFORMANCE — ETags and Keep-Alive
