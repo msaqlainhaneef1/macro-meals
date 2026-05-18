@@ -1,1 +1,23 @@
-(function(){var form=document.getElementById('contact-form');var formWrap=document.getElementById('form-wrap');var successWrap=document.getElementById('success-wrap');if(!form)return;form.addEventListener('submit',function(e){e.preventDefault();formWrap.style.display='none';successWrap.style.display='block';});var resetLink=document.getElementById('send-another');if(resetLink){resetLink.addEventListener('click',function(e){e.preventDefault();form.reset();formWrap.style.display='block';successWrap.style.display='none';});}})();
+/* ===== CONTACT FORM ===== */
+(function(){
+  var form=document.getElementById('contact-form');
+  var formWrap=document.getElementById('form-wrap');
+  var successWrap=document.getElementById('success-wrap');
+  if(!form)return;
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    formWrap.style.display='none';
+    successWrap.style.display='block';
+  });
+
+  var resetLink=document.getElementById('send-another');
+  if(resetLink){
+    resetLink.addEventListener('click',function(e){
+      e.preventDefault();
+      form.reset();
+      formWrap.style.display='block';
+      successWrap.style.display='none';
+    });
+  }
+})();

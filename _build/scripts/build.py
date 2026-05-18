@@ -151,7 +151,12 @@ def rebrand(text):
     return text
 
 def ensure_script_tags(html):
-    """Ensure site-config.js and scripts-config.js are loaded (handled by ensure_common_scripts now)."""
+    """Ensure site-config.js and scripts-config.js are loaded."""
+    if 'site-config.js' not in html:
+        html = html.replace(
+            '<script src="/js/main.js"></script>',
+            '<script src="/js/site-config.js"></script>\n<script src="/js/scripts-config.js"></script>\n<script src="/js/main.js"></script>'
+        )
     return html
 
 # ---------------------------------------------------------------------------
@@ -243,28 +248,16 @@ def ensure_common_head(html):
         return html
     # Remove old GA4/GTM/verification tags to avoid duplicates
     html = re.sub(r'<script async src="https://www\.googletagmanager\.com/gtag/js\?id=[^"]*"></script>\s*', '', html)
-    html = re.sub(r'<script>\s*window\.dataLayer\s*=\s*window\.dataLayer\s*\|\|\s*\[\];\s*function gtag\(\)\{dataLayer\.push\(arguments\);\}\s*gtag\(\'js\'.*?</script>\s*', '', html, flags=re.DOTALL)
-    html = re.sub(r'<script>\(function\(w,d,s,l,i\)\{w\[l\]=w\[l\]\|\|\[\].*?</script>\s*', '', html, flags=re.DOTALL)
+    html = re.sub(r'<script>\s*window\.dataLayer\s*=.*?</script>\s*', '', html, flags=re.DOTALL)
+    html = re.sub(r'<script>\(function\(w,d,s,l,i\).*?</script>\s*', '', html, flags=re.DOTALL)
     html = re.sub(r'<meta name="google-site-verification"[^>]*/?>\s*', '', html)
-    # Remove old deferred analytics block (will be re-added from component)
-    html = re.sub(r'<script>\s*window\.addEventListener\(\'load\',function\(\)\{setTimeout.*?</script>\s*', '', html, flags=re.DOTALL)
     # Remove old favicon/manifest/theme-color tags (will be re-added from component)
     html = re.sub(r'<link rel="icon"[^>]*/?>\s*', '', html)
     html = re.sub(r'<link rel="apple-touch-icon"[^>]*/?>\s*', '', html)
     html = re.sub(r'<link rel="manifest"[^>]*/?>\s*', '', html)
     html = re.sub(r'<meta name="theme-color"[^>]*/?>\s*', '', html)
-    # Remove old stylesheet links to avoid duplicates (both regular and preload)
+    # Remove old stylesheet links to avoid duplicates
     html = re.sub(r'<link rel="stylesheet" href="/css/style\.css">\s*', '', html)
-    html = re.sub(r'<link rel="preload" as="style" href="/css/style\.css"[^>]*>\s*', '', html)
-    html = re.sub(r'<noscript><link rel="stylesheet" href="/css/style\.css"></noscript>\s*', '', html)
-    # Remove old Google Fonts preload to avoid duplicates
-    html = re.sub(r'<link rel="preload" as="style" href="https://fonts\.googleapis\.com[^>]*>\s*', '', html)
-    html = re.sub(r'<noscript><link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*></noscript>\s*', '', html)
-    html = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>\s*', '', html)
-    # Remove old logo preload
-    html = re.sub(r'<link rel="preload" as="image" href="/img/logo\.svg"[^>]*>\s*', '', html)
-    # Remove old critical CSS to avoid duplicates
-    html = re.sub(r'<style>\s*:root\{--primary.*?</style>\s*', '', html, flags=re.DOTALL)
     # Remove old preconnect/dns-prefetch to avoid duplicates
     html = re.sub(r'<link rel="preconnect"[^>]*>\s*', '', html)
     html = re.sub(r'<link rel="dns-prefetch"[^>]*>\s*', '', html)
@@ -283,10 +276,9 @@ def ensure_common_scripts(html):
     scripts = COMPONENTS.get('scripts.html', '')
     if not scripts:
         return html
-    # Remove old script tags (with or without defer) to avoid duplicates
-    html = re.sub(r'<script\s+(?:defer\s+)?src="/js/site-config\.js"[^>]*></script>\s*', '', html)
-    html = re.sub(r'<script\s+(?:defer\s+)?src="/js/scripts-config\.js"[^>]*></script>\s*', '', html)
-    html = re.sub(r'<script\s+(?:defer\s+)?src="/js/main\.js"[^>]*></script>\s*', '', html)
+    # Only add if site-config.js is not already present
+    if 'site-config.js' in html:
+        return html
     # Inject before </body>
     html = html.replace('</body>', scripts + '\n</body>')
     return html
@@ -386,91 +378,6 @@ def inject_skip_to_content(html):
     html = re.sub(r'<a class="skip-to-content"[^>]*>[^<]*</a>\s*', '', html)
     return html
 
-# Critical CSS — only the minimum needed for above-the-fold rendering
-CRITICAL_CSS = """<style>
-:root{--primary:#10b981;--primary-dark:#059669;--primary-light:#ecfdf5;--text-main:#0f172a;--text-muted:#475569;--text-light:#94a3b8;--bg-page:#f8fafc;--bg-card:#fff;--bg-subtle:#f1f5f9;--border-color:#e2e8f0;--font-heading:'Poppins',sans-serif;--font-body:'Inter',sans-serif;--shadow-sm:0 1px 2px 0 rgba(0,0,0,.05);--radius-sm:8px;--radius-md:12px;--radius-lg:16px;--radius-pill:9999px}
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{-webkit-text-size-adjust:100%;overflow-x:hidden}
-body{font-family:var(--font-body);color:var(--text-main);background:var(--bg-page);line-height:1.6;min-height:100vh;display:flex;flex-direction:column;overflow-x:hidden}
-h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:700;color:var(--text-main)}
-a{color:var(--primary);text-decoration:none}
-img{max-width:100%;height:auto}
-ul,ol{list-style:none}
-.container{max-width:1200px;margin:0 auto;padding:0 1rem}
-.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-.header{background:rgba(255,255,255,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:var(--shadow-sm);position:sticky;top:0;z-index:100;border-bottom:1px solid var(--border-color)}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:.75rem 1rem;max-width:1400px;margin:0 auto}
-.logo{display:flex;align-items:center;gap:.6rem;font-family:var(--font-heading);font-weight:800;font-size:1.2rem;color:var(--text-main);letter-spacing:-.02em}
-.logo-img{height:36px;width:auto}
-.nav-desktop{display:none;gap:.25rem}
-.mobile-toggle{display:flex;background:none;border:none;padding:.5rem;cursor:pointer;color:var(--text-muted)}
-.mobile-toggle svg{width:28px;height:28px}
-.hero{background:var(--text-main);color:#fff;padding:4rem 1rem;text-align:center;position:relative;overflow:hidden}
-.hero h1{color:#fff;font-size:2.25rem;font-weight:800;margin-bottom:1rem;letter-spacing:-.03em;line-height:1.2}
-.breadcrumbs{background:var(--bg-subtle);border-bottom:1px solid var(--border-color);font-size:.82rem}
-.breadcrumbs ol{display:flex;flex-wrap:wrap;align-items:center;list-style:none;padding:.65rem 1.5rem;margin:0 auto;max-width:1200px;gap:0}
-@media(min-width:1200px){.header-inner{display:grid;grid-template-columns:1fr auto 1fr}.nav-desktop{display:flex;justify-self:center;align-items:center}.mobile-toggle,.mobile-nav{display:none!important}}
-</style>"""
-
-def inject_critical_css(html):
-    """Inject critical above-the-fold CSS inline in <head>."""
-    if 'Critical CSS' in html:
-        return html
-    # Add critical CSS right after <meta name="viewport">
-    if '<meta name="viewport"' in html:
-        html = re.sub(
-            r'(<meta name="viewport"[^>]*>)',
-            r'\1\n' + CRITICAL_CSS,
-            html
-        )
-    else:
-        html = html.replace('<head>', '<head>\n' + CRITICAL_CSS)
-    return html
-
-def optimize_images(html):
-    """Add loading=lazy, decoding=async to images; preserve above-the-fold logo."""
-    def add_lazy(match):
-        tag = match.group(0)
-        # Skip images that already have loading attribute
-        if 'loading=' in tag:
-            return tag
-        # Skip above-the-fold logos (header + footer)
-        if 'logo' in tag.lower() or 'favicon' in tag.lower():
-            # Add fetchpriority=high to header logo
-            if 'class="logo-img"' in tag and 'fetchpriority' not in tag:
-                tag = tag.replace('<img ', '<img fetchpriority="high" ')
-            return tag
-        # Add lazy loading and async decoding
-        tag = tag.replace('<img ', '<img loading="lazy" decoding="async" ')
-        return tag
-    html = re.sub(r'<img\s[^>]+>', add_lazy, html)
-    return html
-
-def add_script_defer(html):
-    """Add defer to script tags that don't have async or defer."""
-    def add_defer_attr(match):
-        tag = match.group(0)
-        # Skip scripts that already have defer, async, or are inline
-        if 'defer' in tag or 'async' in tag or 'type="application/ld+json"' in tag:
-            return tag
-        # Only add defer to external scripts (with src=)
-        if 'src=' in tag and '</script>' not in match.group(0):
-            tag = tag.replace('<script ', '<script defer ')
-        return tag
-    # Only match opening script tags with src
-    html = re.sub(r'<script\s+src=[^>]+>', add_defer_attr, html)
-    return html
-
-def remove_old_analytics_blocking(html):
-    """Remove old blocking analytics scripts (now loaded asynchronously via head-common)."""
-    # Remove old blocking GA4 script tags
-    html = re.sub(r'<script async src="https://www\.googletagmanager\.com/gtag/js\?id=[^"]*"></script>\s*', '', html)
-    # Remove old inline gtag config (but keep our new deferred version)
-    html = re.sub(r'<script>\s*window\.dataLayer\s*=\s*window\.dataLayer\s*\|\|\s*\[\];\s*function gtag\(\)\{dataLayer\.push\(arguments\);\}\s*gtag\(\'js\'.*?</script>\s*', '', html, flags=re.DOTALL)
-    # Remove old GTM inline script (but keep our new deferred version)
-    html = re.sub(r'<script>\(function\(w,d,s,l,i\)\{w\[l\]=w\[l\]\|\|\[\];w\[l\]\.push\(\{\'gtm\.start\':\s*new Date\(\)\.getTime\(\),event:\'gtm\.js\'\}\);.*?</script>\s*', '', html, flags=re.DOTALL)
-    return html
-
 def process_html_file(filepath):
     """Apply all transformations to an HTML file."""
     # Skip component files themselves
@@ -499,10 +406,6 @@ def process_html_file(filepath):
     content = inject_cookie_banner(content)
     content = inject_print_styles(content)
     content = inject_gtm_noscript(content)
-    # Performance optimizations
-    content = inject_critical_css(content)
-    content = optimize_images(content)
-    content = add_script_defer(content)
     
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)

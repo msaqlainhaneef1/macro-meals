@@ -1,8 +1,340 @@
-(function(){'use strict';var PAGE_REGISTRY=[{slug:"starbucks-nutrition-calculator",title:"Starbucks Nutrition Calculator",cat:"nutrition",icon:"☕"},{slug:"chipotle-nutrition-calculator",title:"Chipotle Nutrition Calculator",cat:"nutrition",icon:"🌯"},{slug:"wawa-nutrition-calculator",title:"Wawa Nutrition Calculator",cat:"nutrition",icon:"🏪"},{slug:"whataburger-nutrition-calculator",title:"Whataburger Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"mcdonalds-calories-calculator",title:"McDonald's Nutrition Calculator",cat:"nutrition",icon:"🍟"},{slug:"subway-nutrition-calculator",title:"Subway Nutrition Calculator",cat:"nutrition",icon:"🥖"},{slug:"taco-bell-nutrition-calculator",title:"Taco Bell Nutrition Calculator",cat:"nutrition",icon:"🌮"},{slug:"five-guys-nutrition-calculator",title:"Five Guys Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"panda-express-nutrition-calculator",title:"Panda Express Nutrition Calculator",cat:"nutrition",icon:"🥡"},{slug:"qdoba-nutrition-calculator",title:"Qdoba Nutrition Calculator",cat:"nutrition",icon:"🌯"},{slug:"arbys-nutrition-calculator",title:"Arby's Nutrition Calculator",cat:"nutrition",icon:"🥩"},{slug:"dutch-bros-nutrition-calculator",title:"Dutch Bros Nutrition Calculator",cat:"nutrition",icon:"☕"},{slug:"sheetz-nutrition-calculator",title:"Sheetz Nutrition Calculator",cat:"nutrition",icon:"🏪"},{slug:"papa-johns-nutrition-calculator",title:"Papa John's Nutrition Calculator",cat:"nutrition",icon:"🍕"},{slug:"mod-pizza-calories-calculator",title:"MOD Pizza Nutrition Calculator",cat:"nutrition",icon:"🍕"},{slug:"wingstop-calories-calculator",title:"Wingstop Calories Calculator",cat:"nutrition",icon:"🍗"},{slug:"blaze-pizza-calories-calculator",title:"Blaze Pizza Nutrition Calculator",cat:"nutrition",icon:"🍕"},{slug:"burger-king-calories-calculator",title:"Burger King Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"cupbop-nutrition-calculator",title:"Cupbop Nutrition Calculator",cat:"nutrition",icon:"🍜"},{slug:"salad-master-nutrition-calculator",title:"Salad Master Nutrition Calculator",cat:"nutrition",icon:"🥗"},{slug:"cava-nutrition-calculator",title:"CAVA Nutrition Calculator",cat:"nutrition",icon:"🥙"},{slug:"naked-juice-nutrition-calculator",title:"Naked Juice Nutrition Calculator",cat:"nutrition",icon:"🥤"},{slug:"jersey-mikes-calories-calculator",title:"Jersey Mike's Nutrition Calculator",cat:"nutrition",icon:"🥖"},{slug:"cafe-rio-calories-calculator",title:"Cafe Rio Nutrition Calculator",cat:"nutrition",icon:"🌯"},{slug:"bibibop-calories-calculator",title:"BIBIBOP Nutrition Calculator",cat:"nutrition",icon:"🍚"},{slug:"carls-jr-calories-calculator",title:"Carl's Jr Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"chilis-calories-calculator",title:"Chili's Nutrition Calculator",cat:"nutrition",icon:"🌶️"},{slug:"applebees-nutrition-calculator",title:"Applebee's Nutrition Calculator",cat:"nutrition",icon:"🍎"},{slug:"daves-hot-chicken-nutrition-calculator",title:"Dave's Hot Chicken Nutrition Calculator",cat:"nutrition",icon:"🍗"},{slug:"albaik-nutrition-calculator",title:"Al Baik Nutrition Calculator",cat:"nutrition",icon:"🍗"},{slug:"bolay-nutrition-calculator",title:"Bolay Nutrition Calculator",cat:"nutrition",icon:"🥗"},{slug:"bolthouse-farms-nutrition-calculator",title:"Bolthouse Farms Nutrition Calculator",cat:"nutrition",icon:"🥤"},{slug:"brassica-nutrition-calculator",title:"Brassica Nutrition Calculator",cat:"nutrition",icon:"🥗"},{slug:"black-rock-coffee-nutrition-calculator",title:"Black Rock Coffee Nutrition Calculator",cat:"nutrition",icon:"☕"},{slug:"blank-street-coffee-calories-calculator",title:"Blank Street Coffee Nutrition Calculator",cat:"nutrition",icon:"☕"},{slug:"dig-nutrition-calculator",title:"Dig Nutrition Calculator",cat:"nutrition",icon:"🥗"},{slug:"smoothie-king-nutrition-calculator",title:"Smoothie King Nutrition Calculator",cat:"nutrition",icon:"🥤"},{slug:"sonic-drive-in-nutrition-calculator",title:"Sonic Drive-In Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"wendys-nutrition-calculator",title:"Wendy's Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"jimmy-johns-calories-calculator",title:"Jimmy John's Nutrition Calculator",cat:"nutrition",icon:"🥖"},{slug:"raising-canes-calculator",title:"Raising Cane's Nutrition Calculator",cat:"nutrition",icon:"🍗"},{slug:"tropical-smoothie-cafe-nutrition-calculator",title:"Tropical Smoothie Cafe Nutrition Calculator",cat:"nutrition",icon:"🥤"},{slug:"sweetgreen-nutrition-calculator",title:"Sweetgreen Nutrition Calculator",cat:"nutrition",icon:"🥗"},{slug:"nandos-nutrition-calculator",title:"Nando's Nutrition Calculator",cat:"nutrition",icon:"🍗"},{slug:"mellow-mushroom-nutrition-calculator",title:"Mellow Mushroom Nutrition Calculator",cat:"nutrition",icon:"🍕"},{slug:"mucho-burrito-nutrition-calculator",title:"Mucho Burrito Nutrition Calculator",cat:"nutrition",icon:"🌯"},{slug:"nifty-fifty-nutrition-calculator",title:"Nifty Fifty Nutrition Calculator",cat:"nutrition",icon:"🍔"},{slug:"jamba-juice-nutrition-calculator",title:"Jamba Juice Nutrition Calculator",cat:"nutrition",icon:"🥤"},{slug:"via-313-nutrition-calculator",title:"Via 313 Nutrition Calculator",cat:"nutrition",icon:"🍕"},{slug:"zao-asian-cafe-nutrition-calculator",title:"Zao Asian Cafe Nutrition Calculator",cat:"nutrition",icon:"🍜"},{slug:"taim-mediterranean-kitchen-nutrition-calculator",title:"Taim Mediterranean Kitchen Nutrition Calculator",cat:"nutrition",icon:"🥙"},{slug:"outback-steakhouse-menu",title:"Outback Steakhouse Menu",cat:"nutrition",icon:"🥩"},{slug:"chipotle-menu",title:"Chipotle Menu",cat:"menu",icon:"🌯"},{slug:"dutch-bros-menu",title:"Dutch Bros Menu",cat:"menu",icon:"☕"},{slug:"five-guys-menu",title:"Five Guys Menu",cat:"menu",icon:"🍔"},{slug:"starbucks-menu",title:"Starbucks Menu",cat:"menu",icon:"☕"},{slug:"taco-bell-menu",title:"Taco Bell Menu",cat:"menu",icon:"🌮"},{slug:"panda-express-menu",title:"Panda Express Menu",cat:"menu",icon:"🥡"},{slug:"qdoba-menu",title:"Qdoba Menu",cat:"menu",icon:"🌯"},{slug:"sheetz-menu",title:"Sheetz Menu",cat:"menu",icon:"🏪"},{slug:"wawa-menu",title:"Wawa Menu",cat:"menu",icon:"🏪"},{slug:"whataburger-menu",title:"Whataburger Menu",cat:"menu",icon:"🍔"},{slug:"sushi-menu",title:"Sushi Menu",cat:"menu",icon:"🍣"},{slug:"vitamin-a-calculator",title:"Vitamin A Calculator",cat:"vitamins",icon:"💊"},{slug:"vitamin-b-calculator",title:"Vitamin B Calculator",cat:"vitamins",icon:"💊"},{slug:"vitamin-c-calculator",title:"Vitamin C Calculator",cat:"vitamins",icon:"🍊"},{slug:"vitamin-d-calculator",title:"Vitamin D Calculator",cat:"vitamins",icon:"☀️"},{slug:"vitamin-e-calculator",title:"Vitamin E Calculator",cat:"vitamins",icon:"💊"},{slug:"vitamin-k-calculator",title:"Vitamin K Calculator",cat:"vitamins",icon:"💊"},{slug:"cholesterol-ratio-calculator",title:"Cholesterol Ratio Calculator",cat:"vitamins",icon:"🩺"},{slug:"ldl-cholesterol-calculator",title:"LDL Cholesterol Calculator",cat:"vitamins",icon:"🩺"},{slug:"bmi-calculator",title:"BMI Calculator",cat:"body",icon:"⚖️"},{slug:"bmi-nih-calculator",title:"BMI NIH Calculator",cat:"body",icon:"⚖️"},{slug:"bmr-calculator",title:"BMR Calculator",cat:"body",icon:"🔥"},{slug:"body-fat-calculator",title:"Body Fat Calculator",cat:"body",icon:"📊"},{slug:"body-shape-calculator",title:"Body Shape Calculator",cat:"body",icon:"📐"},{slug:"ffmi-calculator",title:"FFMI Calculator",cat:"body",icon:"💪"},{slug:"bsa-calculator",title:"BSA Calculator",cat:"body",icon:"📏"},{slug:"bri-calculator",title:"BRI Calculator",cat:"body",icon:"📊"},{slug:"absi-calculator",title:"ABSI Calculator",cat:"body",icon:"📊"},{slug:"army-body-fat-calculator",title:"Army Body Fat Calculator",cat:"body",icon:"🎖️"},{slug:"us-marine-body-fat-calculator",title:"US Marine Body Fat Calculator",cat:"body",icon:"🎖️"},{slug:"anorexic-bmi-calculator",title:"Anorexic BMI Calculator",cat:"body",icon:"⚖️"},{slug:"face-shape-calculator",title:"Face Shape Calculator",cat:"body",icon:"😊"},{slug:"ideal-body-weight-calculator",title:"Ideal Body Weight Calculator",cat:"body",icon:"⚖️"},{slug:"lean-body-mass-calculator",title:"Lean Body Mass Calculator",cat:"body",icon:"💪"},{slug:"overweight-calculator",title:"Overweight Calculator",cat:"body",icon:"⚖️"},{slug:"waist-to-hip-ratio-calculator",title:"Waist to Hip Ratio Calculator",cat:"body",icon:"📏"},{slug:"skinfold-body-fat-calculator",title:"Skinfold Body Fat Calculator",cat:"body",icon:"📊"},{slug:"height-calculator",title:"Height Calculator",cat:"body",icon:"📏"},{slug:"bedridden-patient-height-calculator",title:"Bedridden Patient Height Calculator",cat:"body",icon:"🏥"},{slug:"baby-percentile-calculator",title:"Baby Percentile Calculator",cat:"body",icon:"👶"},{slug:"gfr-calculator",title:"GFR Calculator",cat:"body",icon:"🩺"},{slug:"karvonen-formula-calculator",title:"Karvonen Formula Calculator",cat:"body",icon:"❤️"},{slug:"one-rep-max-calculator",title:"One Rep Max Calculator",cat:"body",icon:"🏋️"},{slug:"tdee-calculator",title:"TDEE Calculator",cat:"diet",icon:"⚡"},{slug:"calorie-deficit-calculator",title:"Calorie Deficit Calculator",cat:"diet",icon:"📉"},{slug:"protein-calculator",title:"Protein Calculator",cat:"diet",icon:"🥩"},{slug:"carbohydrate-calculator",title:"Carbohydrate Calculator",cat:"diet",icon:"🍞"},{slug:"keto-macro-calculator",title:"Keto Macro Calculator",cat:"diet",icon:"🥑"},{slug:"macro-calculator-for-weight-loss",title:"Macro Calculator for Weight Loss",cat:"diet",icon:"📊"},{slug:"water-fasting-calculator",title:"Water Fasting Calculator",cat:"diet",icon:"💧"},{slug:"protein-molecular-weight-calculator",title:"Protein Molecular Weight Calculator",cat:"diet",icon:"🔬"},{slug:"steps-to-calories-calculator",title:"Steps to Calories Calculator",cat:"diet",icon:"👣"},{slug:"steps-to-miles-calculator",title:"Steps to Miles Calculator",cat:"diet",icon:"👣"},{slug:"kj-to-calories-converter",title:"kJ to Calories Converter",cat:"diet",icon:"🔄"},{slug:"maintenance-fluid-calculator",title:"Maintenance Fluid Calculator",cat:"diet",icon:"💧"},{slug:"due-date-calculator",title:"Due Date Calculator",cat:"pregnancy",icon:"📅"},{slug:"conception-calculator",title:"Conception Calculator",cat:"pregnancy",icon:"📅"},{slug:"ovulation-calculator",title:"Ovulation Calculator",cat:"pregnancy",icon:"📅"},{slug:"pregnancy-calculator",title:"Pregnancy Calculator",cat:"pregnancy",icon:"🤰"},{slug:"pregnancy-weight-gain-calculator",title:"Pregnancy Weight Gain Calculator",cat:"pregnancy",icon:"⚖️"},{slug:"menses-calculator",title:"Menses Calculator",cat:"pregnancy",icon:"📅"},{slug:"ivf-success-rate-calculator",title:"IVF Success Rate Calculator",cat:"pregnancy",icon:"🏥"},];var CAT_LABELS={nutrition:"Nutrition Calculators",menu:"Menu",vitamins:"Vitamins & Micronutrients",body:"Body Composition & Health",diet:"Diet & Macro Calculators",pregnancy:"Pregnancy & Specialty"};var CAT_ORDER=["nutrition","menu","vitamins","body","diet","pregnancy"];window.PAGE_REGISTRY=PAGE_REGISTRY;window.CAT_LABELS=CAT_LABELS;function buildNavigation(){var header=document.querySelector('.header');if(!header)return;CAT_ORDER.forEach(function(cat){var dropEl=document.getElementById('dropdown-'+cat);if(!dropEl)return;var inner=dropEl.querySelector('.nav-dropdown-inner');if(!inner)return;inner.innerHTML='';PAGE_REGISTRY.filter(function(p){return p.cat===cat;}).forEach(function(p){var a=document.createElement('a');a.href='/'+p.slug+'/';a.textContent=p.title;inner.appendChild(a);});});var mobileNav=document.getElementById('mobile-nav');if(mobileNav){mobileNav.innerHTML='';var wrapper=document.createElement('div');CAT_ORDER.forEach(function(cat){var pages=PAGE_REGISTRY.filter(function(p){return p.cat===cat;});if(!pages.length)return;var btn=document.createElement('button');btn.className='mobile-cat-btn';btn.innerHTML=CAT_LABELS[cat]+' <span class="arrow">&#9660;</span>';var linksDiv=document.createElement('div');linksDiv.className='mobile-cat-links';pages.forEach(function(p){var a=document.createElement('a');a.href='/'+p.slug+'/';a.textContent=p.title;linksDiv.appendChild(a);});wrapper.appendChild(btn);wrapper.appendChild(linksDiv);});mobileNav.appendChild(wrapper);}}
-function initDesktopNav(){var btns=document.querySelectorAll('.nav-btn[data-cat]');var dropdowns=document.querySelectorAll('.nav-dropdown');btns.forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();var cat=btn.getAttribute('data-cat');var dd=document.getElementById('dropdown-'+cat);var isOpen=dd&&dd.classList.contains('show');dropdowns.forEach(function(d){d.classList.remove('show');});btns.forEach(function(b){b.classList.remove('active');});if(!isOpen&&dd){dd.classList.add('show');btn.classList.add('active');}});});document.addEventListener('click',function(){dropdowns.forEach(function(d){d.classList.remove('show');});btns.forEach(function(b){b.classList.remove('active');});});}
-function initMobileNav(){var toggle=document.getElementById('mobile-toggle');var nav=document.getElementById('mobile-nav');if(toggle&&nav){toggle.addEventListener('click',function(){nav.classList.toggle('show');});}
-document.addEventListener('click',function(e){if(nav&&!nav.contains(e.target)&&e.target!==toggle&&!toggle.contains(e.target)){nav.classList.remove('show');}});if(nav){nav.addEventListener('click',function(e){if(e.target.classList.contains('mobile-cat-btn')||e.target.closest('.mobile-cat-btn')){var btn=e.target.classList.contains('mobile-cat-btn')?e.target:e.target.closest('.mobile-cat-btn');var links=btn.nextElementSibling;if(links)links.classList.toggle('show');btn.classList.toggle('active');}});}}
-function initFAQ(){document.querySelectorAll('.faq-q').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.closest('.faq-item');if(item)item.classList.toggle('open');});});}
-function buildRelatedLinks(){var sections=document.querySelectorAll('.related-section');sections.forEach(function(sec){var grid=sec.querySelector('.related-grid');if(!grid)return;var links=grid.querySelectorAll('.related-card');links.forEach(function(link){var iconSpan=link.querySelector('.rc-icon');if(!iconSpan)return;var href=link.getAttribute('href');if(!href)return;var slug=href.replace(/^\/|\/$/g,'');var page=PAGE_REGISTRY.find(function(p){return p.slug===slug;});if(page&&page.icon){iconSpan.textContent=page.icon;}});});}
-function applyBranding(){if(typeof SITE_CONFIG==='undefined')return;document.querySelectorAll('.logo').forEach(function(el){var iconDiv=el.querySelector('.logo-icon');if(iconDiv)iconDiv.textContent=SITE_CONFIG.nameAbbr;var textNodes=[];el.childNodes.forEach(function(n){if(n.nodeType===3&&n.textContent.trim())textNodes.push(n);});if(textNodes.length){textNodes[textNodes.length-1].textContent=SITE_CONFIG.name;}});document.querySelectorAll('.footer-bottom').forEach(function(el){el.innerHTML='&copy; '+SITE_CONFIG.year+' '+SITE_CONFIG.name+' &mdash; All rights reserved.';});}
-document.addEventListener('DOMContentLoaded',function(){buildNavigation();initDesktopNav();initMobileNav();initFAQ();buildRelatedLinks();applyBranding();});})();
+/**
+ * Macro & Meals - Main JavaScript
+ * ================================
+ * Navigation, internal linking, FAQ toggles, and shared UI logic.
+ * Loaded on every page via <script src="/js/main.js"></script>
+ */
+
+(function () {
+  'use strict';
+
+  /* ================================================================
+     PAGE REGISTRY — master list of every page on the site.
+     The internal-linking system, nav builder, and sitemap
+     generator all read from this single array.
+     To add a new page: just add an entry here.
+     ================================================================ */
+  var PAGE_REGISTRY = [
+    // ── Nutrition / Restaurant Calculators ────────────────
+    { slug: "starbucks-nutrition-calculator", title: "Starbucks Nutrition Calculator", cat: "nutrition", icon: "☕" },
+    { slug: "chipotle-nutrition-calculator", title: "Chipotle Nutrition Calculator", cat: "nutrition", icon: "🌯" },
+    { slug: "wawa-nutrition-calculator", title: "Wawa Nutrition Calculator", cat: "nutrition", icon: "🏪" },
+    { slug: "whataburger-nutrition-calculator", title: "Whataburger Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "mcdonalds-calories-calculator", title: "McDonald's Nutrition Calculator", cat: "nutrition", icon: "🍟" },
+    { slug: "subway-nutrition-calculator", title: "Subway Nutrition Calculator", cat: "nutrition", icon: "🥖" },
+    { slug: "taco-bell-nutrition-calculator", title: "Taco Bell Nutrition Calculator", cat: "nutrition", icon: "🌮" },
+    { slug: "five-guys-nutrition-calculator", title: "Five Guys Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "panda-express-nutrition-calculator", title: "Panda Express Nutrition Calculator", cat: "nutrition", icon: "🥡" },
+    { slug: "qdoba-nutrition-calculator", title: "Qdoba Nutrition Calculator", cat: "nutrition", icon: "🌯" },
+    { slug: "arbys-nutrition-calculator", title: "Arby's Nutrition Calculator", cat: "nutrition", icon: "🥩" },
+    { slug: "dutch-bros-nutrition-calculator", title: "Dutch Bros Nutrition Calculator", cat: "nutrition", icon: "☕" },
+    { slug: "sheetz-nutrition-calculator", title: "Sheetz Nutrition Calculator", cat: "nutrition", icon: "🏪" },
+    { slug: "papa-johns-nutrition-calculator", title: "Papa John's Nutrition Calculator", cat: "nutrition", icon: "🍕" },
+    { slug: "mod-pizza-calories-calculator", title: "MOD Pizza Nutrition Calculator", cat: "nutrition", icon: "🍕" },
+    { slug: "wingstop-calories-calculator", title: "Wingstop Calories Calculator", cat: "nutrition", icon: "🍗" },
+    { slug: "blaze-pizza-calories-calculator", title: "Blaze Pizza Nutrition Calculator", cat: "nutrition", icon: "🍕" },
+    { slug: "burger-king-calories-calculator", title: "Burger King Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "cupbop-nutrition-calculator", title: "Cupbop Nutrition Calculator", cat: "nutrition", icon: "🍜" },
+    { slug: "salad-master-nutrition-calculator", title: "Salad Master Nutrition Calculator", cat: "nutrition", icon: "🥗" },
+    { slug: "cava-nutrition-calculator", title: "CAVA Nutrition Calculator", cat: "nutrition", icon: "🥙" },
+    { slug: "naked-juice-nutrition-calculator", title: "Naked Juice Nutrition Calculator", cat: "nutrition", icon: "🥤" },
+    { slug: "jersey-mikes-calories-calculator", title: "Jersey Mike's Nutrition Calculator", cat: "nutrition", icon: "🥖" },
+    { slug: "cafe-rio-calories-calculator", title: "Cafe Rio Nutrition Calculator", cat: "nutrition", icon: "🌯" },
+    { slug: "bibibop-calories-calculator", title: "BIBIBOP Nutrition Calculator", cat: "nutrition", icon: "🍚" },
+    { slug: "carls-jr-calories-calculator", title: "Carl's Jr Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "chilis-calories-calculator", title: "Chili's Nutrition Calculator", cat: "nutrition", icon: "🌶️" },
+    { slug: "applebees-nutrition-calculator", title: "Applebee's Nutrition Calculator", cat: "nutrition", icon: "🍎" },
+    { slug: "daves-hot-chicken-nutrition-calculator", title: "Dave's Hot Chicken Nutrition Calculator", cat: "nutrition", icon: "🍗" },
+    { slug: "albaik-nutrition-calculator", title: "Al Baik Nutrition Calculator", cat: "nutrition", icon: "🍗" },
+    { slug: "bolay-nutrition-calculator", title: "Bolay Nutrition Calculator", cat: "nutrition", icon: "🥗" },
+    { slug: "bolthouse-farms-nutrition-calculator", title: "Bolthouse Farms Nutrition Calculator", cat: "nutrition", icon: "🥤" },
+    { slug: "brassica-nutrition-calculator", title: "Brassica Nutrition Calculator", cat: "nutrition", icon: "🥗" },
+    { slug: "black-rock-coffee-nutrition-calculator", title: "Black Rock Coffee Nutrition Calculator", cat: "nutrition", icon: "☕" },
+    { slug: "blank-street-coffee-calories-calculator", title: "Blank Street Coffee Nutrition Calculator", cat: "nutrition", icon: "☕" },
+    { slug: "dig-nutrition-calculator", title: "Dig Nutrition Calculator", cat: "nutrition", icon: "🥗" },
+    { slug: "smoothie-king-nutrition-calculator", title: "Smoothie King Nutrition Calculator", cat: "nutrition", icon: "🥤" },
+    { slug: "sonic-drive-in-nutrition-calculator", title: "Sonic Drive-In Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "wendys-nutrition-calculator", title: "Wendy's Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "jimmy-johns-calories-calculator", title: "Jimmy John's Nutrition Calculator", cat: "nutrition", icon: "🥖" },
+    { slug: "raising-canes-calculator", title: "Raising Cane's Nutrition Calculator", cat: "nutrition", icon: "🍗" },
+    { slug: "tropical-smoothie-cafe-nutrition-calculator", title: "Tropical Smoothie Cafe Nutrition Calculator", cat: "nutrition", icon: "🥤" },
+    { slug: "sweetgreen-nutrition-calculator", title: "Sweetgreen Nutrition Calculator", cat: "nutrition", icon: "🥗" },
+    { slug: "nandos-nutrition-calculator", title: "Nando's Nutrition Calculator", cat: "nutrition", icon: "🍗" },
+    { slug: "mellow-mushroom-nutrition-calculator", title: "Mellow Mushroom Nutrition Calculator", cat: "nutrition", icon: "🍕" },
+    { slug: "mucho-burrito-nutrition-calculator", title: "Mucho Burrito Nutrition Calculator", cat: "nutrition", icon: "🌯" },
+    { slug: "nifty-fifty-nutrition-calculator", title: "Nifty Fifty Nutrition Calculator", cat: "nutrition", icon: "🍔" },
+    { slug: "jamba-juice-nutrition-calculator", title: "Jamba Juice Nutrition Calculator", cat: "nutrition", icon: "🥤" },
+    { slug: "via-313-nutrition-calculator", title: "Via 313 Nutrition Calculator", cat: "nutrition", icon: "🍕" },
+    { slug: "zao-asian-cafe-nutrition-calculator", title: "Zao Asian Cafe Nutrition Calculator", cat: "nutrition", icon: "🍜" },
+    { slug: "taim-mediterranean-kitchen-nutrition-calculator", title: "Taim Mediterranean Kitchen Nutrition Calculator", cat: "nutrition", icon: "🥙" },
+    { slug: "outback-steakhouse-menu", title: "Outback Steakhouse Menu", cat: "nutrition", icon: "🥩" },
+
+    // ── Menu Pages ────────────────────────────────────────
+    { slug: "chipotle-menu", title: "Chipotle Menu", cat: "menu", icon: "🌯" },
+    { slug: "dutch-bros-menu", title: "Dutch Bros Menu", cat: "menu", icon: "☕" },
+    { slug: "five-guys-menu", title: "Five Guys Menu", cat: "menu", icon: "🍔" },
+    { slug: "starbucks-menu", title: "Starbucks Menu", cat: "menu", icon: "☕" },
+    { slug: "taco-bell-menu", title: "Taco Bell Menu", cat: "menu", icon: "🌮" },
+    { slug: "panda-express-menu", title: "Panda Express Menu", cat: "menu", icon: "🥡" },
+    { slug: "qdoba-menu", title: "Qdoba Menu", cat: "menu", icon: "🌯" },
+    { slug: "sheetz-menu", title: "Sheetz Menu", cat: "menu", icon: "🏪" },
+    { slug: "wawa-menu", title: "Wawa Menu", cat: "menu", icon: "🏪" },
+    { slug: "whataburger-menu", title: "Whataburger Menu", cat: "menu", icon: "🍔" },
+    { slug: "sushi-menu", title: "Sushi Menu", cat: "menu", icon: "🍣" },
+
+    // ── Vitamins & Micronutrients ─────────────────────────
+    { slug: "vitamin-a-calculator", title: "Vitamin A Calculator", cat: "vitamins", icon: "💊" },
+    { slug: "vitamin-b-calculator", title: "Vitamin B Calculator", cat: "vitamins", icon: "💊" },
+    { slug: "vitamin-c-calculator", title: "Vitamin C Calculator", cat: "vitamins", icon: "🍊" },
+    { slug: "vitamin-d-calculator", title: "Vitamin D Calculator", cat: "vitamins", icon: "☀️" },
+    { slug: "vitamin-e-calculator", title: "Vitamin E Calculator", cat: "vitamins", icon: "💊" },
+    { slug: "vitamin-k-calculator", title: "Vitamin K Calculator", cat: "vitamins", icon: "💊" },
+    { slug: "cholesterol-ratio-calculator", title: "Cholesterol Ratio Calculator", cat: "vitamins", icon: "🩺" },
+    { slug: "ldl-cholesterol-calculator", title: "LDL Cholesterol Calculator", cat: "vitamins", icon: "🩺" },
+
+    // ── Body Composition & Health ─────────────────────────
+    { slug: "bmi-calculator", title: "BMI Calculator", cat: "body", icon: "⚖️" },
+    { slug: "bmi-nih-calculator", title: "BMI NIH Calculator", cat: "body", icon: "⚖️" },
+    { slug: "bmr-calculator", title: "BMR Calculator", cat: "body", icon: "🔥" },
+    { slug: "body-fat-calculator", title: "Body Fat Calculator", cat: "body", icon: "📊" },
+    { slug: "body-shape-calculator", title: "Body Shape Calculator", cat: "body", icon: "📐" },
+    { slug: "ffmi-calculator", title: "FFMI Calculator", cat: "body", icon: "💪" },
+    { slug: "bsa-calculator", title: "BSA Calculator", cat: "body", icon: "📏" },
+    { slug: "bri-calculator", title: "BRI Calculator", cat: "body", icon: "📊" },
+    { slug: "absi-calculator", title: "ABSI Calculator", cat: "body", icon: "📊" },
+    { slug: "army-body-fat-calculator", title: "Army Body Fat Calculator", cat: "body", icon: "🎖️" },
+    { slug: "us-marine-body-fat-calculator", title: "US Marine Body Fat Calculator", cat: "body", icon: "🎖️" },
+    { slug: "anorexic-bmi-calculator", title: "Anorexic BMI Calculator", cat: "body", icon: "⚖️" },
+    { slug: "face-shape-calculator", title: "Face Shape Calculator", cat: "body", icon: "😊" },
+    { slug: "ideal-body-weight-calculator", title: "Ideal Body Weight Calculator", cat: "body", icon: "⚖️" },
+    { slug: "lean-body-mass-calculator", title: "Lean Body Mass Calculator", cat: "body", icon: "💪" },
+    { slug: "overweight-calculator", title: "Overweight Calculator", cat: "body", icon: "⚖️" },
+    { slug: "waist-to-hip-ratio-calculator", title: "Waist to Hip Ratio Calculator", cat: "body", icon: "📏" },
+    { slug: "skinfold-body-fat-calculator", title: "Skinfold Body Fat Calculator", cat: "body", icon: "📊" },
+    { slug: "height-calculator", title: "Height Calculator", cat: "body", icon: "📏" },
+    { slug: "bedridden-patient-height-calculator", title: "Bedridden Patient Height Calculator", cat: "body", icon: "🏥" },
+    { slug: "baby-percentile-calculator", title: "Baby Percentile Calculator", cat: "body", icon: "👶" },
+    { slug: "gfr-calculator", title: "GFR Calculator", cat: "body", icon: "🩺" },
+    { slug: "karvonen-formula-calculator", title: "Karvonen Formula Calculator", cat: "body", icon: "❤️" },
+    { slug: "one-rep-max-calculator", title: "One Rep Max Calculator", cat: "body", icon: "🏋️" },
+
+    // ── Diet & Macro Calculators ──────────────────────────
+    { slug: "tdee-calculator", title: "TDEE Calculator", cat: "diet", icon: "⚡" },
+    { slug: "calorie-deficit-calculator", title: "Calorie Deficit Calculator", cat: "diet", icon: "📉" },
+    { slug: "protein-calculator", title: "Protein Calculator", cat: "diet", icon: "🥩" },
+    { slug: "carbohydrate-calculator", title: "Carbohydrate Calculator", cat: "diet", icon: "🍞" },
+    { slug: "keto-macro-calculator", title: "Keto Macro Calculator", cat: "diet", icon: "🥑" },
+    { slug: "macro-calculator-for-weight-loss", title: "Macro Calculator for Weight Loss", cat: "diet", icon: "📊" },
+    { slug: "water-fasting-calculator", title: "Water Fasting Calculator", cat: "diet", icon: "💧" },
+    { slug: "protein-molecular-weight-calculator", title: "Protein Molecular Weight Calculator", cat: "diet", icon: "🔬" },
+    { slug: "steps-to-calories-calculator", title: "Steps to Calories Calculator", cat: "diet", icon: "👣" },
+    { slug: "steps-to-miles-calculator", title: "Steps to Miles Calculator", cat: "diet", icon: "👣" },
+    { slug: "kj-to-calories-converter", title: "kJ to Calories Converter", cat: "diet", icon: "🔄" },
+    { slug: "maintenance-fluid-calculator", title: "Maintenance Fluid Calculator", cat: "diet", icon: "💧" },
+
+    // ── Pregnancy & Specialty ─────────────────────────────
+    { slug: "due-date-calculator", title: "Due Date Calculator", cat: "pregnancy", icon: "📅" },
+    { slug: "conception-calculator", title: "Conception Calculator", cat: "pregnancy", icon: "📅" },
+    { slug: "ovulation-calculator", title: "Ovulation Calculator", cat: "pregnancy", icon: "📅" },
+    { slug: "pregnancy-calculator", title: "Pregnancy Calculator", cat: "pregnancy", icon: "🤰" },
+    { slug: "pregnancy-weight-gain-calculator", title: "Pregnancy Weight Gain Calculator", cat: "pregnancy", icon: "⚖️" },
+    { slug: "menses-calculator", title: "Menses Calculator", cat: "pregnancy", icon: "📅" },
+    { slug: "ivf-success-rate-calculator", title: "IVF Success Rate Calculator", cat: "pregnancy", icon: "🏥" },
+  ];
+
+  /* ================================================================
+     CATEGORY LABELS (for nav headings)
+     ================================================================ */
+  var CAT_LABELS = {
+    nutrition: "Nutrition Calculators",
+    menu: "Menu",
+    vitamins: "Vitamins & Micronutrients",
+    body: "Body Composition & Health",
+    diet: "Diet & Macro Calculators",
+    pregnancy: "Pregnancy & Specialty"
+  };
+  var CAT_ORDER = ["nutrition", "menu", "vitamins", "body", "diet", "pregnancy"];
+
+  /* ================================================================
+     EXPOSE PAGE_REGISTRY globally for sitemap / other scripts
+     ================================================================ */
+  window.PAGE_REGISTRY = PAGE_REGISTRY;
+  window.CAT_LABELS = CAT_LABELS;
+
+  /* ================================================================
+     NAVIGATION BUILDER — auto-generates desktop & mobile nav
+     from PAGE_REGISTRY so adding a page = 1 line of config
+     ================================================================ */
+  function buildNavigation() {
+    var header = document.querySelector('.header');
+    if (!header) return;
+
+    // Build desktop dropdown content
+    CAT_ORDER.forEach(function (cat) {
+      var dropEl = document.getElementById('dropdown-' + cat);
+      if (!dropEl) return;
+      var inner = dropEl.querySelector('.nav-dropdown-inner');
+      if (!inner) return;
+      inner.innerHTML = '';
+      PAGE_REGISTRY.filter(function (p) { return p.cat === cat; }).forEach(function (p) {
+        var a = document.createElement('a');
+        a.href = '/' + p.slug + '/';
+        a.textContent = p.title;
+        inner.appendChild(a);
+      });
+    });
+
+    // Build mobile nav content
+    var mobileNav = document.getElementById('mobile-nav');
+    if (mobileNav) {
+      mobileNav.innerHTML = '';
+      var wrapper = document.createElement('div');
+      CAT_ORDER.forEach(function (cat) {
+        var pages = PAGE_REGISTRY.filter(function (p) { return p.cat === cat; });
+        if (!pages.length) return;
+        var btn = document.createElement('button');
+        btn.className = 'mobile-cat-btn';
+        btn.innerHTML = CAT_LABELS[cat] + ' <span class="arrow">&#9660;</span>';
+        var linksDiv = document.createElement('div');
+        linksDiv.className = 'mobile-cat-links';
+        pages.forEach(function (p) {
+          var a = document.createElement('a');
+          a.href = '/' + p.slug + '/';
+          a.textContent = p.title;
+          linksDiv.appendChild(a);
+        });
+        wrapper.appendChild(btn);
+        wrapper.appendChild(linksDiv);
+      });
+      mobileNav.appendChild(wrapper);
+    }
+  }
+
+  /* ================================================================
+     DESKTOP NAV TOGGLE
+     ================================================================ */
+  function initDesktopNav() {
+    var btns = document.querySelectorAll('.nav-btn[data-cat]');
+    var dropdowns = document.querySelectorAll('.nav-dropdown');
+    btns.forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var cat = btn.getAttribute('data-cat');
+        var dd = document.getElementById('dropdown-' + cat);
+        var isOpen = dd && dd.classList.contains('show');
+        // close all
+        dropdowns.forEach(function (d) { d.classList.remove('show'); });
+        btns.forEach(function (b) { b.classList.remove('active'); });
+        if (!isOpen && dd) {
+          dd.classList.add('show');
+          btn.classList.add('active');
+        }
+      });
+    });
+    document.addEventListener('click', function () {
+      dropdowns.forEach(function (d) { d.classList.remove('show'); });
+      btns.forEach(function (b) { b.classList.remove('active'); });
+    });
+  }
+
+  /* ================================================================
+     MOBILE NAV TOGGLE
+     ================================================================ */
+  function initMobileNav() {
+    var toggle = document.getElementById('mobile-toggle');
+    var nav = document.getElementById('mobile-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        nav.classList.toggle('show');
+      });
+    }
+    document.addEventListener('click', function (e) {
+      if (nav && !nav.contains(e.target) && e.target !== toggle && !toggle.contains(e.target)) {
+        nav.classList.remove('show');
+      }
+    });
+    // category accordion
+    if (nav) {
+      nav.addEventListener('click', function (e) {
+        if (e.target.classList.contains('mobile-cat-btn') || e.target.closest('.mobile-cat-btn')) {
+          var btn = e.target.classList.contains('mobile-cat-btn') ? e.target : e.target.closest('.mobile-cat-btn');
+          var links = btn.nextElementSibling;
+          if (links) links.classList.toggle('show');
+          btn.classList.toggle('active');
+        }
+      });
+    }
+  }
+
+  /* ================================================================
+     FAQ ACCORDION
+     ================================================================ */
+  function initFAQ() {
+    document.querySelectorAll('.faq-q').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var item = btn.closest('.faq-item');
+        if (item) item.classList.toggle('open');
+      });
+    });
+  }
+
+  /* ================================================================
+     INTERNAL LINKING — auto-generate "Related Calculators"
+     sections using actual emoji icons (not unicode escapes)
+     ================================================================ */
+  function buildRelatedLinks() {
+    var sections = document.querySelectorAll('.related-section');
+    sections.forEach(function (sec) {
+      var grid = sec.querySelector('.related-grid');
+      if (!grid) return;
+      var links = grid.querySelectorAll('.related-card');
+      links.forEach(function (link) {
+        var iconSpan = link.querySelector('.rc-icon');
+        if (!iconSpan) return;
+        var href = link.getAttribute('href');
+        if (!href) return;
+        var slug = href.replace(/^\/|\/$/g, '');
+        var page = PAGE_REGISTRY.find(function (p) { return p.slug === slug; });
+        if (page && page.icon) {
+          iconSpan.textContent = page.icon;
+        }
+      });
+    });
+  }
+
+  /* ================================================================
+     APPLY BRANDING from SITE_CONFIG
+     ================================================================ */
+  function applyBranding() {
+    if (typeof SITE_CONFIG === 'undefined') return;
+    // Update logo text
+    document.querySelectorAll('.logo').forEach(function (el) {
+      var iconDiv = el.querySelector('.logo-icon');
+      if (iconDiv) iconDiv.textContent = SITE_CONFIG.nameAbbr;
+      // Set the text after the icon
+      var textNodes = [];
+      el.childNodes.forEach(function (n) {
+        if (n.nodeType === 3 && n.textContent.trim()) textNodes.push(n);
+      });
+      if (textNodes.length) {
+        textNodes[textNodes.length - 1].textContent = SITE_CONFIG.name;
+      }
+    });
+    // Update footer copyright
+    document.querySelectorAll('.footer-bottom').forEach(function (el) {
+      el.innerHTML = '&copy; ' + SITE_CONFIG.year + ' ' + SITE_CONFIG.name + ' &mdash; All rights reserved.';
+    });
+  }
+
+  /* ================================================================
+     INIT
+     ================================================================ */
+  document.addEventListener('DOMContentLoaded', function () {
+    buildNavigation();
+    initDesktopNav();
+    initMobileNav();
+    initFAQ();
+    buildRelatedLinks();
+    applyBranding();
+  });
+})();
