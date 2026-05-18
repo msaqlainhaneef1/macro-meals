@@ -430,6 +430,366 @@ def add_script_defer(html):
     html = re.sub(r'<script\s[^>]*src=[^>]*></script>', fix_defer, html)
     return html
 
+# ---------------------------------------------------------------------------
+# Internal Linking System — auto-generates related links for every page
+# ---------------------------------------------------------------------------
+
+# Page metadata: slug → {title, icon, cat, tags}
+# Tags drive relevancy scoring. Pages sharing more tags rank higher.
+PAGE_DATA = {
+    # --- Restaurant Nutrition Calculators ---
+    'starbucks-nutrition-calculator': {'title': 'Starbucks Nutrition Calculator', 'icon': '☕', 'cat': 'nutrition', 'tags': {'coffee', 'drinks', 'restaurant', 'fast-food', 'calories'}},
+    'chipotle-nutrition-calculator': {'title': 'Chipotle Nutrition Calculator', 'icon': '🌯', 'cat': 'nutrition', 'tags': {'mexican', 'burrito', 'bowl', 'restaurant', 'fast-food', 'calories'}},
+    'wawa-nutrition-calculator': {'title': 'Wawa Nutrition Calculator', 'icon': '🏪', 'cat': 'nutrition', 'tags': {'convenience', 'sandwich', 'restaurant', 'fast-food', 'calories'}},
+    'whataburger-nutrition-calculator': {'title': 'Whataburger Nutrition Calculator', 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'restaurant', 'fast-food', 'calories'}},
+    'mcdonalds-calories-calculator': {'title': "McDonald's Nutrition Calculator", 'icon': '🍟', 'cat': 'nutrition', 'tags': {'burger', 'fries', 'restaurant', 'fast-food', 'calories'}},
+    'subway-nutrition-calculator': {'title': 'Subway Nutrition Calculator', 'icon': '🥖', 'cat': 'nutrition', 'tags': {'sandwich', 'sub', 'restaurant', 'fast-food', 'calories'}},
+    'taco-bell-nutrition-calculator': {'title': 'Taco Bell Nutrition Calculator', 'icon': '🌮', 'cat': 'nutrition', 'tags': {'mexican', 'taco', 'restaurant', 'fast-food', 'calories'}},
+    'five-guys-nutrition-calculator': {'title': 'Five Guys Nutrition Calculator', 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'fries', 'restaurant', 'fast-food', 'calories'}},
+    'panda-express-nutrition-calculator': {'title': 'Panda Express Nutrition Calculator', 'icon': '🥡', 'cat': 'nutrition', 'tags': {'asian', 'chinese', 'restaurant', 'fast-food', 'calories'}},
+    'qdoba-nutrition-calculator': {'title': 'Qdoba Nutrition Calculator', 'icon': '🌯', 'cat': 'nutrition', 'tags': {'mexican', 'burrito', 'restaurant', 'fast-food', 'calories'}},
+    'arbys-nutrition-calculator': {'title': "Arby's Nutrition Calculator", 'icon': '🥩', 'cat': 'nutrition', 'tags': {'sandwich', 'roast-beef', 'restaurant', 'fast-food', 'calories'}},
+    'dutch-bros-nutrition-calculator': {'title': 'Dutch Bros Nutrition Calculator', 'icon': '☕', 'cat': 'nutrition', 'tags': {'coffee', 'drinks', 'restaurant', 'fast-food', 'calories'}},
+    'sheetz-nutrition-calculator': {'title': 'Sheetz Nutrition Calculator', 'icon': '🏪', 'cat': 'nutrition', 'tags': {'convenience', 'sandwich', 'restaurant', 'fast-food', 'calories'}},
+    'papa-johns-nutrition-calculator': {'title': "Papa John's Nutrition Calculator", 'icon': '🍕', 'cat': 'nutrition', 'tags': {'pizza', 'restaurant', 'fast-food', 'calories'}},
+    'mod-pizza-calories-calculator': {'title': 'MOD Pizza Nutrition Calculator', 'icon': '🍕', 'cat': 'nutrition', 'tags': {'pizza', 'restaurant', 'fast-food', 'calories'}},
+    'wingstop-calories-calculator': {'title': 'Wingstop Calories Calculator', 'icon': '🍗', 'cat': 'nutrition', 'tags': {'chicken', 'wings', 'restaurant', 'fast-food', 'calories'}},
+    'blaze-pizza-calories-calculator': {'title': 'Blaze Pizza Nutrition Calculator', 'icon': '🍕', 'cat': 'nutrition', 'tags': {'pizza', 'restaurant', 'fast-food', 'calories'}},
+    'burger-king-calories-calculator': {'title': 'Burger King Nutrition Calculator', 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'fries', 'restaurant', 'fast-food', 'calories'}},
+    'cupbop-nutrition-calculator': {'title': 'Cupbop Nutrition Calculator', 'icon': '🍜', 'cat': 'nutrition', 'tags': {'asian', 'korean', 'restaurant', 'fast-food', 'calories'}},
+    'salad-master-nutrition-calculator': {'title': 'Salad Master Nutrition Calculator', 'icon': '🥗', 'cat': 'nutrition', 'tags': {'salad', 'healthy', 'restaurant', 'fast-food', 'calories'}},
+    'cava-nutrition-calculator': {'title': 'CAVA Nutrition Calculator', 'icon': '🥙', 'cat': 'nutrition', 'tags': {'mediterranean', 'bowl', 'healthy', 'restaurant', 'fast-food', 'calories'}},
+    'naked-juice-nutrition-calculator': {'title': 'Naked Juice Nutrition Calculator', 'icon': '🥤', 'cat': 'nutrition', 'tags': {'juice', 'drinks', 'smoothie', 'restaurant', 'calories'}},
+    'jersey-mikes-calories-calculator': {'title': "Jersey Mike's Nutrition Calculator", 'icon': '🥖', 'cat': 'nutrition', 'tags': {'sandwich', 'sub', 'restaurant', 'fast-food', 'calories'}},
+    'cafe-rio-calories-calculator': {'title': 'Cafe Rio Nutrition Calculator', 'icon': '🌯', 'cat': 'nutrition', 'tags': {'mexican', 'burrito', 'restaurant', 'fast-food', 'calories'}},
+    'bibibop-calories-calculator': {'title': 'BIBIBOP Nutrition Calculator', 'icon': '🍚', 'cat': 'nutrition', 'tags': {'asian', 'korean', 'bowl', 'restaurant', 'fast-food', 'calories'}},
+    'carls-jr-calories-calculator': {'title': "Carl's Jr Nutrition Calculator", 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'restaurant', 'fast-food', 'calories'}},
+    'chilis-calories-calculator': {'title': "Chili's Nutrition Calculator", 'icon': '🌶️', 'cat': 'nutrition', 'tags': {'casual-dining', 'restaurant', 'calories'}},
+    'applebees-nutrition-calculator': {'title': "Applebee's Nutrition Calculator", 'icon': '🍎', 'cat': 'nutrition', 'tags': {'casual-dining', 'restaurant', 'calories'}},
+    'daves-hot-chicken-nutrition-calculator': {'title': "Dave's Hot Chicken Nutrition Calculator", 'icon': '🍗', 'cat': 'nutrition', 'tags': {'chicken', 'spicy', 'restaurant', 'fast-food', 'calories'}},
+    'albaik-nutrition-calculator': {'title': 'Al Baik Nutrition Calculator', 'icon': '🍗', 'cat': 'nutrition', 'tags': {'chicken', 'restaurant', 'fast-food', 'calories'}},
+    'bolay-nutrition-calculator': {'title': 'Bolay Nutrition Calculator', 'icon': '🥗', 'cat': 'nutrition', 'tags': {'bowl', 'healthy', 'restaurant', 'fast-food', 'calories'}},
+    'bolthouse-farms-nutrition-calculator': {'title': 'Bolthouse Farms Nutrition Calculator', 'icon': '🥤', 'cat': 'nutrition', 'tags': {'juice', 'drinks', 'smoothie', 'healthy', 'calories'}},
+    'brassica-nutrition-calculator': {'title': 'Brassica Nutrition Calculator', 'icon': '🥗', 'cat': 'nutrition', 'tags': {'salad', 'healthy', 'restaurant', 'fast-food', 'calories'}},
+    'black-rock-coffee-nutrition-calculator': {'title': 'Black Rock Coffee Nutrition Calculator', 'icon': '☕', 'cat': 'nutrition', 'tags': {'coffee', 'drinks', 'restaurant', 'calories'}},
+    'blank-street-coffee-calories-calculator': {'title': 'Blank Street Coffee Nutrition Calculator', 'icon': '☕', 'cat': 'nutrition', 'tags': {'coffee', 'drinks', 'restaurant', 'calories'}},
+    'dig-nutrition-calculator': {'title': 'Dig Nutrition Calculator', 'icon': '🥗', 'cat': 'nutrition', 'tags': {'healthy', 'bowl', 'restaurant', 'fast-food', 'calories'}},
+    'smoothie-king-nutrition-calculator': {'title': 'Smoothie King Nutrition Calculator', 'icon': '🥤', 'cat': 'nutrition', 'tags': {'smoothie', 'drinks', 'healthy', 'restaurant', 'calories'}},
+    'sonic-drive-in-nutrition-calculator': {'title': 'Sonic Drive-In Nutrition Calculator', 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'drinks', 'restaurant', 'fast-food', 'calories'}},
+    'wendys-nutrition-calculator': {'title': "Wendy's Nutrition Calculator", 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'fries', 'restaurant', 'fast-food', 'calories'}},
+    'jimmy-johns-calories-calculator': {'title': "Jimmy John's Nutrition Calculator", 'icon': '🥖', 'cat': 'nutrition', 'tags': {'sandwich', 'sub', 'restaurant', 'fast-food', 'calories'}},
+    'raising-canes-calculator': {'title': "Raising Cane's Nutrition Calculator", 'icon': '🍗', 'cat': 'nutrition', 'tags': {'chicken', 'restaurant', 'fast-food', 'calories'}},
+    'tropical-smoothie-cafe-nutrition-calculator': {'title': 'Tropical Smoothie Cafe Nutrition Calculator', 'icon': '🥤', 'cat': 'nutrition', 'tags': {'smoothie', 'drinks', 'healthy', 'restaurant', 'calories'}},
+    'sweetgreen-nutrition-calculator': {'title': 'Sweetgreen Nutrition Calculator', 'icon': '🥗', 'cat': 'nutrition', 'tags': {'salad', 'healthy', 'bowl', 'restaurant', 'calories'}},
+    'nandos-nutrition-calculator': {'title': "Nando's Nutrition Calculator", 'icon': '🍗', 'cat': 'nutrition', 'tags': {'chicken', 'restaurant', 'fast-food', 'calories'}},
+    'mellow-mushroom-nutrition-calculator': {'title': 'Mellow Mushroom Nutrition Calculator', 'icon': '🍕', 'cat': 'nutrition', 'tags': {'pizza', 'restaurant', 'casual-dining', 'calories'}},
+    'mucho-burrito-nutrition-calculator': {'title': 'Mucho Burrito Nutrition Calculator', 'icon': '🌯', 'cat': 'nutrition', 'tags': {'mexican', 'burrito', 'restaurant', 'fast-food', 'calories'}},
+    'nifty-fifty-nutrition-calculator': {'title': 'Nifty Fifty Nutrition Calculator', 'icon': '🍔', 'cat': 'nutrition', 'tags': {'burger', 'retro', 'restaurant', 'calories'}},
+    'jamba-juice-nutrition-calculator': {'title': 'Jamba Juice Nutrition Calculator', 'icon': '🥤', 'cat': 'nutrition', 'tags': {'juice', 'smoothie', 'drinks', 'healthy', 'restaurant', 'calories'}},
+    'via-313-nutrition-calculator': {'title': 'Via 313 Nutrition Calculator', 'icon': '🍕', 'cat': 'nutrition', 'tags': {'pizza', 'restaurant', 'calories'}},
+    'zao-asian-cafe-nutrition-calculator': {'title': 'Zao Asian Cafe Nutrition Calculator', 'icon': '🍜', 'cat': 'nutrition', 'tags': {'asian', 'restaurant', 'fast-food', 'calories'}},
+    'taim-mediterranean-kitchen-nutrition-calculator': {'title': 'Taim Mediterranean Kitchen Nutrition Calculator', 'icon': '🥙', 'cat': 'nutrition', 'tags': {'mediterranean', 'healthy', 'restaurant', 'calories'}},
+    'outback-steakhouse-menu': {'title': 'Outback Steakhouse Menu', 'icon': '🥩', 'cat': 'nutrition', 'tags': {'steak', 'casual-dining', 'restaurant', 'calories'}},
+
+    # --- Restaurant Menus ---
+    'chipotle-menu': {'title': 'Chipotle Menu', 'icon': '🌯', 'cat': 'menu', 'tags': {'mexican', 'burrito', 'menu', 'restaurant'}},
+    'dutch-bros-menu': {'title': 'Dutch Bros Menu', 'icon': '☕', 'cat': 'menu', 'tags': {'coffee', 'drinks', 'menu', 'restaurant'}},
+    'five-guys-menu': {'title': 'Five Guys Menu', 'icon': '🍔', 'cat': 'menu', 'tags': {'burger', 'fries', 'menu', 'restaurant'}},
+    'starbucks-menu': {'title': 'Starbucks Menu', 'icon': '☕', 'cat': 'menu', 'tags': {'coffee', 'drinks', 'menu', 'restaurant'}},
+    'taco-bell-menu': {'title': 'Taco Bell Menu', 'icon': '🌮', 'cat': 'menu', 'tags': {'mexican', 'taco', 'menu', 'restaurant'}},
+    'panda-express-menu': {'title': 'Panda Express Menu', 'icon': '🥡', 'cat': 'menu', 'tags': {'asian', 'chinese', 'menu', 'restaurant'}},
+    'qdoba-menu': {'title': 'Qdoba Menu', 'icon': '🌯', 'cat': 'menu', 'tags': {'mexican', 'burrito', 'menu', 'restaurant'}},
+    'sheetz-menu': {'title': 'Sheetz Menu', 'icon': '🏪', 'cat': 'menu', 'tags': {'convenience', 'sandwich', 'menu', 'restaurant'}},
+    'wawa-menu': {'title': 'Wawa Menu', 'icon': '🏪', 'cat': 'menu', 'tags': {'convenience', 'sandwich', 'menu', 'restaurant'}},
+    'whataburger-menu': {'title': 'Whataburger Menu', 'icon': '🍔', 'cat': 'menu', 'tags': {'burger', 'menu', 'restaurant'}},
+    'sushi-menu': {'title': 'Sushi Menu', 'icon': '🍣', 'cat': 'menu', 'tags': {'sushi', 'japanese', 'menu', 'restaurant'}},
+
+    # --- Body Composition & Health ---
+    'bmi-calculator': {'title': 'BMI Calculator', 'icon': '⚖️', 'cat': 'body', 'tags': {'bmi', 'weight', 'health', 'body-composition', 'obesity'}},
+    'bmi-nih-calculator': {'title': 'BMI NIH Calculator', 'icon': '⚖️', 'cat': 'body', 'tags': {'bmi', 'weight', 'health', 'body-composition', 'nih'}},
+    'bmr-calculator': {'title': 'BMR Calculator', 'icon': '🔥', 'cat': 'body', 'tags': {'bmr', 'metabolism', 'calories', 'energy', 'body-composition'}},
+    'body-fat-calculator': {'title': 'Body Fat Calculator', 'icon': '📊', 'cat': 'body', 'tags': {'body-fat', 'body-composition', 'weight', 'fitness'}},
+    'body-shape-calculator': {'title': 'Body Shape Calculator', 'icon': '📐', 'cat': 'body', 'tags': {'body-shape', 'body-composition', 'measurements'}},
+    'ffmi-calculator': {'title': 'FFMI Calculator', 'icon': '💪', 'cat': 'body', 'tags': {'ffmi', 'muscle', 'fitness', 'body-composition', 'bodybuilding'}},
+    'bsa-calculator': {'title': 'BSA Calculator', 'icon': '📏', 'cat': 'body', 'tags': {'bsa', 'body-surface', 'medical', 'body-composition'}},
+    'bri-calculator': {'title': 'BRI Calculator', 'icon': '📊', 'cat': 'body', 'tags': {'bri', 'body-roundness', 'health', 'body-composition'}},
+    'absi-calculator': {'title': 'ABSI Calculator', 'icon': '📊', 'cat': 'body', 'tags': {'absi', 'body-shape', 'health', 'body-composition'}},
+    'army-body-fat-calculator': {'title': 'Army Body Fat Calculator', 'icon': '🎖️', 'cat': 'body', 'tags': {'body-fat', 'military', 'fitness', 'body-composition'}},
+    'us-marine-body-fat-calculator': {'title': 'US Marine Body Fat Calculator', 'icon': '🎖️', 'cat': 'body', 'tags': {'body-fat', 'military', 'fitness', 'body-composition'}},
+    'anorexic-bmi-calculator': {'title': 'Anorexic BMI Calculator', 'icon': '⚖️', 'cat': 'body', 'tags': {'bmi', 'underweight', 'eating-disorder', 'health'}},
+    'face-shape-calculator': {'title': 'Face Shape Calculator', 'icon': '😊', 'cat': 'body', 'tags': {'face', 'shape', 'measurements', 'body-composition'}},
+    'ideal-body-weight-calculator': {'title': 'Ideal Body Weight Calculator', 'icon': '⚖️', 'cat': 'body', 'tags': {'weight', 'ideal', 'health', 'body-composition'}},
+    'lean-body-mass-calculator': {'title': 'Lean Body Mass Calculator', 'icon': '💪', 'cat': 'body', 'tags': {'lean-mass', 'muscle', 'body-fat', 'body-composition', 'fitness'}},
+    'overweight-calculator': {'title': 'Overweight Calculator', 'icon': '⚖️', 'cat': 'body', 'tags': {'weight', 'bmi', 'obesity', 'health'}},
+    'waist-to-hip-ratio-calculator': {'title': 'Waist to Hip Ratio Calculator', 'icon': '📏', 'cat': 'body', 'tags': {'waist', 'hip', 'body-fat', 'health', 'body-composition'}},
+    'skinfold-body-fat-calculator': {'title': 'Skinfold Body Fat Calculator', 'icon': '📊', 'cat': 'body', 'tags': {'body-fat', 'skinfold', 'fitness', 'body-composition'}},
+    'height-calculator': {'title': 'Height Calculator', 'icon': '📏', 'cat': 'body', 'tags': {'height', 'growth', 'children', 'body-composition'}},
+    'bedridden-patient-height-calculator': {'title': 'Bedridden Patient Height Calculator', 'icon': '🏥', 'cat': 'body', 'tags': {'height', 'medical', 'patient', 'body-composition'}},
+    'baby-percentile-calculator': {'title': 'Baby Percentile Calculator', 'icon': '👶', 'cat': 'body', 'tags': {'baby', 'growth', 'percentile', 'children', 'health'}},
+    'gfr-calculator': {'title': 'GFR Calculator', 'icon': '🩺', 'cat': 'body', 'tags': {'gfr', 'kidney', 'medical', 'health'}},
+    'karvonen-formula-calculator': {'title': 'Karvonen Formula Calculator', 'icon': '❤️', 'cat': 'body', 'tags': {'heart-rate', 'cardio', 'fitness', 'exercise'}},
+    'one-rep-max-calculator': {'title': 'One Rep Max Calculator', 'icon': '🏋️', 'cat': 'body', 'tags': {'strength', 'weightlifting', 'fitness', 'exercise'}},
+
+    # --- Diet & Macro Calculators ---
+    'tdee-calculator': {'title': 'TDEE Calculator', 'icon': '⚡', 'cat': 'diet', 'tags': {'tdee', 'calories', 'energy', 'metabolism', 'weight-loss'}},
+    'calorie-deficit-calculator': {'title': 'Calorie Deficit Calculator', 'icon': '📉', 'cat': 'diet', 'tags': {'calorie-deficit', 'weight-loss', 'calories', 'diet'}},
+    'protein-calculator': {'title': 'Protein Calculator', 'icon': '🥩', 'cat': 'diet', 'tags': {'protein', 'macros', 'muscle', 'diet', 'nutrition'}},
+    'carbohydrate-calculator': {'title': 'Carbohydrate Calculator', 'icon': '🍞', 'cat': 'diet', 'tags': {'carbs', 'macros', 'diet', 'nutrition'}},
+    'keto-macro-calculator': {'title': 'Keto Macro Calculator', 'icon': '🥑', 'cat': 'diet', 'tags': {'keto', 'macros', 'low-carb', 'diet', 'weight-loss'}},
+    'macro-calculator-for-weight-loss': {'title': 'Macro Calculator for Weight Loss', 'icon': '📊', 'cat': 'diet', 'tags': {'macros', 'weight-loss', 'diet', 'calories'}},
+    'water-fasting-calculator': {'title': 'Water Fasting Calculator', 'icon': '💧', 'cat': 'diet', 'tags': {'fasting', 'water', 'weight-loss', 'diet'}},
+    'protein-molecular-weight-calculator': {'title': 'Protein Molecular Weight Calculator', 'icon': '🔬', 'cat': 'diet', 'tags': {'protein', 'molecular', 'science', 'biochemistry'}},
+    'steps-to-calories-calculator': {'title': 'Steps to Calories Calculator', 'icon': '👣', 'cat': 'diet', 'tags': {'steps', 'calories', 'walking', 'exercise', 'fitness'}},
+    'steps-to-miles-calculator': {'title': 'Steps to Miles Calculator', 'icon': '👣', 'cat': 'diet', 'tags': {'steps', 'miles', 'walking', 'exercise', 'distance'}},
+    'kj-to-calories-converter': {'title': 'kJ to Calories Converter', 'icon': '🔄', 'cat': 'diet', 'tags': {'conversion', 'calories', 'kilojoules', 'energy'}},
+    'maintenance-fluid-calculator': {'title': 'Maintenance Fluid Calculator', 'icon': '💧', 'cat': 'diet', 'tags': {'fluid', 'hydration', 'medical', 'health'}},
+
+    # --- Vitamins & Micronutrients ---
+    'vitamin-a-calculator': {'title': 'Vitamin A Calculator', 'icon': '💊', 'cat': 'vitamins', 'tags': {'vitamin-a', 'vitamins', 'micronutrients', 'health'}},
+    'vitamin-b-calculator': {'title': 'Vitamin B Calculator', 'icon': '💊', 'cat': 'vitamins', 'tags': {'vitamin-b', 'vitamins', 'micronutrients', 'health', 'energy'}},
+    'vitamin-c-calculator': {'title': 'Vitamin C Calculator', 'icon': '🍊', 'cat': 'vitamins', 'tags': {'vitamin-c', 'vitamins', 'micronutrients', 'immunity', 'health'}},
+    'vitamin-d-calculator': {'title': 'Vitamin D Calculator', 'icon': '☀️', 'cat': 'vitamins', 'tags': {'vitamin-d', 'vitamins', 'micronutrients', 'bone', 'health'}},
+    'vitamin-e-calculator': {'title': 'Vitamin E Calculator', 'icon': '💊', 'cat': 'vitamins', 'tags': {'vitamin-e', 'vitamins', 'micronutrients', 'antioxidant', 'health'}},
+    'vitamin-k-calculator': {'title': 'Vitamin K Calculator', 'icon': '💊', 'cat': 'vitamins', 'tags': {'vitamin-k', 'vitamins', 'micronutrients', 'blood', 'health'}},
+    'cholesterol-ratio-calculator': {'title': 'Cholesterol Ratio Calculator', 'icon': '🩺', 'cat': 'vitamins', 'tags': {'cholesterol', 'heart', 'health', 'lipids'}},
+    'ldl-cholesterol-calculator': {'title': 'LDL Cholesterol Calculator', 'icon': '🩺', 'cat': 'vitamins', 'tags': {'cholesterol', 'ldl', 'heart', 'health', 'lipids'}},
+
+    # --- Pregnancy & Specialty ---
+    'due-date-calculator': {'title': 'Due Date Calculator', 'icon': '📅', 'cat': 'pregnancy', 'tags': {'pregnancy', 'due-date', 'baby', 'health'}},
+    'conception-calculator': {'title': 'Conception Calculator', 'icon': '📅', 'cat': 'pregnancy', 'tags': {'conception', 'pregnancy', 'fertility', 'health'}},
+    'ovulation-calculator': {'title': 'Ovulation Calculator', 'icon': '📅', 'cat': 'pregnancy', 'tags': {'ovulation', 'fertility', 'pregnancy', 'cycle'}},
+    'pregnancy-calculator': {'title': 'Pregnancy Calculator', 'icon': '🤰', 'cat': 'pregnancy', 'tags': {'pregnancy', 'trimester', 'baby', 'health'}},
+    'pregnancy-weight-gain-calculator': {'title': 'Pregnancy Weight Gain Calculator', 'icon': '⚖️', 'cat': 'pregnancy', 'tags': {'pregnancy', 'weight', 'health', 'baby'}},
+    'menses-calculator': {'title': 'Menses Calculator', 'icon': '📅', 'cat': 'pregnancy', 'tags': {'period', 'cycle', 'menstruation', 'health'}},
+    'ivf-success-rate-calculator': {'title': 'IVF Success Rate Calculator', 'icon': '🏥', 'cat': 'pregnancy', 'tags': {'ivf', 'fertility', 'pregnancy', 'medical'}},
+
+    # --- Essential/Utility pages ---
+    'about': {'title': 'About Macro & Meals', 'icon': 'ℹ️', 'cat': 'essential', 'tags': {'about', 'company'}},
+    'contact': {'title': 'Contact Us', 'icon': '📧', 'cat': 'essential', 'tags': {'contact', 'support'}},
+    'privacy-policy': {'title': 'Privacy Policy', 'icon': '🔒', 'cat': 'legal', 'tags': {'privacy', 'legal'}},
+    'terms-conditions': {'title': 'Terms & Conditions', 'icon': '📜', 'cat': 'legal', 'tags': {'terms', 'legal'}},
+    'disclaimer': {'title': 'Disclaimer', 'icon': '⚠️', 'cat': 'legal', 'tags': {'disclaimer', 'legal'}},
+    'cookie-policy': {'title': 'Cookie Policy', 'icon': '🍪', 'cat': 'legal', 'tags': {'cookies', 'legal', 'privacy'}},
+    'dmca': {'title': 'DMCA', 'icon': '©️', 'cat': 'legal', 'tags': {'dmca', 'legal', 'copyright'}},
+    'accessibility': {'title': 'Accessibility', 'icon': '♿', 'cat': 'legal', 'tags': {'accessibility', 'legal'}},
+    'sitemap-page': {'title': 'Sitemap', 'icon': '🗺️', 'cat': 'essential', 'tags': {'sitemap', 'navigation'}},
+    'blog': {'title': 'Blog', 'icon': '📝', 'cat': 'blog', 'tags': {'blog', 'articles', 'nutrition'}},
+    'blog/how-to-calculate-your-daily-calorie-needs': {'title': 'How to Calculate Your Daily Calorie Needs', 'icon': '📝', 'cat': 'blog', 'tags': {'blog', 'calories', 'tdee', 'nutrition', 'weight-loss', 'diet'}},
+}
+
+# Expert cross-category links: manually curated high-value connections
+CROSS_LINKS = {
+    'bmi-calculator': ['body-fat-calculator', 'ideal-body-weight-calculator', 'tdee-calculator', 'bmr-calculator', 'overweight-calculator'],
+    'bmr-calculator': ['tdee-calculator', 'calorie-deficit-calculator', 'bmi-calculator', 'macro-calculator-for-weight-loss'],
+    'tdee-calculator': ['calorie-deficit-calculator', 'bmr-calculator', 'macro-calculator-for-weight-loss', 'protein-calculator'],
+    'calorie-deficit-calculator': ['tdee-calculator', 'macro-calculator-for-weight-loss', 'keto-macro-calculator', 'bmr-calculator'],
+    'protein-calculator': ['macro-calculator-for-weight-loss', 'keto-macro-calculator', 'tdee-calculator', 'calorie-deficit-calculator'],
+    'keto-macro-calculator': ['macro-calculator-for-weight-loss', 'calorie-deficit-calculator', 'protein-calculator', 'tdee-calculator'],
+    'body-fat-calculator': ['bmi-calculator', 'lean-body-mass-calculator', 'skinfold-body-fat-calculator', 'ffmi-calculator'],
+    'ideal-body-weight-calculator': ['bmi-calculator', 'body-fat-calculator', 'overweight-calculator', 'bmr-calculator'],
+    'lean-body-mass-calculator': ['body-fat-calculator', 'ffmi-calculator', 'protein-calculator', 'bmi-calculator'],
+    'ffmi-calculator': ['lean-body-mass-calculator', 'body-fat-calculator', 'one-rep-max-calculator', 'protein-calculator'],
+    'waist-to-hip-ratio-calculator': ['body-fat-calculator', 'bmi-calculator', 'body-shape-calculator', 'absi-calculator'],
+    'steps-to-calories-calculator': ['steps-to-miles-calculator', 'tdee-calculator', 'calorie-deficit-calculator'],
+    'steps-to-miles-calculator': ['steps-to-calories-calculator', 'tdee-calculator'],
+    'cholesterol-ratio-calculator': ['ldl-cholesterol-calculator', 'bmi-calculator', 'body-fat-calculator'],
+    'ldl-cholesterol-calculator': ['cholesterol-ratio-calculator', 'bmi-calculator'],
+    'due-date-calculator': ['pregnancy-calculator', 'conception-calculator', 'pregnancy-weight-gain-calculator'],
+    'pregnancy-calculator': ['due-date-calculator', 'pregnancy-weight-gain-calculator', 'conception-calculator'],
+    'ovulation-calculator': ['conception-calculator', 'menses-calculator', 'due-date-calculator'],
+    'conception-calculator': ['ovulation-calculator', 'due-date-calculator', 'pregnancy-calculator'],
+    'menses-calculator': ['ovulation-calculator', 'conception-calculator', 'due-date-calculator'],
+    # Ensure no orphan pages — connect niche pages to related ones
+    'nifty-fifty-nutrition-calculator': ['burger-king-calories-calculator', 'sonic-drive-in-nutrition-calculator', 'five-guys-nutrition-calculator'],
+    'via-313-nutrition-calculator': ['blaze-pizza-calories-calculator', 'mod-pizza-calories-calculator', 'papa-johns-nutrition-calculator'],
+    'taim-mediterranean-kitchen-nutrition-calculator': ['cava-nutrition-calculator', 'sweetgreen-nutrition-calculator', 'dig-nutrition-calculator'],
+    'protein-molecular-weight-calculator': ['protein-calculator', 'macro-calculator-for-weight-loss'],
+    'sushi-menu': ['panda-express-menu', 'zao-asian-cafe-nutrition-calculator'],
+}
+
+# Menu ↔ Calculator pairings
+MENU_CALC_PAIRS = {
+    'chipotle-menu': 'chipotle-nutrition-calculator',
+    'dutch-bros-menu': 'dutch-bros-nutrition-calculator',
+    'five-guys-menu': 'five-guys-nutrition-calculator',
+    'starbucks-menu': 'starbucks-nutrition-calculator',
+    'taco-bell-menu': 'taco-bell-nutrition-calculator',
+    'panda-express-menu': 'panda-express-nutrition-calculator',
+    'qdoba-menu': 'qdoba-nutrition-calculator',
+    'sheetz-menu': 'sheetz-nutrition-calculator',
+    'wawa-menu': 'wawa-nutrition-calculator',
+    'whataburger-menu': 'whataburger-nutrition-calculator',
+}
+
+# Category display labels
+CAT_DISPLAY = {
+    'nutrition': '🍔 Restaurant Nutrition Calculators',
+    'menu': '📋 Restaurant Menus',
+    'body': '⚖️ Body Composition & Health',
+    'diet': '🥩 Diet & Macro Calculators',
+    'vitamins': '💊 Vitamins & Micronutrients',
+    'pregnancy': '🤰 Pregnancy & Specialty',
+}
+
+
+def get_related_pages(slug, count=6):
+    """Return top related pages for a given slug using tag-based relevancy scoring."""
+    if slug not in PAGE_DATA:
+        return []
+    
+    current = PAGE_DATA[slug]
+    current_tags = current.get('tags', set())
+    current_cat = current.get('cat', '')
+    
+    # Score all other pages
+    scores = []
+    for other_slug, other_data in PAGE_DATA.items():
+        if other_slug == slug:
+            continue
+        # Skip legal/essential pages from related suggestions
+        if other_data.get('cat') in ('legal', 'essential'):
+            continue
+        
+        other_tags = other_data.get('tags', set())
+        other_cat = other_data.get('cat', '')
+        
+        # Tag overlap score (primary relevancy signal)
+        shared = len(current_tags & other_tags)
+        score = shared * 10
+        
+        # Same category bonus
+        if current_cat == other_cat:
+            score += 5
+        
+        # Cross-link bonus (expert-curated connections, bidirectional)
+        if slug in CROSS_LINKS and other_slug in CROSS_LINKS[slug]:
+            score += 20
+        if other_slug in CROSS_LINKS and slug in CROSS_LINKS[other_slug]:
+            score += 20
+        
+        # Menu ↔ Calculator bonus
+        if slug in MENU_CALC_PAIRS and MENU_CALC_PAIRS[slug] == other_slug:
+            score += 25
+        inv_pairs = {v: k for k, v in MENU_CALC_PAIRS.items()}
+        if slug in inv_pairs and inv_pairs[slug] == other_slug:
+            score += 25
+        
+        if score > 0:
+            scores.append((score, other_slug, other_data))
+    
+    # Sort by score descending, then alphabetically for ties
+    scores.sort(key=lambda x: (-x[0], x[1]))
+    return [(s, d) for _, s, d in scores[:count]]
+
+
+def inject_internal_links(html, filepath):
+    """Inject internal linking section into every page."""
+    slug = os.path.relpath(os.path.dirname(filepath), ROOT)
+    if slug == '.':
+        slug = ''
+    
+    # Skip homepage, 404
+    basename = os.path.basename(filepath) if slug == '' else slug
+    if basename in ('index.html', '') or slug == '':
+        return html
+    if '404' in filepath:
+        return html
+    
+    # Remove any existing related section (will be regenerated)
+    html = re.sub(
+        r'<div class="related-section">.*?</div>\s*</div>\s*(?=</div>\s*</section>|</section>)',
+        '', html, flags=re.DOTALL
+    )
+    # Also remove old standalone related sections
+    html = re.sub(
+        r'<div class="related-section">.*?</div>\s*</div>(?=\s*<footer)',
+        '', html, flags=re.DOTALL
+    )
+    
+    related = get_related_pages(slug, count=6)
+    
+    if not related:
+        # For unknown pages, show popular calculators as fallback
+        fallback_slugs = ['bmi-calculator', 'tdee-calculator', 'calorie-deficit-calculator',
+                          'protein-calculator', 'chipotle-nutrition-calculator', 'starbucks-nutrition-calculator']
+        related = [(s, PAGE_DATA[s]) for s in fallback_slugs if s in PAGE_DATA and s != slug]
+    
+    if not related:
+        return html
+    
+    # Build the related section HTML
+    cards = []
+    for rel_slug, rel_data in related:
+        title = rel_data['title']
+        icon = rel_data['icon']
+        href = f'/{rel_slug}/'
+        cards.append(
+            f'<a href="{href}" class="related-card">'
+            f'<span class="rc-icon">{icon}</span>'
+            f'<span class="rc-text">{title}</span></a>'
+        )
+    
+    # Add "Explore All Calculators" link back to homepage
+    cards.append(
+        '<a href="/" class="related-card related-card-all">'
+        '<span class="rc-icon">🏠</span>'
+        '<span class="rc-text">All Calculators</span></a>'
+    )
+    
+    section_html = (
+        '<div class="related-section">'
+        '<h2>Related Tools You May Like</h2>'
+        '<div class="related-grid">'
+        + ''.join(cards) +
+        '</div></div>'
+    )
+    
+    # Also build a "Category Explorer" for cross-category discovery
+    current_data = PAGE_DATA.get(slug, {})
+    current_cat = current_data.get('cat', '')
+    
+    # Pick 2-3 other categories to suggest
+    other_cats = [c for c in ['body', 'diet', 'nutrition', 'vitamins', 'pregnancy']
+                  if c != current_cat and c in CAT_DISPLAY][:3]
+    
+    if other_cats:
+        cat_links = []
+        for cat in other_cats:
+            # Find the most popular page in that category
+            cat_pages = [(s, d) for s, d in PAGE_DATA.items()
+                         if d.get('cat') == cat and s in HIGH_TRAFFIC_CALCULATORS | HIGH_TRAFFIC_RESTAURANTS]
+            if not cat_pages:
+                cat_pages = [(s, d) for s, d in PAGE_DATA.items() if d.get('cat') == cat]
+            if cat_pages:
+                rep_slug, rep_data = cat_pages[0]
+                label = CAT_DISPLAY.get(cat, cat)
+                cat_links.append(
+                    f'<a href="/{rep_slug}/" class="cat-explore-link">{label}</a>'
+                )
+        
+        if cat_links:
+            section_html += (
+                '<div class="category-explorer">'
+                '<h3>Explore More Categories</h3>'
+                '<div class="cat-explore-grid">'
+                + ''.join(cat_links) +
+                '</div></div>'
+            )
+    
+    # Inject before </section> (last one) or before <footer>
+    if '</section>' in html:
+        # Insert before the last </section>
+        last_section = html.rfind('</section>')
+        if last_section != -1:
+            html = html[:last_section] + section_html + '\n' + html[last_section:]
+    elif '<footer' in html:
+        footer_pos = html.find('<footer')
+        if footer_pos != -1:
+            html = html[:footer_pos] + section_html + '\n' + html[footer_pos:]
+    
+    return html
+
+
 def process_html_file(filepath):
     """Apply all transformations to an HTML file."""
     # Skip component files themselves
@@ -458,6 +818,8 @@ def process_html_file(filepath):
     content = inject_cookie_banner(content)
     content = inject_print_styles(content)
     content = inject_gtm_noscript(content)
+    # Internal linking (auto-generated related pages)
+    content = inject_internal_links(content, filepath)
     # Performance optimizations (safe — no design impact)
     content = optimize_images(content)
     content = add_script_defer(content)
