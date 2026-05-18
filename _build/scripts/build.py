@@ -374,11 +374,8 @@ def fix_favicon_refs(html):
     return html
 
 def inject_skip_to_content(html):
-    """Add skip-to-content accessibility link after <body>."""
-    skip_link = '<a class="skip-to-content" href="#main-content">Skip to content</a>'
-    # Remove existing skip links to avoid duplicates
+    """Remove any skip-to-content links (no longer used)."""
     html = re.sub(r'<a class="skip-to-content"[^>]*>[^<]*</a>\s*', '', html)
-    html = html.replace('<body>', '<body>\n' + skip_link)
     return html
 
 def process_html_file(filepath):
