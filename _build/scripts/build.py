@@ -250,6 +250,8 @@ def ensure_common_head(html):
     html = re.sub(r'<script async src="https://www\.googletagmanager\.com/gtag/js\?id=[^"]*"></script>\s*', '', html)
     html = re.sub(r'<script>\s*window\.dataLayer\s*=.*?</script>\s*', '', html, flags=re.DOTALL)
     html = re.sub(r'<script>\(function\(w,d,s,l,i\).*?</script>\s*', '', html, flags=re.DOTALL)
+    # Remove old deferred analytics block (will be re-added from component)
+    html = re.sub(r"<script>\s*window\.addEventListener\('load'.*?</script>\s*", '', html, flags=re.DOTALL)
     html = re.sub(r'<meta name="google-site-verification"[^>]*/?>\s*', '', html)
     # Remove old favicon/manifest/theme-color tags (will be re-added from component)
     html = re.sub(r'<link rel="icon"[^>]*/?>\s*', '', html)
@@ -257,7 +259,11 @@ def ensure_common_head(html):
     html = re.sub(r'<link rel="manifest"[^>]*/?>\s*', '', html)
     html = re.sub(r'<meta name="theme-color"[^>]*/?>\s*', '', html)
     # Remove old stylesheet links to avoid duplicates
-    html = re.sub(r'<link rel="stylesheet" href="/css/style\.css">\s*', '', html)
+    html = re.sub(r'<link rel="stylesheet" href="/css/style\.css"[^>]*>\s*', '', html)
+    # Remove old Google Fonts link to avoid duplicates
+    html = re.sub(r'<link rel="stylesheet" href="https://fonts\.googleapis\.com[^>]*>\s*', '', html)
+    # Remove old preload tags to avoid duplicates
+    html = re.sub(r'<link rel="preload"[^>]*>\s*', '', html)
     # Remove old preconnect/dns-prefetch to avoid duplicates
     html = re.sub(r'<link rel="preconnect"[^>]*>\s*', '', html)
     html = re.sub(r'<link rel="dns-prefetch"[^>]*>\s*', '', html)
@@ -276,9 +282,10 @@ def ensure_common_scripts(html):
     scripts = COMPONENTS.get('scripts.html', '')
     if not scripts:
         return html
-    # Only add if site-config.js is not already present
-    if 'site-config.js' in html:
-        return html
+    # Remove old script tags (with or without defer) to avoid duplicates
+    html = re.sub(r'<script\s[^>]*src="/js/site-config\.js"[^>]*></script>\s*', '', html)
+    html = re.sub(r'<script\s[^>]*src="/js/scripts-config\.js"[^>]*></script>\s*', '', html)
+    html = re.sub(r'<script\s[^>]*src="/js/main\.js"[^>]*></script>\s*', '', html)
     # Inject before </body>
     html = html.replace('</body>', scripts + '\n</body>')
     return html
@@ -378,6 +385,43 @@ def inject_skip_to_content(html):
     html = re.sub(r'<a class="skip-to-content"[^>]*>[^<]*</a>\s*', '', html)
     return html
 
+def optimize_images(html):
+    """Add loading=lazy and decoding=async to below-fold images."""
+    def add_lazy(match):
+        tag = match.group(0)
+        if 'loading=' in tag:
+            return tag
+        # Skip above-the-fold logo in header (has fetchpriority or class="logo-img" in header)
+        if 'fetchpriority' in tag:
+            return tag
+        # Skip logos that already have loading=lazy (footer logo from component)
+        if 'logo' in tag.lower() and 'loading="lazy"' in tag:
+            return tag
+        # Header logo — don't add lazy
+        if 'class="logo-img"' in tag and 'loading=' not in tag and 'fetchpriority' not in tag:
+            return tag
+        tag = tag.replace('<img ', '<img loading="lazy" decoding="async" ')
+        return tag
+    html = re.sub(r'<img\s[^>]+>', add_lazy, html)
+    return html
+
+def add_script_defer(html):
+    """Add defer attribute to page-specific script tags."""
+    def add_defer(match):
+        tag = match.group(0)
+        if 'defer' in tag or 'async' in tag:
+            return tag
+        # Skip inline scripts (no src attribute)
+        if 'src=' not in tag:
+            return tag
+        # Skip analytics/GTM scripts (handled separately)
+        if 'googletagmanager' in tag or 'google-analytics' in tag:
+            return tag
+        tag = tag.replace('<script ', '<script defer ')
+        return tag
+    html = re.sub(r'<script\s[^>]*src=[^>]*></script>', add_defer, html)
+    return html
+
 def process_html_file(filepath):
     """Apply all transformations to an HTML file."""
     # Skip component files themselves
@@ -406,6 +450,9 @@ def process_html_file(filepath):
     content = inject_cookie_banner(content)
     content = inject_print_styles(content)
     content = inject_gtm_noscript(content)
+    # Performance optimizations (safe — no design impact)
+    content = optimize_images(content)
+    content = add_script_defer(content)
     
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)
@@ -855,11 +902,55 @@ def generate_llms_txt():
     print(f'✓ Generated llms.txt ({len(pages)} pages) and llms-full.txt')
 
 
+def minify_assets():
+    """Minify CSS and JS files for smaller payloads."""
+    try:
+        import csscompressor
+        css_file = os.path.join(ROOT, 'css', 'style.css')
+        if os.path.exists(css_file):
+            with open(css_file, 'r', encoding='utf-8') as f:
+                original = f.read()
+            # Don't minify if already minified (no newlines = already minified)
+            if '\n' in original and len(original) > 1000:
+                minified = csscompressor.compress(original)
+                with open(css_file, 'w', encoding='utf-8') as f:
+                    f.write(minified)
+                saved = len(original) - len(minified)
+                pct = (saved / len(original)) * 100 if len(original) > 0 else 0
+                print(f'  ✓ style.css: {len(original):,} → {len(minified):,} bytes ({pct:.0f}% smaller)')
+            else:
+                print(f'  ⏭ style.css: already minified')
+    except ImportError:
+        print('  ⚠ csscompressor not installed, skipping CSS minification')
+
+    try:
+        from jsmin import jsmin
+        js_dir = os.path.join(ROOT, 'js')
+        if os.path.isdir(js_dir):
+            for js_file in sorted(glob.glob(os.path.join(js_dir, '*.js'))):
+                with open(js_file, 'r', encoding='utf-8') as f:
+                    original = f.read()
+                if '\n' in original and len(original) > 100:
+                    minified = jsmin(original)
+                    with open(js_file, 'w', encoding='utf-8') as f:
+                        f.write(minified)
+                    saved = len(original) - len(minified)
+                    pct = (saved / len(original)) * 100 if len(original) > 0 else 0
+                    name = os.path.basename(js_file)
+                    print(f'  ✓ {name}: {len(original):,} → {len(minified):,} bytes ({pct:.0f}% smaller)')
+                else:
+                    print(f'  ⏭ {os.path.basename(js_file)}: already minified')
+    except ImportError:
+        print('  ⚠ jsmin not installed, skipping JS minification')
+
+
 if __name__ == '__main__':
     print('Loading components...')
     COMPONENTS = load_all_components()
     print()
     process_all_files()
+    print('\nMinifying CSS & JS...')
+    minify_assets()
     generate_sitemap()
     generate_sitemap_xsl()
     generate_robots_txt()

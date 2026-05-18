@@ -49,20 +49,26 @@
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 <link rel="dns-prefetch" href="https://www.google-analytics.com">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258"></script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap">
+<link rel="preload" as="image" href="/img/logo.svg" type="image/svg+xml">
 <script>
-  window.dataLayer = window.dataLayer || [];
+window.addEventListener('load',function(){setTimeout(function(){
+  window.dataLayer=window.dataLayer||[];
   function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-7Q3DMT4258');
+  window.gtag=gtag;
+  var s=document.createElement('script');s.async=true;
+  s.src='https://www.googletagmanager.com/gtag/js?id=G-7Q3DMT4258';
+  s.onload=function(){gtag('js',new Date());gtag('config','G-7Q3DMT4258');};
+  document.head.appendChild(s);
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-5FNQMD49');
+},2000)});
 </script>
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-5FNQMD49');</script>
 <meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
 <link rel="stylesheet" href="/css/style.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
@@ -110,7 +116,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 <header class="header">
 <div class="header-inner">
-<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40" fetchpriority="high"></a>
 <nav class="nav-desktop">
   <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
   <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
@@ -267,7 +273,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="footer">
 <div class="footer-inner">
   <div class="footer-brand">
-    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40"></a>
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40" loading="lazy" decoding="async"></a>
     <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
   </div>
   <div>
@@ -306,10 +312,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
 </footer>
-<script src="/js/site-config.js"></script>
-<script src="/js/scripts-config.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/calculator.js"></script>
+<script defer src="/js/calculator.js"></script>
 <script>
 initCalculator({
   fields: [{"name":"weight","label":"Weight (kg)","type":"number","options":[],"defaultVal":"70"},{"name":"height","label":"Height (cm)","type":"number","options":[],"defaultVal":"170"},{"name":"activity","label":"Activity Level","type":"select","options":["Sedentary","Light Exercise","Moderate Exercise","Heavy Training","Athlete"],"defaultVal":"Moderate Exercise"},{"name":"goal","label":"Goal","type":"select","options":["Maintain Weight","Lose Weight","Build Muscle"],"defaultVal":"Maintain Weight"}],
@@ -380,5 +383,8 @@ initCalculator({
   });
 })();
 </script>
+<script src="/js/site-config.js" defer></script>
+<script src="/js/scripts-config.js" defer></script>
+<script src="/js/main.js" defer></script>
 </body>
 </html>
