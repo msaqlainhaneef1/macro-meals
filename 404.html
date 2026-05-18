@@ -295,7 +295,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="footer-bottom">&copy; 2026 Macro &amp; Meals &mdash; All rights reserved.</div>
 </footer>
 <script>
-(function(){
+document.addEventListener('DOMContentLoaded', function(){
   var input = document.getElementById('search-404');
   var results = document.getElementById('search-404-results');
   if (!input || !results || typeof PAGE_REGISTRY === 'undefined') return;
@@ -321,7 +321,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   document.addEventListener('click', function(e){
     if (!input.contains(e.target) && !results.contains(e.target)) results.style.display = 'none';
   });
-})();
+});
 </script>
 <button id="back-to-top" class="back-to-top" aria-label="Back to top" title="Back to top">
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="24" height="24">

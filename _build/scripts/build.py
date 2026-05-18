@@ -406,20 +406,28 @@ def optimize_images(html):
     return html
 
 def add_script_defer(html):
-    """Add defer attribute to page-specific script tags."""
-    def add_defer(match):
+    """Add defer attribute to common script tags only.
+    
+    Only defers the three common scripts (site-config, scripts-config, main).
+    Page-specific scripts like calculator.js and restaurant.js are NOT deferred
+    because inline scripts immediately after them depend on their functions.
+    Also removes defer from page-specific scripts if previously added.
+    """
+    safe_to_defer = ['site-config.js', 'scripts-config.js', 'main.js']
+    def fix_defer(match):
         tag = match.group(0)
-        if 'defer' in tag or 'async' in tag:
-            return tag
-        # Skip inline scripts (no src attribute)
         if 'src=' not in tag:
             return tag
-        # Skip analytics/GTM scripts (handled separately)
-        if 'googletagmanager' in tag or 'google-analytics' in tag:
-            return tag
-        tag = tag.replace('<script ', '<script defer ')
+        is_safe = any(s in tag for s in safe_to_defer)
+        if is_safe:
+            if 'defer' not in tag and 'async' not in tag:
+                tag = tag.replace('<script ', '<script defer ')
+        else:
+            # Remove defer from page-specific scripts (they have inline dependents)
+            tag = tag.replace(' defer ', ' ').replace(' defer"', '"').replace('"defer ', '"')
+            tag = re.sub(r'\s+defer(?=[\s>])', '', tag)
         return tag
-    html = re.sub(r'<script\s[^>]*src=[^>]*></script>', add_defer, html)
+    html = re.sub(r'<script\s[^>]*src=[^>]*></script>', fix_defer, html)
     return html
 
 def process_html_file(filepath):
