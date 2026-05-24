@@ -6,7 +6,7 @@
 <xsl:template match="/">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Macro &amp; Meals — Sitemap</title>
+  <title>Sitemap | Macro &amp; Meals</title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <style>

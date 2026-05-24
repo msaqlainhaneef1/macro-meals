@@ -431,6 +431,675 @@ def add_script_defer(html):
     return html
 
 # ---------------------------------------------------------------------------
+# SEO Optimization — click-worthy titles, meta descriptions, OG tags
+# ---------------------------------------------------------------------------
+
+# Optimized titles and descriptions for ALL pages
+# Format: slug → (title_without_brand, meta_description)
+# Title will get " | Macro & Meals" appended automatically
+# Descriptions: 120-155 chars, keyword-rich, with CTA
+
+SEO_DATA = {
+    # Homepage
+    'homepage': (
+        'Free Nutrition Calculators & Tools',
+        'Free nutrition calculators for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins & more. Track calories, protein, carbs and fat instantly in your browser.'
+    ),
+
+    # --- Restaurant Nutrition Calculators ---
+    'starbucks-nutrition-calculator': (
+        'Starbucks Nutrition Calculator',
+        'Build your Starbucks order and track calories, protein, carbs & fat. Customize drinks and food with our free Starbucks nutrition calculator.'
+    ),
+    'chipotle-nutrition-calculator': (
+        'Chipotle Nutrition Calculator',
+        'Build your Chipotle burrito, bowl or tacos and see exact calories, protein, carbs & fat. Free Chipotle nutrition calculator with full menu.'
+    ),
+    'mcdonalds-calories-calculator': (
+        "McDonald's Nutrition Calculator",
+        "Check McDonald's calories, protein, carbs & fat for burgers, fries, McNuggets and more. Free McDonald's nutrition calculator with full menu data."
+    ),
+    'subway-nutrition-calculator': (
+        'Subway Nutrition Calculator',
+        'Build your Subway sub and calculate exact calories, protein, carbs & fat. Free Subway nutrition calculator with all bread, protein and topping options.'
+    ),
+    'taco-bell-nutrition-calculator': (
+        'Taco Bell Nutrition Calculator',
+        'Calculate Taco Bell calories, protein, carbs & fat for tacos, burritos, quesadillas and more. Free nutrition calculator with the full menu.'
+    ),
+    'five-guys-nutrition-calculator': (
+        'Five Guys Nutrition Calculator',
+        'Build your Five Guys burger or order and track calories, protein, carbs & fat. Free Five Guys nutrition calculator with all toppings included.'
+    ),
+    'panda-express-nutrition-calculator': (
+        'Panda Express Nutrition Calculator',
+        'Build your Panda Express plate and calculate calories, protein, carbs & fat for orange chicken, fried rice and more. Free nutrition tool.'
+    ),
+    'burger-king-calories-calculator': (
+        'Burger King Nutrition Calculator',
+        'Check Burger King calories for Whoppers, chicken sandwiches, fries and more. Free BK nutrition calculator with full menu data and macros.'
+    ),
+    'wendys-nutrition-calculator': (
+        "Wendy's Nutrition Calculator",
+        "Calculate Wendy's calories, protein, carbs & fat for Baconators, Frostys, salads and more. Free Wendy's nutrition calculator with full menu."
+    ),
+    'arbys-nutrition-calculator': (
+        "Arby's Nutrition Calculator",
+        "Calculate Arby's calories and macros for roast beef sandwiches, curly fries and more. Free Arby's nutrition calculator with complete menu data."
+    ),
+    'qdoba-nutrition-calculator': (
+        'Qdoba Nutrition Calculator',
+        'Build your Qdoba burrito or bowl and see exact calories, protein, carbs & fat. Free Qdoba nutrition calculator with full menu options.'
+    ),
+    'wawa-nutrition-calculator': (
+        'Wawa Nutrition Calculator',
+        'Track Wawa hoagie and food nutrition with calories, protein, carbs & fat. Free Wawa nutrition calculator with full menu data and macros.'
+    ),
+    'whataburger-nutrition-calculator': (
+        'Whataburger Nutrition Calculator',
+        'Check Whataburger calories, protein, carbs & fat for burgers, chicken and more. Free Whataburger nutrition calculator with full menu data.'
+    ),
+    'dutch-bros-nutrition-calculator': (
+        'Dutch Bros Nutrition Calculator',
+        'Check Dutch Bros calories, sugar and macros for Rebels, lattes, frosts and more. Free Dutch Bros nutrition calculator with full drink menu.'
+    ),
+    'sheetz-nutrition-calculator': (
+        'Sheetz Nutrition Calculator',
+        'Track Sheetz MTO food nutrition with calories, protein, carbs & fat. Free Sheetz nutrition calculator for subs, burgers and snacks.'
+    ),
+    'papa-johns-nutrition-calculator': (
+        "Papa John's Nutrition Calculator",
+        "Calculate Papa John's pizza calories by size, crust and toppings. Free Papa John's nutrition calculator with full menu data and macros."
+    ),
+    'mod-pizza-calories-calculator': (
+        'MOD Pizza Nutrition Calculator',
+        'Build your MOD Pizza and calculate exact calories, protein, carbs & fat. Free MOD Pizza nutrition calculator with all crusts and toppings.'
+    ),
+    'wingstop-calories-calculator': (
+        'Wingstop Calories Calculator',
+        'Check Wingstop wing calories by flavor, sides and dips. Free Wingstop nutrition calculator with full menu data, protein, carbs and fat.'
+    ),
+    'blaze-pizza-calories-calculator': (
+        'Blaze Pizza Nutrition Calculator',
+        'Build your Blaze pizza and track exact calories, protein, carbs & fat. Free Blaze Pizza nutrition calculator with all crust and topping options.'
+    ),
+    'applebees-nutrition-calculator': (
+        "Applebee's Nutrition Calculator",
+        "Track Applebee's calories for steaks, burgers, appetizers and desserts. Free Applebee's nutrition calculator with full menu data and macros."
+    ),
+    'daves-hot-chicken-nutrition-calculator': (
+        "Dave's Hot Chicken Calculator",
+        "Check Dave's Hot Chicken calories, protein, carbs & fat by spice level. Free Dave's Hot Chicken nutrition calculator with full menu data."
+    ),
+    'albaik-nutrition-calculator': (
+        'Albaik Nutrition Calculator',
+        'Calculate Albaik chicken meal calories, protein, carbs & fat. Free Albaik nutrition calculator with complete menu data for all items.'
+    ),
+    'bolay-nutrition-calculator': (
+        'Bolay Nutrition Calculator',
+        'Build your Bolay bowl and calculate exact calories, protein, carbs & fat. Free Bolay nutrition calculator with all base, protein and topping options.'
+    ),
+    'bolthouse-farms-nutrition-calculator': (
+        'Bolthouse Farms Calculator',
+        'Compare Bolthouse Farms juice and smoothie nutrition facts. Free calculator with calories, protein, sugar and vitamins for all products.'
+    ),
+    'brassica-nutrition-calculator': (
+        'Brassica Nutrition Calculator',
+        'Build your Brassica bowl and track exact calories, protein, carbs & fat. Free Brassica nutrition calculator with all salad and bowl options.'
+    ),
+    'black-rock-coffee-nutrition-calculator': (
+        'Black Rock Coffee Calculator',
+        'Check Black Rock Coffee drink calories, sugar, protein and fat. Free Black Rock Coffee nutrition calculator with full beverage menu data.'
+    ),
+    'blank-street-coffee-calories-calculator': (
+        'Blank Street Coffee Calculator',
+        'Track Blank Street Coffee drink calories, sugar, protein and fat. Free Blank Street Coffee nutrition calculator with full menu data.'
+    ),
+    'dig-nutrition-calculator': (
+        'DIG Nutrition Calculator',
+        'Build your DIG plate and calculate exact calories, protein, carbs & fat. Free DIG nutrition calculator with all seasonal menu options.'
+    ),
+    'smoothie-king-nutrition-calculator': (
+        'Smoothie King Nutrition Calculator',
+        'Check Smoothie King blend calories, protein, sugar and fat. Free Smoothie King nutrition calculator to build and track your perfect smoothie.'
+    ),
+    'sonic-drive-in-nutrition-calculator': (
+        'Sonic Drive-In Nutrition Calculator',
+        'Calculate Sonic Drive-In calories for burgers, shakes, tots and slushes. Free Sonic nutrition calculator with full menu data and macros.'
+    ),
+    'jimmy-johns-calories-calculator': (
+        "Jimmy John's Nutrition Calculator",
+        "Calculate Jimmy John's sub calories, protein, carbs & fat. Free Jimmy John's nutrition calculator with all bread, meat and topping options."
+    ),
+    'raising-canes-calculator': (
+        "Raising Cane's Nutrition Calculator",
+        "Check Raising Cane's chicken finger combo calories, protein, carbs & fat. Free Raising Cane's nutrition calculator with full menu data."
+    ),
+    'tropical-smoothie-cafe-nutrition-calculator': (
+        'Tropical Smoothie Cafe Calculator',
+        'Build your Tropical Smoothie and track calories, protein, sugar & fat. Free Tropical Smoothie Cafe nutrition calculator with full menu.'
+    ),
+    'sweetgreen-nutrition-calculator': (
+        'Sweetgreen Nutrition Calculator',
+        'Build your Sweetgreen bowl or salad and see exact calories, protein, carbs & fat. Free Sweetgreen nutrition calculator with seasonal menu.'
+    ),
+    'nandos-nutrition-calculator': (
+        "Nando's Nutrition Calculator",
+        "Calculate Nando's Peri-Peri chicken calories, protein, carbs & fat. Free Nando's nutrition calculator with all sides and spice levels."
+    ),
+    'mellow-mushroom-nutrition-calculator': (
+        'Mellow Mushroom Nutrition Calculator',
+        'Calculate Mellow Mushroom pizza and appetizer calories. Free Mellow Mushroom nutrition calculator with full menu data, protein, carbs and fat.'
+    ),
+    'mucho-burrito-nutrition-calculator': (
+        'Mucho Burrito Nutrition Calculator',
+        'Build your Mucho Burrito and track exact calories, protein, carbs & fat. Free Mucho Burrito nutrition calculator with full menu options.'
+    ),
+    'nifty-fifty-nutrition-calculator': (
+        'Nifty Fifty Nutrition Calculator',
+        "Calculate Nifty Fifty's classic diner menu calories, protein, carbs & fat. Free nutrition calculator for burgers, shakes, fries and more."
+    ),
+    'jamba-juice-nutrition-calculator': (
+        'Jamba Juice Nutrition Calculator',
+        'Check Jamba Juice smoothie and bowl calories, protein, sugar & fat. Free Jamba nutrition calculator to build and customize your blend.'
+    ),
+    'via-313-nutrition-calculator': (
+        'Via 313 Nutrition Calculator',
+        'Calculate Via 313 Detroit-style pizza calories, protein, carbs & fat by size and toppings. Free Via 313 nutrition calculator with full menu.'
+    ),
+    'zao-asian-cafe-nutrition-calculator': (
+        'Zao Asian Cafe Nutrition Calculator',
+        'Build your Zao Asian Cafe bowl and track calories, protein, carbs & fat. Free Zao nutrition calculator with noodle, rice and stir-fry options.'
+    ),
+    'taim-mediterranean-kitchen-nutrition-calculator': (
+        'Taim Mediterranean Kitchen Calculator',
+        'Track Taim Mediterranean Kitchen falafel, bowl and pita calories. Free Taim nutrition calculator with protein, carbs and fat data.'
+    ),
+    'carls-jr-calories-calculator': (
+        "Carl's Jr. Nutrition Calculator",
+        "Calculate Carl's Jr. calories, protein, carbs & fat for burgers, chicken stars and more. Free Carl's Jr. nutrition calculator with full menu data."
+    ),
+    'cafe-rio-calories-calculator': (
+        'Cafe Rio Nutrition Calculator',
+        'Build your Cafe Rio burrito, salad or enchilada and see calories, protein, carbs & fat. Free Cafe Rio nutrition calculator with full menu.'
+    ),
+    'chilis-calories-calculator': (
+        "Chili's Nutrition Calculator",
+        "Calculate Chili's calories for burgers, fajitas, ribs and appetizers. Free Chili's nutrition calculator with full menu data and macros."
+    ),
+    'cupbop-nutrition-calculator': (
+        'Cupbop Nutrition Calculator',
+        'Build your Cupbop Korean BBQ cup and track calories, protein, carbs & fat. Free Cupbop nutrition calculator with all sauces and toppings.'
+    ),
+    'salad-master-nutrition-calculator': (
+        'Salad Master Nutrition Calculator',
+        'Build your custom salad and calculate exact calories, protein, carbs & fat. Free Salad Master nutrition calculator with all ingredient options.'
+    ),
+    'cava-nutrition-calculator': (
+        'CAVA Nutrition Calculator',
+        'Build your CAVA bowl, pita or salad and track exact calories, protein, carbs & fat. Free CAVA nutrition calculator with all dip and topping options.'
+    ),
+    'naked-juice-nutrition-calculator': (
+        'Naked Juice Nutrition Calculator',
+        'Compare Naked Juice smoothie and pressed juice nutrition facts. Free Naked Juice calculator with calories, protein, sugar and vitamins.'
+    ),
+    'jersey-mikes-calories-calculator': (
+        "Jersey Mike's Nutrition Calculator",
+        "Build your Jersey Mike's sub and calculate calories, protein, carbs & fat. Free Jersey Mike's nutrition calculator with all bread and topping options."
+    ),
+    'bibibop-calories-calculator': (
+        'BIBIBOP Nutrition Calculator',
+        'Build your BIBIBOP Asian bowl and track exact calories, protein, carbs & fat. Free BIBIBOP nutrition calculator with all base and topping options.'
+    ),
+    'outback-steakhouse-menu': (
+        'Outback Steakhouse Menu & Nutrition',
+        'View the complete Outback Steakhouse menu with calories and nutrition facts for steaks, ribs, appetizers and desserts. Free nutrition data.'
+    ),
+
+    # --- Restaurant Menus ---
+    'chipotle-menu': (
+        'Chipotle Menu with Prices & Calories',
+        'View the full Chipotle menu with nutrition facts, calories and prices for burritos, bowls, tacos, quesadillas and sides. Updated for 2025.'
+    ),
+    'dutch-bros-menu': (
+        'Dutch Bros Menu with Prices & Calories',
+        'Browse the full Dutch Bros menu with nutrition facts, calories and prices for Rebels, lattes, frosts, teas and more. Updated for 2025.'
+    ),
+    'five-guys-menu': (
+        'Five Guys Menu with Prices & Calories',
+        'View the complete Five Guys menu with nutrition facts, calories and prices for burgers, hot dogs, fries and milkshakes. Updated for 2025.'
+    ),
+    'starbucks-menu': (
+        'Starbucks Menu with Prices & Calories',
+        'Browse the full Starbucks menu with nutrition facts, calories and prices for drinks, food, Frappuccinos and seasonal items. Updated for 2025.'
+    ),
+    'taco-bell-menu': (
+        'Taco Bell Menu with Prices & Calories',
+        'View the complete Taco Bell menu with nutrition facts, calories and prices for tacos, burritos, quesadillas and combos. Updated for 2025.'
+    ),
+    'panda-express-menu': (
+        'Panda Express Menu with Prices',
+        'Browse the full Panda Express menu with nutrition facts, calories and prices for orange chicken, plates, bowls and sides. Updated for 2025.'
+    ),
+    'qdoba-menu': (
+        'Qdoba Menu with Prices & Calories',
+        'View the full Qdoba menu with nutrition facts, calories and prices for burritos, bowls, tacos, quesadillas and nachos. Updated for 2025.'
+    ),
+    'sheetz-menu': (
+        'Sheetz Menu with Prices & Calories',
+        'Browse the full Sheetz MTO menu with nutrition facts, calories and prices for subs, burgers, snacks and drinks. Updated for 2025.'
+    ),
+    'wawa-menu': (
+        'Wawa Menu with Prices & Calories',
+        'View the full Wawa menu with nutrition facts, calories and prices for hoagies, breakfast, beverages and snacks. Updated for 2025.'
+    ),
+    'whataburger-menu': (
+        'Whataburger Menu with Prices & Calories',
+        'Browse the full Whataburger menu with nutrition facts, calories and prices for burgers, chicken, breakfast and sides. Updated for 2025.'
+    ),
+    'sushi-menu': (
+        'Sushi Menu with Nutrition & Calories',
+        'Browse a complete sushi menu with nutrition facts, calories and protein for nigiri, maki rolls, sashimi and specialty rolls.'
+    ),
+
+    # --- Body Composition & Health Calculators ---
+    'bmi-calculator': (
+        'Free BMI Calculator',
+        'Calculate your BMI, body fat estimate, ideal weight and TDEE in seconds. Free BMI calculator with complete health profile and personalized results.'
+    ),
+    'bmi-nih-calculator': (
+        'BMI NIH Calculator',
+        'Calculate BMI using the official NIH classification system. Free BMI calculator with NIH health risk categories and clinical weight assessment.'
+    ),
+    'bmr-calculator': (
+        'Free BMR Calculator',
+        'Calculate your Basal Metabolic Rate with multiple scientific formulas. Free BMR calculator to find how many calories you burn at rest daily.'
+    ),
+    'body-fat-calculator': (
+        'Body Fat Calculator',
+        'Estimate your body fat percentage using the U.S. Navy method. Free body fat calculator with lean mass, fat mass and health risk assessment.'
+    ),
+    'body-shape-calculator': (
+        'Body Shape Calculator',
+        'Determine your body shape type from measurements. Free calculator identifies apple, pear, hourglass, rectangle or inverted triangle body types.'
+    ),
+    'ffmi-calculator': (
+        'FFMI Calculator',
+        'Calculate your Fat-Free Mass Index to measure muscular development. Free FFMI calculator used by athletes and bodybuilders for progress tracking.'
+    ),
+    'bsa-calculator': (
+        'BSA Calculator',
+        'Calculate Body Surface Area using Du Bois, Mosteller and other medical formulas. Free BSA calculator used for drug dosing and clinical assessment.'
+    ),
+    'bri-calculator': (
+        'BRI Calculator',
+        'Calculate your Body Roundness Index for health risk assessment. Free BRI calculator measures body shape and abdominal fat distribution risk.'
+    ),
+    'absi-calculator': (
+        'ABSI Calculator',
+        'Calculate your A Body Shape Index to assess mortality risk based on waist circumference. Free ABSI calculator with health risk classification.'
+    ),
+    'army-body-fat-calculator': (
+        'Army Body Fat Calculator',
+        'Calculate body fat using the official U.S. Army method (AR 600-9). Free Army body fat calculator with tape measurement protocol and standards.'
+    ),
+    'us-marine-body-fat-calculator': (
+        'US Marine Body Fat Calculator',
+        'Calculate body fat using official USMC standards. Free Marine Corps body fat calculator with tape measurement method and fitness requirements.'
+    ),
+    'anorexic-bmi-calculator': (
+        'Anorexic BMI Calculator',
+        'Understand BMI ranges associated with anorexia nervosa and when to seek professional help. Free calculator with clinical weight thresholds.'
+    ),
+    'face-shape-calculator': (
+        'Face Shape Calculator',
+        'Determine your face shape from facial measurements. Free face shape calculator identifies oval, round, square, heart, oblong or diamond shapes.'
+    ),
+    'ideal-body-weight-calculator': (
+        'Ideal Body Weight Calculator',
+        'Find your ideal weight using Devine, Robinson, Miller and Hamwi formulas. Free ideal body weight calculator with personalized healthy weight range.'
+    ),
+    'lean-body-mass-calculator': (
+        'Lean Body Mass Calculator',
+        'Calculate your lean body mass and muscle-to-fat ratio. Free LBM calculator using multiple formulas to track fitness progress and set goals.'
+    ),
+    'overweight-calculator': (
+        'Overweight Calculator',
+        'Check if you are overweight based on BMI, body fat and waist measurements. Free overweight calculator with health risk assessment and guidance.'
+    ),
+    'waist-to-hip-ratio-calculator': (
+        'Waist-to-Hip Ratio Calculator',
+        'Calculate your waist-to-hip ratio for cardiovascular risk assessment. Free WHR calculator with health risk categories for men and women.'
+    ),
+    'skinfold-body-fat-calculator': (
+        'Skinfold Body Fat Calculator',
+        'Measure body fat percentage using skinfold caliper measurements. Free skinfold calculator with 3-site and 7-site protocols for accurate results.'
+    ),
+    'height-calculator': (
+        'Height Calculator',
+        'Predict adult height based on current age, parental heights and growth data. Free height calculator for children and teens with growth projections.'
+    ),
+    'bedridden-patient-height-calculator': (
+        'Bedridden Patient Height Calculator',
+        'Estimate height for bedridden patients using knee height, arm span or ulna length. Free clinical height calculator for medical professionals.'
+    ),
+    'baby-percentile-calculator': (
+        'Baby Growth Percentile Calculator',
+        'Track your baby\'s growth against WHO growth charts. Free baby percentile calculator for weight, length and head circumference by age and gender.'
+    ),
+    'gfr-calculator': (
+        'GFR Calculator',
+        'Calculate your Glomerular Filtration Rate for kidney function assessment. Free GFR calculator using CKD-EPI and MDRD formulas with staging.'
+    ),
+    'karvonen-formula-calculator': (
+        'Karvonen Formula Calculator',
+        'Calculate target heart rate training zones using the Karvonen method. Free heart rate calculator for cardio, fat burn and peak performance zones.'
+    ),
+    'one-rep-max-calculator': (
+        'One Rep Max Calculator',
+        'Calculate your one-rep max for any lift using Epley, Brzycki and other formulas. Free 1RM calculator with percentage-based training loads.'
+    ),
+
+    # --- Diet & Macro Calculators ---
+    'tdee-calculator': (
+        'Free TDEE Calculator',
+        'Calculate your Total Daily Energy Expenditure based on BMR and activity level. Free TDEE calculator for weight loss, maintenance or muscle gain.'
+    ),
+    'calorie-deficit-calculator': (
+        'Calorie Deficit Calculator',
+        'Plan your calorie deficit for safe, sustainable weight loss. Free calculator with personalized daily targets, macros and timeline projections.'
+    ),
+    'protein-calculator': (
+        'Protein Calculator',
+        'Calculate your daily protein needs based on weight, activity and fitness goals. Free protein calculator for muscle gain, weight loss or maintenance.'
+    ),
+    'carbohydrate-calculator': (
+        'Carbohydrate Calculator',
+        'Calculate your optimal daily carb intake based on goals, activity and body stats. Free carb calculator for low-carb, keto or performance diets.'
+    ),
+    'keto-macro-calculator': (
+        'Keto Macro Calculator',
+        'Calculate your ideal keto macros for fat, protein and net carbs. Free keto calculator with personalized ratios for weight loss and ketosis.'
+    ),
+    'macro-calculator-for-weight-loss': (
+        'Macro Calculator for Weight Loss',
+        'Calculate your ideal protein, carb and fat macros for weight loss. Free macro calculator with calorie targets and meal planning guidance.'
+    ),
+    'water-fasting-calculator': (
+        'Water Fasting Calculator',
+        'Plan your water fast with projected weight loss, electrolyte needs and refeeding guidance. Free water fasting calculator with safety timeline.'
+    ),
+    'protein-molecular-weight-calculator': (
+        'Protein Molecular Weight Calculator',
+        'Calculate protein molecular weight from amino acid sequence. Free tool for biochemistry students and researchers with detailed mass analysis.'
+    ),
+    'steps-to-calories-calculator': (
+        'Steps to Calories Calculator',
+        'Convert your daily steps into calories burned based on weight, pace and terrain. Free steps to calories calculator for fitness and weight tracking.'
+    ),
+    'steps-to-miles-calculator': (
+        'Steps to Miles Calculator',
+        'Convert your step count into miles or kilometers based on stride length and height. Free steps to miles calculator for walking and running.'
+    ),
+    'kj-to-calories-converter': (
+        'kJ to Calories Converter',
+        'Convert kilojoules to calories and calories to kJ instantly. Free energy unit converter with common food and exercise reference values.'
+    ),
+    'maintenance-fluid-calculator': (
+        'Maintenance Fluid Calculator',
+        'Calculate daily maintenance fluid requirements using the Holliday-Segar method. Free clinical fluid calculator for pediatric and adult patients.'
+    ),
+
+    # --- Vitamins & Micronutrients ---
+    'vitamin-a-calculator': (
+        'Vitamin A Calculator',
+        'Calculate your recommended daily vitamin A intake based on age, gender and health factors. Free vitamin A calculator with food source recommendations.'
+    ),
+    'vitamin-b-calculator': (
+        'Vitamin B Calculator',
+        'Calculate your daily vitamin B complex needs for all 8 B vitamins. Free vitamin B calculator with food sources, deficiency signs and RDA values.'
+    ),
+    'vitamin-c-calculator': (
+        'Vitamin C Calculator',
+        'Find your optimal daily vitamin C intake based on age, smoking status and health conditions. Free vitamin C calculator with food source guide.'
+    ),
+    'vitamin-d-calculator': (
+        'Vitamin D Calculator',
+        'Calculate your recommended daily vitamin D intake for bone health and immunity. Free vitamin D calculator with sun exposure and supplement guidance.'
+    ),
+    'vitamin-e-calculator': (
+        'Vitamin E Calculator',
+        'Calculate your daily vitamin E needs based on age, gender and health conditions. Free vitamin E calculator with food sources and RDA values.'
+    ),
+    'vitamin-k-calculator': (
+        'Vitamin K Calculator',
+        'Calculate your daily vitamin K requirements for blood clotting and bone health. Free vitamin K calculator with food sources and RDA values.'
+    ),
+    'cholesterol-ratio-calculator': (
+        'Cholesterol Ratio Calculator',
+        'Calculate your total-to-HDL cholesterol ratio for heart disease risk assessment. Free cholesterol ratio calculator with health risk categories.'
+    ),
+    'ldl-cholesterol-calculator': (
+        'LDL Cholesterol Calculator',
+        'Estimate your LDL cholesterol using the Friedewald equation from total cholesterol, HDL and triglycerides. Free LDL calculator with risk assessment.'
+    ),
+
+    # --- Pregnancy & Specialty ---
+    'due-date-calculator': (
+        'Due Date Calculator',
+        'Calculate your baby\'s due date from your last period or conception date. Free due date calculator with trimester timeline and key milestones.'
+    ),
+    'conception-calculator': (
+        'Conception Calculator',
+        'Estimate your conception date based on due date or last menstrual period. Free conception calculator with fertile window and ovulation timing.'
+    ),
+    'ovulation-calculator': (
+        'Ovulation Calculator',
+        'Track your ovulation cycle and find your most fertile days. Free ovulation calculator with cycle tracking and conception window predictions.'
+    ),
+    'pregnancy-calculator': (
+        'Pregnancy Calculator',
+        'Track your pregnancy week by week with due date, trimester and fetal development details. Free pregnancy calculator with milestone timeline.'
+    ),
+    'pregnancy-weight-gain-calculator': (
+        'Pregnancy Weight Gain Calculator',
+        'Calculate healthy pregnancy weight gain based on pre-pregnancy BMI. Free calculator with IOM guidelines and trimester-specific recommendations.'
+    ),
+    'menses-calculator': (
+        'Period Calculator',
+        'Predict your next period, fertile window and PMS days. Free menstrual cycle calculator with cycle length tracking and ovulation estimates.'
+    ),
+    'ivf-success-rate-calculator': (
+        'IVF Success Rate Calculator',
+        'Estimate your IVF success probability based on age, diagnosis and treatment factors. Free IVF calculator with clinic comparison and cycle guidance.'
+    ),
+
+    # --- Essential/Legal/Utility Pages ---
+    'about': (
+        'About Us',
+        'Macro & Meals provides free, accurate nutrition calculators and health tools for 50+ restaurants, body composition, diet macros and vitamins.'
+    ),
+    'contact': (
+        'Contact Us',
+        'Get in touch with Macro & Meals. Questions about our nutrition calculators, feedback or partnership inquiries? We would love to hear from you.'
+    ),
+    'privacy-policy': (
+        'Privacy Policy',
+        'Privacy Policy for Macro & Meals. Learn how we collect, use and protect your data when using our free nutrition calculators and health tools.'
+    ),
+    'terms-conditions': (
+        'Terms & Conditions',
+        'Terms and Conditions for using Macro & Meals nutrition calculators and health tools. Read our usage policies before using the site.'
+    ),
+    'disclaimer': (
+        'Disclaimer',
+        'Health and nutrition disclaimer for Macro & Meals. Our calculators are for educational purposes only and not a substitute for medical advice.'
+    ),
+    'cookie-policy': (
+        'Cookie Policy',
+        'Cookie Policy for Macro & Meals. Learn about the cookies we use, why we use them and how to manage your cookie preferences on our site.'
+    ),
+    'dmca': (
+        'DMCA Policy',
+        'DMCA takedown policy for Macro & Meals. Learn how to submit copyright infringement notices and our process for handling DMCA requests.'
+    ),
+    'accessibility': (
+        'Accessibility Statement',
+        'Accessibility statement for Macro & Meals. Our commitment to making nutrition tools accessible to all users regardless of ability or disability.'
+    ),
+    'sitemap-page': (
+        'Sitemap',
+        'Browse all pages on Macro & Meals. Find nutrition calculators, restaurant tools, health calculators, vitamin guides and more in one place.'
+    ),
+    'blog': (
+        'Nutrition Blog',
+        'Nutrition tips, calorie counting guides, diet science and health insights from Macro & Meals. Expert articles to help you eat smarter.'
+    ),
+    'blog/how-to-calculate-your-daily-calorie-needs': (
+        'How to Calculate Daily Calorie Needs',
+        'Learn the science behind TDEE, BMR and activity multipliers to find your perfect daily calorie intake for weight loss, gain or maintenance.'
+    ),
+
+    # 404
+    '404': (
+        'Page Not Found',
+        'The page you are looking for does not exist or has been moved. Browse our free nutrition calculators and health tools at Macro & Meals.'
+    ),
+}
+
+
+def optimize_seo_tags(html, filepath):
+    """Optimize title, meta description, OG tags and other SEO elements."""
+    # Determine slug
+    relpath = os.path.relpath(filepath, ROOT)
+    if relpath == 'index.html':
+        slug = 'homepage'
+    elif relpath == '404.html':
+        slug = '404'
+    else:
+        slug = os.path.dirname(relpath)
+
+    # Get SEO data for this page
+    if slug not in SEO_DATA:
+        # Page not in our mapping — just fix dashes in existing title
+        html = re.sub(
+            r'(<title>[^<]*)\s*[—–]\s*([^<]*</title>)',
+            r'\1 | \2', html
+        )
+        return html
+
+    title_part, description = SEO_DATA[slug]
+
+    # Build full title with branding
+    if slug == 'homepage':
+        full_title = f'Macro &amp; Meals | {title_part}'
+    elif slug == '404':
+        full_title = f'{title_part} | Macro &amp; Meals'
+    else:
+        full_title = f'{title_part} | Macro &amp; Meals'
+
+    # Replace <title>
+    html = re.sub(r'<title>[^<]*</title>', f'<title>{full_title}</title>', html)
+
+    # Replace meta description
+    html = re.sub(
+        r'<meta\s+name="description"\s+content="[^"]*"',
+        f'<meta name="description" content="{description}"',
+        html
+    )
+    # Also handle if description doesn't exist (404 page)
+    if 'name="description"' not in html and '</head>' in html:
+        html = html.replace(
+            '</head>',
+            f'<meta name="description" content="{description}">\n</head>'
+        )
+
+    # Fix OG title (without brand suffix, plain & not &amp;)
+    og_title = title_part.replace('&amp;', '&')
+    html = re.sub(
+        r'<meta\s+property="og:title"\s+content="[^"]*"',
+        f'<meta property="og:title" content="{og_title}"',
+        html
+    )
+
+    # Fix OG description
+    html = re.sub(
+        r'<meta\s+property="og:description"\s+content="[^"]*"',
+        f'<meta property="og:description" content="{description}"',
+        html
+    )
+
+    # Fix twitter description
+    html = re.sub(
+        r'<meta\s+name="twitter:description"\s+content="[^"]*"',
+        f'<meta name="twitter:description" content="{description}"',
+        html
+    )
+
+    # Fix twitter title
+    html = re.sub(
+        r'<meta\s+name="twitter:title"\s+content="[^"]*"',
+        f'<meta name="twitter:title" content="{og_title}"',
+        html
+    )
+
+    # Ensure canonical URL exists and is correct
+    if slug == 'homepage':
+        canonical_url = f'{URL}/'
+    elif slug == '404':
+        pass  # No canonical for 404
+    else:
+        canonical_url = f'{URL}/{slug}/'
+
+    if slug != '404':
+        if '<link rel="canonical"' in html:
+            html = re.sub(
+                r'<link\s+rel="canonical"\s+href="[^"]*"',
+                f'<link rel="canonical" href="{canonical_url}"',
+                html
+            )
+        else:
+            html = html.replace(
+                '</head>',
+                f'<link rel="canonical" href="{canonical_url}">\n</head>'
+            )
+
+    # Ensure og:url matches canonical
+    if slug != '404':
+        if 'og:url' in html:
+            html = re.sub(
+                r'<meta\s+property="og:url"\s+content="[^"]*"',
+                f'<meta property="og:url" content="{canonical_url}"',
+                html
+            )
+
+    # Ensure og:type exists
+    if 'og:type' not in html and '</head>' in html:
+        og_type = 'article' if slug.startswith('blog/') else 'website'
+        html = html.replace(
+            '</head>',
+            f'<meta property="og:type" content="{og_type}">\n</head>'
+        )
+
+    # Ensure og:site_name
+    if 'og:site_name' not in html and '</head>' in html:
+        html = html.replace(
+            '</head>',
+            f'<meta property="og:site_name" content="Macro &amp; Meals">\n</head>'
+        )
+
+    # Remove any em/en dashes that might remain in meta tags
+    # (but not in content text — only in meta attributes)
+    html = re.sub(
+        r'(<meta[^>]*content="[^"]*)\s*—\s*',
+        r'\1 - ',
+        html
+    )
+
+    return html
+
+
+# ---------------------------------------------------------------------------
 # Internal Linking System — auto-generates related links for every page
 # ---------------------------------------------------------------------------
 
@@ -828,6 +1497,8 @@ def process_html_file(filepath):
     content = inject_gtm_noscript(content)
     # Internal linking (auto-generated related pages)
     content = inject_internal_links(content, filepath)
+    # SEO optimization (titles, meta descriptions, OG tags)
+    content = optimize_seo_tags(content, filepath)
     # Performance optimizations (safe — no design impact)
     content = optimize_images(content)
     content = add_script_defer(content)
@@ -992,7 +1663,7 @@ def generate_sitemap_xsl():
 <xsl:template match="/">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <title>Macro &amp; Meals — Sitemap</title>
+  <title>Sitemap | Macro &amp; Meals</title>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
   <style>

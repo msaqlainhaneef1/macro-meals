@@ -6,140 +6,140 @@ Macro & Meals helps users make informed dietary decisions with accurate nutritio
 
 ## Health & Fitness Calculators
 
-- [ABSI Calculator](https://macroandmeals.com/absi-calculator/): Calculate your A Body Shape Index (ABSI) to assess health risk based on waist circumference relative to BMI and height.
-- [Anorexic BMI Calculator](https://macroandmeals.com/anorexic-bmi-calculator/): Understand BMI ranges associated with anorexia nervosa and when to seek help.
-- [Army Body Fat Calculator](https://macroandmeals.com/army-body-fat-calculator/): Calculate body fat percentage using the U.S. Army method (AR 600-9) with tape measurements.
-- [BMI Calculator](https://macroandmeals.com/bmi-calculator/): Calculate your Body Mass Index, body fat estimate, ideal weight, and get a complete health profile — all in one tool.
-- [BMI NIH Calculator](https://macroandmeals.com/bmi-nih-calculator/): Calculate BMI using the NIH (National Institutes of Health) classification system with disease risk assessment.
-- [BMR Calculator](https://macroandmeals.com/bmr-calculator/): Calculate your Basal Metabolic Rate using multiple scientific formulas. Find out how many calories your body burns at re
-- [BRI Calculator](https://macroandmeals.com/bri-calculator/): Calculate your Body Roundness Index to assess body shape and health risk from abdominal fat.
-- [BSA Calculator](https://macroandmeals.com/bsa-calculator/): Calculate your Body Surface Area using multiple medical formulas (Du Bois, Mosteller, Haycock).
-- [Baby Percentile Calculator](https://macroandmeals.com/baby-percentile-calculator/): Track your baby's growth against WHO growth charts. See weight, length, and head circumference percentiles.
-- [Bedridden Patient Height Calculator](https://macroandmeals.com/bedridden-patient-height-calculator/): Estimate height for bedridden patients using knee height, arm span, or ulna length measurements.
-- [Body Fat Calculator](https://macroandmeals.com/body-fat-calculator/): Estimate your body fat percentage using the U.S. Navy method. Get lean mass, fat mass, and fitness category.
-- [Body Shape Calculator](https://macroandmeals.com/body-shape-calculator/): Determine your body shape type (apple, pear, hourglass, rectangle, inverted triangle) from measurements.
-- [Calorie Deficit Calculator](https://macroandmeals.com/calorie-deficit-calculator/): Plan your calorie deficit for safe, sustainable weight loss. Get personalized targets with macro breakdowns and timeline
-- [Carbohydrate Calculator](https://macroandmeals.com/carbohydrate-calculator/): Determine your optimal daily carbohydrate intake based on activity level, goals, and metabolic needs.
-- [Cholesterol Ratio Calculator](https://macroandmeals.com/cholesterol-ratio-calculator/): Calculate your cholesterol ratios to assess cardiovascular risk using total, HDL, and LDL values.
-- [Conception Calculator](https://macroandmeals.com/conception-calculator/): Estimate when conception likely occurred based on your due date or last menstrual period.
-- [Due Date Calculator](https://macroandmeals.com/due-date-calculator/): Calculate your estimated due date based on your last menstrual period or conception date.
-- [FFMI Calculator](https://macroandmeals.com/ffmi-calculator/): Calculate your Fat-Free Mass Index to assess your muscular development relative to height.
-- [Face Shape Calculator](https://macroandmeals.com/face-shape-calculator/): Determine your face shape (oval, round, square, heart, oblong) from facial measurements.
-- [GFR Calculator](https://macroandmeals.com/gfr-calculator/): Estimate your Glomerular Filtration Rate to assess kidney function using the CKD-EPI equation.
-- [Height Calculator](https://macroandmeals.com/height-calculator/): Predict adult height based on current age, parental heights, and growth data.
-- [IVF Success Rate Calculator](https://macroandmeals.com/ivf-success-rate-calculator/): Estimate your IVF success probability based on age, diagnosis, and treatment factors.
-- [Ideal Body Weight Calculator](https://macroandmeals.com/ideal-body-weight-calculator/): Calculate your ideal body weight using multiple medical formulas (Devine, Hamwi, Robinson, Miller).
-- [Karvonen Formula Calculator](https://macroandmeals.com/karvonen-formula-calculator/): Calculate your target heart rate zones for exercise using the Karvonen method with heart rate reserve.
-- [Keto Macro Calculator](https://macroandmeals.com/keto-macro-calculator/): Get precise macronutrient targets for the ketogenic diet based on your body composition and goals.
-- [LDL Cholesterol Calculator](https://macroandmeals.com/ldl-cholesterol-calculator/): Estimate your LDL cholesterol using the Friedewald equation from total cholesterol, HDL, and triglycerides.
-- [Lean Body Mass Calculator](https://macroandmeals.com/lean-body-mass-calculator/): Estimate your lean body mass (fat-free weight) using multiple scientifically validated formulas.
-- [Maintenance Fluid Calculator](https://macroandmeals.com/maintenance-fluid-calculator/): Calculate daily IV fluid requirements using the Holliday-Segar formula for pediatric and adult patients.
-- [Menses Calculator](https://macroandmeals.com/menses-calculator/): Track and predict your menstrual cycle, including period dates, fertile windows, and cycle regularity.
-- [One Rep Max Calculator](https://macroandmeals.com/one-rep-max-calculator/): Calculate your one-rep max (1RM) for any exercise using multiple proven formulas.
-- [Overweight Calculator](https://macroandmeals.com/overweight-calculator/): Determine if you are overweight and assess associated health risks using BMI and waist measurements.
-- [Ovulation Calculator](https://macroandmeals.com/ovulation-calculator/): Predict your most fertile days and ovulation date based on your menstrual cycle.
-- [Pregnancy Calculator](https://macroandmeals.com/pregnancy-calculator/): Track your pregnancy week by week. Get due date, trimester info, baby size estimates, and important milestones.
-- [Pregnancy Weight Gain Calculator](https://macroandmeals.com/pregnancy-weight-gain-calculator/): Track recommended weight gain during pregnancy based on your pre-pregnancy BMI and current week.
-- [Protein Calculator](https://macroandmeals.com/protein-calculator/): Determine your optimal daily protein intake based on body weight, activity level, and fitness goals.
-- [Protein Molecular Weight Calculator](https://macroandmeals.com/protein-molecular-weight-calculator/): Calculate the molecular weight of a protein from its amino acid sequence or number of amino acids.
-- [Raising Cane's Calculator](https://macroandmeals.com/raising-canes-calculator/): Check calories and macros for chicken fingers and combos.
-- [Skinfold Body Fat Calculator](https://macroandmeals.com/skinfold-body-fat-calculator/): Estimate body fat percentage from skinfold caliper measurements using the Jackson-Pollock method.
-- [Steps to Miles Calculator](https://macroandmeals.com/steps-to-miles-calculator/): Convert your step count to distance in miles and kilometers using your height for accurate stride length.
-- [TDEE Calculator](https://macroandmeals.com/tdee-calculator/): Find out exactly how many calories you burn every day. Get personalized macro targets for weight loss, maintenance, or m
-- [US Marine Body Fat Calculator](https://macroandmeals.com/us-marine-body-fat-calculator/): Calculate body fat using the U.S. Marine Corps method (NAVPERS) with circumference measurements.
-- [Vitamin A Calculator](https://macroandmeals.com/vitamin-a-calculator/): Calculate your recommended daily vitamin A intake based on age, gender, pregnancy status, and health factors.
-- [Vitamin B Calculator](https://macroandmeals.com/vitamin-b-calculator/): Calculate your daily needs for all 8 B vitamins. Get personalized recommendations based on age, diet, and lifestyle.
-- [Vitamin C Calculator](https://macroandmeals.com/vitamin-c-calculator/): Determine your optimal daily vitamin C intake based on age, smoking status, health conditions, and stress levels.
-- [Vitamin D Calculator](https://macroandmeals.com/vitamin-d-calculator/): Get a personalized vitamin D dosage based on your health profile, current levels, sun exposure, and risk factors.
-- [Vitamin E Calculator](https://macroandmeals.com/vitamin-e-calculator/): Calculate your recommended vitamin E intake based on age, gender, and health conditions.
-- [Vitamin K Calculator](https://macroandmeals.com/vitamin-k-calculator/): Determine your vitamin K requirements for bone health, blood clotting, and cardiovascular protection.
-- [Waist-to-Hip Ratio Calculator](https://macroandmeals.com/waist-to-hip-ratio-calculator/): Calculate your waist-to-hip ratio to assess abdominal fat distribution and related health risks.
-- [Water Fasting Calculator](https://macroandmeals.com/water-fasting-calculator/): Estimate calorie burn, weight loss, and safety guidelines for water fasting periods.
-- [kJ to Calories Converter](https://macroandmeals.com/kj-to-calories-converter/): Convert between kilojoules and calories instantly. Useful for reading nutrition labels from different countries.
+- [ABSI Calculator | Macro &amp; Meals](https://macroandmeals.com/absi-calculator/): Calculate your A Body Shape Index to assess mortality risk based on waist circumference. Free ABSI calculator with healt
+- [Anorexic BMI Calculator | Macro &amp; Meals](https://macroandmeals.com/anorexic-bmi-calculator/): Understand BMI ranges associated with anorexia nervosa and when to seek professional help. Free calculator with clinical
+- [Army Body Fat Calculator | Macro &amp; Meals](https://macroandmeals.com/army-body-fat-calculator/): Calculate body fat using the official U.S. Army method (AR 600-9). Free Army body fat calculator with tape measurement p
+- [BMI NIH Calculator | Macro &amp; Meals](https://macroandmeals.com/bmi-nih-calculator/): Calculate BMI using the official NIH classification system. Free BMI calculator with NIH health risk categories and clin
+- [BRI Calculator | Macro &amp; Meals](https://macroandmeals.com/bri-calculator/): Calculate your Body Roundness Index for health risk assessment. Free BRI calculator measures body shape and abdominal fa
+- [BSA Calculator | Macro &amp; Meals](https://macroandmeals.com/bsa-calculator/): Calculate Body Surface Area using Du Bois, Mosteller and other medical formulas. Free BSA calculator used for drug dosin
+- [Baby Growth Percentile Calculator | Macro &amp; Meals](https://macroandmeals.com/baby-percentile-calculator/): Track your baby's growth against WHO growth charts. Free baby percentile calculator for weight, length and head circumfe
+- [Bedridden Patient Height Calculator | Macro &amp; Meals](https://macroandmeals.com/bedridden-patient-height-calculator/): Estimate height for bedridden patients using knee height, arm span or ulna length. Free clinical height calculator for m
+- [Body Fat Calculator | Macro &amp; Meals](https://macroandmeals.com/body-fat-calculator/): Estimate your body fat percentage using the U.S. Navy method. Free body fat calculator with lean mass, fat mass and heal
+- [Body Shape Calculator | Macro &amp; Meals](https://macroandmeals.com/body-shape-calculator/): Determine your body shape type from measurements. Free calculator identifies apple, pear, hourglass, rectangle or invert
+- [Calorie Deficit Calculator | Macro &amp; Meals](https://macroandmeals.com/calorie-deficit-calculator/): Plan your calorie deficit for safe, sustainable weight loss. Free calculator with personalized daily targets, macros and
+- [Carbohydrate Calculator | Macro &amp; Meals](https://macroandmeals.com/carbohydrate-calculator/): Calculate your optimal daily carb intake based on goals, activity and body stats. Free carb calculator for low-carb, ket
+- [Cholesterol Ratio Calculator | Macro &amp; Meals](https://macroandmeals.com/cholesterol-ratio-calculator/): Calculate your total-to-HDL cholesterol ratio for heart disease risk assessment. Free cholesterol ratio calculator with 
+- [Conception Calculator | Macro &amp; Meals](https://macroandmeals.com/conception-calculator/): Estimate your conception date based on due date or last menstrual period. Free conception calculator with fertile window
+- [Due Date Calculator | Macro &amp; Meals](https://macroandmeals.com/due-date-calculator/): Calculate your baby's due date from your last period or conception date. Free due date calculator with trimester timelin
+- [FFMI Calculator | Macro &amp; Meals](https://macroandmeals.com/ffmi-calculator/): Calculate your Fat-Free Mass Index to measure muscular development. Free FFMI calculator used by athletes and bodybuilde
+- [Face Shape Calculator | Macro &amp; Meals](https://macroandmeals.com/face-shape-calculator/): Determine your face shape from facial measurements. Free face shape calculator identifies oval, round, square, heart, ob
+- [Free BMI Calculator | Macro &amp; Meals](https://macroandmeals.com/bmi-calculator/): Calculate your BMI, body fat estimate, ideal weight and TDEE in seconds. Free BMI calculator with complete health profil
+- [Free BMR Calculator | Macro &amp; Meals](https://macroandmeals.com/bmr-calculator/): Calculate your Basal Metabolic Rate with multiple scientific formulas. Free BMR calculator to find how many calories you
+- [Free TDEE Calculator | Macro &amp; Meals](https://macroandmeals.com/tdee-calculator/): Calculate your Total Daily Energy Expenditure based on BMR and activity level. Free TDEE calculator for weight loss, mai
+- [GFR Calculator | Macro &amp; Meals](https://macroandmeals.com/gfr-calculator/): Calculate your Glomerular Filtration Rate for kidney function assessment. Free GFR calculator using CKD-EPI and MDRD for
+- [Height Calculator | Macro &amp; Meals](https://macroandmeals.com/height-calculator/): Predict adult height based on current age, parental heights and growth data. Free height calculator for children and tee
+- [IVF Success Rate Calculator | Macro &amp; Meals](https://macroandmeals.com/ivf-success-rate-calculator/): Estimate your IVF success probability based on age, diagnosis and treatment factors. Free IVF calculator with clinic com
+- [Ideal Body Weight Calculator | Macro &amp; Meals](https://macroandmeals.com/ideal-body-weight-calculator/): Find your ideal weight using Devine, Robinson, Miller and Hamwi formulas. Free ideal body weight calculator with persona
+- [Karvonen Formula Calculator | Macro &amp; Meals](https://macroandmeals.com/karvonen-formula-calculator/): Calculate target heart rate training zones using the Karvonen method. Free heart rate calculator for cardio, fat burn an
+- [Keto Macro Calculator | Macro &amp; Meals](https://macroandmeals.com/keto-macro-calculator/): Calculate your ideal keto macros for fat, protein and net carbs. Free keto calculator with personalized ratios for weigh
+- [LDL Cholesterol Calculator | Macro &amp; Meals](https://macroandmeals.com/ldl-cholesterol-calculator/): Estimate your LDL cholesterol using the Friedewald equation from total cholesterol, HDL and triglycerides. Free LDL calc
+- [Lean Body Mass Calculator | Macro &amp; Meals](https://macroandmeals.com/lean-body-mass-calculator/): Calculate your lean body mass and muscle-to-fat ratio. Free LBM calculator using multiple formulas to track fitness prog
+- [Maintenance Fluid Calculator | Macro &amp; Meals](https://macroandmeals.com/maintenance-fluid-calculator/): Calculate daily maintenance fluid requirements using the Holliday-Segar method. Free clinical fluid calculator for pedia
+- [One Rep Max Calculator | Macro &amp; Meals](https://macroandmeals.com/one-rep-max-calculator/): Calculate your one-rep max for any lift using Epley, Brzycki and other formulas. Free 1RM calculator with percentage-bas
+- [Overweight Calculator | Macro &amp; Meals](https://macroandmeals.com/overweight-calculator/): Check if you are overweight based on BMI, body fat and waist measurements. Free overweight calculator with health risk a
+- [Ovulation Calculator | Macro &amp; Meals](https://macroandmeals.com/ovulation-calculator/): Track your ovulation cycle and find your most fertile days. Free ovulation calculator with cycle tracking and conception
+- [Period Calculator | Macro &amp; Meals](https://macroandmeals.com/menses-calculator/): Predict your next period, fertile window and PMS days. Free menstrual cycle calculator with cycle length tracking and ov
+- [Pregnancy Calculator | Macro &amp; Meals](https://macroandmeals.com/pregnancy-calculator/): Track your pregnancy week by week with due date, trimester and fetal development details. Free pregnancy calculator with
+- [Pregnancy Weight Gain Calculator | Macro &amp; Meals](https://macroandmeals.com/pregnancy-weight-gain-calculator/): Calculate healthy pregnancy weight gain based on pre-pregnancy BMI. Free calculator with IOM guidelines and trimester-sp
+- [Protein Calculator | Macro &amp; Meals](https://macroandmeals.com/protein-calculator/): Calculate your daily protein needs based on weight, activity and fitness goals. Free protein calculator for muscle gain,
+- [Protein Molecular Weight Calculator | Macro &amp; Meals](https://macroandmeals.com/protein-molecular-weight-calculator/): Calculate protein molecular weight from amino acid sequence. Free tool for biochemistry students and researchers with de
+- [Raising Cane's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/raising-canes-calculator/): Check Raising Cane's chicken finger combo calories, protein, carbs & fat. Free Raising Cane's nutrition calculator with 
+- [Skinfold Body Fat Calculator | Macro &amp; Meals](https://macroandmeals.com/skinfold-body-fat-calculator/): Measure body fat percentage using skinfold caliper measurements. Free skinfold calculator with 3-site and 7-site protoco
+- [Steps to Miles Calculator | Macro &amp; Meals](https://macroandmeals.com/steps-to-miles-calculator/): Convert your step count into miles or kilometers based on stride length and height. Free steps to miles calculator for w
+- [US Marine Body Fat Calculator | Macro &amp; Meals](https://macroandmeals.com/us-marine-body-fat-calculator/): Calculate body fat using official USMC standards. Free Marine Corps body fat calculator with tape measurement method and
+- [Vitamin A Calculator | Macro &amp; Meals](https://macroandmeals.com/vitamin-a-calculator/): Calculate your recommended daily vitamin A intake based on age, gender and health factors. Free vitamin A calculator wit
+- [Vitamin B Calculator | Macro &amp; Meals](https://macroandmeals.com/vitamin-b-calculator/): Calculate your daily vitamin B complex needs for all 8 B vitamins. Free vitamin B calculator with food sources, deficien
+- [Vitamin C Calculator | Macro &amp; Meals](https://macroandmeals.com/vitamin-c-calculator/): Find your optimal daily vitamin C intake based on age, smoking status and health conditions. Free vitamin C calculator w
+- [Vitamin D Calculator | Macro &amp; Meals](https://macroandmeals.com/vitamin-d-calculator/): Calculate your recommended daily vitamin D intake for bone health and immunity. Free vitamin D calculator with sun expos
+- [Vitamin E Calculator | Macro &amp; Meals](https://macroandmeals.com/vitamin-e-calculator/): Calculate your daily vitamin E needs based on age, gender and health conditions. Free vitamin E calculator with food sou
+- [Vitamin K Calculator | Macro &amp; Meals](https://macroandmeals.com/vitamin-k-calculator/): Calculate your daily vitamin K requirements for blood clotting and bone health. Free vitamin K calculator with food sour
+- [Waist-to-Hip Ratio Calculator | Macro &amp; Meals](https://macroandmeals.com/waist-to-hip-ratio-calculator/): Calculate your waist-to-hip ratio for cardiovascular risk assessment. Free WHR calculator with health risk categories fo
+- [Water Fasting Calculator | Macro &amp; Meals](https://macroandmeals.com/water-fasting-calculator/): Plan your water fast with projected weight loss, electrolyte needs and refeeding guidance. Free water fasting calculator
+- [kJ to Calories Converter | Macro &amp; Meals](https://macroandmeals.com/kj-to-calories-converter/): Convert kilojoules to calories and calories to kJ instantly. Free energy unit converter with common food and exercise re
 
 ## Restaurant Nutrition Calculators
 
-- [Albaik Nutrition Calculator](https://macroandmeals.com/albaik-nutrition-calculator/): Check calories and macros for Albaik chicken and meals.
-- [Applebee's Nutrition Calculator](https://macroandmeals.com/applebees-nutrition-calculator/): Track nutrition for entrees, appetizers, and desserts.
-- [Arby's Nutrition Calculator](https://macroandmeals.com/arbys-nutrition-calculator/): Analyze calories and macros for Arby's sandwiches and sides.
-- [BIBIBOP Nutrition Calculator](https://macroandmeals.com/bibibop-calories-calculator/): Build your Asian bowl and track complete nutrition.
-- [Black Rock Coffee Calculator](https://macroandmeals.com/black-rock-coffee-nutrition-calculator/): Track calories in Black Rock Coffee beverages.
-- [Blank Street Coffee Calculator](https://macroandmeals.com/blank-street-coffee-calories-calculator/): Track calories in Blank Street Coffee drinks.
-- [Blaze Pizza Nutrition Calculator](https://macroandmeals.com/blaze-pizza-calories-calculator/): Customize your pizza and see complete nutrition facts.
-- [Bolay Nutrition Calculator](https://macroandmeals.com/bolay-nutrition-calculator/): Build your Bolay bowl and track nutrition values.
-- [Bolthouse Farms Calculator](https://macroandmeals.com/bolthouse-farms-nutrition-calculator/): Compare nutrition across Bolthouse Farms products.
-- [Brassica Nutrition Calculator](https://macroandmeals.com/brassica-nutrition-calculator/): Track nutrition for Brassica bowls and salads.
-- [Burger King Nutrition Calculator](https://macroandmeals.com/burger-king-calories-calculator/): Check nutrition for Whoppers, sides, and beverages.
-- [CAVA Nutrition Calculator](https://macroandmeals.com/cava-nutrition-calculator/): Customize your Mediterranean bowl and review nutrition.
-- [Cafe Rio Nutrition Calculator](https://macroandmeals.com/cafe-rio-calories-calculator/): Track calories for burritos, salads, and Mexican favorites.
-- [Carl's Jr. Nutrition Calculator](https://macroandmeals.com/carls-jr-calories-calculator/): Calculate nutrition for burgers, chicken, and sides.
-- [Chili's Nutrition Calculator](https://macroandmeals.com/chilis-calories-calculator/): Track nutrition for Chili's entrees, appetizers, and more.
-- [Chipotle Nutrition Calculator](https://macroandmeals.com/chipotle-nutrition-calculator/): Build your burrito or bowl and calculate precise nutrition totals.
-- [Cupbop Nutrition Calculator](https://macroandmeals.com/cupbop-nutrition-calculator/): Track nutrition for Korean BBQ cups and bowls.
-- [DIG Nutrition Calculator](https://macroandmeals.com/dig-nutrition-calculator/): Build your DIG plate and estimate total calorie intake.
-- [Dave's Hot Chicken Calculator](https://macroandmeals.com/daves-hot-chicken-nutrition-calculator/): Track calories and macros for hot chicken and sides.
-- [Dutch Bros Nutrition Calculator](https://macroandmeals.com/dutch-bros-nutrition-calculator/): Track calories in your Dutch Bros coffee drinks and more.
-- [Five Guys Nutrition Calculator](https://macroandmeals.com/five-guys-nutrition-calculator/): Customize burgers and toppings while tracking nutrition.
-- [Jamba Juice Nutrition Calculator](https://macroandmeals.com/jamba-juice-nutrition-calculator/): Compare smoothie nutrition and customize your blend.
-- [Jersey Mike's Nutrition Calculator](https://macroandmeals.com/jersey-mikes-calories-calculator/): Estimate calories and nutrition for subs and wraps.
-- [Jimmy John's Nutrition Calculator](https://macroandmeals.com/jimmy-johns-calories-calculator/): Calculate calories and macros for subs and sides.
-- [MOD Pizza Nutrition Calculator](https://macroandmeals.com/mod-pizza-calories-calculator/): Build your custom pizza and track nutrition details.
-- [McDonald's Nutrition Calculator](https://macroandmeals.com/mcdonalds-calories-calculator/): Calculate nutrition values for all McDonald's menu items.
-- [Mellow Mushroom Nutrition Calculator](https://macroandmeals.com/mellow-mushroom-nutrition-calculator/): Calculate nutrition for artisan pizzas and sides.
-- [Mucho Burrito Nutrition Calculator](https://macroandmeals.com/mucho-burrito-nutrition-calculator/): Build your burrito and see full nutrition breakdown.
-- [Naked Juice Nutrition Calculator](https://macroandmeals.com/naked-juice-nutrition-calculator/): Compare nutrition facts across Naked Juice products.
-- [Nando's Nutrition Calculator](https://macroandmeals.com/nandos-nutrition-calculator/): Check nutrition for flame-grilled chicken and sides.
-- [Nifty Fifty Nutrition Calculator](https://macroandmeals.com/nifty-fifty-nutrition-calculator/): Calculate nutrition for classic diner favorites.
-- [Panda Express Nutrition Calculator](https://macroandmeals.com/panda-express-nutrition-calculator/): Combine entrees and sides to see total calories and macros.
-- [Papa John's Nutrition Calculator](https://macroandmeals.com/papa-johns-nutrition-calculator/): Get nutrition info for pizza, sides, and desserts.
-- [Qdoba Nutrition Calculator](https://macroandmeals.com/qdoba-nutrition-calculator/): Create your burrito or bowl and calculate total nutrition.
-- [Salad Master Nutrition Calculator](https://macroandmeals.com/salad-master-nutrition-calculator/): Build your salad and calculate total nutritional values.
-- [Sheetz Nutrition Calculator](https://macroandmeals.com/sheetz-nutrition-calculator/): Calculate calories and macros for Sheetz made-to-order meals.
-- [Smoothie King Nutrition Calculator](https://macroandmeals.com/smoothie-king-nutrition-calculator/): Track calories and macros in your Smoothie King order.
-- [Sonic Drive-In Nutrition Calculator](https://macroandmeals.com/sonic-drive-in-nutrition-calculator/): Calculate nutrition for Sonic burgers, drinks, and treats.
-- [Starbucks Nutrition Calculator](https://macroandmeals.com/starbucks-nutrition-calculator/): Customize your favorite Starbucks drinks and track complete nutrition information.
-- [Steps to Calories Calculator](https://macroandmeals.com/steps-to-calories-calculator/): Convert your daily step count into calories burned based on weight, pace, and terrain.
-- [Subway Nutrition Calculator](https://macroandmeals.com/subway-nutrition-calculator/): Customize sandwiches and check complete nutrition information.
-- [Sweetgreen Nutrition Calculator](https://macroandmeals.com/sweetgreen-nutrition-calculator/): Build your salad or bowl and view nutrition breakdown.
-- [Taco Bell Nutrition Calculator](https://macroandmeals.com/taco-bell-nutrition-calculator/): Calculate nutrition values for tacos, burritos, and combos.
-- [Taim Mediterranean Kitchen Calculator](https://macroandmeals.com/taim-mediterranean-kitchen-nutrition-calculator/): Track nutrition for falafel, bowls, and Mediterranean dishes.
-- [Tropical Smoothie Cafe Calculator](https://macroandmeals.com/tropical-smoothie-cafe-nutrition-calculator/): Check nutrition facts for smoothies and food items.
-- [Via 313 Nutrition Calculator](https://macroandmeals.com/via-313-nutrition-calculator/): Track nutrition for Detroit-style pizzas and sides.
-- [Wawa Nutrition Calculator](https://macroandmeals.com/wawa-nutrition-calculator/): Review nutrition facts for Wawa hoagies, bowls, and beverages.
-- [Wendy's Nutrition Calculator](https://macroandmeals.com/wendys-nutrition-calculator/): Track nutrition for Wendy's burgers, chicken, and sides.
-- [Whataburger Nutrition Calculator](https://macroandmeals.com/whataburger-nutrition-calculator/): Estimate calories and macros for burgers, sides, and drinks.
-- [Wingstop Calories Calculator](https://macroandmeals.com/wingstop-calories-calculator/): Calculate calories for wings, sides, and dipping sauces.
-- [Zao Asian Cafe Nutrition Calculator](https://macroandmeals.com/zao-asian-cafe-nutrition-calculator/): Calculate nutrition for Asian-inspired bowls and entrees.
+- [Albaik Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/albaik-nutrition-calculator/): Calculate Albaik chicken meal calories, protein, carbs & fat. Free Albaik nutrition calculator with complete menu data f
+- [Applebee's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/applebees-nutrition-calculator/): Track Applebee's calories for steaks, burgers, appetizers and desserts. Free Applebee's nutrition calculator with full m
+- [Arby's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/arbys-nutrition-calculator/): Calculate Arby's calories and macros for roast beef sandwiches, curly fries and more. Free Arby's nutrition calculator w
+- [BIBIBOP Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/bibibop-calories-calculator/): Build your BIBIBOP Asian bowl and track exact calories, protein, carbs & fat. Free BIBIBOP nutrition calculator with all
+- [Black Rock Coffee Calculator | Macro &amp; Meals](https://macroandmeals.com/black-rock-coffee-nutrition-calculator/): Check Black Rock Coffee drink calories, sugar, protein and fat. Free Black Rock Coffee nutrition calculator with full be
+- [Blank Street Coffee Calculator | Macro &amp; Meals](https://macroandmeals.com/blank-street-coffee-calories-calculator/): Track Blank Street Coffee drink calories, sugar, protein and fat. Free Blank Street Coffee nutrition calculator with ful
+- [Blaze Pizza Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/blaze-pizza-calories-calculator/): Build your Blaze pizza and track exact calories, protein, carbs & fat. Free Blaze Pizza nutrition calculator with all cr
+- [Bolay Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/bolay-nutrition-calculator/): Build your Bolay bowl and calculate exact calories, protein, carbs & fat. Free Bolay nutrition calculator with all base,
+- [Bolthouse Farms Calculator | Macro &amp; Meals](https://macroandmeals.com/bolthouse-farms-nutrition-calculator/): Compare Bolthouse Farms juice and smoothie nutrition facts. Free calculator with calories, protein, sugar and vitamins f
+- [Brassica Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/brassica-nutrition-calculator/): Build your Brassica bowl and track exact calories, protein, carbs & fat. Free Brassica nutrition calculator with all sal
+- [Burger King Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/burger-king-calories-calculator/): Check Burger King calories for Whoppers, chicken sandwiches, fries and more. Free BK nutrition calculator with full menu
+- [CAVA Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/cava-nutrition-calculator/): Build your CAVA bowl, pita or salad and track exact calories, protein, carbs & fat. Free CAVA nutrition calculator with 
+- [Cafe Rio Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/cafe-rio-calories-calculator/): Build your Cafe Rio burrito, salad or enchilada and see calories, protein, carbs & fat. Free Cafe Rio nutrition calculat
+- [Carl's Jr. Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/carls-jr-calories-calculator/): Calculate Carl's Jr. calories, protein, carbs & fat for burgers, chicken stars and more. Free Carl's Jr. nutrition calcu
+- [Chili's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/chilis-calories-calculator/): Calculate Chili's calories for burgers, fajitas, ribs and appetizers. Free Chili's nutrition calculator with full menu d
+- [Chipotle Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/chipotle-nutrition-calculator/): Build your Chipotle burrito, bowl or tacos and see exact calories, protein, carbs & fat. Free Chipotle nutrition calcula
+- [Cupbop Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/cupbop-nutrition-calculator/): Build your Cupbop Korean BBQ cup and track calories, protein, carbs & fat. Free Cupbop nutrition calculator with all sau
+- [DIG Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/dig-nutrition-calculator/): Build your DIG plate and calculate exact calories, protein, carbs & fat. Free DIG nutrition calculator with all seasonal
+- [Dave's Hot Chicken Calculator | Macro &amp; Meals](https://macroandmeals.com/daves-hot-chicken-nutrition-calculator/): Check Dave's Hot Chicken calories, protein, carbs & fat by spice level. Free Dave's Hot Chicken nutrition calculator wit
+- [Dutch Bros Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/dutch-bros-nutrition-calculator/): Check Dutch Bros calories, sugar and macros for Rebels, lattes, frosts and more. Free Dutch Bros nutrition calculator wi
+- [Five Guys Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/five-guys-nutrition-calculator/): Build your Five Guys burger or order and track calories, protein, carbs & fat. Free Five Guys nutrition calculator with 
+- [Jamba Juice Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/jamba-juice-nutrition-calculator/): Check Jamba Juice smoothie and bowl calories, protein, sugar & fat. Free Jamba nutrition calculator to build and customi
+- [Jersey Mike's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/jersey-mikes-calories-calculator/): Build your Jersey Mike's sub and calculate calories, protein, carbs & fat. Free Jersey Mike's nutrition calculator with 
+- [Jimmy John's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/jimmy-johns-calories-calculator/): Calculate Jimmy John's sub calories, protein, carbs & fat. Free Jimmy John's nutrition calculator with all bread, meat a
+- [MOD Pizza Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/mod-pizza-calories-calculator/): Build your MOD Pizza and calculate exact calories, protein, carbs & fat. Free MOD Pizza nutrition calculator with all cr
+- [McDonald's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/mcdonalds-calories-calculator/): Check McDonald's calories, protein, carbs & fat for burgers, fries, McNuggets and more. Free McDonald's nutrition calcul
+- [Mellow Mushroom Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/mellow-mushroom-nutrition-calculator/): Calculate Mellow Mushroom pizza and appetizer calories. Free Mellow Mushroom nutrition calculator with full menu data, p
+- [Mucho Burrito Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/mucho-burrito-nutrition-calculator/): Build your Mucho Burrito and track exact calories, protein, carbs & fat. Free Mucho Burrito nutrition calculator with fu
+- [Naked Juice Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/naked-juice-nutrition-calculator/): Compare Naked Juice smoothie and pressed juice nutrition facts. Free Naked Juice calculator with calories, protein, suga
+- [Nando's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/nandos-nutrition-calculator/): Calculate Nando's Peri-Peri chicken calories, protein, carbs & fat. Free Nando's nutrition calculator with all sides and
+- [Nifty Fifty Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/nifty-fifty-nutrition-calculator/): Calculate Nifty Fifty's classic diner menu calories, protein, carbs & fat. Free nutrition calculator for burgers, shakes
+- [Panda Express Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/panda-express-nutrition-calculator/): Build your Panda Express plate and calculate calories, protein, carbs & fat for orange chicken, fried rice and more. Fre
+- [Papa John's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/papa-johns-nutrition-calculator/): Calculate Papa John's pizza calories by size, crust and toppings. Free Papa John's nutrition calculator with full menu d
+- [Qdoba Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/qdoba-nutrition-calculator/): Build your Qdoba burrito or bowl and see exact calories, protein, carbs & fat. Free Qdoba nutrition calculator with full
+- [Salad Master Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/salad-master-nutrition-calculator/): Build your custom salad and calculate exact calories, protein, carbs & fat. Free Salad Master nutrition calculator with 
+- [Sheetz Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/sheetz-nutrition-calculator/): Track Sheetz MTO food nutrition with calories, protein, carbs & fat. Free Sheetz nutrition calculator for subs, burgers 
+- [Smoothie King Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/smoothie-king-nutrition-calculator/): Check Smoothie King blend calories, protein, sugar and fat. Free Smoothie King nutrition calculator to build and track y
+- [Sonic Drive-In Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/sonic-drive-in-nutrition-calculator/): Calculate Sonic Drive-In calories for burgers, shakes, tots and slushes. Free Sonic nutrition calculator with full menu 
+- [Starbucks Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/starbucks-nutrition-calculator/): Build your Starbucks order and track calories, protein, carbs & fat. Customize drinks and food with our free Starbucks n
+- [Steps to Calories Calculator | Macro &amp; Meals](https://macroandmeals.com/steps-to-calories-calculator/): Convert your daily steps into calories burned based on weight, pace and terrain. Free steps to calories calculator for f
+- [Subway Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/subway-nutrition-calculator/): Build your Subway sub and calculate exact calories, protein, carbs & fat. Free Subway nutrition calculator with all brea
+- [Sweetgreen Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/sweetgreen-nutrition-calculator/): Build your Sweetgreen bowl or salad and see exact calories, protein, carbs & fat. Free Sweetgreen nutrition calculator w
+- [Taco Bell Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/taco-bell-nutrition-calculator/): Calculate Taco Bell calories, protein, carbs & fat for tacos, burritos, quesadillas and more. Free nutrition calculator 
+- [Taim Mediterranean Kitchen Calculator | Macro &amp; Meals](https://macroandmeals.com/taim-mediterranean-kitchen-nutrition-calculator/): Track Taim Mediterranean Kitchen falafel, bowl and pita calories. Free Taim nutrition calculator with protein, carbs and
+- [Tropical Smoothie Cafe Calculator | Macro &amp; Meals](https://macroandmeals.com/tropical-smoothie-cafe-nutrition-calculator/): Build your Tropical Smoothie and track calories, protein, sugar & fat. Free Tropical Smoothie Cafe nutrition calculator 
+- [Via 313 Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/via-313-nutrition-calculator/): Calculate Via 313 Detroit-style pizza calories, protein, carbs & fat by size and toppings. Free Via 313 nutrition calcul
+- [Wawa Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/wawa-nutrition-calculator/): Track Wawa hoagie and food nutrition with calories, protein, carbs & fat. Free Wawa nutrition calculator with full menu 
+- [Wendy's Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/wendys-nutrition-calculator/): Calculate Wendy's calories, protein, carbs & fat for Baconators, Frostys, salads and more. Free Wendy's nutrition calcul
+- [Whataburger Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/whataburger-nutrition-calculator/): Check Whataburger calories, protein, carbs & fat for burgers, chicken and more. Free Whataburger nutrition calculator wi
+- [Wingstop Calories Calculator | Macro &amp; Meals](https://macroandmeals.com/wingstop-calories-calculator/): Check Wingstop wing calories by flavor, sides and dips. Free Wingstop nutrition calculator with full menu data, protein,
+- [Zao Asian Cafe Nutrition Calculator | Macro &amp; Meals](https://macroandmeals.com/zao-asian-cafe-nutrition-calculator/): Build your Zao Asian Cafe bowl and track calories, protein, carbs & fat. Free Zao nutrition calculator with noodle, rice
 
 ## Restaurant Menus
 
-- [Chipotle Menu](https://macroandmeals.com/chipotle-menu/): Browse Chipotle's menu with burritos, bowls, tacos, and sides.
-- [Dutch Bros Menu](https://macroandmeals.com/dutch-bros-menu/): Explore Dutch Bros complete drink menu and seasonal specials.
-- [Five Guys Menu](https://macroandmeals.com/five-guys-menu/): View Five Guys burgers, fries, and milkshake options.
-- [Outback Steakhouse Menu](https://macroandmeals.com/outback-steakhouse-menu/): Explore Outback's full menu of steaks, seafood, and sides.
-- [Panda Express Menu](https://macroandmeals.com/panda-express-menu/): Browse Panda Express menu with entrees, sides, and appetizers.
-- [Qdoba Menu](https://macroandmeals.com/qdoba-menu/): View Qdoba's menu with burritos, bowls, tacos, and more.
-- [Sheetz Menu](https://macroandmeals.com/sheetz-menu/): Browse Sheetz made-to-order menu with nutrition information.
-- [Starbucks Menu](https://macroandmeals.com/starbucks-menu/): View the complete Starbucks menu with all drinks and food items.
-- [Sushi Menu](https://macroandmeals.com/sushi-menu/): Explore popular sushi rolls and Japanese dishes with nutrition info.
-- [Taco Bell Menu](https://macroandmeals.com/taco-bell-menu/): View the complete Taco Bell menu with prices and nutrition.
-- [Wawa Menu](https://macroandmeals.com/wawa-menu/): Explore Wawa's full menu including hoagies, beverages, and snacks.
-- [Whataburger Menu](https://macroandmeals.com/whataburger-menu/): Browse the complete Whataburger menu with prices and nutrition.
+- [Chipotle Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/chipotle-menu/): View the full Chipotle menu with nutrition facts, calories and prices for burritos, bowls, tacos, quesadillas and sides.
+- [Dutch Bros Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/dutch-bros-menu/): Browse the full Dutch Bros menu with nutrition facts, calories and prices for Rebels, lattes, frosts, teas and more. Upd
+- [Five Guys Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/five-guys-menu/): View the complete Five Guys menu with nutrition facts, calories and prices for burgers, hot dogs, fries and milkshakes. 
+- [Outback Steakhouse Menu & Nutrition | Macro &amp; Meals](https://macroandmeals.com/outback-steakhouse-menu/): View the complete Outback Steakhouse menu with calories and nutrition facts for steaks, ribs, appetizers and desserts. F
+- [Panda Express Menu with Prices | Macro &amp; Meals](https://macroandmeals.com/panda-express-menu/): Browse the full Panda Express menu with nutrition facts, calories and prices for orange chicken, plates, bowls and sides
+- [Qdoba Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/qdoba-menu/): View the full Qdoba menu with nutrition facts, calories and prices for burritos, bowls, tacos, quesadillas and nachos. U
+- [Sheetz Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/sheetz-menu/): Browse the full Sheetz MTO menu with nutrition facts, calories and prices for subs, burgers, snacks and drinks. Updated 
+- [Starbucks Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/starbucks-menu/): Browse the full Starbucks menu with nutrition facts, calories and prices for drinks, food, Frappuccinos and seasonal ite
+- [Sushi Menu with Nutrition & Calories | Macro &amp; Meals](https://macroandmeals.com/sushi-menu/): Browse a complete sushi menu with nutrition facts, calories and protein for nigiri, maki rolls, sashimi and specialty ro
+- [Taco Bell Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/taco-bell-menu/): View the complete Taco Bell menu with nutrition facts, calories and prices for tacos, burritos, quesadillas and combos. 
+- [Wawa Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/wawa-menu/): View the full Wawa menu with nutrition facts, calories and prices for hoagies, breakfast, beverages and snacks. Updated 
+- [Whataburger Menu with Prices & Calories | Macro &amp; Meals](https://macroandmeals.com/whataburger-menu/): Browse the full Whataburger menu with nutrition facts, calories and prices for burgers, chicken, breakfast and sides. Up
 
 ## Blog
 
-- [Blog](https://macroandmeals.com/blog/): Nutrition tips, calculator guides, and health insights from Macro & Meals.
-- [How to Calculate Your Daily Calorie Needs: A Complete Guide](https://macroandmeals.com/blog/how-to-calculate-your-daily-calorie-needs/): Learn the science behind TDEE, BMR, and activity multipliers to find your perfect calorie intake for weight loss, mainte
+- [How to Calculate Daily Calorie Needs | Macro &amp; Meals](https://macroandmeals.com/blog/how-to-calculate-your-daily-calorie-needs/): Learn the science behind TDEE, BMR and activity multipliers to find your perfect daily calorie intake for weight loss, g
+- [Nutrition Blog | Macro &amp; Meals](https://macroandmeals.com/blog/): Nutrition tips, calorie counting guides, diet science and health insights from Macro & Meals. Expert articles to help yo
 
 ## Optional
 
-- [About Us](https://macroandmeals.com/about/)
-- [Accessibility Statement](https://macroandmeals.com/accessibility/)
-- [Contact Us](https://macroandmeals.com/contact/)
-- [Cookie Policy](https://macroandmeals.com/cookie-policy/)
-- [DMCA Policy](https://macroandmeals.com/dmca/)
-- [Disclaimer](https://macroandmeals.com/disclaimer/)
-- [Privacy Policy](https://macroandmeals.com/privacy-policy/)
-- [Sitemap](https://macroandmeals.com/sitemap-page/)
-- [Terms &amp; Conditions](https://macroandmeals.com/terms-conditions/)
-- [Macro Calculator for Weight Loss](https://macroandmeals.com/macro-calculator-for-weight-loss/)
+- [About Us | Macro &amp; Meals](https://macroandmeals.com/about/)
+- [Accessibility Statement | Macro &amp; Meals](https://macroandmeals.com/accessibility/)
+- [Contact Us | Macro &amp; Meals](https://macroandmeals.com/contact/)
+- [Cookie Policy | Macro &amp; Meals](https://macroandmeals.com/cookie-policy/)
+- [DMCA Policy | Macro &amp; Meals](https://macroandmeals.com/dmca/)
+- [Disclaimer | Macro &amp; Meals](https://macroandmeals.com/disclaimer/)
+- [Privacy Policy | Macro &amp; Meals](https://macroandmeals.com/privacy-policy/)
+- [Sitemap | Macro &amp; Meals](https://macroandmeals.com/sitemap-page/)
+- [Terms & Conditions | Macro &amp; Meals](https://macroandmeals.com/terms-conditions/)
+- [Macro Calculator for Weight Loss | Macro &amp; Meals](https://macroandmeals.com/macro-calculator-for-weight-loss/)
