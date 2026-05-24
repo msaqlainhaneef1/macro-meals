@@ -697,12 +697,17 @@ def inject_internal_links(html, filepath):
     
     # Remove any existing related section (will be regenerated)
     html = re.sub(
-        r'<div class="related-section">.*?</div>\s*</div>\s*(?=</div>\s*</section>|</section>)',
+        r'<div class="related-section">.*?</div>\s*(?=</section>)',
         '', html, flags=re.DOTALL
     )
-    # Also remove old standalone related sections
+    # Also remove old standalone related sections before footer
     html = re.sub(
-        r'<div class="related-section">.*?</div>\s*</div>(?=\s*<footer)',
+        r'<div class="related-section">.*?</div>\s*(?=\s*<footer)',
+        '', html, flags=re.DOTALL
+    )
+    # Remove any old standalone category-explorer divs
+    html = re.sub(
+        r'<div class="category-explorer">.*?</div>\s*</div>\s*',
         '', html, flags=re.DOTALL
     )
     
@@ -741,10 +746,10 @@ def inject_internal_links(html, filepath):
         '<h2>Related Tools You May Like</h2>'
         '<div class="related-grid">'
         + ''.join(cards) +
-        '</div></div>'
+        '</div>'
     )
     
-    # Also build a "Category Explorer" for cross-category discovery
+    # Also build a "Category Explorer" for cross-category discovery (inside the same card)
     current_data = PAGE_DATA.get(slug, {})
     current_cat = current_data.get('cat', '')
     
@@ -775,6 +780,9 @@ def inject_internal_links(html, filepath):
                 + ''.join(cat_links) +
                 '</div></div>'
             )
+    
+    # Close the related-section container
+    section_html += '</div>'
     
     # Inject before </section> (last one) or before <footer>
     if '</section>' in html:
