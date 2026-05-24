@@ -386,23 +386,19 @@ def inject_skip_to_content(html):
     return html
 
 def cleanup_restaurant_detail(html):
-    """Move #rest-detail from left column to right column for restaurant pages.
+    """Clean up restaurant pages: remove old static detail, ensure proper structure.
     
-    Removes old static detail panel content and replaces with empty hidden div
-    in the right sidebar column. The JS dynamically populates it on item click.
+    My Meal (rest-summary) should be FIRST in right column, detail AFTER it.
+    The JS dynamically populates the detail on item click.
     """
     if 'id="rest-detail"' not in html:
         return html
-    # Remove old #rest-detail with all its content from left column
-    detail_pattern = r'<div id="rest-detail"[^>]*>.*?</div>\s*(?=</div>\s*</div>\s*<div class="rest-right-col">|<div class="rest-actions">)'
-    html = re.sub(detail_pattern, '', html, flags=re.DOTALL)
-    # Also remove any remaining #rest-detail (fallback: more aggressive pattern)
-    if 'id="rest-detail"' in html:
-        # Remove <div id="rest-detail">...</div> where it contains detail-card
-        html = re.sub(r'<div id="rest-detail"[^>]*>(?:(?!<div id="rest-detail").)*?<button[^>]*id="add-meal-btn"[^>]*>.*?</button>\s*</div>\s*</div>', '', html, flags=re.DOTALL)
-    # Ensure empty rest-detail div exists in right column
-    if 'id="rest-detail"' not in html and 'class="rest-right-col"' in html:
-        html = html.replace('<div class="rest-right-col">', '<div class="rest-right-col">\n<div id="rest-detail" class="rest-detail-sidebar" style="display:none"></div>')
+    # Remove ALL rest-detail divs everywhere (empty or with content)
+    # Handle empty divs
+    html = re.sub(r'\n?<div id="rest-detail"[^>]*></div>\n?', '\n', html)
+    # Handle divs with content (non-greedy, up to the detail-card closing structure)
+    while 'id="rest-detail"' in html:
+        html = re.sub(r'<div id="rest-detail"[^>]*>[\s\S]*?</div>(?:\s*</div>)?', '', html, count=1)
     return html
 
 def optimize_images(html):
