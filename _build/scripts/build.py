@@ -385,6 +385,26 @@ def inject_skip_to_content(html):
     html = re.sub(r'<a class="skip-to-content"[^>]*>[^<]*</a>\s*', '', html)
     return html
 
+def cleanup_restaurant_detail(html):
+    """Move #rest-detail from left column to right column for restaurant pages.
+    
+    Removes old static detail panel content and replaces with empty hidden div
+    in the right sidebar column. The JS dynamically populates it on item click.
+    """
+    if 'id="rest-detail"' not in html:
+        return html
+    # Remove old #rest-detail with all its content from left column
+    detail_pattern = r'<div id="rest-detail"[^>]*>.*?</div>\s*(?=</div>\s*</div>\s*<div class="rest-right-col">|<div class="rest-actions">)'
+    html = re.sub(detail_pattern, '', html, flags=re.DOTALL)
+    # Also remove any remaining #rest-detail (fallback: more aggressive pattern)
+    if 'id="rest-detail"' in html:
+        # Remove <div id="rest-detail">...</div> where it contains detail-card
+        html = re.sub(r'<div id="rest-detail"[^>]*>(?:(?!<div id="rest-detail").)*?<button[^>]*id="add-meal-btn"[^>]*>.*?</button>\s*</div>\s*</div>', '', html, flags=re.DOTALL)
+    # Ensure empty rest-detail div exists in right column
+    if 'id="rest-detail"' not in html and 'class="rest-right-col"' in html:
+        html = html.replace('<div class="rest-right-col">', '<div class="rest-right-col">\n<div id="rest-detail" class="rest-detail-sidebar" style="display:none"></div>')
+    return html
+
 def optimize_images(html):
     """Add loading=lazy and decoding=async to below-fold images."""
     def add_lazy(match):
@@ -1499,6 +1519,8 @@ def process_html_file(filepath):
     content = inject_internal_links(content, filepath)
     # SEO optimization (titles, meta descriptions, OG tags)
     content = optimize_seo_tags(content, filepath)
+    # Restaurant detail panel cleanup (move to sidebar)
+    content = cleanup_restaurant_detail(content)
     # Performance optimizations (safe — no design impact)
     content = optimize_images(content)
     content = add_script_defer(content)
