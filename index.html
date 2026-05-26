@@ -16,6 +16,7 @@
 <meta name="twitter:description" content="Free nutrition calculators for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins & more. Track calories, protein, carbs and fat instantly in your browser.">
 <meta name="robots" content="index,follow">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Macro & Meals","url":"https://macroandmeals.com/","description":"Free nutrition calculators for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more.","publisher":{"@type":"Organization","name":"Macro & Meals","url":"https://macroandmeals.com"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nutrition Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free nutrition calculator that searches thousands of foods from multiple databases. Track calories, protein, carbs, fat, fiber, and more. Build meals and monitor daily calorie goals.","featureList":["Search foods from multiple nutrition databases","Track calories, protein, carbs, fat, fiber, sugar, sodium","Build custom meals with quantity and serving size controls","Set and monitor daily calorie goals","Dark mode support","Data persists in browser"]}</script>
 <style media="print">
   @media print {
     .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
@@ -47,6 +48,7 @@
     @page { margin: 2cm; }
   }
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -116,7 +118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 <header class="header">
 <div class="header-inner">
-<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40" fetchpriority="high"></a>
+<a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals — Free Nutrition Calculators &amp; Tools" class="logo-img" width="200" height="48" fetchpriority="high"></a>
 <nav class="nav-desktop">
   <button class="nav-btn" data-cat="nutrition">Nutrition Calculators <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
   <button class="nav-btn" data-cat="menu">Menu <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
@@ -143,6 +145,161 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="search-results" class="search-results"></div>
 </div>
 </div></section>
+
+<!-- Unified Nutrition Calculator Tool -->
+<section class="nc-tool-section" id="nutrition-tool">
+<div class="container">
+  <div class="nc-tool-header">
+    <div class="nc-tool-header-row">
+      <h2><i class="fas fa-calculator" style="color:#22c55e;margin-right:.5rem"></i>Nutrition Calculator</h2>
+      <button id="nc-theme-toggle" class="nc-theme-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
+    </div>
+    <p>Search thousands of foods and track your daily nutrition. Data from multiple verified nutrition databases.</p>
+  </div>
+
+  <div class="nc-grid">
+    <!-- Left: Search -->
+    <div class="nc-card">
+      <div class="nc-card-head">
+        <h3><i class="fas fa-search"></i> Find Food</h3>
+        <p>Search for any food to get detailed nutrition information</p>
+      </div>
+      <div class="nc-card-body">
+        <div class="nc-search-row">
+          <input type="text" id="nc-search-input" class="nc-search-input" placeholder="e.g. Avocado, Grilled Chicken, Rice..." autocomplete="off">
+          <button id="nc-search-btn" class="nc-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+        <div id="nc-source-info" class="nc-source-info"></div>
+        <div id="nc-loader" class="nc-loader nc-hidden"></div>
+        <div id="nc-error" class="nc-error nc-hidden"></div>
+        <div id="nc-results" class="nc-results nc-hidden"></div>
+        <div id="nc-serving-area" class="nc-hidden">
+          <div class="nc-serving-box">
+            <div id="nc-selected-name" class="nc-selected-name"></div>
+            <div id="nc-selected-info" class="nc-selected-info"></div>
+            <div class="nc-serving-row">
+              <div class="nc-field">
+                <label for="nc-qty">Quantity</label>
+                <input type="number" id="nc-qty" value="1" min="0.1" step="0.1">
+              </div>
+              <div class="nc-field">
+                <label for="nc-serving-sel">Portion Size</label>
+                <select id="nc-serving-sel"></select>
+              </div>
+            </div>
+            <button id="nc-add-btn" class="nc-add-btn" disabled><i class="fas fa-plus"></i> Add to My Meal</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: Summary -->
+    <div class="nc-card">
+      <div class="nc-card-head">
+        <h3><i class="fas fa-chart-pie"></i> Meal Summary</h3>
+        <p>Your current nutritional intake for this meal</p>
+      </div>
+      <div class="nc-card-body">
+        <div class="nc-summary-cal">
+          <div class="nc-cal-label">Total Calories</div>
+          <div id="nc-total-cal" class="nc-cal-value">0 kcal</div>
+        </div>
+
+        <div class="nc-goal-box">
+          <div class="nc-goal-row">
+            <span>Daily Goal Progress</span>
+            <span id="nc-goal-pct">0%</span>
+          </div>
+          <div class="nc-goal-bar-bg">
+            <div id="nc-goal-bar" class="nc-goal-bar-fill" style="width:0"></div>
+          </div>
+          <div class="nc-goal-sub">
+            <span>0 kcal</span>
+            <span id="nc-goal-display">Goal: 2000 kcal</span>
+          </div>
+        </div>
+
+        <div class="nc-macro-bar">
+          <div id="nc-pro-seg" class="nc-macro-seg pro" style="width:33.3%">33%</div>
+          <div id="nc-carb-seg" class="nc-macro-seg carb" style="width:33.3%">33%</div>
+          <div id="nc-fat-seg" class="nc-macro-seg fat" style="width:33.3%">33%</div>
+        </div>
+
+        <div class="nc-macro-grid">
+          <div class="nc-macro-card">
+            <div class="label">Protein</div>
+            <div id="nc-total-pro" class="value">0</div>
+            <div class="unit">grams</div>
+            <div id="nc-pro-pct" class="pct" style="color:#16a34a">33%</div>
+          </div>
+          <div class="nc-macro-card">
+            <div class="label">Carbs</div>
+            <div id="nc-total-carb" class="value">0</div>
+            <div class="unit">grams</div>
+            <div id="nc-carb-pct" class="pct" style="color:#ca8a04">33%</div>
+          </div>
+          <div class="nc-macro-card">
+            <div class="label">Fat</div>
+            <div id="nc-total-fat" class="value">0</div>
+            <div class="unit">grams</div>
+            <div id="nc-fat-pct" class="pct" style="color:#dc2626">33%</div>
+          </div>
+        </div>
+
+        <div class="nc-micro-grid">
+          <div class="nc-micro-item"><span class="lbl">Fiber</span><span id="nc-total-fiber" class="val">0g</span></div>
+          <div class="nc-micro-item"><span class="lbl">Sugar</span><span id="nc-total-sugar" class="val">0g</span></div>
+          <div class="nc-micro-item"><span class="lbl">Sodium</span><span id="nc-total-sodium" class="val">0mg</span></div>
+        </div>
+
+        <div class="nc-field">
+          <label>Set Daily Calorie Goal</label>
+          <div class="nc-goal-set-row">
+            <input type="number" id="nc-goal-input" placeholder="e.g. 2000" min="500" step="50">
+            <button id="nc-goal-set" class="nc-goal-set-btn">Set</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Meal Items Table -->
+  <div class="nc-table-card">
+    <div class="nc-card">
+      <div class="nc-card-head">
+        <div class="nc-table-head">
+          <div>
+            <h3><i class="fas fa-list"></i> Meal Items</h3>
+            <p>Review and manage the items in your current meal</p>
+          </div>
+          <button id="nc-clear-btn" class="nc-clear-btn"><i class="fas fa-trash-alt"></i> Clear All</button>
+        </div>
+      </div>
+      <div class="nc-card-body">
+        <div id="nc-empty" class="nc-empty">
+          <i class="fas fa-utensils"></i>
+          <p>Your meal is empty. Search for food above to get started!</p>
+        </div>
+        <div id="nc-table-wrap" class="nc-table-wrap">
+          <table class="nc-meal-table">
+            <thead>
+              <tr>
+                <th>Food Item</th>
+                <th class="nc-tc">Calories</th>
+                <th class="nc-tc">Protein</th>
+                <th class="nc-tc">Carbs</th>
+                <th class="nc-tc">Fat</th>
+                <th class="nc-tc">Remove</th>
+              </tr>
+            </thead>
+            <tbody id="nc-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
 
 <section class="section home-categories">
 <div class="container">
@@ -200,7 +357,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <footer class="footer">
 <div class="footer-inner">
   <div class="footer-brand">
-    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals" class="logo-img" width="160" height="40" loading="lazy" decoding="async"></a>
+    <a href="/" class="logo"><img src="/img/logo.svg" alt="Macro &amp; Meals — Free Nutrition Calculators &amp; Tools" class="logo-img" width="200" height="48" loading="lazy" decoding="async"></a>
     <p>Your trusted source for nutrition calculators and health tools. Free, accurate, and easy to use.</p>
   </div>
   <div>
@@ -320,6 +477,7 @@ document.addEventListener('DOMContentLoaded', function(){
   });
 })();
 </script>
+<script src="/js/nutrition-tool.js"></script>
 <script src="/js/site-config.js" defer></script>
 <script src="/js/scripts-config.js" defer></script>
 <script src="/js/main.js" defer></script>
