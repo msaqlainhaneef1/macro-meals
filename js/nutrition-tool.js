@@ -217,6 +217,10 @@
         if (servingG == null || servingG <= 0) {
             servingG = parseServingG(servingText);
         }
+        var labelServingG = item.labelServingGrams;
+        if (labelServingG == null || labelServingG <= 0) {
+            labelServingG = null;
+        }
         return {
             id: item.id,
             fdcId: item.fdcId || null,
@@ -224,6 +228,7 @@
             foodType: item.foodType || 'standard',
             serving: servingText,
             serving_g: servingG,
+            label_serving_g: labelServingG,
             calories: r2(nuts.calories),
             protein: r2(nuts.protein),
             carbs: r2(nuts.carbs),
@@ -360,14 +365,15 @@
             servings: [{ desc: '100 g (standard)', size: 100 }]
         };
 
-        if (f.serving_g && Math.abs(f.serving_g - 100) > 0.5) {
+        var labelG = f.label_serving_g;
+        if (labelG && Math.abs(labelG - 100) > 0.5) {
             var hasServing = selectedFood.servings.some(function (s) {
-                return Math.abs(s.size - f.serving_g) < 0.5;
+                return Math.abs(s.size - labelG) < 0.5;
             });
             if (!hasServing) {
                 selectedFood.servings.push({
-                    desc: (f.serving || 'Label serving') + ' (' + f.serving_g + ' g)',
-                    size: f.serving_g
+                    desc: (f.serving || 'Label serving') + ' (' + labelG + ' g)',
+                    size: labelG
                 });
             }
         }

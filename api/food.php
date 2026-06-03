@@ -195,12 +195,15 @@ function fetch_usda_search($query, $limit = 8) {
             ? ($food['servingSize'] . ' ' . ($food['servingSizeUnit'] ?? 'g'))
             : '100g';
         $servingG = parse_grams_from_serving($serving);
+        $labelServingG = null;
         $dataType = $food['dataType'] ?? '';
         if ($dataType === 'Branded' && $servingG > 0 && abs($servingG - 100) > 0.5) {
+            $labelServingG = $servingG;
             $nutrients = scale_nutrients_to_100g($nutrients, $servingG);
+            $servingG = 100;
         }
 
-        $results[] = [
+        $row = [
             'id' => 'usda_' . ($food['fdcId'] ?? ''),
             'fdcId' => $food['fdcId'] ?? null,
             'name' => $name,
@@ -211,6 +214,10 @@ function fetch_usda_search($query, $limit = 8) {
             'foodType' => $dataType === 'Branded' ? 'branded' : 'standard',
             '_origin' => 'standard',
         ];
+        if ($labelServingG !== null) {
+            $row['labelServingGrams'] = $labelServingG;
+        }
+        $results[] = $row;
     }
     return $results;
 }
@@ -328,13 +335,20 @@ function format_off_product($p, $barcode = null) {
         }
     }
 
-    return [
+    $serving = $p['serving_size'] ?? '100g';
+    $labelServingG = parse_grams_from_serving($serving);
+    if ($labelServingG <= 0 || abs($labelServingG - 100) < 0.5) {
+        $labelServingG = null;
+    }
+
+    $row = [
         'id' => 'off_' . ($barcode ?: uniqid()),
         'barcode' => $barcode,
         'name' => $p['product_name'],
         'brand' => $p['brands'] ?? null,
         'category' => $p['categories'] ?? null,
-        'serving' => $p['serving_size'] ?? '100g',
+        'serving' => $serving,
+        'servingGrams' => 100,
         'quantity' => $p['quantity'] ?? null,
         'image' => $p['image_url'] ?? null,
         'nutrients' => $nutrients,
@@ -345,6 +359,10 @@ function format_off_product($p, $barcode = null) {
         'ingredients' => $p['ingredients_text'] ?? null,
         '_origin' => 'packaged',
     ];
+    if ($labelServingG !== null) {
+        $row['labelServingGrams'] = $labelServingG;
+    }
+    return $row;
 }
 
 function food_type_from_item($item) {
@@ -371,6 +389,14 @@ function sanitize_food_item($item) {
     if ($grams === null && preg_match('/([\d.]+)\s*g\b/i', $serving, $gm)) {
         $grams = (float) $gm[1];
     }
+    // Nutrients are per 100g; do not infer a smaller baseline from serving text alone.
+    if (empty($item['labelServingGrams']) && $grams !== null && abs($grams - 100) > 0.5) {
+        $parsed = parse_grams_from_serving($serving);
+        if ($parsed > 0 && abs($parsed - 100) > 0.5) {
+            $item['labelServingGrams'] = $parsed;
+        }
+        $grams = 100;
+    }
 
     $displayName = clean_food_display_name($item['name'] ?? 'Unknown', $item['brand'] ?? null);
     if ($displayName === '') {
@@ -390,6 +416,9 @@ function sanitize_food_item($item) {
     ];
     if (!empty($item['portions'])) {
         $out['portions'] = $item['portions'];
+    }
+    if (!empty($item['labelServingGrams'])) {
+        $out['labelServingGrams'] = (float) $item['labelServingGrams'];
     }
     return $out;
 }
@@ -412,14 +441,17 @@ function normalize_extra_item($item) {
     }
     $grams = $grams ?: 100;
     $nuts = $item['nutrients'] ?? [];
+    $labelServingG = null;
     if ($grams > 0 && abs($grams - 100) > 0.5) {
+        $labelServingG = $grams;
         $nuts = scale_nutrients_to_100g($nuts, $grams);
+        $grams = 100;
     }
     $name = clean_food_display_name($item['name'] ?? 'Unknown', null);
     if ($name === '') {
         return null;
     }
-    return [
+    $out = [
         'id' => 'food_' . substr(md5($name . ($item['serving'] ?? '')), 0, 12),
         'name' => $name,
         'serving' => $item['serving'] ?? '100g',
@@ -427,11 +459,15 @@ function normalize_extra_item($item) {
         'nutrients' => $nuts,
         'foodType' => $item['foodType'] ?? 'general',
     ];
+    if ($labelServingG !== null) {
+        $out['labelServingGrams'] = $labelServingG;
+    }
+    return $out;
 }
 
 /* ===== COMBINED SEARCH ===== */
 function search_food($query) {
-    $cache_key = 'search_v4_' . strtolower(trim($query));
+    $cache_key = 'search_v5_' . strtolower(trim($query));
     $cached = get_cache($cache_key);
     if ($cached) {
         return $cached;
