@@ -10,30 +10,13 @@
  */
 
 require_once __DIR__ . '/extra-search.lib.php';
+require_once __DIR__ . '/cache.lib.php';
 
 define('USDA_API_KEY', 'fqiLIGccAEaVBbhFXS4RjKuraFldCPBjy4jPtqxb');
-define('CACHE_DIR', __DIR__ . '/cache/');
-define('CACHE_EXPIRY', 86400); // 24 hours
 
-header('Content-Type: application/json');
+header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');
 header('X-Content-Type-Options: nosniff');
-
-// Ensure cache directory exists
-if (!is_dir(CACHE_DIR)) { @mkdir(CACHE_DIR, 0755, true); }
-
-/* ===== CACHING ===== */
-function get_cache($key) {
-    $file = CACHE_DIR . md5($key) . '.json';
-    if (file_exists($file) && (time() - filemtime($file)) < CACHE_EXPIRY) {
-        return json_decode(file_get_contents($file), true);
-    }
-    return null;
-}
-function set_cache($key, $data) {
-    $file = CACHE_DIR . md5($key) . '.json';
-    @file_put_contents($file, json_encode($data));
-}
 
 /* ===== HELPERS ===== */
 function safe_float($v) { return isset($v) ? round((float)$v, 2) : null; }
@@ -467,60 +450,48 @@ function normalize_extra_item($item) {
 
 /* ===== COMBINED SEARCH ===== */
 function search_food($query) {
-    $cache_key = 'search_v5_' . strtolower(trim($query));
-    $cached = get_cache($cache_key);
-    if ($cached) {
-        return $cached;
-    }
-
-    $usda = fetch_usda_search($query, 6);
-    $off = fetch_off_search($query, 4);
-    $extra = extra_search_combined($query);
-    $extraNorm = [];
-    foreach ($extra as $row) {
-        $norm = normalize_extra_item($row);
-        if ($norm) {
-            $extraNorm[] = $norm;
+    $cache_key = 'search_v6_' . strtolower(trim($query));
+    return api_cache_remember($cache_key, API_CACHE_TTL_SEARCH, function () use ($query) {
+        $usda = fetch_usda_search($query, 6);
+        $off = fetch_off_search($query, 4);
+        $extra = extra_search_combined($query);
+        $extraNorm = [];
+        foreach ($extra as $row) {
+            $norm = normalize_extra_item($row);
+            if ($norm) {
+                $extraNorm[] = $norm;
+            }
         }
-    }
-
-    $results = dedupe_food_results(sanitize_food_list(array_merge($usda, $off, $extraNorm)));
-
-    if (!empty($results)) {
-        set_cache($cache_key, $results);
-    }
-    return $results;
+        return dedupe_food_results(sanitize_food_list(array_merge($usda, $off, $extraNorm)));
+    });
 }
 
 /* ===== AUTOCOMPLETE ===== */
 function autocomplete($query) {
-    $cache_key = 'auto_v2_' . strtolower(trim($query));
-    $cached = get_cache($cache_key);
-    if ($cached) return $cached;
-
-    $url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=" . USDA_API_KEY
-         . "&query=" . urlencode($query) . "&pageSize=6&dataType=SR%20Legacy,Foundation";
-    $response = @file_get_contents($url);
-    $suggestions = [];
-    if ($response) {
-        $data = json_decode($response, true);
-        foreach (($data['foods'] ?? []) as $f) {
-            $suggestions[] = [
-                'name' => ucwords(strtolower($f['description'] ?? '')),
-                'category' => $f['foodCategory'] ?? '',
-                'calories' => null
-            ];
-            // Extract calories
-            foreach (($f['foodNutrients'] ?? []) as $n) {
-                if (strtolower($n['nutrientName'] ?? '') === 'energy' && ($n['unitName'] ?? '') === 'KCAL') {
-                    $suggestions[count($suggestions)-1]['calories'] = (float)$n['value'];
-                    break;
+    $cache_key = 'auto_v3_' . strtolower(trim($query));
+    return api_cache_remember($cache_key, API_CACHE_TTL_AUTOCOMPLETE, function () use ($query) {
+        $url = "https://api.nal.usda.gov/fdc/v1/foods/search?api_key=" . USDA_API_KEY
+             . "&query=" . urlencode($query) . "&pageSize=6&dataType=SR%20Legacy,Foundation";
+        $response = @file_get_contents($url);
+        $suggestions = [];
+        if ($response) {
+            $data = json_decode($response, true);
+            foreach (($data['foods'] ?? []) as $f) {
+                $suggestions[] = [
+                    'name' => ucwords(strtolower($f['description'] ?? '')),
+                    'category' => $f['foodCategory'] ?? '',
+                    'calories' => null,
+                ];
+                foreach (($f['foodNutrients'] ?? []) as $n) {
+                    if (strtolower($n['nutrientName'] ?? '') === 'energy' && ($n['unitName'] ?? '') === 'KCAL') {
+                        $suggestions[count($suggestions) - 1]['calories'] = (float) $n['value'];
+                        break;
+                    }
                 }
             }
         }
-    }
-    if (!empty($suggestions)) set_cache($cache_key, $suggestions);
-    return $suggestions;
+        return $suggestions;
+    });
 }
 
 /* ===== HANDLE API REQUEST ===== */
@@ -529,19 +500,18 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
     // Barcode lookup
     if (isset($_GET['barcode']) && !empty(trim($_GET['barcode']))) {
         $barcode = trim($_GET['barcode']);
-        $cache_key = 'barcode_v2_' . $barcode;
-        $cached = get_cache($cache_key);
-        if ($cached) {
-            echo json_encode(['success' => true, 'data' => sanitize_food_item($cached), 'type' => 'barcode']);
-            exit;
+        $cache_key = 'barcode_v3_' . $barcode;
+        $raw = api_cache_get($cache_key, API_CACHE_TTL_BARCODE);
+        if ($raw === null) {
+            $raw = fetch_off_barcode($barcode);
+            if ($raw) {
+                api_cache_set($cache_key, $raw, API_CACHE_TTL_BARCODE);
+            }
         }
-        $result = fetch_off_barcode($barcode);
-        if ($result) {
-            $clean = sanitize_food_item($result);
-            set_cache($cache_key, $result);
-            echo json_encode(['success' => true, 'data' => $clean, 'type' => 'barcode']);
+        if ($raw) {
+            api_send_json(['success' => true, 'data' => sanitize_food_item($raw), 'type' => 'barcode'], API_CACHE_TTL_BARCODE);
         } else {
-            echo json_encode(['success' => false, 'error' => 'Product not found for barcode: ' . $barcode]);
+            api_send_json(['success' => false, 'error' => 'Product not found for barcode: ' . $barcode], 0);
         }
         exit;
     }
@@ -549,18 +519,18 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
     // USDA detail by FDC ID
     if (isset($_GET['fdcId']) && !empty(trim($_GET['fdcId']))) {
         $fdcId = intval($_GET['fdcId']);
-        $cache_key = 'fdc_v4_' . $fdcId;
-        $cached = get_cache($cache_key);
-        if ($cached) {
-            echo json_encode(['success' => true, 'data' => sanitize_food_item($cached), 'type' => 'detail']);
-            exit;
+        $cache_key = 'fdc_v5_' . $fdcId;
+        $raw = api_cache_get($cache_key, API_CACHE_TTL_DETAIL);
+        if ($raw === null) {
+            $raw = fetch_usda_detail($fdcId);
+            if ($raw) {
+                api_cache_set($cache_key, $raw, API_CACHE_TTL_DETAIL);
+            }
         }
-        $result = fetch_usda_detail($fdcId);
-        if ($result) {
-            set_cache($cache_key, $result);
-            echo json_encode(['success' => true, 'data' => sanitize_food_item($result), 'type' => 'detail']);
+        if ($raw) {
+            api_send_json(['success' => true, 'data' => sanitize_food_item($raw), 'type' => 'detail'], API_CACHE_TTL_DETAIL);
         } else {
-            echo json_encode(['success' => false, 'error' => 'Food not found for FDC ID: ' . $fdcId]);
+            api_send_json(['success' => false, 'error' => 'Food not found for FDC ID: ' . $fdcId], 0);
         }
         exit;
     }
@@ -569,7 +539,7 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
     if (isset($_GET['autocomplete']) && !empty(trim($_GET['autocomplete']))) {
         $query = trim($_GET['autocomplete']);
         $suggestions = autocomplete($query);
-        echo json_encode(['success' => true, 'data' => $suggestions, 'type' => 'autocomplete']);
+        api_send_json(['success' => true, 'data' => $suggestions, 'type' => 'autocomplete'], API_CACHE_TTL_AUTOCOMPLETE);
         exit;
     }
 
@@ -578,14 +548,19 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
         $query = trim($_GET['query']);
         $results = search_food($query);
         if (!empty($results)) {
-            echo json_encode(['success' => true, 'data' => $results, 'count' => count($results), 'type' => 'search']);
+            api_send_json([
+                'success' => true,
+                'data' => $results,
+                'count' => count($results),
+                'type' => 'search',
+            ], API_CACHE_TTL_SEARCH);
         } else {
-            echo json_encode(['success' => false, 'error' => 'No results found for: ' . $query, 'data' => []]);
+            api_send_json(['success' => false, 'error' => 'No results found for: ' . $query, 'data' => []], 0);
         }
         exit;
     }
 
-    echo json_encode(['success' => false, 'error' => 'Invalid request']);
+    api_send_json(['success' => false, 'error' => 'Invalid request'], 0);
     exit;
 }
 ?>

@@ -117,6 +117,9 @@ This repo is structured for direct Hostinger Git deployment:
 
 All website files are at the repo root, so they deploy directly to `public_html/`.
 
+### API caching (nutrition search)
+Food API responses are cached in **PHP memory (APCu)** when available — no files are written under `api/cache/`. Enable the **APCu** extension in Hostinger → **PHP Configuration** for best performance. Browsers also cache JSON responses via `Cache-Control` / `ETag`.
+
 ### Auto-deploy (optional)
 1. Copy the **Webhook URL** from Hostinger Git section
 2. GitHub repo → **Settings** → **Webhooks** → **Add webhook**

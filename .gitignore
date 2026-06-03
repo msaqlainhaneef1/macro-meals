@@ -1,4 +1,5 @@
-api/cache/
+api/cache/*.json
+api/cache/*.tmp
 *.pyc
 __pycache__/
 macroandmeals-dist.zip
