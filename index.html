@@ -16,7 +16,7 @@
 <meta name="twitter:description" content="Free nutrition calculators for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins & more. Track calories, protein, carbs and fat instantly in your browser.">
 <meta name="robots" content="index,follow">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Macro & Meals","url":"https://macroandmeals.com/","description":"Free nutrition calculators for 50+ restaurants, BMI, BMR, TDEE, macros, vitamins, and more.","publisher":{"@type":"Organization","name":"Macro & Meals","url":"https://macroandmeals.com"}}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nutrition Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free nutrition calculator that searches thousands of foods from multiple databases. Track calories, protein, carbs, fat, fiber, and more. Build meals and monitor daily calorie goals.","featureList":["Search foods from multiple nutrition databases","Track calories, protein, carbs, fat, fiber, sugar, sodium","Build custom meals with quantity and serving size controls","Set and monitor daily calorie goals","Dark mode support","Data persists in browser"]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Nutrition Calculator","applicationCategory":"HealthApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Free nutrition calculator that searches thousands of foods from multiple databases. Track calories, protein, carbs, fat, fiber, and more. Build meals and monitor daily calorie goals.","featureList":["Search foods from integrated nutrition databases","Barcode lookup for packaged products","Track calories, protein, carbs, fat, fiber, sugar, sodium","Build custom meals with quantity and serving size controls","Set and monitor daily calorie goals","Data persists in browser"]}</script>
 <style media="print">
   @media print {
     .header, .footer, .nav-desktop, .mobile-toggle, .mobile-nav,
@@ -48,7 +48,6 @@
     @page { margin: 2cm; }
   }
 </style>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://www.googletagmanager.com">
@@ -73,6 +72,7 @@ window.addEventListener('load',function(){setTimeout(function(){
 </script>
 <meta name="google-site-verification" content="8aq4LQnww6MCM6oTkdJv_hhUMP3NN0qD_IaCR-aND3k" />
 <link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/nutrition-tool.css">
 <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
@@ -146,167 +146,175 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div></section>
 
-<!-- Unified Nutrition Calculator Tool -->
-<section class="nc-tool-section" id="nutrition-tool">
-<div class="container">
-  <div class="nc-tool-header">
-    <div class="nc-tool-header-row">
-      <h2><i class="fas fa-calculator" style="color:#22c55e;margin-right:.5rem"></i>Nutrition Calculator</h2>
-      <button id="nc-theme-toggle" class="nc-theme-btn" aria-label="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
-    </div>
-    <p>Search thousands of foods from USDA, branded products, and packaged foods. Track calories, macros, and micronutrients for your meals.</p>
-  </div>
-
-  <div class="nc-grid">
-    <!-- Left: Search -->
-    <div class="nc-card">
-      <div class="nc-card-head">
-        <h3><i class="fas fa-search"></i> Find Food</h3>
-        <p>Search USDA database, branded foods, and packaged products</p>
+<!-- Unified Nutrition Calculator Tool (compact single-screen) -->
+<section class="tool-section tool-compact section" id="nutrition-tool" aria-labelledby="nutrition-tool-title">
+  <div class="container tool-shell">
+    <header class="tool-top">
+      <div class="tool-top-text">
+        <h2 id="nutrition-tool-title">Nutrition Calculator</h2>
+        <p class="tool-top-desc">Search on the left, adjust serving in the center, and watch totals update on the right.</p>
       </div>
-      <div class="nc-card-body">
-        <div class="nc-search-row">
-          <input type="text" id="nc-search-input" class="nc-search-input" placeholder="e.g. Avocado, Grilled Chicken, Rice, Banana..." autocomplete="off">
-          <button id="nc-search-btn" class="nc-search-btn"><i class="fas fa-search"></i> Search</button>
+      <div class="tool-flow" aria-label="How to use">
+        <span class="tool-flow-step is-active" data-step="1">1 · Search</span>
+        <span class="tool-flow-arrow" aria-hidden="true">→</span>
+        <span class="tool-flow-step" data-step="2">2 · Select</span>
+        <span class="tool-flow-arrow" aria-hidden="true">→</span>
+        <span class="tool-flow-step" data-step="3">3 · Add</span>
+      </div>
+    </header>
+
+    <div class="tool-app">
+      <div class="tool-col tool-col-search">
+        <div class="tool-col-head"><span class="tool-col-icon" aria-hidden="true">🔍</span> Find food</div>
+        <div class="tool-col-body">
+          <div class="tool-search-block">
+            <label class="tool-input-label" for="tool-search-input">Food name</label>
+            <div class="tool-search-wrap">
+              <input type="search" id="tool-search-input" class="tool-search-input" placeholder="e.g. chicken, rice, apple…" autocomplete="off" enterkeyhint="search" aria-label="Search food">
+              <button type="button" id="tool-search-btn" class="tool-search-btn">Search</button>
+            </div>
+            <label class="tool-input-label" for="tool-barcode-input">Barcode</label>
+            <div class="tool-barcode-wrap">
+              <input type="text" id="tool-barcode-input" class="tool-search-input tool-barcode-input" placeholder="UPC / EAN code" inputmode="numeric" autocomplete="off" aria-label="Product barcode">
+              <button type="button" id="tool-barcode-btn" class="tool-btn-secondary">Lookup</button>
+            </div>
+          </div>
+          <p id="tool-source-info" class="tool-source-info" role="status" aria-live="polite"></p>
+          <div id="tool-loader" class="tool-loader tool-hidden" role="status" aria-label="Loading"></div>
+          <div id="tool-error" class="tool-error tool-hidden" role="alert"></div>
+          <div class="tool-scroll">
+            <div id="tool-results" class="tool-results tool-hidden" role="listbox" aria-label="Search results"></div>
+            <div id="tool-detail-panel" class="tool-detail-panel tool-hidden" aria-hidden="true"></div>
+          </div>
         </div>
-        <div id="nc-source-info" class="nc-source-info"></div>
-        <div id="nc-loader" class="nc-loader nc-hidden"></div>
-        <div id="nc-error" class="nc-error nc-hidden"></div>
-        <div id="nc-results" class="nc-results nc-hidden"></div>
+      </div>
 
-        <!-- Detail Panel (shows full nutrition when item selected) -->
-        <div id="nc-detail-panel" class="nc-detail-panel nc-hidden"></div>
+      <div class="tool-col tool-col-meal">
+        <div class="tool-col-head tool-col-head-split">
+          <span><span class="tool-col-icon" aria-hidden="true">🍽</span> Your meal <strong id="tool-item-count" class="tool-count-inline">0</strong></span>
+          <button type="button" id="tool-clear-btn" class="tool-clear-btn">Clear</button>
+        </div>
 
-        <div id="nc-serving-area" class="nc-hidden">
-          <div class="nc-serving-box">
-            <div class="nc-serving-title"><i class="fas fa-weight"></i> Customize Serving</div>
-            <div id="nc-selected-name" class="nc-selected-name"></div>
-            <div id="nc-selected-info" class="nc-selected-info"></div>
-            <div class="nc-serving-row">
-              <div class="nc-field">
-                <label for="nc-qty">Quantity</label>
-                <input type="number" id="nc-qty" value="1" min="0.1" step="0.1">
-              </div>
-              <div class="nc-field">
-                <label for="nc-serving-sel">Portion Size</label>
-                <select id="nc-serving-sel"></select>
+        <div id="tool-serving-area" class="tool-add-panel tool-hidden" aria-live="polite">
+          <div class="tool-add-panel-head">
+            <span class="tool-add-label">Ready to add</span>
+            <button type="button" id="tool-add-cancel" class="tool-add-cancel" aria-label="Cancel selection">&times;</button>
+          </div>
+          <p id="tool-selected-name" class="tool-add-food-name"></p>
+          <div id="tool-selected-info" class="tool-add-macros"></div>
+          <div class="tool-add-controls">
+            <div class="tool-add-field">
+              <span class="tool-add-field-label">Quantity</span>
+              <div class="tool-qty-stepper">
+                <button type="button" class="tool-qty-btn" data-qty-delta="-1" aria-label="Decrease quantity">−</button>
+                <input type="number" id="tool-qty" value="1" min="0.1" step="0.1" aria-label="Quantity">
+                <button type="button" class="tool-qty-btn" data-qty-delta="1" aria-label="Increase quantity">+</button>
               </div>
             </div>
-            <button id="nc-add-btn" class="nc-add-btn" disabled><i class="fas fa-plus"></i> Add to My Meal</button>
+            <div class="tool-add-field tool-add-field-wide">
+              <label class="tool-add-field-label" for="tool-serving-sel">Serving size</label>
+              <select id="tool-serving-sel"></select>
+            </div>
+          </div>
+          <div class="tool-add-preview">
+            <span class="tool-add-preview-label">This serving</span>
+            <span id="tool-preview-cal" class="tool-add-preview-val">—</span>
+          </div>
+          <button type="button" id="tool-add-btn" class="tool-add-btn" disabled>
+            <span class="tool-add-btn-text">Add to meal</span>
+          </button>
+        </div>
+
+        <div class="tool-col-body tool-col-body-meal">
+          <div id="tool-empty" class="tool-empty">
+            <div class="tool-empty-icon" aria-hidden="true"></div>
+            <p class="tool-empty-title">Your meal is empty</p>
+            <p class="tool-empty-desc">Search a food on the left, select it, then add it using the panel above.</p>
+          </div>
+          <div id="tool-table-wrap" class="tool-table-wrap">
+            <table class="tool-meal-table">
+              <thead>
+                <tr>
+                  <th scope="col">Food</th>
+                  <th class="tool-tc tool-th-cal">Cal</th>
+                  <th class="tool-tc tool-th-pro">Pro</th>
+                  <th class="tool-tc tool-th-carb">Carb</th>
+                  <th class="tool-tc tool-th-fat">Fat</th>
+                  <th class="tool-tc"><span class="sr-only">Remove</span></th>
+                </tr>
+              </thead>
+              <tbody id="tool-table-body"></tbody>
+              <tfoot id="tool-table-foot"></tfoot>
+            </table>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- Right: Summary -->
-    <div class="nc-card">
-      <div class="nc-card-head">
-        <h3><i class="fas fa-chart-pie"></i> Meal Summary <span id="nc-item-count" style="background:rgba(255,255,255,.2);padding:.15rem .5rem;border-radius:10px;font-size:.75rem;margin-left:.5rem">0</span></h3>
-        <p>Your current nutritional intake for this meal</p>
-      </div>
-      <div class="nc-card-body">
-        <div class="nc-summary-cal">
-          <div class="nc-cal-label">Total Calories</div>
-          <div id="nc-total-cal" class="nc-cal-value">0 kcal</div>
-        </div>
-
-        <div class="nc-goal-box">
-          <div class="nc-goal-row">
-            <span>Daily Goal Progress</span>
-            <span id="nc-goal-pct">0%</span>
+      <div class="tool-col tool-col-stats">
+        <div class="tool-col-head"><span class="tool-col-icon" aria-hidden="true">📊</span> Meal totals</div>
+        <div class="tool-col-body">
+          <div class="tool-stat-hero">
+            <div class="tool-stat-cal">
+              <span id="tool-total-cal" class="tool-cal-value">0</span>
+              <span class="tool-cal-unit">kcal</span>
+            </div>
+            <div class="tool-stat-goal">
+              <div class="tool-goal-row">
+                <span id="tool-goal-display">Goal 2000</span>
+                <span id="tool-goal-pct" class="tool-goal-pct">0%</span>
+              </div>
+              <div class="tool-goal-bar-bg">
+                <div id="tool-goal-bar" class="tool-goal-bar-fill"></div>
+              </div>
+              <span id="tool-goal-eaten" class="tool-goal-eaten">0 kcal in meal</span>
+            </div>
           </div>
-          <div class="nc-goal-bar-bg">
-            <div id="nc-goal-bar" class="nc-goal-bar-fill" style="width:0"></div>
+          <div class="tool-macro-bar" role="img" aria-label="Macro ratio">
+            <div id="tool-pro-seg" class="tool-macro-seg pro"></div>
+            <div id="tool-carb-seg" class="tool-macro-seg carb"></div>
+            <div id="tool-fat-seg" class="tool-macro-seg fat"></div>
           </div>
-          <div class="nc-goal-sub">
-            <span>0 kcal</span>
-            <span id="nc-goal-display">Goal: 2000 kcal</span>
+          <div class="tool-macro-row">
+            <div class="tool-macro-pill tool-macro-pro">
+              <span class="lbl">Protein</span>
+              <span id="tool-total-pro" class="val">0</span><span class="unit">g</span>
+              <span id="tool-pro-pct" class="pct">0%</span>
+            </div>
+            <div class="tool-macro-pill tool-macro-carb">
+              <span class="lbl">Carbs</span>
+              <span id="tool-total-carb" class="val">0</span><span class="unit">g</span>
+              <span id="tool-carb-pct" class="pct">0%</span>
+            </div>
+            <div class="tool-macro-pill tool-macro-fat">
+              <span class="lbl">Fat</span>
+              <span id="tool-total-fat" class="val">0</span><span class="unit">g</span>
+              <span id="tool-fat-pct" class="pct">0%</span>
+            </div>
           </div>
-        </div>
-
-        <div class="nc-macro-bar">
-          <div id="nc-pro-seg" class="nc-macro-seg pro" style="width:33.3%">33%</div>
-          <div id="nc-carb-seg" class="nc-macro-seg carb" style="width:33.3%">33%</div>
-          <div id="nc-fat-seg" class="nc-macro-seg fat" style="width:33.3%">33%</div>
-        </div>
-
-        <div class="nc-macro-grid">
-          <div class="nc-macro-card">
-            <div class="label">Protein</div>
-            <div id="nc-total-pro" class="value">0</div>
-            <div class="unit">grams</div>
-            <div id="nc-pro-pct" class="pct" style="color:#16a34a">33%</div>
+          <div class="tool-micro-row">
+            <span>Fiber <strong id="tool-total-fiber">0g</strong></span>
+            <span>Sugar <strong id="tool-total-sugar">0g</strong></span>
+            <span>Sodium <strong id="tool-total-sodium">0mg</strong></span>
+            <span>Sat. fat <strong id="tool-total-satfat">0g</strong></span>
+            <span>Chol. <strong id="tool-total-chol">0mg</strong></span>
+            <span>K <strong id="tool-total-potassium">0mg</strong></span>
           </div>
-          <div class="nc-macro-card">
-            <div class="label">Carbs</div>
-            <div id="nc-total-carb" class="value">0</div>
-            <div class="unit">grams</div>
-            <div id="nc-carb-pct" class="pct" style="color:#ca8a04">33%</div>
+          <div class="tool-goal-form">
+            <span class="tool-goal-form-label">Daily goal</span>
+            <div class="tool-goal-presets">
+              <button type="button" class="tool-preset-btn" data-goal="1500">1500</button>
+              <button type="button" class="tool-preset-btn" data-goal="2000">2000</button>
+              <button type="button" class="tool-preset-btn" data-goal="2500">2500</button>
+            </div>
+            <div class="tool-goal-set-row">
+              <input type="number" id="tool-goal-input" placeholder="2000" min="500" max="10000" step="50" inputmode="numeric" aria-label="Custom daily calorie goal">
+              <button type="button" id="tool-goal-set" class="tool-goal-set-btn">Set</button>
+            </div>
           </div>
-          <div class="nc-macro-card">
-            <div class="label">Fat</div>
-            <div id="nc-total-fat" class="value">0</div>
-            <div class="unit">grams</div>
-            <div id="nc-fat-pct" class="pct" style="color:#dc2626">33%</div>
-          </div>
-        </div>
-
-        <div class="nc-micro-grid">
-          <div class="nc-micro-item"><span class="lbl">Fiber</span><span id="nc-total-fiber" class="val">0g</span></div>
-          <div class="nc-micro-item"><span class="lbl">Sugar</span><span id="nc-total-sugar" class="val">0g</span></div>
-          <div class="nc-micro-item"><span class="lbl">Sodium</span><span id="nc-total-sodium" class="val">0mg</span></div>
-          <div class="nc-micro-item"><span class="lbl">Sat. Fat</span><span id="nc-total-satfat" class="val">0g</span></div>
-          <div class="nc-micro-item"><span class="lbl">Cholesterol</span><span id="nc-total-chol" class="val">0mg</span></div>
-          <div class="nc-micro-item"><span class="lbl">Potassium</span><span id="nc-total-potassium" class="val">0mg</span></div>
-        </div>
-
-        <div class="nc-field">
-          <label>Set Daily Calorie Goal</label>
-          <div class="nc-goal-set-row">
-            <input type="number" id="nc-goal-input" placeholder="e.g. 2000" min="500" step="50">
-            <button id="nc-goal-set" class="nc-goal-set-btn">Set</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Meal Items Table -->
-  <div class="nc-table-card">
-    <div class="nc-card">
-      <div class="nc-card-head">
-        <div class="nc-table-head">
-          <div>
-            <h3><i class="fas fa-list"></i> Meal Items</h3>
-            <p>Review and manage the items in your current meal</p>
-          </div>
-          <button id="nc-clear-btn" class="nc-clear-btn"><i class="fas fa-trash-alt"></i> Clear All</button>
-        </div>
-      </div>
-      <div class="nc-card-body">
-        <div id="nc-empty" class="nc-empty">
-          <i class="fas fa-utensils"></i>
-          <p>Your meal is empty. Search for food above to get started!</p>
-        </div>
-        <div id="nc-table-wrap" class="nc-table-wrap">
-          <table class="nc-meal-table">
-            <thead>
-              <tr>
-                <th>Food Item</th>
-                <th class="nc-tc">Calories</th>
-                <th class="nc-tc">Protein</th>
-                <th class="nc-tc">Carbs</th>
-                <th class="nc-tc">Fat</th>
-                <th class="nc-tc">Remove</th>
-              </tr>
-            </thead>
-            <tbody id="nc-table-body"></tbody>
-          </table>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
 
 <section class="section home-categories">

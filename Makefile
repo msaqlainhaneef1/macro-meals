@@ -36,7 +36,7 @@ build:
 # Start local development server
 serve:
 	@echo "Starting dev server at http://localhost:8080"
-	python3 _build/server.py 8080
+	php -S localhost:8080 -t . _build/php-router.php
 
 # Full dev workflow: build then serve
 dev: build serve

@@ -1,0 +1,4 @@
+api/cache/
+*.pyc
+__pycache__/
+macroandmeals-dist.zip

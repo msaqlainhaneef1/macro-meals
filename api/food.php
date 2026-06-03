@@ -1,14 +1,15 @@
 <?php
 /**
- * Advanced Food Search & Nutrition API
- * Integrates USDA FoodData Central and Open Food Facts.
- * 
+ * Food Search & Nutrition API (server-side data sources only).
+ *
  * Endpoints:
- *   ?query=chicken breast        — Text search (returns up to 10 results)
- *   ?barcode=3017620422003       — Barcode lookup (Open Food Facts)
- *   ?fdcId=171705                — USDA food detail by FDC ID
- *   ?autocomplete=chic           — Quick autocomplete suggestions
+ *   ?query=chicken breast   — Combined text search
+ *   ?barcode=3017620422003  — Barcode lookup
+ *   ?fdcId=171705           — Food detail with portion options
+ *   ?autocomplete=chic      — Quick suggestions
  */
+
+require_once __DIR__ . '/extra-search.lib.php';
 
 define('USDA_API_KEY', 'fqiLIGccAEaVBbhFXS4RjKuraFldCPBjy4jPtqxb');
 define('CACHE_DIR', __DIR__ . '/cache/');
@@ -37,6 +38,61 @@ function set_cache($key, $data) {
 /* ===== HELPERS ===== */
 function safe_float($v) { return isset($v) ? round((float)$v, 2) : null; }
 
+function parse_grams_from_serving($servingText) {
+    if (!$servingText) {
+        return 100.0;
+    }
+    if (preg_match('/([\d.]+)\s*g\b/i', (string) $servingText, $m)) {
+        $v = (float) $m[1];
+        return $v > 0 ? $v : 100.0;
+    }
+    return 100.0;
+}
+
+/** Scale nutrient map from a reference serving size to per 100 g. */
+function scale_nutrients_to_100g(array $nutrients, $servingGrams) {
+    $servingGrams = (float) $servingGrams;
+    if ($servingGrams <= 0 || abs($servingGrams - 100) < 0.5) {
+        return $nutrients;
+    }
+    $factor = 100 / $servingGrams;
+    foreach ($nutrients as $key => $val) {
+        if ($val !== null && is_numeric($val)) {
+            $nutrients[$key] = round((float) $val * $factor, 2);
+        }
+    }
+    return $nutrients;
+}
+
+function clean_food_display_name($name, $brand = null) {
+    $name = trim((string) ($name ?: 'Unknown'));
+    if ($brand) {
+        $brand = trim((string) $brand);
+        $suffix = ' (' . $brand . ')';
+        if ($suffix !== ' ()' && stripos($name, $suffix) !== false) {
+            $name = trim(str_ireplace($suffix, '', $name));
+        }
+        if (strcasecmp($name, $brand) === 0) {
+            return '';
+        }
+    }
+    return $name;
+}
+
+function dedupe_food_results(array $items) {
+    $seen = [];
+    $out = [];
+    foreach ($items as $item) {
+        $key = strtolower(preg_replace('/[^a-z0-9]+/', '', substr($item['name'] ?? '', 0, 48)));
+        if ($key === '' || isset($seen[$key])) {
+            continue;
+        }
+        $seen[$key] = true;
+        $out[] = $item;
+    }
+    return $out;
+}
+
 function off_context() {
     return stream_context_create([
         'http' => [
@@ -50,9 +106,15 @@ function off_context() {
 function extract_usda_nutrients($foodNutrients) {
     $map = [];
     foreach ($foodNutrients as $n) {
-        $name = strtolower($n['nutrientName'] ?? '');
-        $val = isset($n['value']) ? (float)$n['value'] : null;
-        $unit = strtoupper($n['unitName'] ?? '');
+        if (isset($n['nutrient']['name'])) {
+            $name = strtolower($n['nutrient']['name']);
+            $unit = strtoupper($n['nutrient']['unitName'] ?? '');
+            $val = isset($n['amount']) ? (float) $n['amount'] : (isset($n['value']) ? (float) $n['value'] : null);
+        } else {
+            $name = strtolower($n['nutrientName'] ?? '');
+            $unit = strtoupper($n['unitName'] ?? '');
+            $val = isset($n['value']) ? (float) $n['value'] : (isset($n['amount']) ? (float) $n['amount'] : null);
+        }
         if ($val === null) continue;
 
         // Macros
@@ -116,20 +178,38 @@ function fetch_usda_search($query, $limit = 8) {
     $results = [];
     foreach ($data['foods'] as $food) {
         $nutrients = extract_usda_nutrients($food['foodNutrients'] ?? []);
-        if (empty($nutrients['calories']) && empty($nutrients['protein'])) continue;
+        if (empty($nutrients['calories']) && empty($nutrients['protein'])) {
+            continue;
+        }
+
+        $brand = $food['brandOwner'] ?? $food['brandName'] ?? null;
+        $name = clean_food_display_name(
+            ucwords(strtolower($food['description'] ?? 'Unknown Food')),
+            $brand
+        );
+        if ($name === '') {
+            continue;
+        }
+
+        $serving = $food['servingSize']
+            ? ($food['servingSize'] . ' ' . ($food['servingSizeUnit'] ?? 'g'))
+            : '100g';
+        $servingG = parse_grams_from_serving($serving);
+        $dataType = $food['dataType'] ?? '';
+        if ($dataType === 'Branded' && $servingG > 0 && abs($servingG - 100) > 0.5) {
+            $nutrients = scale_nutrients_to_100g($nutrients, $servingG);
+        }
 
         $results[] = [
             'id' => 'usda_' . ($food['fdcId'] ?? ''),
             'fdcId' => $food['fdcId'] ?? null,
-            'name' => ucwords(strtolower($food['description'] ?? 'Unknown Food')),
-            'brand' => $food['brandOwner'] ?? $food['brandName'] ?? null,
-            'category' => $food['foodCategory'] ?? null,
-            'dataType' => $food['dataType'] ?? null,
-            'serving' => $food['servingSize'] ? ($food['servingSize'] . ' ' . ($food['servingSizeUnit'] ?? 'g')) : '100g',
-            'servingText' => $food['householdServingFullText'] ?? null,
+            'name' => $name,
+            'brand' => $brand,
+            'serving' => $serving,
+            'servingGrams' => $servingG,
             'nutrients' => $nutrients,
-            'source' => 'USDA FoodData Central',
-            'sourceIcon' => 'usda'
+            'foodType' => $dataType === 'Branded' ? 'branded' : 'standard',
+            '_origin' => 'standard',
         ];
     }
     return $results;
@@ -146,19 +226,35 @@ function fetch_usda_detail($fdcId) {
 
     $nutrients = extract_usda_nutrients($food['foodNutrients'] ?? []);
 
+    $portions = [['desc' => '100 g (standard)', 'grams' => 100]];
+    if (!empty($food['foodPortions'])) {
+        foreach ($food['foodPortions'] as $portion) {
+            if (empty($portion['gramWeight'])) {
+                continue;
+            }
+            $unit = is_array($portion['measureUnit'] ?? null)
+                ? ($portion['measureUnit']['name'] ?? 'serving')
+                : ($portion['measureUnit'] ?? 'serving');
+            $label = trim(($portion['amount'] ?? '') . ' ' . ($portion['modifier'] ?? $unit));
+            $grams = (float) $portion['gramWeight'];
+            $portions[] = [
+                'desc' => $label . ' (' . round($grams) . ' g)',
+                'grams' => $grams,
+            ];
+        }
+    }
+
     return [
-        'id' => 'usda_' . $food['fdcId'],
+        'id' => 'food_' . $food['fdcId'],
         'fdcId' => $food['fdcId'],
-        'name' => ucwords(strtolower($food['description'] ?? 'Unknown Food')),
-        'brand' => $food['brandOwner'] ?? $food['brandName'] ?? null,
-        'category' => $food['foodCategory'] ?? null,
-        'dataType' => $food['dataType'] ?? null,
-        'ingredients' => $food['ingredients'] ?? null,
+        'name' => clean_food_display_name(
+            ucwords(strtolower($food['description'] ?? 'Unknown Food')),
+            $food['brandOwner'] ?? $food['brandName'] ?? null
+        ),
         'serving' => isset($food['servingSize']) ? ($food['servingSize'] . ' ' . ($food['servingSizeUnit'] ?? 'g')) : '100g',
-        'servingText' => $food['householdServingFullText'] ?? null,
         'nutrients' => $nutrients,
-        'source' => 'USDA FoodData Central',
-        'sourceIcon' => 'usda'
+        'portions' => $portions,
+        '_origin' => 'standard',
     ];
 }
 
@@ -247,23 +343,112 @@ function format_off_product($p, $barcode = null) {
         'ecoscore' => $p['ecoscore_grade'] ?? null,
         'allergens' => $allergens,
         'ingredients' => $p['ingredients_text'] ?? null,
-        'source' => 'Open Food Facts',
-        'sourceIcon' => 'off'
+        '_origin' => 'packaged',
+    ];
+}
+
+function food_type_from_item($item) {
+    if (!empty($item['foodType'])) {
+        return $item['foodType'];
+    }
+    $origin = $item['_origin'] ?? '';
+    if ($origin === 'packaged' || !empty($item['barcode'])) {
+        return 'packaged';
+    }
+    if (!empty($item['brand'])) {
+        return 'branded';
+    }
+    return 'standard';
+}
+
+function sanitize_food_item($item) {
+    if (!$item || !is_array($item)) {
+        return null;
+    }
+    $nuts = $item['nutrients'] ?? [];
+    $serving = $item['serving'] ?? '100g';
+    $grams = $item['servingGrams'] ?? null;
+    if ($grams === null && preg_match('/([\d.]+)\s*g\b/i', $serving, $gm)) {
+        $grams = (float) $gm[1];
+    }
+
+    $displayName = clean_food_display_name($item['name'] ?? 'Unknown', $item['brand'] ?? null);
+    if ($displayName === '') {
+        return null;
+    }
+
+    $out = [
+        'id' => $item['id'] ?? ('food_' . uniqid()),
+        'fdcId' => $item['fdcId'] ?? null,
+        'barcode' => $item['barcode'] ?? null,
+        'name' => $displayName,
+        'serving' => $serving,
+        'servingGrams' => $grams ?: 100,
+        'foodType' => food_type_from_item($item),
+        'nutrients' => $nuts,
+        'image' => $item['image'] ?? null,
+    ];
+    if (!empty($item['portions'])) {
+        $out['portions'] = $item['portions'];
+    }
+    return $out;
+}
+
+function sanitize_food_list($items) {
+    $out = [];
+    foreach ($items as $item) {
+        $clean = sanitize_food_item($item);
+        if ($clean) {
+            $out[] = $clean;
+        }
+    }
+    return $out;
+}
+
+function normalize_extra_item($item) {
+    $grams = $item['servingGrams'] ?? null;
+    if ($grams === null && !empty($item['serving'])) {
+        $grams = parse_grams_from_serving($item['serving']);
+    }
+    $grams = $grams ?: 100;
+    $nuts = $item['nutrients'] ?? [];
+    if ($grams > 0 && abs($grams - 100) > 0.5) {
+        $nuts = scale_nutrients_to_100g($nuts, $grams);
+    }
+    $name = clean_food_display_name($item['name'] ?? 'Unknown', null);
+    if ($name === '') {
+        return null;
+    }
+    return [
+        'id' => 'food_' . substr(md5($name . ($item['serving'] ?? '')), 0, 12),
+        'name' => $name,
+        'serving' => $item['serving'] ?? '100g',
+        'servingGrams' => $grams,
+        'nutrients' => $nuts,
+        'foodType' => $item['foodType'] ?? 'general',
     ];
 }
 
 /* ===== COMBINED SEARCH ===== */
 function search_food($query) {
-    $cache_key = 'search_v2_' . strtolower(trim($query));
+    $cache_key = 'search_v4_' . strtolower(trim($query));
     $cached = get_cache($cache_key);
-    if ($cached) return $cached;
+    if ($cached) {
+        return $cached;
+    }
 
-    // Fetch from both sources in parallel (or sequential in PHP)
     $usda = fetch_usda_search($query, 6);
     $off = fetch_off_search($query, 4);
+    $extra = extra_search_combined($query);
+    $extraNorm = [];
+    foreach ($extra as $row) {
+        $norm = normalize_extra_item($row);
+        if ($norm) {
+            $extraNorm[] = $norm;
+        }
+    }
 
-    // Merge results — USDA first (more accurate for whole foods), OFF for packaged
-    $results = array_merge($usda, $off);
+    $results = dedupe_food_results(sanitize_food_list(array_merge($usda, $off, $extraNorm)));
 
     if (!empty($results)) {
         set_cache($cache_key, $results);
@@ -311,13 +496,14 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
         $cache_key = 'barcode_v2_' . $barcode;
         $cached = get_cache($cache_key);
         if ($cached) {
-            echo json_encode(['success' => true, 'data' => $cached, 'type' => 'barcode']);
+            echo json_encode(['success' => true, 'data' => sanitize_food_item($cached), 'type' => 'barcode']);
             exit;
         }
         $result = fetch_off_barcode($barcode);
         if ($result) {
+            $clean = sanitize_food_item($result);
             set_cache($cache_key, $result);
-            echo json_encode(['success' => true, 'data' => $result, 'type' => 'barcode']);
+            echo json_encode(['success' => true, 'data' => $clean, 'type' => 'barcode']);
         } else {
             echo json_encode(['success' => false, 'error' => 'Product not found for barcode: ' . $barcode]);
         }
@@ -327,16 +513,16 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
     // USDA detail by FDC ID
     if (isset($_GET['fdcId']) && !empty(trim($_GET['fdcId']))) {
         $fdcId = intval($_GET['fdcId']);
-        $cache_key = 'fdc_v2_' . $fdcId;
+        $cache_key = 'fdc_v4_' . $fdcId;
         $cached = get_cache($cache_key);
         if ($cached) {
-            echo json_encode(['success' => true, 'data' => $cached, 'type' => 'detail']);
+            echo json_encode(['success' => true, 'data' => sanitize_food_item($cached), 'type' => 'detail']);
             exit;
         }
         $result = fetch_usda_detail($fdcId);
         if ($result) {
             set_cache($cache_key, $result);
-            echo json_encode(['success' => true, 'data' => $result, 'type' => 'detail']);
+            echo json_encode(['success' => true, 'data' => sanitize_food_item($result), 'type' => 'detail']);
         } else {
             echo json_encode(['success' => false, 'error' => 'Food not found for FDC ID: ' . $fdcId]);
         }
@@ -363,17 +549,7 @@ if (basename($_SERVER['SCRIPT_FILENAME']) === 'food.php') {
         exit;
     }
 
-    // No valid params
-    echo json_encode([
-        'success' => false,
-        'error' => 'Missing parameter. Use ?query=, ?barcode=, ?fdcId=, or ?autocomplete=',
-        'endpoints' => [
-            'search' => '?query=chicken breast',
-            'barcode' => '?barcode=3017620422003',
-            'detail' => '?fdcId=171705',
-            'autocomplete' => '?autocomplete=chick'
-        ]
-    ]);
+    echo json_encode(['success' => false, 'error' => 'Invalid request']);
     exit;
 }
 ?>
